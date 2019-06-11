@@ -9,7 +9,7 @@ Y - Present   N - Absent   # - Holiday
 
 | Week/Day | Day 1 | Day 2 | Day 3 | Day 4 | Day 5 |
 | ------  | ---- | ---- | ---- | ---- | ---- |
-| Week 01 |   Y  |      |      |      |      |
+| Week 01 |   Y  |   Y  |      |      |      |
 | Week 02 |      |      |      |      |      |
 | Week 03 |      |      |      |      |      |
 | Week 04 |      |      |      |      |      |
