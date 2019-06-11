@@ -1,7 +1,7 @@
-### Nrupul Dev
+### vetrivel c
 
-GitHub - https://github.com/nrupuld
-Linkedin - https://www.linkedin.com/in/nrupuld/
+GitHub - https://github.com/vetrivelcsamy
+Linkedin - https://www.linkedin.com/in/vetrivelcsamy/
 
 **Attendance** 
 
@@ -9,7 +9,7 @@ Y - Present   N - Absent   # - Holiday
 
 | Week/Day | Day 1 | Day 2 | Day 3 | Day 4 | Day 5 |
 | ------  | ---- | ---- | ---- | ---- | ---- |
-| Week 01 |   Y  |      |      |      |      |
+| Week 01 |   Y  |   Y  |      |      |      |
 | Week 02 |      |      |      |      |      |
 | Week 03 |      |      |      |      |      |
 | Week 04 |      |      |      |      |      |
