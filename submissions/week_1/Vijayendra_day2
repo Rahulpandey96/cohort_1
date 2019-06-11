@@ -8,3 +8,7 @@ pwd : practise/week1/day2
 ---------------------------
 date > date.txt
 to check : less date.txt
+---------------------------
+cal 1975 > cal_1975.txt
+less cal_1975
+---------------------------
