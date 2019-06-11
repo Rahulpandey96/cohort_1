@@ -1,0 +1,7 @@
+mkdir practise
+cd practise
+mkdir week1
+cd week1
+mkdir day2
+cd day2
+pwd : practise/week1/day2
