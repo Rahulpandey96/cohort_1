@@ -5,3 +5,6 @@ cd week1
 mkdir day2
 cd day2
 pwd : practise/week1/day2
+---------------------------
+date > date.txt
+to check : less date.txt
