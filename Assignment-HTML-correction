@@ -1,0 +1,185 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+
+		<title>First Blog</title>
+	<style type="text/css">
+		table {border: 1px solid grey;}
+		th {border: 1px solid red;}
+		td {border: 1px solid grey;}
+
+	</style>
+
+	</head>
+	
+	<body>
+		
+		<h1>Welcome to my </h1><h2>first blog! </h2><h3> Hope you enjoy reading it!</h3>
+		
+		<figure> 
+	
+		<img src="pug.jpg" alt="My pug">
+		<figcaption>My Dog!</figcaption>
+	</figure>
+
+		 Here is some information on pugs ! 
+		<p><strong><em>The Pug</em></strong>  is a breed of dog with physically distinctive features of a wrinkly, short-muzzled face, and curled tail. The breed has a fine, glossy coat that comes in a variety of colours, most often fawn or black, and a compact square body with well-developed muscles.Pugs were brought from China to Europe in the sixteenth century and were popularized in Western Europe by the House of Orange of the Netherlands, and the House of Stuart. In the United Kingdom, in the nineteenth century, Queen Victoria developed a passion for pugs which she passed on to other members of the Royal family.
+		<p>To read more visit this <a href=https://en.wikipedia.org/wiki/Pug>link</a></p>
+		<h3> Here is a cute video of pugs! </h3>
+	<iframe src="https://www.youtube.com/embed/l3S7zyzg4P8"></iframe> 
+
+	<h2>Here is a unordered list of some other dogs I love! You can click on the links to read more about them</h2>
+		<ul>
+			<a href="https://en.wikipedia.org/wiki/Labrador_Retriever" target="blank"><li>Labrador Retriever</a>
+			<a href="https://en.wikipedia.org/wiki/beagle" target="blank"><li>Beagle</a>
+			<a href="https://en.wikipedia.org/wiki/german_shepherd" target="blank"><li>German Shepherd</a>
+			</ul>
+		
+		<h2> This is a short Discription List of other animals I like!</h2>
+		<h3> I also included some photos of each animal!</h3>
+		<dl>
+			<dd><strong> Dairy Cows! </strong></dd>
+			<dt>Dairy cattle (also called dairy cows) are cattle cows bred for the ability to produce large quantities of milk, from which dairy products are made. Dairy cows generally are of the species Bos taurus. </dt>
+		</dl>
+				<strong><dd> Lions! </dd></strong>
+			<dt> The lion (Panthera leo) is a species in the family Felidae; it is a muscular, deep-chested cat with a short, rounded head, a reduced neck and round ears, and a hairy tuft at the end of its tail. The lion is sexually dimorphic; males are larger than females with a typical weight range of 150 to 250 kg (330 to 550 lb) for males and 120 to 182 kg (265 to 400 lb) for females </dt>
+		<dl>
+				<strong><dd> Elephants </dd></strong>
+			<dt>Elephants are large mammals of the family Elephantidae in the order Proboscidea. Three species are currently recognised: the African bush elephant (Loxodonta africana), the African forest elephant (L. cyclotis), and the Asian elephant (Elephas maximus).</dt> 
+			</dl>
+			
+	
+		<h2>Photos!</h2>
+		<h2> I am still learning HTML so this is a sample table I made! </h2>
+		<table>
+		  <tbody><tr><th scope="col" colspan="5">Header</th>
+		  	</td></tr>
+		  
+		  <tr>
+		    <td colspan="2">Row 1, cell 1</td>
+		    <td>Row 1, cell 3</td>
+		    <td>Row 1, cell 4</td>
+		  </tr>
+		  <tr>
+		    <td rowspan="5">Row 2, cell 1</td>
+		    <td rowspan="5">Row 2, cell 2</td>
+		    <td rowspan="5">Row 2, cell 3</td>
+		    <td>Row 2, cell 4</td>
+		  </tr>
+		  <tr>
+		    <td>Row 3, cell 4</td>
+		  </tr>
+		  <tr>
+		  
+		    <td>Row 4, cell 4</td>
+		  </tr>
+		  <tr>
+		    <td>Row 5, cell 4</td>
+		  </tr>
+		  <tr>
+		    <td>Row 6, cell 4</td>
+		  </tr>
+		  <tr>
+		    <td rowspan="5">Row 7, cell 1</td>
+		    <td rowspan="5">Row 7, cell 2</td>
+		    <td rowspan="5">Row 7, cell 3</td>
+		    <td>Row 7, cell 4</td>
+		  </tr>
+		  <tr>
+		    <td>Row 8, cell 4</td>
+		  </tr>
+		  <tr>
+		    <td>Row 9, cell 4</td>
+		  </tr>
+		  <tr>
+		    <td>Row 10, cell 4</td>
+		  </tr>
+		  <tr>
+		    <td>Row 11, cell 4</td>
+		  </tr>
+		</tbody></table>
+		<h3> I included an image of what the table should look like below! </h3>
+		<img src="images/sample_table.png" alt="Sample table image">
+		<br><br>
+
+
+		That's all for my first blog, if you want to contact me use the following form!
+		<br><br>
+
+		<form action="action_page.php" method="post">
+		  
+		  	<div>
+		    <label for="name"> Name :&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;</label>
+		    <input type="password" name="user_name" id="name">
+		  </div><br>
+		  	
+		  <span>
+
+		    <label for="mail">E-mail:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+		    <input type="mail" name="user_mail" id="mail">
+		  </span><br><br>
+
+		  <span>
+		    <label for="msg">Message:&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+		    <textarea rows="8" cols="80" id="msg" name="user_message"></textarea>
+		  </span><br><br>
+
+		  <div>
+		  	<label for="phone_num">Phone Number:</label>
+		  	<input type="text" name="user_phone" id="phone_num"> 
+		  </div><br>
+		  <span>
+		 	<label for="Birthday">Birthday:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+		 	<input type="date" name="user_date" id="Birthday">
+		 	</span><br>
+		  <div>
+		  	<label for="gender">Gender:</label>
+		  	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="gender" value="male" checked="" id="gender"> Male<br>
+		 	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="gender" value="female" checked=""> Female<br>
+		  	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="gender" value="other" checked=""> Other 
+		  </div><br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="submit" 
+       value="Submit" 
+       style="font-size : 40px; width: 10%; height: 800px;" /> 
+</form> <br><br>
+
+<p>If you click the "Submit" button, the form-data will be sent to a page called "action_page.php".</p>
+
+		  <div>
+		  	<label for="favourite_Dog?">Favourite Dog?</label>
+		  	<input type="text" name="Dog" id="favourite_Dog"> 
+
+
+<select>
+  <option value="Pug">Pug</option>
+		  		<option value="Labrador Retriever">Labrador Retriever</option>
+		  		<option value="Beagle">Beagle</option>
+		  		<option value="German Shepherd"></option>
+
+		
+</select>
+</div>
+
+
+<!--hgdfgjhffkjh-->
+
+ 
+		  	
+		  
+	
+	    
+
+	
+	   
+		<footer>
+			Published on    
+			12 June 2019    
+		  
+		© Mystery Blogger 2019
+			Created with love ❤️
+		</footer>
+			
+		</body>
+		</html>
+		
