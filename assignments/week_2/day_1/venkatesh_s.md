@@ -146,13 +146,13 @@ Commands on how you got the answer
 ```
 2. No. of contributors to the repository
 ```
-1186
+571
 ```
 
 Commands on how you got the answer
 
 ```
-< git log | grep Author | wc -l >
+< git log | grep Author | uniq | wc -l >
 <COMMAND 2>
 <COMMAND 3>
 ```
