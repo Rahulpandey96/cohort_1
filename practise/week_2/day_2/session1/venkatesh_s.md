@@ -184,27 +184,33 @@ red
 1. Width
 ```
 100px
-```
+```  
+
 2. Background Color
 ```
 white
-```
+```  
+
 3. Padding-Bottom
 ```
 4px
-```
+```  
+
 4. Margin-Right
 ```
 6px
-```
+```  
+
 5. Font-Size
 ```
 11px
-```
+```  
+
 6. Color
 ```
 black
-```
+```  
+
 ### FSD.W2.2.1_6
 ```
 <div class="class5 class3" id="id1">MASAI</div>
@@ -212,27 +218,33 @@ black
 1. Width
 ```
 100px
-```
+```  
+
 2. Color
 ```
 red
-```
+```  
+
 3. Padding-Right
 ```
 20px
-```
+```  
+
 4. Margin-Left
 ```
 15px
-```
+```  
+
 5. Font-Size
 ```
 12px
-```
+```  
+
 6. Background Color
 ```
 black
-```
+```  
+
 ### FSD.W2.2.1_7
 ```
 <div class="class2" id="id2">MASAI</div>
