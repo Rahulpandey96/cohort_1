@@ -5,11 +5,11 @@
 </head>
 <body>
 	<input type="text" name="name" id="name">
-	<section id="gender">
+	<select id="gender">
 		<option value="">--</option>
 		<option value="male">M</option>
 		<option value="female">F</option>
-	</section>
+	</select>
 	<input type="text" name="email" id="email">
 	<input type="text" name="mobile" id="mobile">
 	<hr>
@@ -19,18 +19,22 @@
 	<button onclick="showMobile()">MOBILE</button>
 	<script type="text/javascript">
 		function showName() {
+			alert(document.getElementById("name").value);
 			// Show the alert of the filled name
 		}
 
 		function showGender() {
+			alert(document.getElementById("gender").value);
 			// Show the alert of the selected Gender
 		}
 
 		function showEmail() {
+			alert(document.getElementById("email").value);
 			// Show the alert of the filled email
 		}
 
 		function showMobile() {
+			alert(document.getElementById("mobile").value);
 			// Show the alert of the filled mobile
 		}
 	</script>
