@@ -96,7 +96,7 @@ div {
 Fill the below property values for the `div`
 1. Color
 ```
-white  
+  white
 ```
 2. Height
 ```
@@ -154,11 +154,11 @@ black
 <div id="id2">MASAI</div>
 ```
 1. Color
-```
-white
+```white
+
 ```
 2. Background Color
-``
+```
 red
 ```
 3. Padding-Bottom
@@ -184,33 +184,27 @@ red
 1. Width
 ```
 100px
-```  
-
+```
 2. Background Color
 ```
-white
-```  
-
+red
+```
 3. Padding-Bottom
 ```
 4px
-```  
-
+```
 4. Margin-Right
 ```
 6px
-```  
-
+```
 5. Font-Size
 ```
 11px
-```  
-
+```
 6. Color
 ```
-black
-```  
-
+violet
+```
 ### FSD.W2.2.1_6
 ```
 <div class="class5 class3" id="id1">MASAI</div>
@@ -218,33 +212,27 @@ black
 1. Width
 ```
 100px
-```  
-
+```
 2. Color
 ```
 red
-```  
-
+```
 3. Padding-Right
 ```
 20px
-```  
-
+```
 4. Margin-Left
 ```
-15px
-```  
-
+6px
+```
 5. Font-Size
 ```
 12px
-```  
-
+```
 6. Background Color
 ```
 black
-```  
-
+```
 ### FSD.W2.2.1_7
 ```
 <div class="class2" id="id2">MASAI</div>
@@ -255,7 +243,7 @@ black
 ```
 2. Height
 ```
-100px
+50px
 ```
 3. Padding-Top
 ```
@@ -267,11 +255,11 @@ black
 ```
 5. Font-Size
 ```
-22px
+20px
 ```
 6. Color
 ```
-
+black
 ```
 ### FSD.W2.2.1_8
 ```
@@ -283,7 +271,7 @@ black
 ```
 2. Height
 ```
-100px
+50px
 ```
 3. Padding-Left
 ```
@@ -299,7 +287,7 @@ black
 ```
 6. Color
 ```
-orange
+purple
 ```
 ### FSD.W2.2.1_9
 ```
@@ -315,7 +303,7 @@ orange
 ```
 3. Background Color
 ```
-black
+red
 ```
 4. Color
 ```
@@ -323,7 +311,7 @@ red
 ```
 5. Font-Size
 ```
-12px
+20px
 ```
 ### FSD.W2.2.1_10
 ```
@@ -335,7 +323,7 @@ red
 ```
 2. Height
 ```
-100px
+50px
 ```
 3. Padding-Top
 ```
@@ -343,7 +331,7 @@ red
 ```
 4. Margin-Left
 ```
-10px
+22px
 ```
 5. Font-Size
 ```
@@ -360,64 +348,52 @@ blue
 1. Background Color
 ```
 black
-```  
-
+```
 2. Height
 ```
 100px
-```  
-
+```
 3. Margin-Left
 ```
-10px
-```  
-
+20px
+```
 4. Padding-Right
 ```
 20px
-```  
-
+```
 5. Font-Size
 ```
-14px
-```  
-
+28px
+```
 6. Color
 ```
-blue
-```  
-
+orange
+```
 ### FSD.W2.2.1_12
 ```
 <div id="id2">MASAI</div>
 ```
 1. Width
 ```
-75px
-```  
 
+```
 2. Height
 ```
-100px
-```  
 
+```
 3. Background Color
 ```
-black
-```  
-
+red
+```
 4. Margin-Right
 ```
-6px
-```  
-
+20px
+```
 5. Font-Size
-```
-12px
-```  
+`20px``
 
+```
 6. Color
-```
-white
-```  
+``white`
 
+```
