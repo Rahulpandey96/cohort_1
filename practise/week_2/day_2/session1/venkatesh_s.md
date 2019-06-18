@@ -158,8 +158,8 @@ black
 white
 ```
 2. Background Color
-```red
-
+``
+red
 ```
 3. Padding-Bottom
 ```
