@@ -348,27 +348,33 @@ blue
 1. Background Color
 ```
 black
-```
+```  
+
 2. Height
 ```
 100px
-```
+```  
+
 3. Margin-Left
 ```
 10px
-```
+```  
+
 4. Padding-Right
 ```
 20px
-```
+```  
+
 5. Font-Size
 ```
 14px
-```
+```  
+
 6. Color
 ```
 blue
-```
+```  
+
 ### FSD.W2.2.1_12
 ```
 <div id="id2">MASAI</div>
@@ -376,24 +382,30 @@ blue
 1. Width
 ```
 75px
-```
+```  
+
 2. Height
 ```
 100px
-```
+```  
+
 3. Background Color
 ```
 black
-```
+```  
+
 4. Margin-Right
 ```
 6px
-```
+```  
+
 5. Font-Size
 ```
 12px
-```
+```  
+
 6. Color
 ```
 white
-```
+```  
+
