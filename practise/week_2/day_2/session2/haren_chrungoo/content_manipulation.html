@@ -6,29 +6,34 @@
 <body>
 	<h1 id="firstname">Hello</h1>
 	<div id="lastname">MASAI</div>
-	<p id="fullname">School</p>
+	<p id="fullname">School</p>	
 	<hr/>
 	<button onclick="setFirstName()">FIRSTNAME</button>
 	<button onclick="setLastName()">LASTNAME</button>
 	<button onclick="setFullName()">FIRSTNAME NAME</button>
 	<button onclick="resetDefaults()">RESET DEFAULTS</button>
+     
 	<script type="text/javascript">
 		function setFirstName() {
-                
-                 document.getElementById("firstname").innerHTML="VENKATESH";
- 			// Change the content of h1 to your first name
+			// Change the content of h1 to your first name
+			document.getElementById("firstname").innerHTML = "HAREN"
 		}
 
 		function setLastName() {
-                 
-                 document.getElementById("lastname").innerHTML="S";   
-                           
 			// Change the content of div to your last name
+			document.getElementById("lastname").innerHTML = "CHRUNGOO"
 		}
 
 		function setFullName() {
-                 document.getElementById("fullname").innerHTML="VENKATESH S";  
 			// Change the content of p to your full name (firstname - lastname)
+			document.getElementById("fullname").innerHTML = "HAREN CHRUNGOO"
+		}
+		function resetDefaults() {
+			// Change the content of p to your full name (firstname - lastname)
+			document.getElementById("firstname").innerHTML = "Hello"
+			document.getElementById("lastname").innerHTML = "MASAI"
+			document.getElementById("fullname").innerHTML = "School"
+
 		}
 	</script>
 </body>
