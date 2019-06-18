@@ -25,27 +25,48 @@
 	<button onclick="resetForm()">RESET FORM</button>
 	<button onclick="resetDisplay()">RESET DISPLAY</button>
 	<script type="text/javascript">
-		function setName() {
+		function showName() {
+                
+                document.getElementbyId("dname").innerHTML = document.getElementById("name").value;
 			// Show filled name inside h1
 		}
 
-		function setGender() {
+		function showGender() {
+                
+                 document.getElementById("dGender").innerHTML = document.getElementById("gender").value;
 			// Show the selected gender inside h2
 		}
 
-		function setEmail() {
-			// Show the filled email inside h3
+		function showEmail() {
+
+                 document.getElementById("dEmail").innerHTML = document.getElementById("email").value;
+ 			// Show the filled email inside h3
 		}
 
-		function setMobile() {
+		function showMobile() {
+
+                 document.getElementById("dMobile").innerHTML = getElementById("mobile").value;
+                 
 			// Show the filled mobile inside h4
 		}
 
 		function resetForm() {
+
+                document.getElementById("name").value = "NAME";
+                document.getElementById("gender").value = "GENDER";
+                document.getElementById("email").value = "EMAIL";
+                document.getElementById("mobile").value = "MOBILE";
 			// Reset all the form elements to default values
 		}
 
 		function resetDisplay {
+
+                document.getElementById("dName").innerHTML = "";
+                document.getElementById("dGender").innerHTML = "GENDER";
+                document.getElementById("dEmail").innerHTML = "EMAIL";
+                document.getElementById("dMobile").innerHTML = "MOBILE";
+                
+                document.getElementById("
 			// Reset all the headings (h1, h2, h3, h4) to blank values
 		}
 	</script>
