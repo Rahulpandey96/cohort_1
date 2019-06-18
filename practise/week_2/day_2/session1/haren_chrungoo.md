@@ -95,13 +95,13 @@ div {
 ```
 Fill the below property values for the `div`
 1. Color
-```
-white  
-
+``` 
+ white
+  
 ```
 2. Height
 ```
-100px
+    height 100px
 
 ```
 
@@ -118,11 +118,11 @@ Fill the below property values for the `div`
 ```
 2. Height
 ```
-50px
+50px	
 
 ```
 3. Padding
-```
+``` 
 4px
 
 ```
@@ -157,7 +157,7 @@ Fill the below property values for the `div`
 ```
 6. Color
 ```
-black
+ black
 
 ```
 ### FSD.W2.2.1_4
@@ -165,13 +165,11 @@ black
 <div id="id2">MASAI</div>
 ```
 1. Color
-```
-white
-
+``` white
 ```
 2. Background Color
 ```
-red
+ black
 
 ```
 3. Padding-Bottom
@@ -186,12 +184,12 @@ red
 ```
 5. Font-Size
 ```
-20px
+ 12px
 
 ```
 6. Height
 ```
-100px
+ 100px
 
 ```
 ### FSD.W2.2.1_5
@@ -205,7 +203,7 @@ red
 ```
 2. Background Color
 ```
-red
+white
 
 ```
 3. Padding-Bottom
@@ -215,18 +213,17 @@ red
 ```
 4. Margin-Right
 ```
-20px
+6px	
 
 ```
 5. Font-Size
 ```
-20px
+11px
 
 ```
 6. Color
 ```
-violet
-
+ black
 ```
 ### FSD.W2.2.1_6
 ```
@@ -234,12 +231,12 @@ violet
 ```
 1. Width
 ```
-50px
+100px
 
 ```
 2. Color
 ```
-red
+red	
 
 ```
 3. Padding-Right
@@ -249,7 +246,7 @@ red
 ```
 4. Margin-Left
 ```
-6px
+15px
 
 ```
 5. Font-Size
@@ -268,7 +265,7 @@ black
 ```
 1. Width
 ```
-75px
+100px
 
 ```
 2. Height
@@ -283,12 +280,12 @@ black
 ```
 4. Margin-Bottom
 ```
-10px
+6px
 
 ```
 5. Font-Size
 ```
-22px
+20px
 
 ```
 6. Color
@@ -307,7 +304,7 @@ white
 ```
 2. Height
 ```
-50px
+100px
 
 ```
 3. Padding-Left
@@ -327,7 +324,7 @@ white
 ```
 6. Color
 ```
-purple
+orange
 
 ```
 ### FSD.W2.2.1_9
@@ -336,7 +333,7 @@ purple
 ```
 1. Width
 ```
-100px
+75px
 
 ```
 2. Height
@@ -365,7 +362,7 @@ red
 ```
 1. Width
 ```
-150px
+150
 
 ```
 2. Height
@@ -374,8 +371,8 @@ red
 
 ```
 3. Padding-Top
-```
-4px
+``` 
+ 4px
 
 ```
 4. Margin-Left
@@ -404,13 +401,12 @@ black
 ```
 2. Height
 ```
-100px
+200px
 
 ```
 3. Margin-Left
 ```
-20px
-
+  20px
 ```
 4. Padding-Right
 ```
@@ -419,14 +415,13 @@ black
 ```
 5. Font-Size
 ```
-28px
-
+     28px
 ```
 6. Color
-```
+``` 
 orange
 
-```
+```	
 ### FSD.W2.2.1_12
 ```
 <div id="id2">MASAI</div>
