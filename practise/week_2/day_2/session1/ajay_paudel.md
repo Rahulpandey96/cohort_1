@@ -94,14 +94,11 @@ div {
 <div>MASAI</div>
 ```
 Fill the below property values for the `div`
-1. Color
+1. Color  white``
+  
 ```
-white  
-
+2. Height  100px
 ```
-2. Height
-```
-100px
 
 ```
 
@@ -111,353 +108,291 @@ white
 <div style="height:50px;">MASAI</div>
 ```
 Fill the below property values for the `div`
-1. Width
+1. Width  100px
 ```
-100px
 
 ```
-2. Height
+2. Height 50px
 ```
-50px
 
 ```
-3. Padding
+3. Padding  4px
 ```
-4px
 
 ```
 ### FSD.W2.2.1_3
 ```
 <div class="class1">MASAI</div>
 ```
-1. Width
+1. Width 100px
 ```
-100px
 
 ```
-2. Height
+2. Height 100px
 ```
-100px
 
 ```
-3. Padding-Left
+3. Padding-Left 4px
 ```
-4px
 
 ```
-4. Margin-Right
+4. Margin-Right 6px
 ```
-6px
 
 ```
-5. Font-Size
+5. Font-Size 16px
 ```
-16px
 
 ```
-6. Color
+6. Color black
 ```
-black
 
 ```
 ### FSD.W2.2.1_4
 ```
 <div id="id2">MASAI</div>
 ```
-1. Color
+1. Color white
 ```
-white
 
 ```
-2. Background Color
+2. Background Color red
 ```
-red
 
 ```
-3. Padding-Bottom
+3. Padding-Bottom   4px
 ```
-4px
 
 ```
-4. Margin-Top
+4. Margin-Top  10px
 ```
-10px
 
 ```
-5. Font-Size
+5. Font-Size  20px
 ```
-20px
 
 ```
-6. Height
+6. Height 100px
 ```
-100px
 
 ```
 ### FSD.W2.2.1_5
 ```
 <div class="class1 class4" style="color:violet">MASAI</div>
 ```
-1. Width
+1. Width 100px
 ```
-100px
 
 ```
-2. Background Color
+2. Background Color red
 ```
-red
 
 ```
-3. Padding-Bottom
+3. Padding-Bottom 4px
 ```
-4px
 
 ```
-4. Margin-Right
+4. Margin-Right 6px
 ```
-20px
 
 ```
-5. Font-Size
+5. Font-Size 11px
 ```
-20px
 
 ```
-6. Color
+6. Color red
 ```
-violet
 
 ```
 ### FSD.W2.2.1_6
 ```
 <div class="class5 class3" id="id1">MASAI</div>
 ```
-1. Width
+1. Width 100px
 ```
-50px
 
 ```
-2. Color
+2. Color red
 ```
-red
 
 ```
-3. Padding-Right
+3. Padding-Right 20px
 ```
-20px
 
 ```
-4. Margin-Left
+4. Margin-Left 6px
 ```
-6px
 
 ```
-5. Font-Size
+5. Font-Size 12px
 ```
-12px
 
 ```
-6. Background Color
+6. Background Color black
 ```
-black
 
 ```
 ### FSD.W2.2.1_7
 ```
 <div class="class2" id="id2">MASAI</div>
 ```
-1. Width
+1. Width 75px
 ```
-75px
 
 ```
-2. Height
+2. Height 50px
 ```
-100px
 
 ```
-3. Padding-Top
+3. Padding-Top 4px
 ```
-4px
 
 ```
-4. Margin-Bottom
+4. Margin-Bottom 10px
 ```
-10px
 
 ```
-5. Font-Size
+5. Font-Size 20px
 ```
-22px
 
 ```
-6. Color
+6. Color red
 ```
-white
 
 ```
 ### FSD.W2.2.1_8
 ```
 <div class="class4 class2 class6" style="font-size:20px">MASAI</div>
 ```
-1. Width
+1. Width 100px
 ```
-100px
 
 ```
-2. Height
+2. Height 50px
 ```
-50px
 
 ```
-3. Padding-Left
+3. Padding-Left 6px
 ```
-6px
 
 ```
-4. Margin-Right
+4. Margin-Right 6px
 ```
-6px
 
 ```
-5. Font-Size
+5. Font-Size 20px
 ```
-20px
 
 ```
-6. Color
+6. Color purple
 ```
-purple
 
 ```
 ### FSD.W2.2.1_9
 ```
 <div class="class5 class3" id="id2">MASAI</div>
 ```
-1. Width
+1. Width 75px
 ```
-100px
 
 ```
-2. Height
+2. Height 100px
 ```
-100px
 
 ```
-3. Background Color
+3. Background Color red
 ```
-red
 
 ```
-4. Color
+4. Color red
 ```
-red
 
 ```
-5. Font-Size
+5. Font-Size 20px
 ```
-20px
 
 ```
 ### FSD.W2.2.1_10
 ```
 <div class="class2 class4 class5" id="id3" style="margin-left:22px">MASAI</div>
 ```
-1. Width
+1. Width 100px
 ```
-150px
 
 ```
-2. Height
+2. Height 50px
 ```
-50px
 
 ```
-3. Padding-Top
+3. Padding-Top 4px
 ```
-4px
 
 ```
-4. Margin-Left
+4. Margin-Left 22px
 ```
-22px
 
 ```
-5. Font-Size
+5. Font-Size 14px
 ```
-14px
 
 ```
-6. Color
+6. Color blue
 ```
-blue
 
 ```
 ### FSD.W2.2.1_11
 ```
 <div class="class5 class3" id="id3" style="color:orange; font-size:28px; margin:20px">MASAI</div>
 ```
-1. Background Color
+1. Background Color black
 ```
-black
 
 ```
-2. Height
+2. Height 100px
 ```
-100px
 
 ```
-3. Margin-Left
+3. Margin-Left 20px
 ```
-20px
 
 ```
-4. Padding-Right
+4. Padding-Right 20px
 ```
-20px
 
 ```
-5. Font-Size
+5. Font-Size 28px
 ```
-28px
 
 ```
-6. Color
+6. Color orange
 ```
-orange
 
 ```
 ### FSD.W2.2.1_12
 ```
 <div id="id2">MASAI</div>
 ```
-1. Width
+1. Width 75px
 ```
-75px
 
 ```
-2. Height
+2. Height 100px
 ```
-100px
 
 ```
-3. Background Color
+3. Background Color red
 ```
-red
 
 ```
-4. Margin-Right
+4. Margin-Right 20px
 ```
-20px
 
 ```
-5. Font-Size
+5. Font-Size 12px
 ```
-20px
 
 ```
-6. Color
+6. Color white
 ```
-white
 
 ```
