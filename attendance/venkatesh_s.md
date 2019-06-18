@@ -5,8 +5,9 @@ Y - Present   N - Absent   # - Holiday
 
 | Week/Day | Day 1 | Day 2 | Day 3 | Day 4 | Day 5 |
 | ------  | ---- | ---- | ---- | ---- | ---- |
-| Week 01 |    Y |   Y  |      |      |      |
-| Week 02 |      |      |      |      |      |
+<<<<<<< HEAD
+| Week 01 |  Y   |   Y  |   Y  |   Y  |   Y  |
+| Week 02 |  Y   |   Y  |      |      |      |
 | Week 03 |      |      |      |      |      |
 | Week 04 |      |      |      |      |      |
 | Week 05 |      |      |      |      |      |
@@ -25,3 +26,5 @@ Y - Present   N - Absent   # - Holiday
 | Week 18 |      |      |      |      |      |
 | Week 19 |      |      |      |      |      |
 | Week 20 |      |      |      |      |      |
+
+
