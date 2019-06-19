@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Coding Session 2</title>
+</head>
+<body>
+	<!-- These elements below are for FSD.W2.2.2_1-->
+	<h1> Check if you can drive in India! </h1>
+	<input type="text" name="drive" id="age">
+	<p id="result"> </p>
+	<hr/>
+	<button onclick="check_drive()">
+		Click here to check!
+	</button>
+	<!-- These elements above are for FSD.W2.2.2_1-->
+	<!-- These elements below are for FSD.W2.2.2_2-->
+	<h1>Input your color in the textbox!</h1>
+	<input type="text" id="color">
+	<button id="update_color" onclick="change_color()">
+		Click here to change my color
+	</button>
+	<!-- These elements above are for FSD.W2.2.2_2-->
+
+	<!-- These elements below are for FSD.W2.2.2_3-->
+	<h1>Find your continent!</h1>
+	<label>Choose your Country</label>
+	<select id="country">
+		<option>India</option>
+		<option>United States of America</option>
+		<option>China</option>
+		<option>Nepal</option>
+		<option>Australia</option>
+		<option>France</option>
+		<option>Germany</option>
+		<option>South Africa</option>
+		<option>Nigeria</option>
+		<option>Mexico</option>
+		<option>Argentina</option>
+		<option>Brazil</option>
+		<option>Canada</option>
+		<option>Singapore</option>
+		<option>Sweden</option>
+	</select>
+	<button onclick="find_continent()">Find Continent</button>
+	<!-- These elements above are for FSD.W2.2.2_2-->
+	<script type="text/javascript">
+
+		function check_drive()
+			//Write javascript for FSD.W2.2.2_1 here
+			
+		{
+			var user = Number(document.getElementById("age").value);
+			var result = document.getElementById('result');
+
+			if (user>18)
+			{
+				result.innerHTML = "You can drive in India!";
+			}
+			else if (user==18) 
+			{
+				result.innerHTML = "You are just old enough to drive in India!";
+			}
+			else{
+				result.innerHTML = "You can't drive in India";
+			}	
+	}
+	// change color of box scripting coding goes here
+		function change_color()
+		{	
+			//Write javascript for FSD.W2.2.2_2 here
+			var user = document.getElementById('color').value;
+			var result = document.getElementById('update_color');
+			result.style.backgroundColor=user;
+		}
+	// find continent scripting coding goes here
+	function find_continent(){
+			//Write javascript for FSD.W2.2.2_3 here
+			var cnt_name = document.getElementById("country").value;
+						switch(cnt_name)
+			{
+				case "India":{alert("Asia");}
+				break;
+				case "United States of America":{alert("North America");}
+				break;
+				case "China":{alert("Asia");}
+				break;
+				case "Nepal":{alert("Asia");}
+				break;
+				case "Australia":{alert("Australia");}
+				break;
+				case "France":{alert("Europ");}
+				break;
+				case "India":{alert("Europ");}
+				break;
+				case "South Africa":{alert("South Africa");}
+				break;
+				case "Nigeria":{alert("South Africa");}
+				break;
+				case "Mexico":{alert("North America");}
+				break;
+				case "Canada":{alert("South America");}
+				break;
+				case "Argentina":{alert("Europ");}
+				break;
+				case "Brazil":{alert("South America");}
+				break;
+				case "Singapore":{alert("Asia");}
+				break;
+				case "Sweden":{alert("Europ");}
+				break;
+				case "Germany":{alert("Europ");}
+				break;
+				default:{alert("select you country")}		
+			}	
+		}
+		
+		
+	</script>
+</body>
+</html>
