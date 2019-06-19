@@ -1,4 +1,5 @@
-﻿# Week 2 - Day 1
+
+# Week 2 - Day 1
 
 **NOTE:** Follow the instructions carefully and follow coding discipline
 
@@ -22,23 +23,28 @@ The files contains marks the data of 2000 students from India and Pakistan one f
 1. Find the total number of students from Pakistan
 
 ```
-ANSWER 500
+ANSWER
 ```
+Total - 500 
 
 Commands on how you got the answer
 
 ```
-grep Pakistan marks_rand_2000.csv |wc -l
+<COMMAND 1> = grep Pakistan marks_rand_2000.csv
+<COMMAND 2> = grep Pakistan marks_rand_2000.csv | wc -l
+<COMMAND 3>
 ```
 2. No of students from India who are in the bottom 200 list based on the marks scored
 ```
-ANSWER 156
+ANSWER
 ```
+146
 Commands on how you got the answer
 
 ```
-sort -g marks_rand_2000.csv > sorted.txt|head -n 200 > bottom.txt
-grep India bottom.txt|wc -l
+<COMMAND 1> = sort -r marks_rand_2000.csv | tail -n 200 > bottom.txt
+<COMMAND 2> = grep India bottom.txt | wc -l
+<COMMAND 3>
 ```
 
 
@@ -60,60 +66,71 @@ Mumbai,Isadora U. Ward
 1. Find the total number of orders from Mumbai
 
 ```
-ANSWER 269
-```
+ANSWER
+
+268
 
 Commands on how you got the answer
 
 ```
-grep Mumbai city_names_orders_rand.csv |wc -l
+<COMMAND 1> =grep Mumbai city_names_orders_rand.csv
+<COMMAND 2> = grep Mumbai city_names_orders_rand.csv | wc -l
+<COMMAND 3>
 ```
 2. Find the total number of users from Bangalore
 
 ```
-ANSWER 371
-```
+ANSWER
+371
 
 Commands on how you got the answer
 
 ```
-grep Bangalore city_names_orders_rand.csv |wc -l
+<COMMAND 1> = grep Bangalore city_names_orders_rand.csv
+<COMMAND 2>= grep Bangalore city_names_orders_ran.csv | wc -l
+<COMMAND 3>
 ```
 3. Total no of users who have more than one order
 
 ```
-ANSWER 102
+ANSWER
 ```
 
 Commands on how you got the answer
 
 ```
-sort city_names_orders_rand.csv|uniq -D|uniq -c|wc -l
+<COMMAND 1>
+<COMMAND 2>
+<COMMAND 3>
 ```
 4. User having the most no of orders
 ```
-18 Bangalore,Yuli Z. Pratt
+USERNAME
+```
 ```
 COUNT OF ORDERS
-```
-sort city_names_orders_rand.csv|uniq -c > mostnoorder.txt
-sort -g mostnoorder.txt |tail -n 1
-```
-
-```
-5. User from Mumbai having the most no of orders
-```
-11 Mumbai,Russell T. Compton
-
-```
-11
 ```
 Commands on how you got the answer
 
 ```
-grep Mumbai city_names_orders_rand.csv > mumbai.txt
-sort -g mostnoorder.txt |tail -n 1
+<COMMAND 1>
+<COMMAND 2>
+<COMMAND 3>
+```
+5. User from Mumbai having the most no of orders
+```
+USERNAME
+```
+```
+COUNT OF ORDERS
+```
+Commands on how you got the answer
 
+```
+<COMMAND 1>
+<COMMAND 2>
+<COMMAND 3>
+```
 
 ## FSD.W2.1.C (30 min)
 
@@ -121,55 +138,67 @@ sort -g mostnoorder.txt |tail -n 1
 
 Clone the repo https://github.com/jlevy/the-art-of-command-line
 1. Total no of commits made to the repository
-441
 ```
+ANSWER
+```
+
 Commands on how you got the answer
 
 ```
-git log > commit.txt|grep commit commit.txt|wc -l
+<COMMAND 1>
+<COMMAND 2>
+<COMMAND 3>
 ```
 2. No. of contributors to the repository
 ```
-571
+ANSWER
+```
 
 Commands on how you got the answer
 
 ```
-git log > auth.txt|grep Author commit.txt|uniq -c|wc -l
+<COMMAND 1>
+<COMMAND 2>
+<COMMAND 3>
 ```
 
 3. User with the maximum no of commits to the repository
 ```
-24 Author: Joshua Levy <joshua@cal.berkeley.edu>
-
+USER IDENTITY
 ```
-24
+```
+NO OF COMMITS
 ```
 
 Commands on how you got the answer
 
 ```
-git log > auth.txt|grep Author commit.txt|uniq -c > max_auth.txt
-sort -g max_auth.txt |tail -n 1
+<COMMAND 1>
+<COMMAND 2>
+<COMMAND 3>
 ```
 
 4. Commits made in the month of January for the year 2018
 ```
-ANSWER 8
+ANSWER
 ```
 Commands on how you got the answer
 
 ```
-grep 2018 commit.txt > year2018.txt | grep Jan year2018.txt > jan.txt|wc -l
+<COMMAND 1>
+<COMMAND 2>
+<COMMAND 3>
 ```
 5. Commits made on Sundays for the year 2019
 ```
-ANSWER 0
+ANSWER
 ```
 Commands on how you got the answer
 
 ```
-git log > file.txt |grep 2019 file.txt > year2019.txt|grep Sun year2019.txt|wc -l
+<COMMAND 1>
+<COMMAND 2>
+<COMMAND 3>
 ```
 
 

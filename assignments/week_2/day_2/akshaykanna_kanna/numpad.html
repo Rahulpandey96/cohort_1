@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Numpad</title>
+	<style type="text/css">
+		#result{
+  			height:100px;
+  			width:280px;
+  			background-color:grey;
+  			margin-left:500px; 
+  			border: 2px solid black;
+  			font-size: 45px;
+		}
+		#b1{
+			height:75px;
+			width:75px;
+			background-color:green;
+			margin-left: 500px;
+			margin-top: 50px;
+			border: 2px solid black;
+			font-size: 20px;
+			
+		}
+		#b2{
+			height:75px;
+			width:75px;
+			background-color:orange;
+			margin-top: 50px;
+			margin-left: 20px;
+			border: 2px solid black;
+			font-size: 20px;
+		}
+		#b3{
+			height:75px;
+			width:75px;
+			background-color:green;
+			margin-top: 50px;
+			margin-left: 20px;
+			border: 2px solid black;
+			font-size: 20px;
+		}
+		#b4{
+			height:75px;
+			width:75px;
+			background-color:orange;
+			margin-top: 50px;
+			margin-left: 500px;
+			border: 2px solid black;
+			font-size: 20px;
+		}
+		#b5{
+			height: 75px;
+			width: 75px;
+			background-color: orange;
+			margin-top: 50px;
+			margin-left: 20px;
+			border: 2px solid black;
+			font-size: 20px;
+		}
+		#b6{
+			height: 75px;
+			width: 75px;
+			background-color: orange;
+			margin-top: 50px;
+			margin-left: 20px;
+			border: 2px solid black;
+			font-size: 20px;
+		}
+		#b7{
+			height: 75px;
+			width: 75px;
+			background-color: green;
+			margin-top: 50px;
+			margin-left: 500px;
+			border: 2px solid black;
+			font-size: 20px;
+		}
+		#b8{
+			height: 75px;
+			width: 75px;
+			background-color: orange;
+			margin-top: 50px;
+			margin-left: 20px;
+			border: 2px solid black;
+			font-size: 20px;
+		}
+		#b9{
+			height: 75px;
+			width: 75px;
+			background-color: green;
+			margin-top: 50px;
+			margin-left: 20px;
+			border: 2px solid black;
+			font-size: 20px;
+		}
+		#b10{
+			height: 75px;
+			width: 75px;
+			background-color: purple;
+			margin-top: 50px;
+			margin-left: 600px;
+			border: 2px solid black;
+			font-size: 20px;
+		}
+	</style>
+</head>
+<body>
+
+    	<input type="text" id="result" value="#" /><br><br>
+
+    	<button id="b1" onclick="dis('1')" value="1">1</button>
+    	<button id="b2" onclick="dis('2')" value="2">2</button>
+    	<button id="b3" onclick="dis('3')" value="3">3</button><br>
+    	<button id="b4" onclick="dis('4')" value="4">4 &nbsp;</button>
+    	<button id="b5" onclick="dis('5')" value="5">5</button>
+    	<button id="b6" onclick="dis('6')" value="6">6</button><br>
+    	<button id="b7" onclick="dis('7')" value="7">7</button>
+    	<button id="b8" onclick="dis('8')" value="8">8</button>
+    	<button id="b9" onclick="dis('9')" value="9">9</button><br>
+    	<button id="b10" onclick="dis('0')" value="0">0</button>
+    	<script type="text/javascript">
+       		function dis(val){
+    			document.getElementById("result").value+=val;
+    		}
+    	</script>
+
+</body>
+</html>
