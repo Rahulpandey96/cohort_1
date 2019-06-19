@@ -92,23 +92,21 @@ sort city_names_orders_rand.csv|uniq -D|uniq -c|wc -l
 ```
 4. User having the most no of orders
 ```
-USERNAME
-```18 Bangalore,Yuli Z. Pratt
+18 Bangalore,Yuli Z. Pratt
 ```
 COUNT OF ORDERS
-```
-Commands on how you got the answer
-
 ```
 sort city_names_orders_rand.csv|uniq -c > mostnoorder.txt
 sort -g mostnoorder.txt |tail -n 1
 ```
+
+```
 5. User from Mumbai having the most no of orders
 ```
-USERNAME
-`11 Mumbai,Russell T. Compton``
+11 Mumbai,Russell T. Compton
+
 ```
-COUNT OF ORDERS
+11
 ```
 Commands on how you got the answer
 
@@ -123,10 +121,8 @@ sort -g mostnoorder.txt |tail -n 1
 
 Clone the repo https://github.com/jlevy/the-art-of-command-line
 1. Total no of commits made to the repository
+441
 ```
-ANSWER
-`441``
-
 Commands on how you got the answer
 
 ```
@@ -134,8 +130,7 @@ git log > commit.txt|grep commit commit.txt|wc -l
 ```
 2. No. of contributors to the repository
 ```
-ANSWER
-`571``
+571
 
 Commands on how you got the answer
 
@@ -145,10 +140,10 @@ git log > auth.txt|grep Author commit.txt|uniq -c|wc -l
 
 3. User with the maximum no of commits to the repository
 ```
-USER IDENTITY
-`24 Author: Joshua Levy <joshua@cal.berkeley.edu>``
+24 Author: Joshua Levy <joshua@cal.berkeley.edu>
+
 ```
-NO OF COMMITS
+24
 ```
 
 Commands on how you got the answer

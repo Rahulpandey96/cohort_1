@@ -96,7 +96,7 @@ div {
 Fill the below property values for the `div`
 1. Color
 ```
-  white
+white
 ```
 2. Height
 ```
@@ -127,27 +127,27 @@ padding: 4px;
 ```
 1. Width
 ```
-width: 100px
+100px
 ```
 2. Height
 ```
-height: 100px;
+100px
 ```
 3. Padding-Left
 ```
-padding-left:4px;
+4px
 ```
 4. Margin-Right
 ```
-margin-right: 6px;
+6px
 ```
 5. Font-Size
 ```
-fort-size: 16px;
+16px
 ```
 6. Color
 ```
-color: black
+black
 ```
 ### FSD.W2.2.1_4
 ```
@@ -155,27 +155,27 @@ color: black
 ```
 1. Color
 ```
-color: yellow;
+yellow
 ```
 2. Background Color
 ```
-background-color: red;
+red
 ```
 3. Padding-Bottom
 ```
-padding: 4px;
+4px
 ```
 4. Margin-Top
 ```
-margin-top: 20px;
+20px
 ```
 5. Font-Size
 ```
-font-size: 20px;
+20px
 ```
 6. Height
 ```
-height: 100px;
+100px
 ```
 ### FSD.W2.2.1_5
 ```
@@ -183,27 +183,27 @@ height: 100px;
 ```
 1. Width
 ```
-width: 100px;
+100px
 ```
 2. Background Color
 ```
-background-color: red;
+red
 ```
 3. Padding-Bottom
 ```
-padding-bottom: 4px;
+4px
 ```
 4. Margin-Right
 ```
-margin-right: 6px;
+6px
 ```
 5. Font-Size
 ```
-font-size: 11px;
+11px
 ```
 6. Color
 ```
-color:violet;
+violet
 ```
 ### FSD.W2.2.1_6
 ```
@@ -211,27 +211,27 @@ color:violet;
 ```
 1. Width
 ```
-width: 100px;
+100px
 ```
 2. Color
 ```
-color: orange;
+orange
 ```
 3. Padding-Right
 ```
-padding-right: 20px;
+20px
 ```
 4. Margin-Left
 ```
-margin-left: 15px;
+15px
 ```
 5. Font-Size
 ```
-font-size: 12px;
+12px
 ```
 6. Background Color
 ```
-background-color: black;
+black
 ```
 ### FSD.W2.2.1_7
 ```
@@ -239,27 +239,27 @@ background-color: black;
 ```
 1. Width
 ```
-width: 75px;
+75px
 ```
 2. Height
 ```
-height: 50px;
+50px
 ```
 3. Padding-Top
 ```
-padding-top: 4px;
+4px
 ```
 4. Margin-Bottom
 ```
-margin-bottom: 6px;
+6px
 ```
 5. Font-Size
 ```
-font-size: 20px;
+20px
 ```
 6. Color
 ```
-color: black;
+black
 ```
 ### FSD.W2.2.1_8
 ```
@@ -267,27 +267,27 @@ color: black;
 ```
 1. Width
 ```
-width: 100px;
+100px
 ```
 2. Height
 ```
-height: 20px;
+20px
 ```
 3. Padding-Left
 ```
-padding-left: 6px;
+6px
 ```
 4. Margin-Right
 ```
-margin-right: 6px;
+6px
 ```
 5. Font-Size
 ```
-font-size: 20px;
+20px
 ```
 6. Color
 ```
-color: purple;
+purple
 ```
 ### FSD.W2.2.1_9
 ```
@@ -295,23 +295,23 @@ color: purple;
 ```
 1. Width
 ```
-width: 100px;
+100px
 ```
 2. Height
 ```
-height: 100px;
+100px
 ```
 3. Background Color
 ```
-background-color: black;
+black
 ```
 4. Color
 ```
-color: red;
+red
 ```
 5. Font-Size
 ```
-font-size: 12px;
+12px
 ```
 ### FSD.W2.2.1_10
 ```
@@ -319,27 +319,27 @@ font-size: 12px;
 ```
 1. Width
 ```
-widht: 150px;
+150px
 ```
 2. Height
 ```
-height: 100px;
+100px
 ```
 3. Padding-Top
 ```
-padding-top: 4px;
+4px
 ```
 4. Margin-Left
 ```
-margin-left: 22px;
+22px
 ```
 5. Font-Size
 ```
-font-size: 11px;
+11px
 ```
 6. Color
 ```
-color: black
+black
 ```
 ### FSD.W2.2.1_11
 ```
@@ -347,27 +347,27 @@ color: black
 ```
 1. Background Color
 ```
-background-color: black;
+black
 ```
 2. Height
 ```
-height: 100px;
+100px
 ```
 3. Margin-Left
 ```
-margin-left: 20px;
+20px
 ```
 4. Padding-Right
 ```
-padding-right: 4px;
+4px
 ```
 5. Font-Size
 ```
-font-size: 28px;
+28px
 ```
 6. Color
 ```
-color: orange;
+orange
 ```
 ### FSD.W2.2.1_12
 ```
@@ -375,25 +375,25 @@ color: orange;
 ```
 1. Width
 ```
-width: 75px;
+75px
 ```
 2. Height
 ```
-height: 100px;
+100px;
 ```
 3. Background Color
 ```
-background-color: red;
+red
 ```
 4. Margin-Right
 ```
-margin-right: 20px;
+20px
 ```
 5. Font-Size
 ```
-font-size: red;
+red
 ```
 6. Color
 ```
-color: white;
+white
 ```
