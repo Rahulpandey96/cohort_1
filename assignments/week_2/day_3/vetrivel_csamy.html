@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Unit Cala</title>
+</head>
+<body>
+ <h2 id="calculatorOutput"> </h2>
+  <span>
+  	<label>From</label>
+    <input type="text" id="firstNumber"/>
+    <p></p>
+    <label>Length</label>
+    <select id="Unit1">
+		<option value="meter"> Meter</option>
+		<option value="kilometer">Kilometer</option>
+		<option value="mile"> Mile </option>	
+		<option value="light"> Light Year </option>	
+	</select>
+    <p></p>
+    <label>To</label>
+    <input type="text" id="secondNumber"/>
+    <p></p>
+    <label>Temperature</label>
+     <select id="Unit2">
+		<option value="celsius"> Celsius</option>
+		<option value="kelvin">Kelvin</option>
+		<option value="fahrenheit"> Fahrenheit </option>	
+         <option disabled="Volume"><b>Volume</b></option>>
+         <option value="liter"> Liter</option>
+		<option value="milliliter">Milliliter</option>
+		<option value="gallon"> US Gallon </option>	
+		<option value="tea"> Imperial Tea Spoon </option>	
+	</select>
+    <input type="text" id="operator"/>
+  </span>
+  <p></p>
+  <button onclick="calculate()">Calculate</button> 
+
+  <script type="text/javascript">
+  	function calculate(){
+  var num1 = document.getElementById('firstNumber').value;
+  num1 = parseInt(num1)
+  var num2 = document.getElementById('secondNumber').value;
+  num2 = parseInt(num2)
+  var operator = document.getElementById('operator').value;
+  var output;
+  
+  switch(operator){
+    case '+':
+      output = num1 + num2;
+      break;
+    case '-':
+      output = num1 - num2;
+      break;
+    case '*':
+      output = num1 * num2;
+      break;
+    case '/':
+      output = num1 / num2;
+      break;
+    default:
+      output = num1 % num2
+  }
+  
+  document.getElementById('calculatorOutput').innerHTML = output;
+}
+  </script>
+</body>
+</html>
