@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title>Unit converter</title>
+</head>
+<body>
+	<!--master div-->
+<div >
+	<div>
+	<!--form div-->
+		<div >
+			<input type="text" id="form">
+			<select id="form_id">
+				<option value="M" >Meter</option>
+				<option value="K">Kilometer</option>
+				<option value="Mil">Mile</option>
+				<option value="LY">Light Year</option>
+			</select>
+		</div>
+		<!--To div-->
+		<div>
+			<p type="text" id="to"></p>
+		</div>
+	</div>	
+	<hr>
+	<!--child div3-->
+	<div>
+		<div>
+			<div>
+				<button onclick="cal_len()" >Length</button>
+			</div>
+			<div ><!--length div1-->
+				<select size="4" id="select_length">
+					<option value="Meter" >Meter</option>
+					<option value="Kilometer">Kilometer</option>
+					<option value="Mile">Mile</option>
+					<option value="Light_Year">Light Year</option>
+				</select>
+			</div>
+			
+		</div>
+		<div >
+			<div>
+				<button onclick="cal_temp()" >Temperature</button>
+			</div>
+			<div style="float: left;"><!--Temperature div1-->
+				<select size="4" id="select_temp">
+					<option value="Celsius" >Celsius</option>
+					<option value="Kelvin">Kelvin</option>
+					<option value="Fahrenheit">Fahrenheit</option>
+				</select>
+			</div>
+		</div>
+		<div ><!--Volume div1-->
+			<div>
+				<button onclick="cal_vol()" >Volume</button>
+			</div>
+			<div >
+				<select size="4" id="select_volume">
+					<option value="Liter">Liter</option>
+					<option value="Milliliter">Milliliter</option>
+					<option value="US_Gallon">US Gallon</option>
+					<option value="Imperial_Tea_Spoon">Imperial Tea Spoon</option>
+				</select>
+			</div>
+		</div>
+	</div>
+	<!--child div4-->
+	<div>
+		<button id="submit_btn" >Submit</button>
+	</div>
+</div>
+<script type="text/javascript">
+	function cal_len()
+	{
+		var opt=document.getElementById("select_length").value;
+		var form_i=document.getElementById("form_id").value;
+		var get_input=parseInt(document.getElementById("form").value);
+		if (form_i=="M") {
+			var am=1;
+			var ak=1000;
+			var amil=1609.5;
+			var aly=1.057008707E-16;
+		}
+		 /*
+		else if (form_i="K") {
+
+		}
+		else if (form_i="Mil") {
+
+		}
+		else if (form_i="LY") {
+
+		}*/
+		else 
+		{
+			alert("wrong selection");
+
+		}
+
+		
+		switch (opt)
+		{
+			case 'Meter':
+						var m=get_input*am;
+						document.getElementById("to").innerHTML=m + form_i;
+						break;
+			case "Kilometer":
+						var km=get_input/ak;
+						document.getElementById("to").innerHTML=km + form_i;
+						break;
+			case "Mile":
+						var miles=get_input/amil;
+						document.getElementById("to").innerHTML=miles + form_i;
+						break;
+			case "Light_Year":
+						var lyear=get_input/aly;
+						document.getElementById("to").innerHTML=lyear + form_i;
+						break;
+			default :
+						alert("not a good selection")
+		}
+
+		
+	}
+
+	function cal_temp()
+	{
+		var opt1=document.getElementById("select_temp").value;
+		var get_input=parseInt(document.getElementById("form").value);
+		switch (opt1)
+		{
+			case 'Celsius':
+						var m=get_input*1;
+						document.getElementById("to").innerHTML=m+"c";
+						break;
+			case "Kelvin":
+						var km=get_input-274.15;
+						document.getElementById("to").innerHTML=km+"k";
+						break;
+			case "Fahrenheit":
+						var miles=get_input-33.8;
+						document.getElementById("to").innerHTML=miles +"F";
+						break;
+			default :
+						alert("not a good selection")
+		}
+
+	}
+
+	function cal_vol()
+	{
+		var opt2=document.getElementById("select_volume").value;
+		var get_input=parseInt(document.getElementById("form").value);
+		switch (opt2)
+		{
+			case 'Liter':
+						var m=get_input*1;
+						document.getElementById("to").innerHTML=m+"ltr";
+						break;
+			case "Milliliter":
+						var km=get_input/1000;
+						document.getElementById("to").innerHTML=km+"Milliliter";
+						break;
+			case "US_Gallon":
+						var miles=get_input/3.78541;
+						document.getElementById("to").innerHTML=miles +"miles";
+						break;
+			case "Imperial_Tea_Spoon":
+						var miles=get_input/168.93638269;
+						document.getElementById("to").innerHTML=miles +"ITS";
+						break;
+			default :
+						alert("not a good selection")
+		}
+	}
+</script>
+</body>
+</html>

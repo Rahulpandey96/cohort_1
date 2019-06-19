@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Unit conveter</title>
+	<style type="text/css">
+		#unit_con{
+			width:350px;
+			height:200px;
+			border:25px groove #ccc;
+			margin:20px auto;
+			padding-left:20px;
+			padding-top:30px;
+		}
+		#number{
+			padding:5px;
+		}
+		#converter_btn{
+			padding:5px;
+			margin-left:17px;
+			color:black;
+			font-weight:bolder;
+			background-color:cyan;
+		}
+		#result{
+			width:300px;
+			height:50px;
+			border:2px solid green;
+			margin-top:20px;
+			background-color:orange;
+			font-family:sans-serif;
+			font-size:20px;
+			text-align:center;
+			padding-top:15px;
+		}
+		#developer{
+			margin:0 auto;
+		}
+		span{
+			color:red;
+			font-size:30px;
+			margin-left:270px;
+			margin-top:500px;
+		}
+	</style>
+</head>
+<body>
+	<div id="unit_con">
+	<input type="text" name="input_unit" id="number"/>
+	<button id="converter_btn" onclick="unit_converter()">Click Convert</button><br/><br/>
+	<label>From unit</label>
+	<select id="from_unit">
+		<option>Kilometer</option>
+		<option>Centimeter</option>
+		<option>Milimeter</option>
+		<option>Nanometer</option>
+		<option>Mile</option>
+		<option>Inch</option>
+		<option>Light Year</option>
+	</select>
+	<label>To unit</label>
+	<select id="to_unit">
+		<option>Kilometer</option>
+		<option>Centimeter</option>
+		<option>Milimeter</option>
+		<option>Nanometer</option>
+		<option>Mile</option>
+		<option>Inch</option>
+		<option>Light Year</option>
+	</select>
+	<div id="result"></div>
+	</div><br/><br/>
+	<h3 id="developer">
+		<span>C</span>onverter <span>D</span>eveloped by <span>S</span>umanta!
+	</h3>
+<!-- Scripting coding goes down from here -->
+	<script type="text/javascript">
+		function unit_converter() 
+		{	
+			var from = document.getElementById('from_unit').value;
+			var to_unit = document.getElementById('to_unit').value;
+			var result = document.getElementById('result');
+			var n = Number(document.getElementById('number').value);
+			// Convert from kilometer to other script coding
+			if (from_unit="Kilometer")
+			 {
+			 	switch(to_unit){
+			 		case "Centimeter":{result.innerHTML=n*10**5;}
+			 		break;
+			 		case "Milimeter":{result.innerHTML=n*10**6;}
+			 		break;
+			 		case "Nanometer":{result.innerHTML=n*10**12;}
+			 		break;
+			 		case "Mile":{result.innerHTML=n*0.6213688756;}
+			 		break;
+			 		case "Inch":{result.innerHTML=n*39370.07874;}
+			 		break;
+			 		case "Light Year":{result.innerHTML=n*(1.057008707E-13);}
+			 		break;
+			 		default:{result.innerHTML="Pleas put a number!";}
+			 	}
+			 }
+			 // convert from centimeter to other scripting coding
+			 if (from_unit="Centimeter") 
+			 {
+			 	switch(to_unit){
+			 		case "Kilometer":{result.innerHTML=n/(10**5);}
+			 		break;
+			 		case "Milimeter":{result.innerHTML=n*10;}
+			 		break;
+			 		case "Nanometer":{result.innerHTML=n*10**7;}
+			 		break;
+			 		case "Mile":{result.innerHTML=n*0.0000062137;}
+			 		break;
+			 		case "Inch":{result.innerHTML=n*0.3937007874;}
+			 		break;
+			 		case "Light Year":{result.innerHTML=n*(1.057008707E-18);}
+			 		break;
+			 		default:{result.innerHTML="Pleas put a number!";}
+			 	}
+			 }
+			 // convert nanometer to other scripting coding
+			 if (from_unit="Nanometer") 
+			 {
+			 	switch(to_unit){
+			 		case "Kilometer":{result.innerHTML=n*(1.E-12);}
+			 		break;
+			 		case "Milimeter":{result.innerHTML=n*0.000001;}
+			 		break;
+			 		case "Centimeter":{result.innerHTML=n*(1.E-7);}
+			 		break;
+			 		case "Mile":{result.innerHTML=n*(6.213688756E-13);}
+			 		break;
+			 		case "Inch":{result.innerHTML=n*(3.937007874E-8);}
+			 		break;
+			 		case "Light Year":{result.innerHTML=n*(1.057008707E-25);}
+			 		break;
+			 		default:{result.innerHTML="Pleas put a number!";}
+			 	}
+			 }
+			 // script coding of mile to other
+			 if (from_unit="Mile") 
+			 {
+			 	switch(to_unit){
+			 		case "Kilometer":{result.innerHTML=n*1.60935;}
+			 		break;
+			 		case "Milimeter":{result.innerHTML=n*1609350;}
+			 		break;
+			 		case "Centimeter":{result.innerHTML=n*160935;}
+			 		break;
+			 		case "Nanometer":{result.innerHTML=n*(160935*(10**7));}
+			 		break;
+			 		case "Inch":{result.innerHTML=n*63360.23622;}
+			 		break;
+			 		case "Light Year":{result.innerHTML=n*(1.701096963E-13);}
+			 		break;
+			 		default:{result.innerHTML="Pleas put a number!";}
+			 	}
+			 }
+			  // script coding of Inch to other
+			 if (from_unit="Inch") 
+			 {
+			 	switch(to_unit){
+			 		case "Kilometer":{result.innerHTML=n*0.0000254;}
+			 		break;
+			 		case "Milimeter":{result.innerHTML=n*25.4;}
+			 		break;
+			 		case "Centimeter":{result.innerHTML=n*2.54;}
+			 		break;
+			 		case "Nanometer":{result.innerHTML=n*(254*(10**5));}
+			 		break;
+			 		case "Mile":{result.innerHTML=n*0.0000157828;}
+			 		break;
+			 		case "Light Year":{result.innerHTML=n*(2.684802117E-18);}
+			 		break;
+			 		default:{result.innerHTML="Pleas put a number!";}
+			 	}
+			 }
+			  // script coding of Light year to other
+			 if (from_unit="Light Year") 
+			 {
+			 	switch(to_unit){
+			 		case "Kilometer":{result.innerHTML=n*9460660000000;}
+			 		break;
+			 		case "Milimeter":{result.innerHTML=n*9460660000000000000;}
+			 		break;
+			 		case "Centimeter":{result.innerHTML=n*946066000000000000;}
+			 		break;
+			 		case "Nanometer":{result.innerHTML=n*(254*(10**5));}
+			 		break;
+			 		case "Mile":{result.innerHTML=n*5878559666946;}
+			 		break;
+			 		case "Inch":{result.innerHTML=n*372466929133858300;}
+			 		break;
+			 		default:{result.innerHTML="Pleas put a number!";}
+			 	}
+			 }
+		}
+	</script>
+</body>
+</html>
