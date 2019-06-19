@@ -1,21 +1,4 @@
-Skip to content
- 
-Search or jump to…
 
-Pull requests
-Issues
-Marketplace
-Explore
- 
-@Pavanpatil08 
-3
-0 11 masai-school/full-stack-dev
- Code  Issues 0  Pull requests 0  Projects 0  Wiki  Security  Insights
-full-stack-dev/course/week_2/day_2/w2_day_2_coding1.md
-@nrupul-dev nrupul-dev W2 D2 S1
-175d2b3 14 minutes ago
-399 lines (321 sloc)  3.7 KB
-    
 Week 2 - Day 2
 SUBMISSION:
 
@@ -256,17 +239,6 @@ Margin-Right:20px;
 
 Font-Size:20px;
 
-Color
+Color:yellow;
 
-© 2019 GitHub, Inc.
-Terms
-Privacy
-Security
-Status
-Help
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About
+
