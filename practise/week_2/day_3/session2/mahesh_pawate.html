@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Coding Session 2</title>
+</head>
+<body>
+	<!-- These elements below are for FSD.W2.2.2_1-->
+	<h1> Check if you can drive in India! </h1>
+	<input type="text" id="drive">
+	<p id="put"> </p>
+	</hr>
+	<button onclick="check_drive()">Click here to check!</button>
+	<!-- These elements above are for FSD.W2.2.2_1-->
+
+	<!-- These elements below are for FSD.W2.2.2_2-->
+	<h1>Input your color in the textbox!
+	<input type="text" id="color_change">
+	<button onclick="change_color()" id="ch_new" >Click here to change my color</button>
+	
+	<!-- These elements above are for FSD.W2.2.2_2-->
+
+	<!-- These elements below are for FSD.W2.2.2_3-->
+	<h1>Find your continent!</h1>
+	<label for="country_select">Choose your Country</label>
+	<select id="continent_select">
+		<option value="India">India </option>
+		<option value="United States of America">United States of America </option>
+		<option value="China">China </option>
+		<option value="Nepal">Nepal </option>
+		<option value="Australia">Australia </option>
+		<option value="France">France </option>
+		<option value="Germany">Germany </option>
+		<option value="South Africa">South Africa </option>
+		<option value="Nigeria">Nigeria </option>
+		<option value="Mexico">Mexico </option>
+		<option value="Argentina">Argentina </option>
+		<option value="Brazil">Brazil </option>
+		<option value="Canada">Canada </option>
+		<option value="Singapore">Singapore </option>
+		<option value="Sweden">Sweden </option>
+
+	</select>
+	<button onclick="find_continent()">Find Continent</button>
+	<!-- These elements above are for FSD.W2.2.2_2-->
+	<script type="text/javascript">
+		function check_drive(){
+			var number1=parseInt(document.getElementById("drive").value);
+			var yage= "your age is " + number1 + " and you are allowed to drive";
+			var nage= "your age is " + number1 + " and you are not allowed to drive";
+
+			if (number1>=18) 
+			{
+				document.getElementById("put").innerHTML =yage
+			}
+			else
+			{
+				document.getElementById("put").innerHTML =nage
+			}
+			//Write javascript for FSD.W2.2.2_1 here
+		}
+		function change_color(){
+			var color_ver= document.getElementById("color_change").value;
+			switch (color_ver)
+			{
+				case 'red':
+					document.getElementById("ch_new").style.backgroundColor="red";
+					break;
+				case 'blue':
+					document.getElementById("ch_new").style.backgroundColor="blue";
+					break;
+				case 'black':
+					document.getElementById("ch_new").style.backgroundColor="black";
+					break;
+				case 'pink':
+					document.getElementById("ch_new").style.backgroundColor="pink";
+					break;
+				case 'purple':
+					document.getElementById("ch_new").style.backgroundColor="purple";
+					break;
+				 default:
+					document.getElementById("ch_new").style.backgroundColor="red";
+					break;
+
+			}
+
+			//Write javascript for FSD.W2.2.2_2 here
+		}
+		function find_continent(){
+			var country=document.getElementById("continent_select").value;
+
+
+			switch (country)
+			{
+				case 'India' :
+					alert("The selected country is " + country + "  and the continent is Asia");
+					break;
+				case 'China' :
+					alert("The selected country is " + country + "  and the continent is Asia");
+					break;
+				case 'Nepal' :
+					alert("The selected country is " + country + "  and the continent is Asia");
+					break;
+				case 'Singapore' :
+					alert("The selected country is " + country + "  and the continent is Asia");
+					break;
+
+				case 'United States of America' :
+					alert("The selected country is " + country + "  and the continent is NorthAmerica");
+					break;
+				case 'Mexico' :
+					alert("The selected country is " + country + "  and the continent is NorthAmerica");
+					break;
+
+				case 'Canada' :
+					alert("The selected country is " + country + "  and the continent is NorthAmerica");
+					break;
+				case 'Australia' :
+					alert("The selected country is " + country + "  and the continent is Australia");
+					break;
+
+				case 'France' :
+					alert("The selected country is " + country + "  and the continent is Europe");
+					break;
+				case 'Sweden' :
+					alert("The selected country is " + country + "  and the continent is Europe");
+					break;
+				case 'Germany' :
+					alert("The selected country is " + country + "  and the continent is Europe");
+					break;
+
+				case 'Argentina' :
+					alert("The selected country is " + country + "  and the continent is SouthAmerica");
+					break;
+				case 'Brazil' :
+					alert("The selected country is " + country + "  and the continent is SouthAmerica");
+					break;
+				case 'South Africa' :
+					alert("The selected country is " + country + "  and the continent is Africa");
+					break;
+				case 'Nigeria' :
+					alert("The selected country is " + country + "  and the continent is Africa");
+					break;
+			}
+			//Write javascript for FSD.W2.2.2_3 here
+		}
+	</script>
+</body>
+</html>
