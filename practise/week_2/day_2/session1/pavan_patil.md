@@ -16,7 +16,7 @@ Don't use the web browser or any online tool to answer these questions. Only ref
 
 Consider the below styles for solving the problems
 
-* {
+ {
     color: yellow;
     font-size: 12px;
 }
