@@ -1,6 +1,6 @@
 Skip to content
  
-Search or jump to…
+Search or jump toâ€¦
 
 Pull requests
 Issues
@@ -101,7 +101,8 @@ div {
     color: purple;
     background-color: red;
 }
-FSD.W2.2.1_1
+
+ 1.FSD.W2.2.1_1
 <div>MASAI</div>
 Fill the below property values for the div
 
@@ -109,7 +110,7 @@ Color: white
   
 Height : 100px;
 
-FSD.W2.2.1_2
+2.FSD.W2.2.1_2
 <div style="height:50px;">MASAI</div>
 Fill the below property values for the div
 
@@ -119,7 +120,7 @@ Height:50px;
 
 Padding: 4px;
 
-FSD.W2.2.1_3
+3.FSD.W2.2.1_3
 <div class="class1">MASAI</div>
 Width 100px;
 
@@ -133,7 +134,7 @@ Font-Size: 16px;
 
 Color black;:
 
-FSD.W2.2.1_4
+4.FSD.W2.2.1_4
 <div id="id2">MASAI</div>
 Color :white
 
@@ -147,7 +148,7 @@ Font-Size :20px;
 
 Height:50px;
 
-FSD.W2.2.1_5
+5.FSD.W2.2.1_5
 <div class="class1 class4" style="color:violet">MASAI</div>
 Width :100px;
 
@@ -161,7 +162,7 @@ Font-Size:11px;
 
 Color :purple;
 
-FSD.W2.2.1_6
+6.FSD.W2.2.1_6
 <div class="class5 class3" id="id1">MASAI</div>
 Width :100px;
 
@@ -175,7 +176,7 @@ Font-Size:12px;
 
 Background Color:black;
 
-FSD.W2.2.1_7
+7.FSD.W2.2.1_7
 <div class="class2" id="id2">MASAI</div>
 Width:75px;
 
@@ -189,7 +190,7 @@ Font-Size:20px;
 
 Color:black;
 
-FSD.W2.2.1_8
+8.FSD.W2.2.1_8
 <div class="class4 class2 class6" style="font-size:20px">MASAI</div>
 Width:100px;
 
@@ -203,7 +204,7 @@ Font-Size:20px;
 
 Color :purple;
 
-FSD.W2.2.1_9
+9.FSD.W2.2.1_9
 <div class="class5 class3" id="id2">MASAI</div>
 Width:75px;
 
@@ -215,7 +216,7 @@ Color:red;
 
 Font-Size:20px;
 
-FSD.W2.2.1_10
+10.FSD.W2.2.1_10
 <div class="class2 class4 class5" id="id3" style="margin-left:22px">MASAI</div>
 Width :150px;
 
@@ -229,7 +230,7 @@ Font-Size:14px;
 
 Color:blue;
 
-FSD.W2.2.1_11
+11.FSD.W2.2.1_11
 <div class="class5 class3" id="id3" style="color:orange; font-size:28px; margin:20px">MASAI</div>
 Background Color:black;
 
@@ -243,7 +244,7 @@ Font-Size:28px;
 
 Color:orange;
 
-FSD.W2.2.1_12
+12.FSD.W2.2.1_12
 <div id="id2">MASAI</div>
 Width:75;
 
@@ -257,7 +258,7 @@ Font-Size:20px;
 
 Color
 
-© 2019 GitHub, Inc.
+Â© 2019 GitHub, Inc.
 Terms
 Privacy
 Security
