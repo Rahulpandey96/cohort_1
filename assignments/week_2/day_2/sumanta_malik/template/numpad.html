@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Number pad</title>
+	<style type="text/css">
+		#page{
+			width:800px;
+			height:900px;
+			background-color:white;
+			border:1px solid #ccc;
+			margin:20px auto;
+			position:relative;
+		}
+		/* main box style coding goes here */
+		#box_main{
+			width:320px;
+			height:500px;
+			border:1px solid red;
+			border:none;
+			position:absolute;
+			top:70px;
+			left:200px;
+			padding:20px;
+		}
+		/* Calculator display design coding goes here */
+		#display{
+			width:300px;
+			height:90px;
+			border:2px solid black;
+			background-color:#ccc;
+			float:left;
+		}
+		/* Font design of calculator display goes here */
+		#text_h1{
+			padding:0;
+			margin:0;
+			text-align:center;
+			font-size:70px;
+		}
+		.cols{
+			width:70px;
+			height:380px;
+			border:1px solid green;
+			border:none;
+			float:left;
+			margin:20px;
+		}
+		/* all rows design coding here */
+		.row{
+			width:30px;
+			height:30px;
+			border:2px solid black;
+			float:left;
+			position:relative;
+			padding:20px;
+			margin-top:23px;
+			text-align:center;
+			font-family:sans-serif;
+			font-size:30px;
+		}
+		.col1{
+			margin-left:0;
+		}
+		.col2{
+			margin-left:23px;
+		}
+		.col3{
+			margin-left:23px;
+		}
+		.row_col1{
+			margin-left:0;
+		}
+		/*cells content having orange color coding goes */
+		.cell_orange{
+			background-color:orange;
+		}
+		/*cells content having green color coding goes */
+		.cell_green{
+			background-color:green;
+		}
+		/*cell content having cyan color coding goes */
+		.cell_blue{
+			background-color:cyan;
+		}
+		/* some div element is hide who's hide coding goes here */
+		.cell_hide{
+			border:none;
+		}	
+	</style>
+</head>
+<body>
+	<div id="page">
+		<div id="box_main">
+			<!-- Calculator output display coding goes here !-->
+			<div id="display">
+				<h1 id="text_h1">#</h1>
+			</div>
+			<!-- First collomn element coding goes here !-->
+			<div class="cols col1">
+				<div class="row row_col1 cell_green">1</div>
+				<div class="row row_col1 cell_orange">4</div>
+				<div class="row row_col1 cell_green">7</div>
+				<div class="row row_col1 cell_hide"></div>
+			</div>
+			<!-- Second collomn element coding goes here !-->
+			<div class="cols col2">
+				<div class="row row_col2 cell_orange">2</div>
+				<div class="row row_col2 cell_orange">5</div>
+				<div class="row row_col2 cell_orange">8</div>
+				<div class="row row_col2 cell_blue">0</div>
+			</div>
+			<!-- Second collomn element coding goes here !-->
+			<div class="cols col3">
+				<div class="row cell_green">3</div>
+				<div class="row cell_orange">6</div>
+				<div class="row cell_green">9</div>
+				<div class="row cell_hide" ></div>
+			</div>
+		</div>		
+	</div>
+</body>
+</html>
