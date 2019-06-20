@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Converter</title>
+    <style type="text/css">
+    body{
+        margin: 0px;
+        padding: 0px;
+    }
+    .converter_body{
+        width: 420px;
+        height: 200px;
+  
+        position: absolute;
+        margin-left: 350px;
+        margin-top: 150px;
+        box-shadow: 0px 0px 2px 1px #cacaca;
+    }
+    .converter_title{
+        text-align: center;
+        margin:13px 0px;
+    }
+    input
+    {
+        height: 25px;
+    }
+    #input{
+        margin-left: 25px;
+    }
+    #my_select,#my_result{
+        width:180px;
+        margin-left:25px;  
+    }
+    #my_result{
+        margin-left: 12.5px
+    }
+
+    
+    </style>
+</head>
+<body>
+    <div class="converter_body">
+    <h1 class="converter_title">Converter</h1>
+    <input type="text" name="input" id="input">
+    <span>=</span>
+    <input type="text" name="result" id="result">
+    <select id="my_select">
+    <option value="meter">Meter</option>
+    <option value="kilometer">kilometer</option>
+    <option value="centimeter">centimeter</option>
+    <select>
+   <select id="my_result">
+            <option value="meter">Meter</option>
+            <option value="kilometer">kilometer</option>
+            <option value="centimeter">centimeter</option>
+</select>
+</div>
+
+    <script>
+        var input = document.getElementById(input);
+        var result = document.getElementById(result);
+        var my_select = document.getElementById(my_select);
+        var my_result = document.getElementById(my_result);
+
+        document.getElementById(input).value = (my_result());
+        document.getElementById(my_select).value = (my_result());
+        document.getElementById(my_result).value = (my_result());
+
+        var input_type = my_select.value;
+        var result_type = my_result.value;
+        function my_result(){
+            if(input_type == "meter" && result_type == "kilometer"){
+                result.value = parseInt(input.value)*0.001;
+            }
+            elseif(input_type == "meter" && result_type == "centimeter")
+            {
+                result.value = parseInt(input.value)*100;
+            }
+            elseif(input_type == "meter" && result_type == "meter")
+            {
+                result.value = parseInt(input.value);
+            }
+            elseif(input_type == "kilometer" && result_type == "meter")
+            {
+                result.value = parseInt(input.value)*1000;
+            }
+            elseif(input_type == "kilometer" && result_type == "meter")
+            {
+                result.value = parseInt(input.value)*1000;
+            }
+            elseif(input_type == "kilometer" && result_type == "kilometer")
+            {
+                result.value = parseInt(input.value);
+            }
+            elseif(input_type == "centimeter" && result_type == "kilometer")
+            {
+                result.value = parseInt(input.value)*0.00001;
+            }
+            elseif(input_type == "centimeter" && result_type == "meter")
+            {
+                result.value = parseInt(input.value)*0.01;
+            }
+            elseif(input_type == "centimeter" && result_type == "centimeter")
+            {
+                result.value = parseInt(input.value);
+            }
+
+
+        }
+
+
+
+
+    
+    
+    </script>
+</body>
+</html>
