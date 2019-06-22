@@ -96,9 +96,9 @@ sort city_names_orders_rand.csv | uniq -d | wc -l
 USERNAME
 
 Bangalore,Yuli Z. Pratt
+
 ```
-COUNT OF ORDERS 18 
-```
+
 Commands on how you got the answer
 
 ```
