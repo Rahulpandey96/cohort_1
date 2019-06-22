@@ -83,6 +83,7 @@ grep -i Bangalore city_names_orders_rand.csv | uniq -d | wc -l
 
 ```
 102
+
 ```
 
 Commands on how you got the answer
@@ -102,11 +103,13 @@ Commands on how you got the answer
 
 ```
 sort city_names_orders_rand.csv | uniq -c | sort -n | tail -n 1
+
 ```
 5. User from Mumbai having the most no of orders
+
 ```
 Mumbai,Russell T. Compton
-```
+
 ```
 COUNT OF ORDERS 11
 ```
@@ -114,6 +117,7 @@ Commands on how you got the answer
 
 ```
 grep -i mumbai city_names_orders_rand.csv | uniq -c | sort -n
+
 ```
 
 ## FSD.W2.1.C (30 min)
@@ -147,7 +151,6 @@ git log | grep Author | sort | uniq -d | wc -l
 3. User with the maximum no of commits to the repository
 ```
 Joshua Levy <joshua@cal.berkeley.edu>
-```
 ``` 
 466
 ```
