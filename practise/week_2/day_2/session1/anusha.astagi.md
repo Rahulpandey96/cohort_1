@@ -99,9 +99,9 @@ Fill the below property values for the `div`
 white  
 ```
 2. Height
-100px
-```
 
+```
+100px
 ```
 
 ### FSD.W2.2.1_2
@@ -111,116 +111,117 @@ white
 ```
 Fill the below property values for the `div`
 1. Width
+
+```
 100px
 ```
+2. Height
 
 ```
-2. Height
 50px
 ```
-
-```
 3. Padding
-4px
-```
 
+```
+4px
 ```
 ### FSD.W2.2.1_3
 ```
 <div class="class1">MASAI</div>
 ```
 1. Width
-100px
-```
 
+```
+100px
 ```
 2. Height
+
+```
 100px
 ```
+3. Padding-Left
 
 ```
-3. Padding-Left
 4px
 ```
+4. Margin-Right
 
 ```
-4. Margin-Right
 6px
 ```
+5. Font-Size
 
 ```
-5. Font-Size
 16px
 ```
-
-```
 6. Color
-black
-```
 
+```
+black
 ```
 ### FSD.W2.2.1_4
 ```
 <div id="id2">MASAI</div>
 ```
 1. Color
+
+```
 white
 ```
+2. Background Color
 
 ```
-2. Background Color
 black
 ```
+3. Padding-Bottom
 
 ```
-3. Padding-Bottom
 4px
 ```
+4. Margin-Top
 
 ```
-4. Margin-Top
 16px
 ```
+5. Font-Size
 
 ```
-5. Font-Size
 12px
 ```
-
-```
 6. Height
-100px
-```
 
+```
+100px
 ```
 ### FSD.W2.2.1_5
 ```
 <div class="class1 class4" style="color:violet">MASAI</div>
 ```
 1. Width
+
+```
 100px
 ```
-
-```
 2. Background Color
-red
-``
+
+red;
 ```
 3. Padding-Bottom
-24px
 
+24px
 ```
 4. Margin-Right
+
+```
 6px
 ```
+5. Font-Size
 
 ```
-5. Font-Size
 12px
 ```
-
-```
 6. Color
+
 ```
 yellow
 ```
@@ -238,76 +239,76 @@ yellow
 yellow
 ```
 3. Padding-Right
+
+```
 24px
 ```
+4. Margin-Left
 
 ```
-4. Margin-Left
 16px
 ```
+5. Font-Size
 
 ```
-5. Font-Size
 12px
 ```
-
-```
 6. Background Color
-black
-```
 
+```
+black
 ```
 ### FSD.W2.2.1_7
 ```
 <div class="class2" id="id2">MASAI</div>
 ```
 1. Width
+
+```
 75px
 ```
-
-```
 2. Height
-50px
-```
 
+```
+50px
 ```
 3. Padding-Top
 ```
 
 ```
 4. Margin-Bottom
+
+```
 6px
 ```
+5. Font-Size
 
 ```
-5. Font-Size
 12px
 ```
-
-```
 6. Color
-yellow
-```
 
+```
+yellow
 ```
 ### FSD.W2.2.1_8
 ```
 <div class="class4 class2 class6" style="font-size:20px">MASAI</div>
 ```
 1. Width
+
+```
 100px
 ```
+2. Height
 
 ```
-2. Height
 50px
 ```
-
-```
 3. Padding-Left
-6px
-```
 
+```
+6px
 ```
 4. Margin-Right
 
@@ -320,9 +321,9 @@ yellow
 
 ```
 6. Color
-yellow
-```
 
+```
+yellow
 ```
 ### FSD.W2.2.1_9
 ```
@@ -333,21 +334,22 @@ yellow
 
 ```
 2. Height
+
+```
 100px
 ```
+3. Background Color
 
 ```
-3. Background Color
 black
 ```
+4. Color
 
 ```
-4. Color
 yellow
 ```
-
-```
 5. Font-Size
+
 ```
 12px
 ```
@@ -356,42 +358,42 @@ yellow
 <div class="class2 class4 class5" id="id3" style="margin-left:22px">MASAI</div>
 ```
 1. Width
+
+```
 100px
 ```
+2. Height
 
 ```
-2. Height
 50px
 ```
-
-```
 3. Padding-Top
-4px
 
+4px
 ```
 4. Margin-Left
+
+```
 10px
 ```
+5. Font-Size
 
 ```
-5. Font-Size
 12px
 ```
-
-```
 6. Color
-yellow
-```
 
+```
+yellow
 ```
 ### FSD.W2.2.1_11
 ```
 <div class="class5 class3" id="id3" style="color:orange; font-size:28px; margin:20px">MASAI</div>
 ```
 1. Background Color
-black
-```
 
+```
+black
 ```
 2. Height
 300px
