@@ -23,7 +23,7 @@
 	<!-- These elements below are for FSD.W2.2.2_3-->
 	<h1>Find your continent!</h1>
 	<label for="country_select">Choose your Country</label>
-	<select id="continent_select">
+	<select id="country_select">
 
 		<option value="Continent is Asia" id="i">India</option>
         <option value="Continent is Asia">China</option>
@@ -66,28 +66,9 @@
 			
 		}
 		function find_continent(){
-			var country =document.getElementById("continent_select").value;
+			alert(document.getElementById("country_select").value);
             
-			//if(country=="India" || country == "China" || country == "Nepal" ||country =="Singapore")
-			//{
-			//alert("Continent is Asia")
-			//}
-			//else if(country=="France"||country =="Germany"||country =="Argentina"||country =="Sweden")
-			//{
-			//alert("Continent is Europe")
-			//}
-			//else if(country=="United States of America"||country=="Mexico"||country=="Canada")
-			//{
-			//alert("Continent is North America")
-			//}
-			//else if(country=="South Africa"||country=="Nigeria"||country=="Brazil")
-			//{
-			//	alert("Continent is Africa")
-			//}
-			//else
-			//{
-			//	alert("Continent is Australia")
-			//}
+			
 		}
 	</script>
 </body>
