@@ -9,118 +9,132 @@
         .namsize{
             height: 500px;
             width: 300px;
-            border:1px solid black;
-            margin-left: 300px;
+            
+            margin-left: 450px;
+			margin-top:100px;
 
         }
         .box{
-            height: 200px;
+            height: 150px;
             width: 300px;
             background-color: rgba(204, 197, 189, 0.774);
-            border:1px solid black;
+            border:3px solid black;
             
         }
         .box1{
             height: 400px;
             width: 300px;
-            
-            margin-top:200px;
-            margin-left: 50px;
+        	margin-top:120px;
+            margin-left: 20px;
+			padding:40px
 
 
         }
+		.number_box{
+			padding:10px;
+			height:50px;
+			width:50px;
+
+		}
+		#number{
+			padding:20px;
+			text-align: center;
+		}
+		.color_orange{
+			background-color: rgb(212, 91, 21);
+			
+		}
+		.color_green{
+			background-color: green;
+		}
+		.color_purple{
+			background-color: purple;
+		}
+		.margin{
+			margin-left: 30px;
+		}
         
         
         
         </style>
         <div class="namsize">
         <div class="box">
-	<div id="no">
+	<div id="number">
 
 
-           <!-- <div id="no2"></div>
-            <div id="no3"></p>
-                <div id="no4"></h1>
-                    <div id="no5"></div>
-                    <div id="no6"></p>
-                        <div id="no7"></h1>
-                            <div id="no8"></div>
-                            <div id="no9"></p>
-                                <div id="no0">-->
-            
 	
 </div>
 <div class="box1">
-	<p><button onclick="show1()"> 1 </button>
-	<button onclick="show2()"> 2 </button>
-    <button onclick="show3()"> 3</button></p>
-    <p> <button onclick="show4()"> 4 </button>
-    <button onclick="show5()"> 5 </button>
-    <button onclick="show6()"> 6 </button></p>
-<p><button onclick="show7()"> 7</button>
-    <button onclick="show8()"> 8 </button>
-    <button onclick="show9()"> 9 </button></p>
-	<button onclick="show0()"> 0 </button>
+	<p><button onclick="show_1()" class="number_box color_green"> 1 </button>
+	<button onclick="show_2()" class="number_box color_orange"> 2 </button>
+    <button onclick="show_3()" class="number_box color_green"> 3</button></p>
+    <p> <button onclick="show_4()" class="number_box color_orange color_green"> 4 </button>
+    <button onclick="show_5()" class="number_box color_orange "> 5 </button>
+    <button onclick="show_6()" class="number_box color_orange"> 6 </button></p>
+<p><button onclick="show_7()" class="number_box color_green"> 7</button>
+    <button onclick="show_8()" class="number_box color_orange"> 8 </button>
+    <button onclick="show_9()" class="number_box color_green"> 9 </button></p>
+	<button onclick="show_0()" class="number_box color_green margin-left"> 0 </button>
 </div>
 </div>
 	<script type="text/javascript">
-		function show1() {
+		function show_1() {
 			// Change the content of h1 to your first name
-			document.getElementById("no").innerHTML = "1";
+			document.getElementById("number").innerHTML = "1";
 
 		}
         
-		function show2() {
+		function show_2() {
 			// Change the content of h1 to your first name
-			document.getElementById("no").innerHTML = "2";
+			document.getElementById("number").innerHTML = "2";
 
 		}
    
-		function show3() {
+		function show_3() {
 			// Change the content of h1 to your first name
-			document.getElementById("no").innerHTML = "3";
+			document.getElementById("number").innerHTML = "3";
 
 		}
     
-		function show4() {
+		function show_4() {
 			// Change the content of h1 to your first name
-			document.getElementById("no").innerHTML = "4";
+			document.getElementById("number").innerHTML = "4";
 
 		}
     
-		function show5() {
+		function show_5() {
 			// Change the content of h1 to your first name
-			document.getElementById("no").innerHTML = "5";
+			document.getElementById("number").innerHTML = "5";
 
 		}
        
-		function show6() {
+		function show_6() {
 			// Change the content of h1 to your first name
-			document.getElementById("no").innerHTML = "6";
+			document.getElementById("number").innerHTML = "6";
 
 		}
        
-		function show7() {
+		function show_7() {
 			// Change the content of h1 to your first name
-			document.getElementById("no").innerHTML = "7";
+			document.getElementById("number").innerHTML = "7";
 
 		}
        
-		function show8() {
+		function show_8() {
 			// Change the content of h1 to your first name
-			document.getElementById("no").innerHTML = "8";
+			document.getElementById("number").innerHTML = "8";
 
 		}
       
-		function show9() {
+		function show_9() {
 			// Change the content of h1 to your first name
-			document.getElementById("no").innerHTML = "9";
+			document.getElementById("number").innerHTML = "9";
 
 		}
      
-		function show0() {
+		function show_0() {
 			// Change the content of h1 to your first name
-			document.getElementById("no").innerHTML = "0";
+			document.getElementById("number").innerHTML = "0";
 
 		}
 
