@@ -3,53 +3,83 @@
 <head>
 	<title>Registration</title>
 	<style type="text/css">
-		.flt
+		.float_left
 		{
 			float: left;
 		}
-		#clr
+
+		.float_right
+		{
+			float: right;
+		}
+
+		.both_margin
+		{
+			margin-left: 30PX
+		}
+
+		#body_background
 		{
 			background-color: black;
-			height:100vh;
+			height:70vh;
 		}
+
 		#mar_for_main
 		{
-			height: 100vh;
+			height: 70vh;
 			margin-left: 250px;
 			margin-right: 250px;
 			background-color: white;
-			padding-top: 60px;
+			padding: 80px;
 		}
-		#border
+		.validation_color
 		{
-			margin-left: 80px;
+			color: red;
+		}
+
+		.part2
+		{
 			border-style: solid;
 			border-radius: 15px;
 			border-color: black;
-			border-width: 2px;
-			height: 200px;
-			width: 200px;
-			padding-top: 70px;
-			padding-bottom: 70px;
-			padding-left:  50px;
+			border-radius:25px;
+			color: white;
+			background-color: black;
+			padding: 20px;
 		}
-		#mar
+
+		#part_one
 		{
-			margin-left: 200px;
+			margin-left: 150px;
+		}
+
+		.size_font_part2
+		{
+			font-size: 28px;
+			font-style: bold;
+			padding-top:  40px;
+			padding-bottom: 30px;
+		}
+
+		.submit_btn
+		{
+			width: 175px;
+			margin-top: 10px;
 		}
 	</style>
 </head>
-<body  id="clr" >
+<body  id="body_background" >
 	<!--master-->
 	<div id="mar_for_main">
 		<!--white screen-->
-		<div id="mar" class="flt">
+		<div id="part_one " class="float_left both_margin">
 			<div>
 				<div>
 					<h1>Name</h1>
 				</div>
 				<div>
-					<input type="text" name="name" id="name">
+					<input type="text" id="name">
+					<p class="validation_color" id="name_id"></p>
 				</div>
 			</div>
 			<div>
@@ -57,7 +87,8 @@
 					<h1>Email</h1>
 				</div>
 				<div>
-					<input type="text" name="email" id="email">
+					<input type="text"  id="email">
+					<p class="validation_color" id="email_id"></p>
 				</div>
 			</div>
 			<div>
@@ -65,40 +96,118 @@
 					<h1>Mobile</h1>
 				</div>
 				<div>
-					<input type="number" name="mobile" id="mobile">
+					<input type="text" id="mobile">
+					<p class="validation_color" id="mobile_id"></p>
 				</div>
 			</div>
 			<div>
-				<button onclick="submit()" >REGISTER</button>
+				<button class="submit_btn" onclick="submit()" >REGISTER</button>
 			</div>
 		</div>
 		<!--black screen-->
-		<div class="flt " id="border">
-			<div>
+		<div  class="part2 float_right both_margin">
+			<div class="size_font_part2">
 				<div>
-					<label>NAME</label>
-				</div>
-				<div>
-					<label>MASAI</label>
+					Name : <label id="name_out">NAME </label>
 				</div>
 			</div>
-			<div>
+			<div class="size_font_part2">
 				<div>
-					<label>EMAIL</label>
-				</div>
-				<div>
-					<label>EMAIL</label>
+					EMAIL : <label id="email_out" >EMAIL</label>
 				</div>
 			</div>
-			<div>
+			<div class="size_font_part2">
 				<div>
-					<label>MOBILE</label>
-				</div>
-				<div>
-					<label>Mobile</label>
+					MOBILE : <label id="mobile_out">MOBILE</label>
 				</div>
 			</div>
 		</div>
 	</div>
+	<script type="text/javascript">
+		function submit()
+		{
+			//<!--veiable declaration and initialisation-->
+			var name=document.getElementById("name").value
+			var email=document.getElementById("email").value
+			var mobile=document.getElementById("mobile").value
+			var flag=false
+			var provider=""
+			var dot_com=""
+			var count=0
+
+			//<!--Name--> 
+			if(name.length < 3 || name.length>10)
+			{
+				document.getElementById("name_id").innerHTML = "Validation Error :<br> Enter valid Name..!!"
+			}
+			else
+			{
+				document.getElementById("name_id").innerHTML = "";
+			}
+
+			//<!--Mobile-->
+			if(mobile.length != 10)
+			{
+				document.getElementById("mobile_id").innerHTML ="you entered " + mobile.length + " characters. Validation Error :<br> Enter valid Mobile Number..!!"
+			}
+			else
+			{
+				document.getElementById("mobile_id").innerHTML =""
+			}
+			
+			//<!--EmailId-->
+			if (email.length>5)
+			{
+				for(var i=0; i<=email.length-1; i++)
+				{
+					if (email[i]=='@')
+					{
+						flag=true
+						count++
+					}
+				}
+				if (flag==true && count<=1) 
+				{
+					for(var j=email.indexOf('@')+1; j<=email.lastIndexOf(".")-1;j++)
+					{
+						provider+=email[j]
+					}
+					if (provider == "gmail" || provider == "yahoo" || provider == "rediffmail" )
+					{
+						for(var i=email.lastIndexOf(".")+1; i<=email.length-1;i++)
+						{
+							dot_com+=email[i]
+						}
+						if(dot_com != "com" )
+						{
+							document.getElementById("email_id").innerHTML=" Validation Error :<br> You are missing ' com ' symboll"
+
+						}
+						else
+						{
+							document.getElementById("name_out").innerHTML=name
+							document.getElementById("email_out").innerHTML=email
+							document.getElementById("mobile_out").innerHTML =mobile
+						}
+					}
+					else
+					{
+						document.getElementById("email_id").innerHTML=" Validation Error : <br>You are missing ' provider ' / '.'  or both symboll "
+					}
+				}
+				else
+				{
+					document.getElementById("email_id").innerHTML=" Validation Error :<br> You are missing ' @ ' symboll or used multiple time"
+				}
+			}
+			else 
+			{
+				document.getElementById("email_id").innerHTML=" Validation Error <br>(less character) : Enter valid Email Id..!!"
+			}
+			//document.getElementById("name_id").innerHTML="";
+			//document.getElementById("email_id").innerHTML="";
+			//document.getElementById("mobile_id").value="";	
+		}
+	</script>
 </body>
 </html>

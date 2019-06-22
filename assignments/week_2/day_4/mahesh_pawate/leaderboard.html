@@ -18,16 +18,18 @@ Sat Jun 22 12:47:28 IST 2019-->
 			color: black;
 			text-align: center;
 			font-size: 18px;
-
 		}
+
 		.keys_fl_clear
 		{
 			clear: left;
 		}
+
 		.key_fl_clr
 		{
 			clear: both;
 		}
+
 		.plus
 		{
 			background-color: orange;
@@ -92,12 +94,12 @@ Sat Jun 22 12:47:28 IST 2019-->
 		<div>
 			<!--min-->
 			<div class="flt">
-				<input value="43" class=" max input_back2 " id="get_input1" type="text" name="get_input1">
+				<input value="43" class=" max input_back2 " id="input_min" type="text" name="input_min">
 				<h2>Min</h2>
 			</div>
 			<!--max-->
 			<div class="flt">
-				<input value="2019" class="  max input_back3" id="get_input2" type="text" name="get_input2">
+				<input value="2019" class="max input_back3" id="input_max" type="text" name="input_max">
 				<h2>Max</h2>
 			</div>
 		</div>
@@ -167,10 +169,11 @@ Sat Jun 22 12:47:28 IST 2019-->
 		}
 		function fun_submit()
 		{
-			var in1=Number(document.getElementById("screen").value)
-			var in2=Number(document.getElementById("get_input1").value)
-			var in3=Number(document.getElementById("get_input2").value)
-			if (in1<in2) 
+			var curent_score = Number(document.getElementById("screen").value)
+			var min_score = Number(document.getElementById("input_min").value)
+			var max_score = Number(document.getElementById("input_max").value)
+
+			if (curent_score < min_score) 
 			{
 				document.getElementById("get_input1").value=in1
 				document.getElementById("screen").value=""
@@ -180,7 +183,7 @@ Sat Jun 22 12:47:28 IST 2019-->
 			 	document.getElementById("get_input2").value=in1
 			 	document.getElementById("screen").value=""
 			}
-			 else if (in1==in2) 
+			else if (in1==in2) 
 			{
 				alert("The number " + in1 +" is equal to " + in2);
 				document.getElementById("screen").value=""			
@@ -199,10 +202,7 @@ Sat Jun 22 12:47:28 IST 2019-->
 			{
 				alert("Not a Integer Number");
 			}
-
 		}
-
-
 	</script>
 </body>
 </html>
