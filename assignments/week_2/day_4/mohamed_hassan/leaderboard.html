@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <style type="text/css">
+.body{
+  width:1140px;
+  margin:0 auto;
+}
+.container{
+  margin:0 300px;
+}
+.screen{
+  width:350px;
+  height:100px;
+  border:4px solid #000;
+  background-color: #ccc;
+  float:left;
+  font-size:75px;
+  margin-top: 70px;
+}
+.buttons_key{
+  position:relative;
+  width:70px;
+  height:50px;
+  border:2px solid #000;
+  float:left;
+  font-size:20px;
+}
+.clear_left{
+  clear:left;
+}
+.margin_left{
+  margin-left:70px;
+}
+.margin_top{
+  margin-top: 40px;
+}
+.margin_left_for_zerobtn{
+margin-left: 145px;
+}
+.margin_left_for_maxbtn{
+margin-left:210px;
+}
+.margin_left_for_minbtn{
+  margin-left:-50px;
+}
+.enter_key{
+  width:230px;
+  background-color: #000;
+  color:#fff;
+}
+.span_enterbtn{
+  left:70px;
+}
+span{
+  position: absolute;
+  top:15px;
+  left:30px;
+}
+.max_min_key{
+width:125px;
+height:100px;
+}
+.span_min_max_btn{
+  top:110px;
+}
+.max_color{
+  background-color: green;
+}
+.min_color{
+  background-color: red;
+}
+.max_min_fontsize{
+  font-size: 30px;
+}
+.min_max_value{
+position: absolute;
+top:25px;
+}
+.bgcolor_green{
+background-color: green;
+}
+.bgcolor_orange{
+background-color: orange;
+}
+.bgcolor_purple{
+  background-color: purple;
+}
+
+  </style>
+  <title>Numpad</title>
+</head>
+<body class="body">
+  <div class="container">
+    <div class="buttons_key clear_left margin_top max_min_key margin_left_for_minbtn min_color"> <span class="span_min_max_btn">MIN</span><span id='min_box' class="max_min_fontsize min_max_value">43</span></div>
+    <div class="buttons_key margin_top margin_left_for_maxbtn max_min_key max_color"><span class="span_min_max_btn">MAX</span><span id='max_box' class="max_min_fontsize min_max_value">2019</span></div>
+    <div id="screendisplay" class="screen clear_left">#</div>
+    <div onclick="display(1)" id="press1" class="buttons_key clear_left margin_top bgcolor_green"><span>1</span></div>
+    <div onclick="display(2)" id="press2" class="buttons_key margin_left margin_top bgcolor_orange"><span>2</span></div>
+    <div onclick="display(3)" id="press3" class="buttons_key margin_left margin_top bgcolor_green"><span>3</span></div>
+    <div onclick="display(4)" id="press4" class="buttons_key clear_left margin_top bgcolor_orange"><span>4</span></div>
+    <div onclick="display(5)" id="press5" class="buttons_key margin_left margin_top bgcolor_orange"><span>5</span></div>
+    <div onclick="display(6)" id="press6" class="buttons_key margin_left margin_top bgcolor_orange"><span>6</span></div>
+    <div onclick="display(7)" id="press7" class="buttons_key clear_left margin_top bgcolor_green"><span>7</span></div>
+    <div onclick="display(8)" id="press8" class="buttons_key margin_left margin_top bgcolor_orange"><span>8</span></div>
+    <div onclick="display(9)" id="press9" class="buttons_key margin_left margin_top bgcolor_green"><span>9</span></div>
+    <div onclick="display(0)" id="press0" class="buttons_key clear_left margin_top margin_left_for_zerobtn bgcolor_purple"><span>0</span> </div>
+    <div onclick="enter()" id="pressenter" class="buttons_key enter_key clear_left margin_left margin_top"><span class="span_enterbtn">ENTER</span></div>
+
+  </div>
+<script>
+function display(val){
+  var screen_content= document.getElementById('screendisplay').innerHTML
+  if(screen_content=='#'){
+    var clear='';
+    document.getElementById('screendisplay').innerHTML=clear;
+  }
+document.getElementById('screendisplay').innerHTML+=val;
+}
+function enter(){
+  var min=parseInt(document.getElementById('min_box').innerHTML);
+  var max=parseInt(document.getElementById('max_box').innerHTML);
+  var screen_content= parseInt(document.getElementById('screendisplay').innerHTML);
+
+  if(screen_content > max){
+  //  console.log(screen_content)
+   document.getElementById('max_box').innerHTML=screen_content;
+ }
+ else if(screen_content < min){
+    console.log(screen_content)
+    document.getElementById('min_box').innerHTML=screen_content;
+  }else if(min<screen_content&&screen_content<max){
+    alert("The entered value is neither less than " + min + "or greater than" +max )
+  }
+}
+
+</script>
+</body>
+</html>
