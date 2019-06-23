@@ -11,11 +11,11 @@
         padding: 0px;
     }
     .converter_body{
-        width: 420px;
+        width: 500px;
         height: 200px;
   
         position: absolute;
-        margin-left: 350px;
+        margin-left: 400px;
         margin-top: 150px;
         box-shadow: 0px 0px 2px 1px #cacaca;
     }
@@ -30,12 +30,29 @@
     #input{
         margin-left: 25px;
     }
-    #my_select,#my_result{
+    #input_left,#input_right{
         width:180px;
         margin-left:25px;  
     }
-    #my_result{
-        margin-left: 12.5px
+    #input_right{
+        margin-left: 2px
+    }
+    select{
+        width: 2500px;
+        height: 50px;
+
+
+    }
+    .convert{
+        height:30px;
+        width:150px;
+        background-color: black;
+        color:blanchedalmond;
+        margin-left: 120px;
+    }
+    .shift_left{
+        margin-right: 110px;
+        float:right;
     }
 
     
@@ -45,65 +62,73 @@
     <div class="converter_body">
     <h1 class="converter_title">Converter</h1>
     <input type="text" name="input" id="input">
-    <span>=</span>
+
     <input type="text" name="result" id="result">
-    <select id="my_select">
+    <select class="dispaly_left" id="input_left">
     <option value="meter">Meter</option>
     <option value="kilometer">kilometer</option>
     <option value="centimeter">centimeter</option>
     <select>
-   <select id="my_result">
+   <select class="shift_left" id="input_right">
             <option value="meter">Meter</option>
             <option value="kilometer">kilometer</option>
             <option value="centimeter">centimeter</option>
-</select>
+</select><br>
+
+<button class="convert" onclick="my_result()">CONVERT</button>
+
 </div>
 
     <script>
-        var input = document.getElementById(input);
-        var result = document.getElementById(result);
-        var my_select = document.getElementById(my_select);
-        var my_result = document.getElementById(my_result);
+        var input = document.getElementById("input");
+        var result = document.getElementById("result");
+        var input_left = document.getElementById("input_left");
+        var input_right = document.getElementById("input_right");
 
-        document.getElementById(input).value = (my_result());
-        document.getElementById(my_select).value = (my_result());
-        document.getElementById(my_result).value = (my_result());
+        
+        //document.getElementById("input").value = (my_result());
+        //document.getElementById("input_left").value = (my_result());
+        //document.getElementById("input_right").value = (my_result());
 
-        var input_type = my_select.value;
-        var result_type = my_result.value;
+        var input_type = input_left.value;
+        var result_type = input_right.value;
         function my_result(){
-            if(input_type == "meter" && result_type == "kilometer"){
+            if(input_type === "meter" && result_type === "kilometer"){
+                
+                //document.getElementById("result").value = parseInt(input.value)*0.001;
+
+
                 result.value = parseInt(input.value)*0.001;
             }
-            elseif(input_type == "meter" && result_type == "centimeter")
+            elseif(input_type === "meter" && result_type === "centimeter")
             {
                 result.value = parseInt(input.value)*100;
             }
-            elseif(input_type == "meter" && result_type == "meter")
+            elseif(input_type === "meter" && result_type === "meter")
             {
                 result.value = parseInt(input.value);
             }
-            elseif(input_type == "kilometer" && result_type == "meter")
+            elseif(input_type === "kilometer" && result_type === "meter")
             {
                 result.value = parseInt(input.value)*1000;
             }
-            elseif(input_type == "kilometer" && result_type == "meter")
+            elseif(input_type === "kilometer" && result_type === "meter")
             {
                 result.value = parseInt(input.value)*1000;
             }
-            elseif(input_type == "kilometer" && result_type == "kilometer")
+            elseif(input_type === "kilometer" && result_type === "kilometer")
             {
                 result.value = parseInt(input.value);
             }
-            elseif(input_type == "centimeter" && result_type == "kilometer")
+            elseif(input_type === "centimeter" && result_type === "kilometer")
             {
                 result.value = parseInt(input.value)*0.00001;
             }
-            elseif(input_type == "centimeter" && result_type == "meter")
+            elseif(input_type === "centimeter" && result_type === "meter")
             {
                 result.value = parseInt(input.value)*0.01;
             }
-            elseif(input_type == "centimeter" && result_type == "centimeter")
+            elseif(input_type === "centimeter" && result_type === "centimeter")
             {
                 result.value = parseInt(input.value);
             }
