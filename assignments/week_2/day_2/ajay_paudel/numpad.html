@@ -4,128 +4,177 @@
 	<title>Numpad</title>
 	<meta charset="utf-8">
 	<style >
-		.class1{
-			border: 1px solid black; height: 600px; width:500px; margin-left: 400px;
+		.outer_box{
+			border: 1px solid black;
+			 height: 600px; 
+			 width:500px;
+			 margin-left: 400px;
 		}
 		.recbox{
-			border: 1px solid black;height: 100px; width: 350px ;margin-left: 77px ; margin-top: 50px;background-color: grey;
+			border: 1px solid black;
+			height: 100px; 
+			width: 350px ;
+			margin-left: 77px ;
+			 margin-top: 50px;
+			 background-color: grey;
 		}
 		#para1{
-			font-size: 30px;text-align: center;
+			font-size: 30px;
+			text-align: center;
 		}
-		.num1{
-			float: left; border: 1px solid black; height: 65px; width: 65px; margin-top: 30px ;margin-left: 100px;
+		.outer_button_box1{
+			float: left;
+			 border: 1px solid black; 
+			 height: 65px; 
+			width: 65px;
+			 margin-top: 30px ;
+			 margin-left: 100px;
 		}
-		#green_num{
-			font-size: 30px; text-align: center; height: 65px; width: 65px; background-color: green
+
+		#green_button{
+			font-size: 30px;
+			 text-align: center;
+			 height: 65px; 
+			 width: 65px; 
+			background-color: green
 		}
-		#orange_num{
-			font-size: 30px; text-align: center; height: 65px; width: 65px; background-color: orange
+		#orange_button{
+			font-size: 30px;
+			 text-align: center;
+			 height: 65px;
+			 width: 65px; 
+			 background-color: orange
 		}
-		.num2{
-			float: left; border: 1px solid black; height: 65px; width: 65px; margin-top: 30px ;margin-left: 50px;
+		.outer_button_box2{
+			float: left;
+			 border: 1px solid black;
+			 height: 65px;
+			 width: 65px;
+			 margin-top: 30px ;
+			 margin-left: 50px;
 		}
-		.num3{
-			float: left; border: 1px solid black; height: 65px; width: 65px; margin-top: 30px ;margin-left: 50px
+		.outer_button_box3{
+			float: left;
+			 border: 1px solid black;
+			 height: 65px;
+			 width: 65px;
+			 margin-top: 30px ;
+			 margin-left: 50px
 		}
-		.num4{
-			clear: both;float: left; border: 1px solid black;height: 65px; width: 65px; margin-left: 100px ; margin-top: 30px
+		.outer_button_box4{
+			clear: both;
+			float: left;
+			 border: 1px solid black;
+			 height: 65px;
+			  width: 65px; 
+			  margin-left: 100px ;
+			  margin-top: 30px
 		}
-		#violet_num{
-			font-size: 30px; text-align: center; height: 65px; width: 65px; background-color: violet;
+		#violet_button{
+			font-size: 30px;
+			 text-align: center;
+			 height: 65px; 
+			 width: 65px;
+			 background-color: violet;
 		}
-		.num0{
-			clear: both;float: left; border: 1px solid black;height: 65px; width: 65px; margin-left: 218px ; margin-top: 30px
+		.outer_button_box5{
+			clear: both;
+			float: left; 
+			border: 1px solid black;
+			height: 65px;
+			 width: 65px;
+			 margin-left: 218px ;
+			 margin-top: 30px
 		}
 
 	</style>
 </head>
 <body>
-	<div class="class1" >
+	<div class="outer_box" >
 		<div class="recbox">
 			<p id="para1">#</p>
 		</div>
 
-		<div class="num1">
-			<button onclick="one()" id="green_num">1</button>	
+		<div class="outer_button_box1">
+			<button onclick="show_num_one()" id="green_button">1</button>	
 		</div>
 
-		<div class="num2">
-			<button onclick="two()" id="orange_num">2</button>
+		<div class="outer_button_box2">
+			<button onclick="show_num_two()" id="orange_button">2</button>
 		</div>
 
-		<div class="num3">
-			<button onclick="three()" id="green_num">3</button>
+		<div class="outer_button_box3">
+			<button onclick="show_num_three()" id="green_button">3</button>
 		</div>
 
-		<div class="num4">
-			<button onclick="four()" id="orange_num">4</button>
+		<div class="outer_button_box4">
+			<button onclick="show_num_four()" id="orange_button">4</button>
 			
 		</div>
 
-		<div class="num2">
-			<button onclick="five()" id="orange_num">5</button>
+		<div class="outer_button_box2">
+			<button onclick="show_num_five()" id="orange_button">5</button>
 		</div>
 
-		<div class="num3">
-			<button onclick="six()" id="orange_num">6</button>
+		<div class="outer_button_box3">
+			<button onclick="show_num_six()" id="orange_button">6</button>
 		</div>
 
-		<div class="num4">
-			<button onclick="seven()" id="green_num">7</button>
+		<div class="outer_button_box4">
+			<button onclick="show_num_seven()" id="green_button">7</button>
 		</div>
 
-		<div class="num2">
-			<button onclick="eight()" id="orange_num">8</button>
+		<div class="outer_button_box2">
+			<button onclick="show_num_eight()" id="orange_button">8</button>
 		</div>
 
-		<div class="num3">
-			<button onclick="nine()" id="green_num">9</button>
+		<div class="outer_button_box3">
+			<button onclick="show_num_nine()" id="green_button">9</button>
 		</div>
 
-		<div class="num0">
-			<button onclick="zero()" id="violet_num">0</button>
+		<div class="outer_button_box5">
+			<button onclick="show_num_zero()" id="violet_button">0</button>
 		</div>
 	</div>
 
 	<script>
-		function one() {
+		function show_num_one() {
 			// body...
 			document.getElementById('para1').innerHTML = 1;
 		}
-		function two() {
+		function show_num_two() {
 			// body...
 			document.getElementById('para1').innerHTML = 2;
 		}
-		function three() {
+		function show_num_three() {
 			// body...
 			document.getElementById('para1').innerHTML = 3;
 		}
-		function four() {
+		function show_num_four() {
 			// body...
 			document.getElementById('para1').innerHTML = 4;
 		}
-		function five() {
+		function show_num_five() {
 			// body...
 			document.getElementById('para1').innerHTML = 5;
 		}
-		function six() {
+		function show_num_six() {
 			// body...
 			document.getElementById('para1').innerHTML = 6;
 		}
-		function seven() {
+		function show_num_seven() {
 			// body...
 			document.getElementById('para1').innerHTML = 7;
 		}
-		function eight() {
+		function show_num_eight() {
 			// body...
 			document.getElementById('para1').innerHTML = 8;
 		}
-		function nine() {
+		function show_num_nine() {
 			// body...
 			document.getElementById('para1').innerHTML = 9;
 		}
-		function zero() {
+		function show_num_zero() {
 			// body...
 			document.getElementById('para1').innerHTML = 0;
 		}
