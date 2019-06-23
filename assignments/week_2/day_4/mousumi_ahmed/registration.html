@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Registration Form </title>
+
+    <style>
+
+        .box{
+            height: 600px;
+            width: 100px;
+            border: 2 px dotted black;
+            margin: 20px;
+        }
+
+    .box_left{
+        height: 500px;
+        width:500px;    
+        
+        margin-top:80px;
+        margin-left:150px;
+        padding: 20px;
+        text-align: justify;
+        font-size: 25px;
+        float:left;
+        
+    }
+    .box_right{
+        height: 500px;
+        width:320px;    
+        border:2px solid black;
+        margin-top:80px;
+        margin-right:150px;
+        padding: 20px;
+        text-align: justify;
+        font-size: 25px;
+        float:right;
+        color:white;
+    }
+    input{
+        width: 300px;
+        padding: 15px;
+        border: 2px solid black;
+    }
+    .black{
+        background-color: black;
+    }
+    .red{
+        color:red;
+    }
+    button{
+        width:300px;
+        background-color: black;
+        color: antiquewhite;
+        height: 50px;
+        font-size: 20px;
+    }
+    .font{
+        font-size: 50px;
+    }
+    
+    
+    </style>
+</head>
+<body>
+    <div>
+        <div class="box_left">
+                <p> <label for="name" ><strong>NAME</strong></label><br>
+                 <input type="text" name="name" id="name"></p>
+                 <p class="red" id="valid_name"></p>
+                 <p> <label for="email" ><strong>EMAIL</strong></label><br>
+                <input type="text" name="email" id="email"></p>  
+                <p id="eid" class="red"></p>
+                <p> <label for="mobile" ><strong>MOBILE</strong></label><br>
+              <input type="text" name="mobile" id="mobile"></p>
+            <p id="valid_mobile"class="red">Enter a Valid Mobile</p>
+           
+            <button onclick="register()">REGISTER</button>
+        </div>
+        <div class="box_right black">
+            <h3>NAME<br><span class="font">MASAI</span></h3>
+            <h3>EMAIL<br>email@masaischool.com</h3>
+            <h3>MOBILE<br><span class="font">9876543210</span></h3>
+
+        </div>
+    </div>
+    <script>
+        function register(){
+
+            
+            var name = document.getElementById("name").value;
+
+            if(name.length < 3 || name.length >10)
+            {
+                document.getElementById("valid_name").innerHTML="Name must be 3 to 10 character "
+                
+            }
+            else
+            {
+                document.getElementById("valid_name").innerHTML=" "
+            }
+            
+
+
+
+
+            var mobile = document.getElementById("mobile").value;
+            if(mobile.length<10 || mobile.length>10)
+            {
+                document.getElementById("valid_mobile").innerHTML="Mobile Number must be 10 character"
+              
+            }
+            else{
+                document.getElementById("valid_mobile").innerHTML=" " 
+            }
+
+
+
+
+            var email = document.getElementById('email').value;
+
+            for (var i = 0; i < email.length; i++) {
+             if (email[i] == '@') {
+
+            
+             if ((email[0] != "@") && (email[email.length - 3] == "c") && (email[email.length - 2] == "o") && (email[email.length - 1] == "m")) {
+
+              if ((email[email.length - 4] == '.') && (email[email.length - 5] != "@") && (email[email.length - 4] != 'c')) 
+              {
+                document.getElementById("id").innerHTML = "";
+                } else {
+                    document.getElementById("eid").innerHTML = " Pls enter a valid email id ";
+                }
+              } else {
+                document.getElementById("eid").innerHTML = " Pls enter a valid email id ";
+        }
+    }
+}
+document.getElementById("eid").innerHTML = " Pls enter a valid email id ";
+}
+
+
+
+           /* var email=document.getElementById("email").value;
+            if(email.indexof('@')<=0)
+            {
+                document.getElementById("valid_email").innerHTML = "invalid email";
+               
+            }
+             if((email.charAt(email.length-4)!='.') && (email.charAt(email.length-3)!='.'))
+             {
+                document.getElementById("valid_email").innerHTML = "invalid email";
+              
+              }
+              else{
+                  alert('bnbjhh');
+              }*/
+
+        
+    
+    
+    
+    
+    
+    </script>
+</body>
+</html>
