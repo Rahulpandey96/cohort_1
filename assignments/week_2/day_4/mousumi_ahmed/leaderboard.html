@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Leader Board</title>
+    <style>
+		.main_layout{
+			height: 800px;
+			width: 700px;
+			margin-left: 200px;
+			margin-top: 50px;
+		
+		}
+    
+    .box_left{
+		height: 80px;
+		width: 130px;
+		margin-left: 70px;
+		margin-top: -10px;
+		background-color: red;
+	}
+	.box_right{
+		height: 80px;
+		width: 130px;
+		margin-top:-150px;
+		margin-right: 100px;
+		
+		background-color: green;
+		float: right;	
+	}
+	.left{
+		margin-left: 100px;
+	}
+	.right{
+		margin-top:-50px;
+		margin-right: 150px;
+		float:right;
+	}
+	.text_centre{
+		text-align: center;
+		font-size: 30px;
+	}
+
+    .score_box{
+		height: 100px;
+		width: 300px;
+		margin-left: 200px;
+		background-color: rgb(75, 161, 157);
+		
+	}
+
+	.score_heading{
+		margin-left: 300px;
+
+	}
+	.clear{
+		clear:left;
+	}
+	.input_keys{
+		height:50px;
+		width: 50px;
+		margin-top: 20px;
+		margin-left:50px;
+		float: left;
+	}
+	.margin_left{
+		margin-left: 170px;
+	}
+	.submit_style{
+		width: 250px;
+		margin-left: 200px;
+		background-color: black;
+		color:white;
+		font-size: 30px;
+	}
+    
+    .center{
+		margin-left: 150px;
+	}
+	.green{
+		background-color: green;
+	}
+	.orange{
+		background-color: rgb(230, 110, 13);
+
+	}
+	.purple{
+		background-color: purple;
+	}
+	.reset_style{
+		height:50px;
+		width:80px;
+		background-color: black;
+		color:white;
+		margin-left: 10px;
+	}    
+    
+    </style>
+</head>
+<body>
+
+		<div class="main_layout">
+
+			<div>
+				<input type="text" value="43" name="input_min" id="input_min" class="box_left text_centre" >
+				<h2 class="left">MIN</h2>
+			<div>
+
+				<div><input type="text" value="2019" name="input_max" id="input_max" class="box_right text_centre" >
+				<h2 class="right">MAX</h2>
+
+
+			</div>	
+
+			<div>
+
+				<h1 class="score_heading">SCORE</h1>
+				<input type="text" name="screen" class="score_box text_centre" id="score" >
+			</div>
+
+
+
+			<div class="margin_left">
+			<div >
+				<button class="input_keys clear green" onclick="display('1')">1</button>
+			</div>
+			<div >
+				<button class="input_keys orange " onclick="display('2')">2</button>
+			</div>
+			<div>
+				<button class="input_keys green" onclick="display('3')">3</button>
+			</div>
+			<div>
+				<button class="input_keys clear orange" onclick="display('4')">4</button>
+			</div>
+			<div>
+				<button class="input_keys orange" onclick="display('5')">5</button>
+			</div>
+			<div>
+				<button class="input_keys orange" onclick="display('6')">6</button>
+			</div>
+			<div>
+				<button class="input_keys clear green" onclick="display('7')">7</button>
+			</div>
+			<div>
+				<button class="input_keys orange" onclick="display('8')">8</button>
+			</div>
+			<div>
+				<button class="input_keys green" onclick="display('9')">9</button>
+			</div>
+			<div>
+				<button class="input_keys clear center purple" onclick="display('0')">0</button>
+			</div>
+			
+		</div>
+	</div>
+
+
+
+
+
+		<div>
+			<div>
+				<button class="input_keys submit_style clear " onclick="fun_submit()">ENTER</button>
+			</div>
+			<div>
+				<button class=" reset_style input_keys " onclick="reset()">reset</button>
+			</div>
+		</div>
+	</div>
+
+
+	<script type="text/javascript">
+		function reset()
+		{
+			document.getElementById("score").value=""
+		}
+		function display(input)
+		{
+			document.getElementById("score").value+=input;
+		}
+		function fun_submit()
+		{
+			var curent_score = Number(document.getElementById("score").value)
+			var min_score = Number(document.getElementById("input_min").value)
+			var max_score = Number(document.getElementById("input_max").value)
+			if (curent_score < min_score) 
+			{
+				document.getElementById("score").innerHTML= current_score
+				
+			}
+			if(curent_score> max_score)
+			{
+				document.getElementById("score").innerHTML= current_score
+			
+			}
+			else
+			{
+				document.getElementById("score").innerHTML= input
+			}
+
+		}
+			
+		
+	</script>
+</body>
+</html>

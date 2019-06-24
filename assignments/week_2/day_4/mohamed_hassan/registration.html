@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <style type="text/css" media="screen">
+  label {
+    font-size: 30px;
+  }
+  input {
+    width: 400px;
+    height: 50px;
+    border: 2px solid #000;
+    font-size: 30px;
+  }
+    .float_left {
+      float: left;
+    }
+    .float_clear {
+      float: left;
+      clear: left;
+    }
+    .submit {
+      width: 400px;
+      height: 50px;
+      background-color: #000;
+      color: #fff;
+      font-size: 20px;
+    }
+    .float_right {
+      float: right;
+    }
+    .main_div {
+      margin: 100px 50px;
+    }
+    .sub_div {
+      background-color: #000;
+      color: #fff;
+      font-size: 40px;
+    }
+    .font_size {
+      font-size: 80px;
+    }
+    .margin_top {
+      margin-top: 15px;
+    }
+    .warning_text {
+      font-size: 20px;
+      color: red
+    }
+  </style>
+  <title>Registration</title>
+</head>
+
+<body style="margin:0 auto;width:1140px;">
+  <div class="main_div">
+    <div class="float_left">
+      <div class="form">
+        <label id="name" class="float_left" for="name">Name</label>
+        <input id="user_name" class="float_clear margin_top" type="text" name="name" value="">
+        <label id="email" class="float_clear margin_top" for="email">E-mail</label>
+        <input id="user_emailid" class="float_clear margin_top" type="text" name="emailid" value="">
+        <p id="email_warning" class="float_clear"></p>
+        <label id="number" class="float_clear margin_top" for="mobile_no">Mobile</label>
+        <input id="user_number" class="float_clear margin_top" type="text" name="mobile_no" value="">
+        <p id="mobie_warning" class=" float_clear"></p>
+        <button onclick="check()" class="submit float_clear margin_top" type="submit" name="button">Register</button>
+      </div>
+
+    </div>
+
+    <div class="float_right sub_div">
+      <div class="">NAME</div>
+      <div class="font_size margin_top">MASAI</div>
+      <div class="margin_top">E-mail</div>
+      <div class="margin_top">email@masaischool.com</div>
+      <div class="margin_top">MOBILE</div>
+      <div class="margin_top">9876543210</div>
+    </div>
+  </div>
+  <script type="text/javascript">
+    function check(){
+      mobile_check();
+      email_check();
+
+//for mobile number verification
+
+      function mobile_check() {
+        var mobile = parseInt(document.getElementById("user_number").value)
+
+        if (typeof(mobile == "number")) {
+          mob = mobile.toString();
+          var count = 1
+          console.log(mob.length)
+          for (var i = 1; i < mob.length; i++) {
+            count += 1;
+          }
+          console.log(count)
+          if (count == 10) {
+            document.getElementById("mobie_warning").style.color="green";
+            document.getElementById('mobie_warning').innerHTML = "NUMBER TAKEN"
+          } else {
+            document.getElementById('mobie_warning').style.color="red"
+            document.getElementById("mobie_warning").innerHTML = "INCORRECT NUMBER"
+          }
+        } else {
+          document.getElementById('mobie_warning').style.color="red"
+          document.getElementById('mobie_warning').innerHTML = "PLEASE ENTER NUMBER"
+        }
+      }
+
+//for email id verification
+
+      function email_check() {
+        var email = document.getElementById("user_emailid").value
+        if (typeof(email) == "string") {
+          for (var i = 0; i < email.length; i++) {
+            var email = document.getElementById("user_emailid").value
+            if (email[i] == '@') {
+              var email = document.getElementById("user_emailid").value
+              if ((email[0] != "@") && (email[email.length - 4] == '.') && (email[email.length - 3] == 'c') && (email[email.length - 2] == 'o') && (email[email.length - 1] == 'm')) {
+                console.log(email[email.length - 4])
+                if ((email[email.length - 5] != '@') && (email[email.length - 4] == '.')) {
+                  console.log(email[email.length - 2])
+                  document.getElementById('email_warning').style.color="green"
+                  document.getElementById('email_warning').innerHTML = "MAIL IS TAKEN"
+                  console.log("mail is taken")
+                } else {
+                  console.log("mail is not taken")
+                  document.getElementById('email_warning').style.color="red"
+                  document.getElementById('email_warning').innerHTML = "ENTER THE VALID EMAIL ID"
+
+              }
+
+            }else{
+              document.getElementById('email_warning').style.color="red"
+              document.getElementById("email_warning").innerHTML = "ENTER THE VALID EMAIL ID"
+            }
+
+        }
+} alert("Please enter @")
+    }else {
+        document.getElementById('email_warning').style.color="red"
+        document.getElementById("email_warning").innerHTML = "ENTER THE VALID EMAIL ID"
+}
+}
+}
+  </script>
+</body>
+</html>

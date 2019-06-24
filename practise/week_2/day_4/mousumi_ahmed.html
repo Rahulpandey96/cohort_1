@@ -24,7 +24,7 @@
 	<!-- These elements below are for FSD.W2.2.2_3-->
 	<h1>Check if the users email is valid!</h1>
 	<label for="email_input" >Email</label>
-	<input type="text" id="email_input">
+	<input type="text" id="email">
 
 	<button onclick="validateEmail()">Check Email!</button>
 	<!-- These elements above are for FSD.W2.2.2_2-->
@@ -60,11 +60,34 @@
 
 		}
 
-		
+		function validateEmail(){
+ 			var email = document.getElementById('email').value;
+
+            for (var i = 0; i < email.length; i++) {
+             if (email[i] == '@') {
+
+            
+             if ((email[0] != "@") && (email[email.length - 3] == "c") && (email[email.length - 2] == "o") && (email[email.length - 1] == "m")) {
+
+              if ((email[email.length - 4] == '.') && (email[email.length - 5] != "@") && (email[email.length - 4] != 'c')) 
+              {
+                alert("valid email");
+                } else {
+                    alert("invalid email");
+                }
+              } else {
+                alert("invalid email");
+        }
+    }
+}
+alert("invalid email");
+}
 
 
 
-		//Write javascript for FSD.W2.4.1_3 here
+
+
+		/*Write javascript for FSD.W2.4.1_3 here
 		function validateEmail(){
 
 

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <title>Coding Session 2</title>
+</head>
+<body>
+        
+        <h1> Check if you can drive in India! </h1>
+        <input type="text" name = "drive" id="drive">
+        <p id="para" > </p>
+        </hr>
+        <button onclick="check_drive()">Click here to check!</button>
+        
+        <h1 id="color_text">Input your color in the textbox!
+        <input type="text" id="color_name">
+        <button onclick="change_color()">Click here to change my color</button>
+
+        <h1>Find your continent!</h1>
+        <label for="country_select">Choose your Country</label>
+        <select id="continent">
+                        <option value = "India"> India </option>
+                        <option value = "United States of America"> United States of America </option>
+                        <option value = "China"> China </option>
+                        <option value = "Nepal"> Nepal </option>
+                        <option value = "Australia"> Australia </option>
+                        <option value = "France"> France </option>
+                        <option value = "Germany"> Germany </option>
+                        <option value = "South Africa"> South Africa </option>
+                        <option value = "Nigeria"> Nigeria </option>
+                        <option value = "Mexico">Mexico</option>
+                        <option value = "Argentina"> Argentina</option>
+                        <option value = "Brazil"> Brazil </option>
+                        <option value = "Canada"> Canada </option>
+                        <option value = "Singapore">Singapore</option>
+                        <option value = "Sweden"> Sweden </option>
+        </select>
+        <button onclick="find_continent()">Find Continent</button>
+        
+        <script type="text/javascript">
+                function check_drive(){
+                       var drive_value = document.getElementById('drive').value;
+                       
+                        if (drive_value > 18) 
+                        {
+                             document.getElementById("para").innerHTML = "You can drive in India!"   
+                        }
+                       
+                       if (drive_value < 18) 
+                        {
+                             document.getElementById("para").innerHTML = "You can't drive in India!"   
+                        }
+
+                        if (drive_value == 18) 
+                        {
+                             document.getElementById("para").innerHTML = "You are just old enough to drive in India!"   
+                        }
+                       
+                       
+                }
+                function change_color(){
+                        
+                       var color_value= document.getElementById("color_name").value;
+                       document.getElementById("color_text").style.color = color_value;
+                }
+                function find_continent(){
+                        
+                        var continent_value = document.getElementById("continent").value;
+
+                        switch (continent_value)
+                                {
+
+                                                case 'India' :
+                                                        alert("The continent is Asia");
+                                                        break;
+                                                case 'United States of America' :
+                                                        alert("The continent is NorthAmerica");
+                                                        break;
+                                                case 'China' :
+                                                        alert("The continent is Asia");
+                                                        break;
+                                                case 'Nepal' :
+                                                        alert("The continent is Asia");
+                                                        break;
+                                                case 'Australia' :
+                                                        alert("The continent is Australia");
+                                                        break;
+                                                case 'France' :
+                                                        alert("The continent is Europe");
+                                                        break;
+                                                case 'Germany' :
+                                                        alert("The continent is Europe");
+                                                        break;
+                                                case 'South Africa' :
+                                                        alert("The continent is Africa");
+                                                        break;
+                                                case 'Nigeria' :
+                                                        alert("The continent is Africa");
+                                                        break;
+                                                case 'Mexico' :
+                                                        alert("The continent is NorthAmerica");
+                                                        break;
+                                                case 'Argentina' :
+                                                        alert("The continent is SouthAmerica");
+                                                        break;
+                                                case 'Brazil' :
+                                                        alert("The continent is SouthAmerica");
+                                                        break;
+                                                case 'Canada' :
+                                                        alert("The continent is NorthAmerica");
+                                                        break;
+                                                case 'Singapore' :
+                                                        alert("The continent is Asia");
+                                                        break;
+                                                case 'Sweden' :
+                                                        alert("The continent is Europe");
+                                                        break;
+                                                
+                                }
+                      }
+        </script>
+</body>
+</html>           
