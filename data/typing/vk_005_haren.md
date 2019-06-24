@@ -1,4 +1,4 @@
-# FIRSTNAME LASTNAME
+# Haren
 
 [https://thetypingcat.com/typing-speed-test/](https://thetypingcat.com/typing-speed-test/)
 

@@ -1,4 +1,4 @@
-# FIRSTNAME LASTNAME
+# Ajay
 
 [https://thetypingcat.com/typing-speed-test/](https://thetypingcat.com/typing-speed-test/)
 
