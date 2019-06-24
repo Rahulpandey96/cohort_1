@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Leaderboard</title>
+  <style type="text/css">
+    .body
+    {
+      width:500px;
+      margin:0 auto;  
+    }
+    .container
+    {
+      margin-top: 200px;
+    }
+    .screen
+    {
+      height:100px;
+      width:340px;
+      background-color:grey;
+      margin-left:30px; 
+      border: 2px solid black;
+      font-size: 45px;
+      text-align: center;
+    }
+    .clear
+    {
+      clear:left;
+    }
+    .align
+    {
+      font-size: 30px;
+      padding:5px;
+    }
+    .color_box 
+    {
+      float: left;
+      width:75px;
+      height:75px;
+      border:2px solid black;
+      margin:30px 30px 0 30px;
+      margin-left:30px;
+    }
+    .min_box
+    {
+      float: left;
+      width:100px;
+      height:100px;
+      border:2px solid black;
+      margin-top: -120px;
+      margin-left:-50px;
+      text-align: center;
+      font-size: 35px;
+    }
+    .max_box
+    {
+      float: right;
+      width:100px;
+      height:100px;
+      border:2px solid black;
+      margin-top: -165px;
+      margin-right: 20px;
+      text-align: center;
+      font-size: 35px;
+    }
+    #min_textsize
+    {
+      margin-left: -40px;
+      margin-top: -50px; 
+    }
+    #max_textsize
+    {
+      float: right;
+      margin-right: 35px;
+      margin-top: -50px; 
+    }
+    .start_button
+    {
+      height: 80px;
+      width: 100px;
+      text-align: center;
+      margin-left: -280px;
+      margin-top: 500px;  
+      font-size: 25px;
+    }
+    .purple_box
+    {
+      margin-left:165px;
+    }
+    .background_green
+    {   
+      background-color: green;
+    }
+    .background_orange
+    {
+      background-color: orange;
+    }
+    .background_grey
+    {
+      background-color: grey;
+    }
+    .background_purple
+    {
+      background-color: purple;
+    }
+    .background_red
+    {
+      background-color: red;
+    }
+  </style>
+</head>
+<body class="body">
+  <div class="container">
+    
+    <div>
+        <input type="text" name="input1" class="min_box background_red" value="43" id="lowscore">
+        <h2 id="min_textsize">MIN</h2>
+           
+        <input type="text" name="input2" class="max_box background_green" value="2019" id="highscore">
+        <h2 id="max_textsize">MAX</h2>
+    </div>
+    <div id="screen_display" class="screen "></div>
+
+    <button class="clear color_box background_green align" onclick="display('1')" value="1">1
+    </button>
+    <button class="color_box background_orange align" onclick="display('2')" value="1">2
+    </button>
+    <button class="color_box background_green align" onclick="display('3')" value="1">3
+    </button>
+    <button class="clear color_box background_orange align" onclick="display('4')" value="1">4
+    </button>
+    <button class="color_box background_orange align" onclick="display('5')" value="1">5
+    </button>
+    <button class="color_box background_orange align" onclick="display('6')" value="1">6
+    </button>
+    <button class="clear color_box background_green align" onclick="display('7')" value="1">7
+    </button>
+    <button class="color_box background_orange align" onclick="display('8')" value="1">8
+    </button>
+    <button class="color_box background_green align" onclick="display('9')" value="1">9
+    </button>
+    <button class="clear color_box purple_box background_purple align" onclick="display('0')" value="1">0
+    </button>
+   <button id="start" class=" start_button " style="padding: 1px; color: black;" onclick="start()" value="start">START
+    </button>
+  </div>
+  <script>
+    function display(val)
+    {
+       document.getElementById("screen_display").innerHTML +=val;
+    }
+    function start()
+    {
+        var mainScore = document.getElementById("screen_display").value;
+        var highScore = document.getElementById("highscore").value;
+        var lowScore = document.getElementById("lowscore").value;
+        if (mainScore < highScore) {
+          document.getElementById("lowscore").value = mainScore;
+          document.getElementById("screen_display").value = "";
+        } else if (mainScore > lowScore) {
+          document.getElementById("highscore").value = mainScore;
+          document.getElementById("screen_display").value = "";
+        } else if (mainScore == lowScore) {
+          alert("Number " + mainScore + " Equal To " + lowScore);
+          document.getElementById("screen_display").value + "";
+        } else if (mainScore == highScore) {
+          alert("Number " + mainScore + "Equal To " + highScore);
+          document.getElementById("screen_display").value = "";
+        } else if (mainScore > lowScore && mainScore < highScore) {
+          document.getElementById("errorText").innerText =
+            "Number" + mainScore + " " + lowScore + " " + highScore;
+          document.getElementById("screen_display").value + "";
+        } else {
+          document.getElementById("errorText").innerText =
+            "Integers Number || Ex: -15, 0, 27, 1102";
+        }
+    }
+</script>
+</body>
+</html>
+
