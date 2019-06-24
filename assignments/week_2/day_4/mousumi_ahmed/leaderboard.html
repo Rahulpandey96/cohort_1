@@ -42,7 +42,6 @@
 		text-align: center;
 		font-size: 30px;
 	}
-
     .score_box{
 		height: 100px;
 		width: 300px;
@@ -50,10 +49,8 @@
 		background-color: rgb(75, 161, 157);
 		
 	}
-
 	.score_heading{
 		margin-left: 300px;
-
 	}
 	.clear{
 		clear:left;
@@ -84,7 +81,6 @@
 	}
 	.orange{
 		background-color: rgb(230, 110, 13);
-
 	}
 	.purple{
 		background-color: purple;
@@ -188,19 +184,18 @@
 			var max_score = Number(document.getElementById("input_max").value)
 			if (curent_score < min_score) 
 			{
-				document.getElementById("score").innerHTML= current_score
+				document.getElementById("input_min").value= curent_score;
 				
 			}
 			if(curent_score> max_score)
 			{
-				document.getElementById("score").innerHTML= current_score
+				document.getElementById("input_max").value= curent_score;
 			
 			}
 			else
 			{
-				document.getElementById("score").innerHTML= input
+				document.getElementById("score").value="";
 			}
-
 		}
 			
 		
