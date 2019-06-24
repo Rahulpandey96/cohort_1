@@ -118,7 +118,7 @@ Fill the below property values for the `div`
 ```
 2. Height
 ```
-50px;
+100px;
 
 ```
 3. Padding
@@ -212,7 +212,7 @@ red
 ```
 6. Color
 ```
-purple
+white
 ```
 ### FSD.W2.2.1_6
 ```
@@ -328,7 +328,7 @@ red
 ```
 1. Width
 ```
-150px
+100px
 ```
 2. Height
 ```
