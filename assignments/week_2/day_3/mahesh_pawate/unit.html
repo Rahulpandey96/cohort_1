@@ -92,7 +92,7 @@
 			</div>
 
 			<div class="float_left inputbox_border" ><!--Volume div3-->
-				<select size="4" id="select_volume">
+				<select size="4" id="convert_in_volume">
 					<option value="Liter">Liter</option>
 					<option value="Milliliter">Milliliter</option>
 					<option value="US_Gallon">US Gallon</option>
@@ -108,7 +108,7 @@
 		{
 			var unit_selected=document.getElementById("select_your_unit").value
 			var convert_unit=document.getElementById("convert_in_length").value
-			var get_input=document.getElementById("take_input").value
+			var get_input=Number(document.getElementById("take_input").value)
 			switch(unit_selected)
 			{
 				case "M" :
@@ -213,7 +213,6 @@
 				}
 			}
 		}
-
 		function temperature()
 		{
 			var unit_selected=document.getElementById("select_your_unit").value
@@ -226,16 +225,16 @@
 				{
 						if (convert_unit == "Celsius")
 						{
-							document.getElementById("display").innerHTML=get_input * 1  + " " + convert_unit
+							document.getElementById("display").innerHTML=get_input * 1  + " " + convert_unit;
 						}
 						else if (convert_unit == "Kelvin")
 						{
-							temp=get_input + 273.15
-							document.getElementById("display").innerHTML= temp  + " " + convert_unit
+							temp=get_input + 273.15;
+							document.getElementById("display").innerHTML= temp  + " " + convert_unit;
 						}
 						else if (convert_unit == "Fahrenheit")
 						{
-							document.getElementById("display").innerHTML=(get_input 9/5) + 32 +" "+ convert_unit
+							document.getElementById("display").innerHTML= get_input* 9/5 + 32 +" "+ convert_unit;
 						}
 						else
 						{
@@ -247,15 +246,17 @@
 				{
 						if (convert_unit == "Celsius")
 						{
-							document.getElementById("display").innerHTML=get_input * 1  + " " + convert_unit
+							document.getElementById("display").innerHTML=get_input - 273.15  + " " + convert_unit
 						}
 						else if (convert_unit == "Kelvin")
 						{
-							document.getElementById("display").innerHTML=get_input / 1000  + " " + convert_unit
+							document.getElementById("display").innerHTML=get_input * 1  + " " + convert_unit
 						}
 						else if (convert_unit == "Fahrenheit")
 						{
-							document.getElementById("display").innerHTML=get_input/1609.344 +" "+ convert_unit
+							console.log(convert_unit);
+							temp=(get_input - 273.15) * 9/5
+							document.getElementById("display").innerHTML= temp  + 32  +" "+ convert_unit
 						}
 						else
 						{
@@ -267,15 +268,17 @@
 				{
 						if (convert_unit == "Celsius")
 						{
-							document.getElementById("display").innerHTML=get_input * 1  + " " + convert_unit
+							temp=(get_input - 32) * 5/9
+							document.getElementById("display").innerHTML= temp  + " " + convert_unit
 						}
 						else if (convert_unit == "Kelvin")
 						{
-							document.getElementById("display").innerHTML=get_input / 1000  + " " + convert_unit
+							temp=(get_input - 32) * 5/9 + 273.15
+							document.getElementById("display").innerHTML=temp  + " " + convert_unit
 						}
 						else if (convert_unit == "Fahrenheit")
 						{
-							document.getElementById("display").innerHTML=get_input/1609.344 +" "+ convert_unit
+							document.getElementById("display").innerHTML=get_input +" "+ convert_unit
 						}
 						else
 						{
@@ -289,6 +292,84 @@
 				}
 			}
 		}
+		function volume()
+		{
+			var unit_selected=document.getElementById("select_your_unit").value
+			var convert_unit=document.getElementById("convert_in_volume").value
+			var get_input=Number(document.getElementById("take_input").value)
+			var temp=0
+			switch(unit_selected)
+			{
+				case "C" :
+				{
+						if (convert_unit == "Celsius")
+						{
+							document.getElementById("display").innerHTML=get_input * 1  + " " + convert_unit;
+						}
+						else if (convert_unit == "Kelvin")
+						{
+							temp=get_input + 273.15;
+							document.getElementById("display").innerHTML= temp  + " " + convert_unit;
+						}
+						else if (convert_unit == "Fahrenheit")
+						{
+							document.getElementById("display").innerHTML= get_input* 9/5 + 32 +" "+ convert_unit;
+						}
+						else
+						{
+							alert("Please use proper selection, This is not a temperature...!!!");
+						}
+						break;
+				}
+				case "Kel" :
+				{
+						if (convert_unit == "Celsius")
+						{
+							document.getElementById("display").innerHTML=get_input - 273.15  + " " + convert_unit
+						}
+						else if (convert_unit == "Kelvin")
+						{
+							document.getElementById("display").innerHTML=get_input * 1  + " " + convert_unit
+						}
+						else if (convert_unit == "Fahrenheit")
+						{
+							console.log(convert_unit);
+							temp=(get_input - 273.15) * 9/5
+							document.getElementById("display").innerHTML= temp  + 32  +" "+ convert_unit
+						}
+						else
+						{
+							alert("Please use proper selection, This is not a temperature...!!!");
+						}
+						break;
+				}
+				case "F" :
+				{
+						if (convert_unit == "Celsius")
+						{
+							temp=(get_input - 32) * 5/9
+							document.getElementById("display").innerHTML= temp  + " " + convert_unit
+						}
+						else if (convert_unit == "Kelvin")
+						{
+							temp=(get_input - 32) * 5/9 + 273.15
+							document.getElementById("display").innerHTML=temp  + " " + convert_unit
+						}
+						else if (convert_unit == "Fahrenheit")
+						{
+							document.getElementById("display").innerHTML=get_input +" "+ convert_unit
+						}
+						else
+						{
+							alert("Please use proper selection, This is not a temperature...!!!");
+						}
+						break;
+				}
+				default :
+				{
+					alert("This may be neither unit nor temperature, please select Proper...! ");
+				}
+			}
 	</script>
 </body>
 </html>
