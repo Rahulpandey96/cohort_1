@@ -97,26 +97,78 @@
 			</div>
 			<!-- First collomn element coding goes here !-->
 			<div class="cols col1">
-				<div class="row row_col1 cell_green">1</div>
-				<div class="row row_col1 cell_orange">4</div>
-				<div class="row row_col1 cell_green">7</div>
+				<div class="row row_col1 cell_green" onclick="one()">1</div>
+				<div class="row row_col1 cell_orange" onclick="four()">4</div>
+				<div class="row row_col1 cell_green" onclick="seven()">7</div>
 				<div class="row row_col1 cell_hide"></div>
 			</div>
 			<!-- Second collomn element coding goes here !-->
 			<div class="cols col2">
-				<div class="row row_col2 cell_orange">2</div>
-				<div class="row row_col2 cell_orange">5</div>
-				<div class="row row_col2 cell_orange">8</div>
-				<div class="row row_col2 cell_blue">0</div>
+				<div class="row row_col2 cell_orange" onclick="two()">2</div>
+				<div class="row row_col2 cell_orange" onclick="five()">5</div>
+				<div class="row row_col2 cell_orange" onclick="eight()">8</div>
+				<div class="row row_col2 cell_blue" onclick="zero()">0</div>
 			</div>
 			<!-- Second collomn element coding goes here !-->
 			<div class="cols col3">
-				<div class="row cell_green">3</div>
-				<div class="row cell_orange">6</div>
-				<div class="row cell_green">9</div>
-				<div class="row cell_hide" ></div>
+				<div class="row cell_green" onclick="three()">3</div>
+				<div class="row cell_orange" onclick="six()">6</div>
+				<div class="row cell_green" onclick="seven()">9</div>
+				<div class="row cell_hide"></div>
 			</div>
 		</div>		
 	</div>
+	<script type="text/javascript">
+		function one()
+		{
+		 var result = document.getElementById('text_h1');
+		 	result.innerHTML = 1;
+		}
+		function two()
+		{
+		 var result = document.getElementById('text_h1');
+		 	result.innerHTML = 2;
+		}
+		function three()
+		{
+		 var result = document.getElementById('text_h1');
+		 	result.innerHTML = 3;
+		}
+		function four()
+		{
+		 var result = document.getElementById('text_h1');
+		 	result.innerHTML = 4;
+		}
+		function five()
+		{
+		 var result = document.getElementById('text_h1');
+		 	result.innerHTML = 5;
+		}function six()
+		{
+		 var result = document.getElementById('text_h1');
+		 	result.innerHTML = 6;
+		}
+		function seven()
+		{
+		 var result = document.getElementById('text_h1');
+		 	result.innerHTML = 7;
+		}
+		function eight()
+		{
+		 var result = document.getElementById('text_h1');
+		 	result.innerHTML = 8;
+		}
+		function nine()
+		{
+		 var result = document.getElementById('text_h1');
+		 	result.innerHTML = 9;
+		}
+		function zero()
+		{
+		 var result = document.getElementById('text_h1');
+		 	result.innerHTML = 0;
+		}
+
+	</script>
 </body>
 </html>
