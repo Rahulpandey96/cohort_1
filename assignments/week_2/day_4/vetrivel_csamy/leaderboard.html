@@ -172,10 +172,10 @@
         } else if (mainScore > lowScore) {
           document.getElementById("highscore").value = mainScore;
           document.getElementById("enterdisplay").value = "";
-        } else if (mainScore == lowScore) {
+        } else if (mainScore === lowScore) {
           alert("Number " + mainScore + " Equal To " + lowScore);
           document.getElementById("enterdisplay").value + "";
-        } else if (mainScore == highScore) {
+        } else if (mainScore === highScore) {
           alert("Number " + mainScore + "Equal To " + highScore);
           document.getElementById("enterdisplay").value = "";
         } else if (mainScore > lowScore && mainScore < highScore) {
