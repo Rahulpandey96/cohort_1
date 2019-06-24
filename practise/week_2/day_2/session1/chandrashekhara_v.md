@@ -96,12 +96,12 @@ div {
 Fill the below property values for the `div`
 1. Color
 ```
-color: white;
+white;
   
 ```
 2. Height
 ```
-height: 100px;
+100px;
 
 ```
 
@@ -113,17 +113,17 @@ height: 100px;
 Fill the below property values for the `div`
 1. Width
 ```
-width: 100px;
+100px;
 
 ```
 2. Height
 ```
-height:50px;
+50px;
 
 ```
 3. Padding
 ```
-padding: 4px;
+4px;
 
 ```
 ### FSD.W2.2.1_3
@@ -132,13 +132,13 @@ padding: 4px;
 ```
 1. Width
 ```
-width: 100px;
+100px;
 
 ```
 2. Height
 ```
 
-height: 100px;
+100px;
 
 ```
 3. Padding-Left
