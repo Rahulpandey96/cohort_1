@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Registration Form </title>
+
+    <style>
+        .box{
+            height: 600px;
+            width: 100px;
+            border: 1px dotted black;
+            
+        }
+    .box_left{
+        
+        font-size: 25px;
+        float:left;
+        height: 500px;
+        width:500px;    
+        margin-top:100px;
+        margin-left:150px;
+        
+    }
+    .box_right{
+        font-size: 25px;
+        float:right;
+        height: 400px;
+        width:300px;    
+         margin-top:100px;
+        margin-right:250px;
+        padding: 20px;
+        color:white;
+        border:1px solid black;
+        background-color: black
+        
+        
+    }
+    .input_value{
+        width: 300px;
+        height: 20px;
+        padding: 15px;
+        border: 1px solid black;
+    }
+    
+    .red{
+        color:red;
+    }
+    .black{
+        color: black;
+    }
+    button{
+        width:300px;
+        background-color: black;
+        color: white;
+        height: 50px;
+        font-size: 20px;
+    }
+    .f_size{
+        font-size: 50px;
+    }
+    
+    
+    </style>
+</head>
+<body>
+    <div>
+        <div class="box_left">
+                <p> <label for="name" ><strong>NAME</strong></label><br>
+                 <input class="input_value" type="text" name="name" id="name"></p>
+                 <p class="red" id="valid_name"></p>
+                 <p> <label for="email" ><strong>EMAIL</strong></label><br>
+                <input class="input_value" type="text" name="email" id="email"></p>  
+                <p id="valid_email" class="red"></p>
+                <p> <label for="mobile" ><strong>MOBILE</strong></label><br>
+              <input class="input_value" type="Number" name="mobile" id="mobile"></p>
+            <p id="valid_mobile"class="red"></p>
+           
+            <button onclick="register()">REGISTER</button>
+        </div>
+        <div class="box_right ">
+            <h3>NAME<br><span class="f_size" id="right_name">MASAI</span></h3>
+            <h3>EMAIL<br><span id="right_email">email@masaischool.com</span></h3>
+            <h3>MOBILE<br><span id="right_mobile" class="f_size">9876543210</span></h3>
+
+        </div>
+    </div>
+    <script>
+        function register(){
+            
+            var name_value = document.getElementById("name").value;
+        
+            if(name_value.length < 3 || name_value.length >10)
+            {
+                document.getElementById("valid_name").innerHTML="Name must be 3 to 10 character "
+
+                
+            }
+            else
+            {
+               
+                document.getElementById("valid_name").style.color= "black";
+                document.getElementById("valid_name").innerHTML = "";
+                var  name_color =  document.getElementById("valid_name").style.color
+            }
+            
+            var mobile = document.getElementById("mobile").value;
+            if(mobile.length<10 || mobile.length>10)
+            {
+                document.getElementById("valid_mobile").innerHTML="Mobile Number must be 10 character"
+              
+            }
+            else{
+                
+                document.getElementById("valid_mobile").style.color = "black"
+                document.getElementById("valid_mobile").innerHTML=""
+                var mob_color=  document.getElementById("valid_mobile").style.color
+
+            }
+
+            var email = document.getElementById('email').value;
+            if (email.length == 0) {
+                 document.getElementById("valid_email").innerHTML ="Email should not be empty"
+            }
+            for (var i = 0; i < email.length; i++) {
+             if (email[i] == '@') {
+            
+             if ((email[0] != "@") && (email[email.length - 3] == "c") && (email[email.length - 2] == "o") && (email[email.length - 1] == "m")) 
+             {
+              if ((email[email.length - 4] == '.') && (email[email.length - 5] != "@") && (email[email.length - 4] != 'c')) 
+              {
+                
+                
+                document.getElementById("valid_email").style.color= "black"
+                document.getElementById("valid_email").innerHTML = "";
+                var email_color = document.getElementById("valid_email").style.color
+
+                } else {
+                    document.getElementById("valid_email").innerHTML = " Enter a valid email id ";
+                }
+              } else {
+                document.getElementById("valid_email").innerHTML = " Enter a valid email id ";
+        }
+    }
+}
+
+            if (name_color == "black" &&  email_color =="black" && mob_color == "black" )
+             {
+                document.getElementById("right_mobile").innerHTML= mobile;
+                document.getElementById("right_name").innerHTML=name_value;
+                document.getElementById("right_email").innerHTML = email;
+            }
+}
+</script>
+</body>
+</html>
