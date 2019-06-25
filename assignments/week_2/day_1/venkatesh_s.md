@@ -28,7 +28,7 @@ The files contains marks the data of 2000 students from India and Pakistan one f
 Commands on how you got the answer
 
 ```
-<grep Pakistan marks_rand_2000.csv | wc -l>
+grep Pakistan marks_rand_2000.csv | wc -l
 
 ```
 2. No of students from India who are in the bottom 200 list based on the marks scored
@@ -38,9 +38,7 @@ Commands on how you got the answer
 Commands on how you got the answer
 
 ```
-< sort -nr marks_rand_2000.csv | tail -n 200 | grep India | wc -l >
-<COMMAND 2>
-<COMMAND 3>
+sort -nr marks_rand_2000.csv | tail -n 200 | grep India | wc -l 
 ```
 
 
@@ -68,9 +66,7 @@ Mumbai,Isadora U. Ward
 Commands on how you got the answer
 
 ```
-< grep Mumbai city_names_orders_rand.csv | wc -l  >
-<COMMAND 2>
-<COMMAND 3>
+Mumbai city_names_orders_rand.csv | wc -l
 ```
 2. Find the total number of users from Bangalore
 
@@ -81,9 +77,8 @@ Commands on how you got the answer
 Commands on how you got the answer
 
 ```
-< grep Bangalore city_names_orders_rand.csv | wc -l >
-<COMMAND 2>
-<COMMAND 3>
+Bangalore city_names_orders_rand.csv | wc -l 
+
 ```
 3. Total no of users who have more than one order
 
@@ -94,9 +89,8 @@ Commands on how you got the answer
 Commands on how you got the answer
 
 ```
-< sort city_names_orders_rand.csv | uniq -d | wc -l >
-<COMMAND 2>
-<COMMAND 3>
+city_names_orders_rand.csv | uniq -d | wc -l 
+
 ```
 4. User having the most no of orders
 ```
@@ -108,9 +102,9 @@ Bangalore, Yuli.Pratt
 Commands on how you got the answer
 
 ```
-< sort city_names_orders_rand.csv | uniq -c | sort -nr | head -n -l >
-<COMMAND 2>
-<COMMAND 3>
+city_names_orders_rand.csv | uniq -c | sort -nr | head -n -l 
+
+
 ```
 5. User from Mumbai having the most no of orders
 ```
@@ -122,9 +116,9 @@ Mumbai, Russell T.Compton
 Commands on how you got the answer
 
 ```
-< sort city_names_orders_rand.csv | uniq -c | sort -nr | grep Mumbai | head -n 1  >
-<COMMAND 2>
-<COMMAND 3>
+city_names_orders_rand.csv | uniq -c | sort -nr | grep Mumbai | head -n 1
+
+
 ```
 
 ## FSD.W2.1.C (30 min)
@@ -140,9 +134,9 @@ Clone the repo https://github.com/jlevy/the-art-of-command-line
 Commands on how you got the answer
 
 ```
-< git log | grep commit | wc -l >
-<COMMAND 2>
-<COMMAND 3>
+git log | grep commit | wc -l
+
+
 ```
 2. No. of contributors to the repository
 ```
@@ -152,9 +146,9 @@ Commands on how you got the answer
 Commands on how you got the answer
 
 ```
-< git log | grep Author | uniq | wc -l >
-<COMMAND 2>
-<COMMAND 3>
+git log | grep Author | uniq | wc -l
+
+
 ```
 
 3. User with the maximum no of commits to the repository
@@ -168,9 +162,9 @@ Author: Joshua Levy <joshua@cal.berkeley.edu>
 Commands on how you got the answer
 
 ```
-< git log | grep Author | uniq -c | sort -nr | head -n 1 >
-<COMMAND 2>
-<COMMAND 3>
+git log | grep Author | uniq -c | sort -nr | head -n 1 
+
+
 ```
 
 4. Commits made in the month of January for the year 2018
@@ -180,9 +174,9 @@ Commands on how you got the answer
 Commands on how you got the answer
 
 ```
-< git log | grep Jan* | grep 2018 | wc -l  >
-<COMMAND 2>
-<COMMAND 3>
+git log | grep Jan* | grep 2018 | wc -l
+
+
 ```
 5. Commits made on Sundays for the year 2019
 ```
@@ -191,9 +185,8 @@ Commands on how you got the answer
 Commands on how you got the answer
 
 ```
-< git log | grep Sun | grep 2019 | wc -l  >
-<COMMAND 2>
-<COMMAND 3>
+git log | grep Sun | grep 2019 | wc -l
+
 ```
 
 
