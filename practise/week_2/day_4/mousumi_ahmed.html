@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Coding Session 1!</title>
+</head>
+<body>
+	<!-- These elements below are for FSD.W2.4.1_1-->
+	<h1> Create your own exponentiation function! </h1>
+	<input type="text" name = "num1" id ="num1">
+	<input type="text" name = "num2" id ="num2">
+	<p id="output_final"> </p>
+	</hr>
+	<button onclick="exponent()">Click here to find the exponent!</button>
+	<!-- These elements above are for FSD.W2.2.2_1-->
+	
+	<!-- These elements below are for FSD.W2.2.2_3-->
+	<h1 id="sum">Sum of multiples of 3 and 5!</h1>
+	<p></p>
+	<input type="text" id="limit">
+	<button onclick="sumOf3And5()">Click here for the output!</button>
+	
+	<!-- These elements above are for FSD.W2.2.2_2-->
+
+	<!-- These elements below are for FSD.W2.2.2_3-->
+	<h1>Check if the users email is valid!</h1>
+	<label for="email_input" >Email</label>
+	<input type="text" id="email">
+
+	<button onclick="validateEmail()">Check Email!</button>
+	<!-- These elements above are for FSD.W2.2.2_2-->
+	<script type="text/javascript">
+		//Write javascript for FSD.W2.4.1_1 here
+		function exponent(){
+			var num1 = Number(document.getElementById('num1').value);
+			var num2 = Number(document.getElementById('num2').value);
+			var output = 1;
+			for(var i=0;i<num2;i++){
+				output=output*num1;
+			}
+
+			document.getElementById("output_final").innerHTML = output;
+	
+		}
+
+			
+		
+		//Write javascript for FSD.W2.4.1_2 here
+		function sumOf3And5(){
+			var limit = Number(document.getElementById("limit").value);
+			var sum =0;
+			for(var i=0; i<=limit;i++){
+				{
+					if(i%3==0 && i%5==0){
+						sum=sum+i;
+					}
+				}
+			}
+
+			document.getElementById('sum').innerHTML = sum;
+
+		}
+
+		function validateEmail(){
+ 			var email = document.getElementById('email').value;
+
+            for (var i = 0; i < email.length; i++) {
+             if (email[i] == '@') {
+
+            
+             if ((email[0] != "@") && (email[email.length - 3] == "c") && (email[email.length - 2] == "o") && (email[email.length - 1] == "m")) {
+
+              if ((email[email.length - 4] == '.') && (email[email.length - 5] != "@") && (email[email.length - 4] != 'c')) 
+              {
+                alert("valid email");
+                } else {
+                    alert("invalid email");
+                }
+              } else {
+                alert("invalid email");
+        }
+    }
+}
+alert("invalid email");
+}
+
+
+
+
+
+		/*Write javascript for FSD.W2.4.1_3 here
+		function validateEmail(){
+
+
+
+				var x = email_input.length-1;
+
+				for(var i=0; i<x.length-1;i++){
+					if(x[i]=="@")
+					{
+						flag=True;
+						break;
+					}
+
+				}
+				if(flag==true || email_input.length-1=="m"|| email_input.length-1=="o"||email_input.length-1=="c"||email_input.length-1=="."){
+						{
+							 
+										alert("email is is valid");
+						}
+						else			
+						{
+										alert("email is is valid");
+						}
+									
+									
+						}
+								
+		}
+
+		  /*checkString(document.getElementById('email_input').value)
+		  
+
+
+		 }
+
+		function checkString(inputString){
+  		var countPeriod = 0;
+  		var countA = 0
+  		for(var i = 0; i < inputString.length; i++){
+
+
+
+   		  if(inputString[i] == '.'){
+
+			  
+			  countPeriod=+CountPeriod;
+			  countPeriod++
+
+
+			  
+   			 }
+				if(inputString[i] == 'c'){
+
+			  
+				countPeriod=+CountPeriod;
+				countPeriod++
+
+
+
+  				}
+				  if(inputString[i] == 'o'){
+
+			  
+ 				countPeriod=+CountPeriod;
+				countPeriod++
+
+
+
+ 			 }
+				  if(inputString[i] == 'm'){
+
+			  
+		 	    countPeriod=+CountPeriod;
+				countPeriod++
+
+
+
+ 			 }
+			else(inputString[i] == '@')
+			{
+				countA=+countA;
+			    countA++
+			  
+  		 	 }
+			}
+    	  	
+		  		if(countPeriod==1 && countA==1){
+
+					document.getElementById('email').innerHTML= alert("valid email");
+				  }
+		 	 else{
+				document.getElementById('email').innerHTML = alert("Invalid Input");
+		  }*/
+
+			
+					
+	</script>
+</body>
+</html>

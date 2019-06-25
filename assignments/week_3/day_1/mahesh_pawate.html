@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+	<title>The Typewriter</title>
+	<style type="text/css">
+		.all_keys
+		{
+			border-style:solid;
+			height: 50px;
+			width: 50px;
+			font-size: 18px;
+			border-radius: 15px;
+			background-color: black;
+			color: white;
+			padding: 5px;
+		}
+
+		.btn_space
+		{
+			width: 400px;
+			color: black;
+			margin-top: 30px;
+			margin-bottom: 30px;
+			margin-right: 30px
+		}
+
+		.btn_obscene_on
+		{
+			width: 100px;
+			color: red;
+			background-color: white;
+		}
+
+		.float_left
+		{
+			float: left;
+		}
+
+		.float_right
+		{
+			margin-left: 40px;
+			float: right;
+		}
+
+		.input_border
+		{
+			width: 700px;
+			height: 60px;
+			border-style: solid;
+			border-radius: 25px;
+		}
+
+		#first_div_margin
+		{
+			margin-left: 275px;
+			margin-right: 275px;
+			background-color:white;
+			height: 100vh;
+			padding-top: 30px
+		}	
+
+		.clear_left
+		{
+			clear: left;
+		}
+
+		.pad_top
+		{
+			padding-top: 60px;
+		}
+
+		.pad_all
+		{
+			margin-left: 140px;
+			padding: 10px;
+			padding-left: 20px;
+			padding-right: 20px;
+		}
+
+		#pad_row2
+		{
+			margin-left: 165px;
+		}
+
+		#pad_row3
+		{
+			margin-left: 185px;
+		}
+
+		#pad_row4
+		{
+			margin-left: 205px;
+		}
+
+		.input_align
+		{
+			text-align: center;
+			font-size: 28px;
+			font-style: oblique;
+			font-style: bold;
+		}
+	</style>
+</head>
+<body >
+	<div align="center" id="first_div_margin"><!--Master division-->
+		<div><!--inputbox Division-->
+			<input  id="input_all" class="input_border input_align " type="text" name="txt" >
+		</div>
+		<div class="pad_top"><!--all keys--> 
+			<!--row 1-->
+			<div class="pad_all">
+				<div>
+					<button  onclick="display('1')" class="all_keys float_left " >
+						<div class="float_right">!</div>
+						<div class="float_left">1</div> 
+					</button> 
+				</div>
+				<div>
+					<button  onclick="display('2')" class="all_keys float_left" >
+						<div class="float_right">@</div>
+						<div class="float_left">2</div> 
+					</button> 
+				</div>
+				<div>
+					<button onclick="display('3')" class="all_keys float_left" >
+						<div class="float_right">#</div>
+						<div class="float_left">3</div> 
+					</button> 
+				</div>
+				<div>
+					<button  onclick="display('4')" class="all_keys float_left" >
+						<div class="float_right">$</div>
+						<div class="float_left">4</div> 
+					</button> 
+				</div>
+				<div>
+					<button  onclick="display('5')" class="all_keys float_left" >
+						<div class="float_right">%</div>
+						<div class="float_left">5</div> 
+					</button> 
+				</div>
+				<div>
+					<button  onclick="display('6')" class="all_keys float_left" >
+						<div class="float_right">^</div>
+						<div class="float_left">6</div> 
+					</button> 
+				</div>
+				<div>
+					<button  onclick="display('7')" class="all_keys float_left" >
+						<div class="float_right">&</div>
+						<div class="float_left">7</div> 
+					</button> 
+				</div>
+				<div>
+					<button  onclick="display('8')" class="all_keys float_left" >
+						<div class="float_right">*</div>
+						<div class="float_left">8</div> 
+					</button> 
+				</div>
+				<div>
+					<button  onclick="display('9')" class="all_keys float_left" >
+						<div class="float_right">(</div>
+						<div class="float_left">9</div> 
+					</button> 
+				</div>
+				<div>
+					<button  onclick="display('0')" class="all_keys float_left" >
+						<div class="float_right">)</div>
+						<div class="float_left">0</div> 
+					</button>  
+				</div>
+				<div>
+					<button onclick="back_space()" class="all_keys float_left" >Back</button> 
+				</div>
+			</div>
+			<!--row 2-->
+			<div class="clear_left pad_all " id="pad_row2">
+				<div>
+					<button onclick="display('q')" class="all_keys float_left" >Q</button> 
+				</div>
+				<div>
+					<button onclick="display('w')" class="all_keys float_left" >W</button> 
+				</div>
+				<div>
+					<button onclick="display('e')" class="all_keys float_left" >E</button> 
+				</div>
+				<div>
+					<button onclick="display('r')" class="all_keys float_left">R</button> 
+				</div>
+				<div>
+					<button onclick="display('t')" class="all_keys float_left">T</button> 
+				</div>
+				<div>
+					<button onclick="display('y')" class="all_keys float_left">Y</button> 
+				</div>
+				<div>
+					<button onclick="display('u')" class="all_keys float_left">U</button> 
+				</div>
+				<div>
+					<button onclick="display('i')" class="all_keys float_left">I</button> 
+				</div>
+				<div>
+					<button onclick="display('o')" class="all_keys float_left">O</button> 
+				</div>
+				<div>
+					<button onclick="display('p')" class="all_keys float_left">P</button> 
+				</div>
+			</div>
+			<!--row3-->
+			<div class="clear_left pad_all" id="pad_row3">
+				<div>
+					<button onclick="display('a')" class="all_keys float_left" >A</button> 
+				</div>
+				<div>
+					<button onclick="display('s')" class="all_keys float_left" >S</button> 
+				</div>
+				<div>
+					<button onclick="display('d')" class="all_keys float_left" >D</button> 
+				</div>
+				<div>
+					<button onclick="display('f')" class="all_keys float_left">F</button> 
+				</div>
+				<div>
+					<button onclick="display('g')" class="all_keys float_left">G</button> 
+				</div>
+				<div>
+					<button onclick="display('h')" class="all_keys float_left">H</button> 
+				</div>
+				<div>
+					<button onclick="display('j')" class="all_keys float_left">J</button> 
+				</div>
+				<div>
+					<button onclick="display('k')" class="all_keys float_left">K</button> 
+				</div>
+				<div>
+					<button onclick="display('l')" class="all_keys float_left">L</button> 
+				</div>
+			</div>
+			<!--row4-->
+			<div class="clear_left pad_all " id="pad_row4">
+				<div>
+					<button onclick="display('z')" class="all_keys float_left" >Z</button> 
+				</div>
+				<div>
+					<button onclick="display('x')" class="all_keys float_left" >X</button> 
+				</div>
+				<div>
+					<button onclick="display('c')" class="all_keys float_left" >C</button> 
+				</div>
+				<div>
+					<button onclick="display('v')" class="all_keys float_left">V</button> 
+				</div>
+				<div>
+					<button onclick="display('b')"class="all_keys float_left">B</button> 
+				</div>
+				<div>
+					<button onclick="display('n')" class="all_keys float_left">N</button> 
+				</div>
+				<div>
+					<button onclick="display('m')" class="all_keys float_left">M</button> 
+				</div>
+				<div>
+					<button onclick="display('.com')" class="all_keys float_left">.com</button> 
+				</div>
+			</div>
+		</div>
+		<div class="clear_left "><!--space button-->
+			<button onclick="display(' ')" class="btn_space all_keys"></button>
+		</div>
+		<div><!--obscene keysButton-->
+			<div><!--on mode-->
+				<button id="mybtn_clear" onclick="clean()" class="all_keys btn_obscene_on">CLEAN</button>
+				<button id="mybtn_caps" onclick="capsBtn()" class="all_keys btn_obscene_on">CAPS</button>
+				<button id="mybtn_shift" onclick="shift_btn()" class="all_keys btn_obscene_on">SHIFT</button>
+				<button id="mybtn_password" onclick="password()" class="all_keys btn_obscene_on">PASS</button>
+				<button id="mybtn_reverse" onclick="reverse()" class="all_keys btn_obscene_on">REVERSE</button>
+				<button onclick="clear_all()" class="all_keys btn_obscene_on" >Clear</button>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+		var flag=false;
+		var password_flag = false;
+		/*function shift()
+		{
+
+		}
+
+		function password()
+		{
+			var input_value=document.getElementById("input").value
+			var original_text=""
+			original_text=original_text + input_value
+			console.log(original_text);
+			var pass=""
+			var star="*"
+			var chk=""
+			var count=0
+			/*for(var i=1;i<input_value.length-2;i++)
+			{
+				if (input_value[i]=='*')
+				 {
+			 		console.log(count++);
+				 }
+				 else
+				 {
+			 		console.log(count++);
+				 }
+			}
+			if (count!=input_value.length-2)
+			{
+				document.getElementById("output").value=original_text
+			}
+			else
+			{//
+			
+			if (input_value.length <=1 )
+			{
+				console.log(document.getElementById("output").value=input_value);
+			}
+			else
+			{
+				for(var i=0;i<input_value.length-2;i++)
+				{
+					//pass+=input_value[i];
+					star+=star[i]
+				}
+					var last_elemet=input_value[input_value.length-1]
+					console.log(document.getElementById("output").value=star + last_elemet)
+			}
+
+
+
+
+			var input_value=document.getElementById("input_all").value
+			for(var i=0;i<=input_value.length-2;i++)
+			{
+				pass=pass + input_value[i];
+			}
+			var pass
+			for(var i=0;i<=input_value.length-2;i++)
+			{
+				pass=pass + input_value[i];
+			}
+			
+		}*/
+
+		
+		function upper_case(input)
+		{
+			switch(input)
+			{
+				case 'a' :
+				{
+					return 'A'
+					break;
+				}
+
+				case 'b':
+				{
+					return 'B'
+					break;
+				}
+
+				case 'c' :
+				{
+					return 'C'
+					break;
+				}
+
+				case 'd' :
+				{
+					return 'D'
+					break;
+				}
+
+				case 'e' :
+				{
+					return 'E'
+					break;
+				}
+
+				case 'f' :
+				{
+					return 'F'
+					break;
+				}
+
+				case 'g' :
+				{
+					return 'G'
+					break;
+				}
+
+				case 'h' :
+				{
+					return 'H'
+					break;
+				}
+
+				case 'i' :
+				{
+					return 'I'
+					break;
+				}
+
+				case 'j' :
+				{
+					return 'J'
+					break;
+				}
+
+				case 'k' :
+				{
+					return 'K'
+					break;
+				}
+
+				case 'l' :
+				{
+					return 'L'
+					break;
+				}
+
+				case 'm' :
+				{
+					return 'M'
+					break;
+				}
+
+				case 'n' :
+				{
+					return 'N'
+					break;
+				}
+
+				case 'o' :
+				{
+					return 'O'
+					break;
+				}				
+
+				case 'p' :
+				{
+					return 'P'
+					break;
+				}
+
+				case 'q' :
+				{
+					return 'Q'
+					break;
+				}
+
+				case 'r' :
+				{
+					return 'R'
+					break;
+				}
+
+				case 's' :
+				{
+					return 'S'
+					break;
+				}
+
+				case 't' :
+				{
+					return 'T'
+					break;
+				}
+
+				case 'u' :
+				{
+					return 'U'
+					break;
+				}
+
+				case 'v' :
+				{
+					return 'V'
+					break;
+				}
+
+				case 'w' :
+				{
+					return 'W'
+					break;
+				}
+
+
+				case 'x' :
+				{
+					return 'X'
+					break;
+				}
+
+				case 'y' :
+				{
+					return 'Y'
+					break;
+				}
+
+				case 'z' :
+				{
+					return 'Z'
+					break;
+				}
+			}
+		}
+
+		function password()
+		{
+			var get_input=document.getElementById("input_all").value
+			var duplicate =get_input
+			var str="*";
+			if (get_input.length<=1)
+			{
+				document.getElementById("input_all").value=get_input
+				document.getElementById("mybtn_reverse").style.backgroundColor= "black";
+			}
+			var last_char=get_input[get_input.length-1];
+			for(var i=0; i<get_input.length-2; i++)
+			{
+				str+=str[i]
+			}
+
+			document.getElementById("input_all").value=str+last_char
+		}
+
+		function capsBtn()
+		{
+			if (flag==false)
+			{
+				flag=true
+			}
+			else
+			{
+				flag=false
+			}
+		}
+		
+		function reverse()
+		{
+			var input_value=document.getElementById("input_all").value
+			console.log(input_value);
+			var reverse=""
+			for(var i=input_value.length-1; i>=0; i--)
+				{
+					reverse+=input_value[i];
+				}
+			document.getElementById("input_all").value=reverse
+			if (document.getElementById("mybtn_reverse").style.backgroundColor== "white" || document.getElementById("mybtn_reverse").style.backgroundColor== "black" )
+			{
+				document.getElementById("mybtn_reverse").style.backgroundColor= "green";
+				console.log(reverse)
+			}
+			else
+			{
+				document.getElementById("mybtn_reverse").style.backgroundColor= "black";
+			}
+		}
+		function shift_btn(input)
+		{
+			return upper_case(input)
+		}
+
+		var shift_flag=false;
+
+		function shift()
+		{
+			var get_input=document.getElementById("input_all").value
+			var output = get_input
+			if(shift_flag==true)
+			{
+				var caps_text = shift_btn(argument_input)
+				output = output + caps_text;
+				document.getElementById("mybtn_shift").style.backgroundColor="green";
+			} 
+			else
+			{
+				output = output + argument_input
+				document.getElementById("mybtn_shift").style.backgroundColor="black";
+			}
+
+			document.getElementById("input_all").value=output;
+		}
+
+		function caps(input)
+		{			
+			return upper_case(input);
+		}
+
+		function clear_all()
+		{
+			document.getElementById("input_all").value=" "
+			document.getElementById("mybtn_clear").style.backgroundColor="blue";
+		}
+
+		function display(argument_input)
+		{
+			var get_input=document.getElementById("input_all").value
+			var output = get_input
+			if(flag==true)
+			{
+				var caps_text = caps(argument_input)
+				output = output + caps_text;
+				document.getElementById("mybtn_caps").style.backgroundColor="green";
+			} 
+			else
+			{
+				output = output + argument_input
+				document.getElementById("mybtn_caps").style.backgroundColor="black";
+			}
+
+			document.getElementById("input_all").value=output;
+		}
+
+		function clean()
+		{
+			var get_input=document.getElementById("input_all").value
+			if (get_input=="sexy" || get_input=="anilingus" || get_input=="anus"|| get_input=="shit" || get_input=="arsehole" || get_input=="ass" ||get_input== "asshole"|| get_input== "assmunch"|| get_input=="erotic" || get_input=="autoerotic" ||get_input== "babeland")
+			{
+				var temp1=get_input[0]
+				for (var i=1;i<get_input.length-1;i++)
+				{
+					temp1+= "*"
+				}
+				var last=get_input.length-1;
+				document.getElementById("input_all").value=temp1 + get_input[last];
+				document.getElementById("mybtn_clear").style.backgroundColor="green";
+			}
+			else
+			{
+				document.getElementById("mybtn_clear").style.backgroundColor="black";
+			}
+		}
+
+		function back_space()
+		{
+			var txt_input=document.getElementById("input_all").value
+			var temp1=""
+			for (var i=0;i<txt_input.length-1;i++)
+				{
+					temp1+= txt_input[i]
+				}
+				document.getElementById("input_all").value=temp1
+		}
+	</script>
+</body>
+</html>

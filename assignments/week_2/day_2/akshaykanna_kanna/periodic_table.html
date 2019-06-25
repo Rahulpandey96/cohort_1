@@ -1,245 +1,312 @@
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<title>Periodic Table</title>
-	<style type="text/css">
-		body{
-			width:1140px;
-			margin-top: 120px;
-			margin-left: 300px;
-		}
-		h1{
-			text-align: center;
-		}
-		#t1{
-			height:50px;
-			width:50px;
-			background-color:red;
-			float:left;
-		}
-		#t2{
-			height:50px;
-			width:50px;
-			background-color:yellow;
-			float:right;
-			margin-right:70px
-		}
-		#t3{
-			height:50px;
-			width:50px;
-			background-color:green;
-			float:left;
-			clear:left;
-			margin-top:10px;
-		}
-		#t4{
-			height:50px;width:50px;background-color:red;float:left;margin-top:10px;margin-left:10px;
-		}
-		#t5{
-			height:90px;width:90px;background-color:green;float:left;margin-top:-10px;margin-left:80px;
-		}
-		#t6{
-			height:50px;width:50px;background-color:yellow;float:right;margin-top:10px;margin-right:70px;
-		}
-		#t7{
-			height:50px;width:50px;background-color:pink;float:right;margin-top:10px;margin-right:10px;
-		}
-		#t8{
-			height:50px;width:50px;background-color:green;float:right;margin-top:10px;margin-right:10px;
-		}
-		#t9{
-			height:50px;width:50px;background-color:purple;float:right;margin-top:10px; margin-right:10px;
-		}
+  <style type="text/css">
+  .box
+  {
+    height:50px;
+    width:50px;
+  }
+  .big_greenbox
+  {
+    height:100px;
+    width:100px;
+  }
+  .border_box
+  {
+    height:45px;
+    width:45px;
+  }
+  .align_left
+  {
+    float:left;
+  }
+  .align_right
+  {
+    float:right;
+    margin-right:770px;
+  }
+  .box3
+  {
+    float:left;
+    clear:left;
+    margin-top:10px;
+  }
+  .box4{
+    float:left;
+    margin-top:10px;
+    margin-left:10px;
+  }
+  .box5
+  {
+    float:left;
+    margin-top:-10px;
+    margin-left:55px;
+  }
+  .box6
+  {
+    float:right;
+    margin-top:10px;
+    margin-right:770px;
+  }
+  .box7
+  {
+    float:right;
+    margin-top:10px;
+    margin-right:10px;
+  }
+  .box8
+  {
+    float:left;
+    clear:left;
+    margin-top:-20px;
+  }
+  .box9
+  {
+    float:left;
+    margin-top:-20px;
+    margin-left:10px;
+  }
+  .box10
+  {
+    float:right;
+    margin-top:-20px;
+    margin-right:770px;
+  }
+  .box11
+  {
+    float:right;
+    margin-top:-20px;
+    margin-right:10px;
+  }
+  .box12
+  {
+    float:left;
+    clear:left;
+    margin-top:10px;
+  }
+  .box13
+  {
+    float:left;
+    margin-top:10px;
+    margin-left:10px;
+  }
+  .box14
+  {
+    float:left;
+    clear:left;
+    margin-top:40px;
+    margin-left:130px;
+  }
+  .box15
+  {
+    float:left;
+    margin-top:10px;
+    margin-top:40px;
+  }
+  .box16
+  {
+    float:left;
+    clear:left;
+    margin-left:130px;
+  }
+  .float_left
+  {
+    float:left;
+  }
+  .background_lightgreen{
+    background-color: lightgreen;
+  }
+  .background_green
+  {
+    background-color: green;
+  }
+  .background_yellow
+  {
+    background-color: yellow;
+  }
+  .background_red
+  {
+    background-color: red;
+  }
+  .background_pink
+  {
+    background-color: pink;
+  }
+  .background_purple
+  {
+    background-color: purple;
+  }
 
-
-		#t10{
-			height:50px;width:50px;background-color:green;float:left;clear:left;margin-top:-5px;
-		}
-		#t11{
-			height:50px;width:50px;background-color:red;float:left;margin-top:-5px;margin-left:10px;
-		}
-		#t12{
-			height:50px;width:50px;background-color:yellow;float:right;margin-top:-5px;margin-right:70px;
-		}
-		#t13{
-			height:50px;width:50px;background-color:pink;float:right;margin-top:-5px;margin-right:10px;
-		}
-		#t14{
-			height:50px;width:50px;background-color:green;float:right;margin-top:-5px;margin-right:26px;
-		}
-		#t15{
-			height:50px;width:50px;background-color:green;float:right;margin-top:-5px;margin-right:10px;
-		}
-		#t16{
-			height:50px;width:50px;background-color:purple;float:right;margin-top:-5px;margin-right:10px;
-		}
-		#t17{
-			height:50px;width:50px;background-color:darkorange;float:right;margin-top:-5px;margin-right:10px;
-		}
-
-
-
-		#t18{
-			height:50px;width:50px;background-color:green;float:left;clear:left;margin-top:10px;
-		}
-		#t19{
-			height:50px;width:50px;background-color:red;float:left;margin-top:10px;margin-left:10px;
-		}
-		#t20{
-			height:50px;width:50px;background-color:white;float:left;margin-top:10px;margin-left:10px;
-		}
-		#t21{
-			height:50px;width:50px;background-color:blue;float:left;margin-top:10px;margin-left:10px;
-		}
-		#t22{
-			height:50px;width:50px;background-color:orange;float:left;margin-top:10px;margin-left:10px;
-		}
-		#t23{
-			height:50px;width:50px;background-color:purple;float:left;margin-top:10px;margin-left:10px;
-		}
-		#t24{
-			height:50px;width:50px;background-color:green;float:left;margin-top:10px;margin-left:10px;
-		}
-		#t25{height:50px;width:50px;background-color:pink;float:left;margin-top:10px;margin-left:10px;}
-		#t26{height:50px;width:50px;background-color:yellow;float:left;margin-top:10px;margin-left:10px;}
-		#t27{height:44px;width:44px;background-color:white;float:left;margin-top:10px;margin-left:10px;border:3px solid #000;}
-		#t28{height:50px;width:50px;background-color:grey;float:left;margin-top:10px;margin-left:10px;}
-		#t29{height:50px;width:50px;background-color:darkgreen;float:left;clear:left;margin-top:40px;margin-left:130px;}
-		#t30{height:50px;width:50px;background-color:darkgreen;float:left;margin-top:10px;margin-top:40px;}
-		#t31{height:50px;width:50px;background-color:green;float:left;clear:left; margin-left:130px;}
-		#t32{height:50px;width:50px;background-color:green;float:left;}
-	</style>
+  .background_green
+  {
+    background-color: green;  
+  }
+  .background_blue
+  {
+    background-color: blue;
+  }
+  .background_orange
+  {
+    background-color: orange;
+  }
+  .background_violet
+  {
+    background-color: violet;
+  }
+  .background_white
+  {
+    background-color: white;
+  }
+  .background_grey
+  {
+    background-color: grey;
+  }
+  .border
+  {
+    border:3px solid #000;
+  }
+  </style>
+  <title>Assignment_2</title>
 </head>
-<body>
-	<h1>Peridic Table New Style</h1>
-	<div id="t1"></div>
-	<div id="t2"></div>
-	<div id="t3"></div>
-	<div id="t4"></div>
-	<div id="t5"></div>
-	<div id="t6"></div>
-	<div id="t7"></div>
-	<div id="t8"></div>
-	<div id="t8"></div>
-	<div id="t8"></div>
-	<div id="t9"></div>
-	<div id="t10"></div>
-	<div id="t11"></div>
-	<div id="t12"></div>
-	<div id="t13"></div>
-	<div id="t14"></div>
-	<div id="t15"></div>
-	<div id="t16"></div>
-	<div id="t17"></div>
-	<div id="t18"></div>
-	<div id="t19"></div>
-	<div id="t20">&nbsp;</div>
-	<div id="t21"></div>
-	<div id="t21"></div>
-	<div id="t21"></div>
-	<div id="t21"></div>
-	<div id="t21"></div>
-	<div id="t21"></div>
-	<div id="t21"></div>
-	<div id="t21"></div>
-	<div id="t21"></div>
-	<div id="t22"></div>
-	<div id="t23"></div>
-	<div id="t23"></div>
-	<div id="t24"></div>
-	<div id="t25"></div>
-	<div id="t26"></div>
-	<div id="t18"></div>
-	<div id="t19"></div>
-	<div id="t20">&nbsp;</div>
-	<div id="t21"></div>
-	<div id="t21"></div>
-	<div id="t21"></div>
-	<div id="t21"></div>
-	<div id="t21"></div>
-	<div id="t21"></div>
-	<div id="t21"></div>
-	<div id="t21"></div>
-	<div id="t21"></div>
-	<div id="t22"></div>
-	<div id="t22"></div>
-	<div id="t23"></div>
-	<div id="t23"></div>
-	<div id="t25"></div>
-	<div id="t26"></div>
+<body class="body">
+  <h1>Periodic Table New Style</h1>
+  <div>
+    <div class="box align_left background_red" ></div>
+    <div class="box align_right background_yellow" ></div>
 
+    <div class="box box3 background_green" ></div>
+    <div class="box box4 background_red" ></div>
+    <div class="big_greenbox box5 background_green"></div>
+    <div class="box box6 background_yellow" ></div>
+    <div class="box box7 background_pink"></div>
+    <div class="box box7 background_green"></div>
+    <div class="box box7 background_green" ></div>
+    <div class="box box7 background_green"></div>
+    <div class="box box7 background_purple" ></div>
 
-	<div id="t18"></div>
-	<div id="t19"></div>
-	<div id="t27"></div>
-	<div id="t21"></div>
-	<div id="t21"></div>
-	<div id="t21"></div>
-	<div id="t21"></div>
-	<div id="t21"></div>
-	<div id="t21"></div>
-	<div id="t21"></div>
-	<div id="t21"></div>
-	<div id="t21"></div>
-	<div id="t22"></div>
-	<div id="t22"></div>
-	<div id="t22"></div>
-	<div id="t23"></div>
-	<div id="t25"></div>
-	<div id="t26"></div>
+    <div class="box box8 background_green"></div>
+    <div class="box box9 background_red"></div>
+    <div class="box box10 background_yellow" ></div>
+    <div class="box box11 background_pink"></div>
+    <div class="box box11 background_green"></div>
+    <div class="box box11 background_green" ></div>
+    <div class="box box11 background_purple" ></div>
+    <div class="box box11 background_orange" ></div>
 
+    <div class="box box12 background_green" ></div>
+    <div class="box box13 background_red" ></div>
+    <div class="box box13 background_white" >&nbsp;</div>
+    <div class="box box13 background_blue"></div>
+    <div class="box box13 background_blue"></div>
+    <div class="box box13 background_blue"></div>
+    <div class="box box13 background_blue"></div>
+    <div class="box box13 background_blue"></div>
+    <div class="box box13 background_blue"></div>
+    <div class="box box13 background_blue"></div>
+    <div class="box box13 background_blue"></div>
+    <div class="box box13 background_blue"></div>
+    <div class="box box13 background_orange" ></div>
+    <div class="box box13 background_purple"></div>
+    <div class="box box13 background_purple"></div>
+    <div class="box box13 background_green" ></div>
+    <div class="box box13 background_pink" ></div>
+    <div class="box box13 background_yellow" ></div>
 
+    <div class="box box12 background_green" ></div>
+    <div class="box box13 background_red" ></div>
+    <div class="box box13 background_white" >&nbsp;</div>
+    <div class="box box13 background_blue"></div>
+    <div class="box box13 background_blue"></div>
+    <div class="box box13 background_blue"></div>
+    <div class="box box13 background_blue"></div>
+    <div class="box box13 background_blue"></div>
+    <div class="box box13 background_blue"></div>
+    <div class="box box13 background_blue"></div>
+    <div class="box box13 background_blue"></div>
+    <div class="box box13 background_blue"></div>
+    <div class="box box13 background_orange"></div>
+    <div class="box box13 background_orange"></div>
+    <div class="box box13 background_purple"></div>
+    <div class="box box13 background_purple"></div>
+    <div class="box box13 background_pink"></div>
+    <div class="box box13 background_yellow" ></div>
 
-	<div id="t18"></div>
-	<div id="t19"></div>
-	<div id="t27"></div>
-	<div id="t21"></div>
-	<div id="t21"></div>
-	<div id="t21"></div>
-	<div id="t21"></div>
-	<div id="t21"></div>
-	<div id="t21"></div>
-	<div id="t21"></div>
-	<div id="t21"></div>
-	<div id="t21"></div>
-	<div id="t28"></div>
-	<div id="t28"></div>
-	<div id="t28"></div>
-	<div id="t28"></div>
-	<div id="t28"></div>
-	<div id="t28"></div>
+    <div class="box box12 background_green" ></div>
+    <div class="box box13 background_red" ></div>
+    <div class="border_box box13 background_white border" >&nbsp;</div>
+    <div class="box box13 background_blue" ></div>
+    <div class="box box13 background_blue" ></div>
+    <div class="box box13 background_blue" ></div>
+    <div class="box box13 background_blue" ></div>
+    <div class="box box13 background_blue" ></div>
+    <div class="box box13 background_blue" ></div>
+    <div class="box box13 background_blue" ></div>
+    <div class="box box13 background_blue" ></div>
+    <div class="box box13 background_blue" ></div>
+    <div class="box box13 background_orange"></div>
+    <div class="box box13 background_orange"></div>
+    <div class="box box13 background_orange"></div>
+    <div class="box box13 background_purple" ></div>
+    <div class="box box13 background_pink"></div>
+    <div class="box box13 background_yellow"></div>
 
+    <div class="box box12 background_green"></div>
+    <div class="box box13 background_red" ></div>
+    <div class="border_box box13 background_white border">&nbsp;</div>
+    <div class="box box13 background_blue"></div>
+    <div class="box box13 background_blue"></div>
+    <div class="box box13 background_blue"></div>
+    <div class="box box13 background_blue"></div>
+    <div class="box box13 background_blue"></div>
+    <div class="box box13 background_blue"></div>
+    <div class="box box13 background_blue"></div>
+    <div class="box box13 background_blue"></div>
+    <div class="box box13 background_blue"></div>
+    <div class="box box13 background_grey"></div>
+    <div class="box box13 background_grey"></div>
+    <div class="box box13 background_grey"></div>
+    <div class="box box13 background_grey"></div>
+    <div class="box box13 background_grey"></div>
+    <div class="box box13 background_grey"></div>
 
-	<div id="t29"></div>
-	<div id="t30"></div>
-	<div id="t30"></div>
-	<div id="t30"></div>
-	<div id="t30"></div>
-	<div id="t30"></div>
-	<div id="t30"></div>
-	<div id="t30"></div>
-	<div id="t30"></div>
-	<div id="t30"></div>
-	<div id="t30"></div>
-	<div id="t30"></div>
-	<div id="t30"></div>
-	<div id="t30"></div>
+    <div class="box box14 background_green"></div>
+    <div class="box box15 background_green"></div>
+    <div class="box box15 background_green"></div>
+    <div class="box box15 background_green"></div>
+    <div class="box box15 background_green"></div>
+    <div class="box box15 background_green"></div>
+    <div class="box box15 background_green"></div>
+    <div class="box box15 background_green"></div>
+    <div class="box box15 background_green"></div>
+    <div class="box box15 background_green"></div>
+    <div class="box box15 background_green"></div>
+    <div class="box box15 background_green"></div>
+    <div class="box box15 background_green"></div>
+    <div class="box box15 background_green"></div>
 
-	<div id="t31"></div>
-	<div id="t32"></div>
-	<div id="t32"></div>
-	<div id="t32"></div>
-	<div id="t32"></div>
-	<div id="t32"></div>
-	<div id="t32"></div>
-	<div id="t32"></div>
-	<div id="t32"></div>
-	<div id="t32"></div>
-	<div id="t32"></div>
-	<div id="t32"></div>
-	<div id="t32"></div>
-	<div id="t32"></div>
-	
+    <div class="box box16 background_lightgreen"></div>
+    <div class="box float_left background_lightgreen"></div>
+    <div class="box float_left background_lightgreen"></div>
+    <div class="box float_left background_lightgreen"></div>
+    <div class="box float_left background_lightgreen"></div>
+    <div class="box float_left background_lightgreen"></div>
+    <div class="box float_left background_lightgreen"></div>
+    <div class="box float_left background_lightgreen"></div>
+    <div class="box float_left background_lightgreen"></div>
+    <div class="box float_left background_lightgreen"></div>
+    <div class="box float_left background_lightgreen"></div>
+    <div class="box float_left background_lightgreen"></div>
+    <div class="box float_left background_lightgreen"></div>
+    <div class="box float_left background_lightgreen"></div>
+
+  </div>
 
 </body>
 </html>
+
+
+
+
+
