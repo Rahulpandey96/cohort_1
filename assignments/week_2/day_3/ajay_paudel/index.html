@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Converter</title>
+	<meta charset="utf-8">
+	<style >
+		.outerbox{
+			height: 900px;width: 800px;border: 1px solid black;margin-left: 300px; margin-top: 100px;background-color: grey;
+		}
+		.outer_button_box{
+			height: 50px ; width: 250px; border: 1px solid black;float: left;
+		}
+		.button_box{
+			height: 50px; width: 250px;background-color: green;
+		}
+		.from{
+			clear: both;
+			
+			float: left;
+			margin-top:50px;
+			height: 60px;
+			width:150px;
+			margin-left: 30px
+		}
+		.to{
+			float: left;
+			
+			margin-top:50px;
+			margin-left: 50px;
+		}
+		.para{
+			font-size: 28px;
+		}
+		.input_value{
+			height: 30px; width: 150px;
+		}
+		.outer_convert_box{
+			clear: both;
+			border: 1px solid black;
+			float: left;
+			margin-top:70px;
+			margin-left: 350px;
+			height: 40px;
+			width: 150px;
+			background-color: grey;
+		}
+		.convert_button{
+			height: 40px;
+			width: 150px;
+
+
+		}
+		.result_box{
+			float: right;
+			border: 1px solid black;
+			height: 30px;
+			width: 150px;
+			margin-top: 80px;
+			margin-left: 50px;
+			background-color: orange;
+		}
+		.bg{
+			background-color: violet;
+		}
+		.centre{
+			text-align: center;
+			margin-top: 3px;
+
+		}
+		.from_value{
+			float: left;
+			border: 1px solid black;
+			height: 30px;
+			width: 150px;
+			margin-top: 80px;
+			margin-left: 50px;
+			background-color: orange;
+	</style>
+</head>
+<body>
+	<div class="outerbox">
+		<div class="outer_button_box">
+			<button  class="button_box">Lenght</button>
+		</div>
+
+		<div class="outer_button_box">
+			<button  class="button_box">Temperature</button>
+		</div>
+		
+		<div class="outer_button_box">
+			<button class="button_box">Volume</button>
+		</div>
+
+		<div class="from">
+			<label class="para" for="len_from">From </label><br>
+			<select class="input_value" id="len_from">
+				<option value="Meter">Meter</option>
+				<option value="Kilometer">Kilometer</option>
+				<option value="Mile">Mile</option>
+				<option value="Light Year">Light Year</option>
+			</select>
+
+		</div>
+
+		<div class="from_value">
+			<input class="input_value bg" type="number" name="" id="length_input">
+			
+		</div>
+
+
+		<div class="to">
+			<label class="para" for="len_to">To </label><br>
+			<select class="input_value" id="len_to">
+				<option value="Meter">Meter</option>
+				<option value="Kilometer">Kilometer</option>
+				<option value="Mile">Mile</option>
+				<option value="Light Year">Light Year</option>
+			</select>
+
+		</div>
+
+		
+
+		<div class="result_box" >
+			<p id="len_result" class="centre">Result</p>
+			
+		</div>
+
+		<div class="outer_convert_box" >
+			<button onclick="length_convert()" class="convert_button" >Convert</button>
+		</div>
+
+		<div class="from">
+			<label class="para" for="temp_from">From </label><br>
+			<select class="input_value" id="temp_from">
+				<option value="Celsius">Celsius</option>
+				<option value="Kelvin">Kelvin</option>
+				<option value="Fahrenhiet">Fahrenhiet</option>
+				
+			</select>
+
+		</div>
+
+		<div class="from_value">
+			<input class="input_value bg" type="number" name="" id="temp_input">
+			
+		</div>
+
+
+		<div class="to">
+			<label class="para" for="temp_to">To </label><br>
+			<select class="input_value" id="temp_to">
+				<option value="Celsius">Celsius</option>
+				<option value="Kelvin">Kelvin</option>
+				<option value="Fahrenhiet">Fahrenhiet</option>
+				
+			</select>
+
+		</div>
+
+		<div class="result_box" >
+			<p id="temp_result" class="centre">Result</p>
+			
+		</div>
+
+		<div class="outer_convert_box" >
+			<button onclick="temp_convert()" class="convert_button" >Convert</button>
+		</div>
+
+		<div class="from">
+			<label class="para" for="vol_from">From </label><br>
+			<select class="input_value" id="vol_from">
+				<option value="Litre">Litre</option>
+				<option value="Millilitre">Millilitre</option>
+				<option value="US Gallon">US Gallon</option>
+				<option value="Imperial Tea Spoon">Imperial Tea Spoon</option>
+			</select>
+
+		</div>
+
+		<div class="from_value">
+			<input class="input_value bg" type="number" name="" id="volume_input">
+			
+		</div>
+
+		<div class="to">
+			<label class="para" for="vol_to">To </label><br>
+			<select class="input_value" id="vol_to">
+				<option value="Litre">Litre</option>
+				<option value="Millilitre">Millilitre</option>
+				<option value="US Gallon">US Gallon</option>
+				<option value="Imperial Tea Spoon">Imperial Tea Spoon</option>
+			</select>
+
+		</div>
+
+		<div class="result_box" >
+			<p id="vol_result" class="centre">Result</p>
+			
+		</div>
+		<div class="outer_convert_box" >
+			<button onclick="vol_convert()" class="convert_button" >Convert</button>
+		</div>
+
+		
+		
+	</div>
+
+	<script >
+		function length_convert() {
+			
+		var from_value = document.getElementById('len_from').value;
+		var to_value = document.getElementById('len_to').value;
+		var len_input_value = document.getElementById("length_input").value
+
+
+		if (from_value == "Meter") {
+			switch(to_value)
+			{
+				case "Meter" :
+					document.getElementById('len_result').innerHTML= len_input_value
+					break
+				case "Kilometer":
+					document.getElementById("len_result").innerHTML= len_input_value/1000
+					break
+				case "Mile":
+					document.getElementById("len_result").innerHTML= len_input_value/1609.344
+					break
+				case "Light Year":
+					document.getElementById("len_result").innerHTML= len_input_value/9.461
+					break
+			}
+		}
+
+		if (from_value == "Kilometer") {
+
+			switch(to_value)
+			{
+				case "Meter" :
+					document.getElementById('len_result').innerHTML= len_input_value*1000
+					break
+				case "Kilometer":
+					document.getElementById("len_result").innerHTML= len_input_value
+					break
+				case "Mile":
+					document.getElementById("len_result").innerHTML= len_input_value/1.609
+					break
+				case "Light Year":
+					document.getElementById("len_result").innerHTML= len_input_value/9.461
+					break
+			}
+		}	
+
+		if (from_value == "Mile") {
+
+			switch(to_value)
+			{
+				case "Meter" :
+					document.getElementById('len_result').innerHTML= len_input_value*1609.344
+					break
+				case "Kilometer":
+					document.getElementById("len_result").innerHTML= len_input_value*1.609
+					break
+				case "Mile":
+					document.getElementById("len_result").innerHTML= len_input_value
+					break
+				case "Light Year":
+					document.getElementById("len_result").innerHTML= len_input_value/5.879
+					break
+			}
+		}	
+
+		if (from_value == "Light Year") {
+
+			switch(to_value)
+			{
+				case "Meter" :
+					document.getElementById('len_result').innerHTML= len_input_value*9.461
+					break
+				case "Kilometer":
+					document.getElementById("len_result").innerHTML= len_input_value*9.461
+					break
+				case "Mile":
+					document.getElementById("len_result").innerHTML= len_input_value*5.879
+					break
+				case "Light Year":
+					document.getElementById("len_result").innerHTML= len_input_value
+					break
+			}
+		}	
+	}
+
+	function temp_convert(){
+		var from_value1 = document.getElementById('temp_from').value;
+		var to_value1 = document.getElementById('temp_to').value;
+		var temp_input_value = document.getElementById("temp_input").value
+		if (from_value1 == "Celsius") {
+
+			switch(to_value1)
+			{
+				case "Celsius" :
+					document.getElementById('temp_result').innerHTML= temp_input_value
+					break
+				case "Kelvin":
+					document.getElementById("temp_result").innerHTML= temp_input_value+273.15
+					break
+				case "Fahrenhiet":
+					document.getElementById("temp_result").innerHTML= (temp_input_value*9/5)+32
+					break
+				
+			}
+		}	
+
+		if (from_value1 == "Kelvin") {
+
+			switch(to_value1)
+			{
+				case "Celsius" :
+					document.getElementById('temp_result').innerHTML= temp_input_value-273.15
+					break
+				case "Kelvin":
+					document.getElementById("temp_result").innerHTML= temp_input_value
+					break
+				case "Fahrenhiet":
+					document.getElementById("temp_result").innerHTML= (temp_input_value-273.15) *( 9/5) + 32
+					break
+				
+			}
+		}	
+
+		if (from_value1 == "Fahrenhiet") {
+
+			switch(to_value1)
+			{
+				case "Celsius" :
+					document.getElementById('temp_result').innerHTML= (temp_input_value - 32) * (5/9)
+					break
+				case "Kelvin":
+					document.getElementById("temp_result").innerHTML= (temp_input_value - 32) * (5/9) + 273.15
+					break
+				case "Fahrenhiet":
+					document.getElementById("temp_result").innerHTML= temp_input_value
+					break
+				
+			}
+		}	
+
+		}
+
+		function vol_convert(){
+			var from_value2 = document.getElementById('vol_from').value;
+			var to_value2 = document.getElementById('vol_to').value;
+			var vol_input_value = document.getElementById("volume_input").value	
+
+			if (from_value2 == "Litre") {
+
+			switch(to_value2)
+			{
+				case "Litre" :
+					document.getElementById('vol_result').innerHTML= vol_input_value
+					break
+				case "Millilitre":
+					document.getElementById("vol_result").innerHTML= vol_input_value*1000
+					break
+				case "US Gallon":
+					document.getElementById("vol_result").innerHTML= vol_input_value/3.785
+					break
+				case "Imperial Tea Spoon":
+					document.getElementById("vol_result").innerHTML= vol_input_value*168.936
+					break	
+				
+			}
+		}	
+	
+			if (from_value2 == "Millilitre") {
+
+			switch(to_value2)
+			{
+				case "Litre" :
+					document.getElementById('vol_result').innerHTML= vol_input_value/1000
+					break
+				case "Millilitre":
+					document.getElementById("vol_result").innerHTML= vol_input_value
+					break
+				case "US Gallon":
+					document.getElementById("vol_result").innerHTML= vol_input_value/3785.412
+					break
+				case "Imperial Tea Spoon":
+					document.getElementById("vol_result").innerHTML= vol_input_value/5.919
+					break	
+				
+			}
+		}	
+	
+
+			if (from_value2 == "US Gallon") {
+
+			switch(to_value2)
+			{
+				case "Litre" :
+					document.getElementById('vol_result').innerHTML= vol_input_value*3.785
+					break
+				case "Millilitre":
+					document.getElementById("vol_result").innerHTML= vol_input_value*3785.412
+					break
+				case "US Gallon":
+					document.getElementById("vol_result").innerHTML= vol_input_value
+					break
+				case "Imperial Tea Spoon":
+					document.getElementById("vol_result").innerHTML= vol_input_value*639.494
+					break	
+				
+			}
+		}	
+	
+
+			if (from_value2 == "Imperial Tea Spoon") {
+
+			switch(to_value1)
+			{
+				case "Litre" :
+					document.getElementById('vol_result').innerHTML= vol_input_value/168.936
+					break
+				case "Millilitre":
+					document.getElementById("vol_result").innerHTML= vol_input_value*5.919
+					break
+				case "US Gallon":
+					document.getElementById("vol_result").innerHTML= vol_input_value/639.494
+					break
+				case "Imperial Tea Spoon":
+					document.getElementById("vol_result").innerHTML= vol_input_value
+					break	
+				
+			}
+		}	
+	
+
+		}	
+			
+		
+	</script>
+</body>
+</html>
