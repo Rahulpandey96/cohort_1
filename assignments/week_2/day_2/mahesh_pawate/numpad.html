@@ -61,6 +61,7 @@
 			border-width: 4px;
 			background-color: gray;
 			border-radius: 10px;
+			color:white;
 		}
 
 		.plus_sign_color
@@ -83,20 +84,27 @@
 <body id="body_specific">
 	<div class="div_align">
 		<div>
-			<div class="display_input">#</div>
+			<div class="display_input"  id="hash"></div>
 		</div>
 		<div class="keys_margin_left" >
-			<div class="key_style">1</div>
-			<div class="key_style plus_sign_color">2</div>
-			<div class="key_style">3</div>
-			<div class="key_style clear_float plus_sign_color">4</div>
-			<div class="key_style">5</div>
-			<div class="key_style plus_sign_color" >6</div>
-			<div class="key_style clear_float">7</div>
-			<div class="key_style plus_sign_color">8</div>
-			<div class="key_style">9</div>
-			<div id="zero_btn_leftmargin" class="key_style clear_float zero_back_color">0</div>
+			<div class="key_style" onclick="display('1')">1</div>
+			<div class="key_style plus_sign_color" onclick="display('2')">2</div>
+			<div class="key_style" onclick="display('3')">3</div>
+			<div class="key_style clear_float plus_sign_color" onclick="display('4')">4</div>
+			<div class="key_style" onclick="display('5')">5</div>
+			<div class="key_style plus_sign_color" onclick="display('6')">6</div>
+			<div class="key_style clear_float" onclick="display('7')">7</div>
+			<div class="key_style plus_sign_color" onclick="display('8')">8</div>
+			<div class="key_style" onclick="display('9')">9</div>
+			<div id="zero_btn_leftmargin" class="key_style clear_float zero_back_color" onclick="display('0')">0</div>
 		</div>
 	</div>
+
+	<script type="text/javascript">
+		function display(input)
+		{
+			document.getElementById("hash").innerHTML+=input;
+		}
+	</script>
 </body>
 </html>
