@@ -292,84 +292,117 @@
 				}
 			}
 		}
+
 		function volume()
 		{
 			var unit_selected=document.getElementById("select_your_unit").value
 			var convert_unit=document.getElementById("convert_in_volume").value
 			var get_input=Number(document.getElementById("take_input").value)
-			var temp=0
 			switch(unit_selected)
 			{
-				case "C" :
+				case "Ltr" :
 				{
-						if (convert_unit == "Celsius")
+						if (convert_unit == "Liter")
 						{
-							document.getElementById("display").innerHTML=get_input * 1  + " " + convert_unit;
+							document.getElementById("display").innerHTML=get_input+ " " + convert_unit;
 						}
-						else if (convert_unit == "Kelvin")
+						else if (convert_unit == "Milliliter")
 						{
-							temp=get_input + 273.15;
-							document.getElementById("display").innerHTML= temp  + " " + convert_unit;
+							document.getElementById("display").innerHTML= get_input * 1000  + " " + convert_unit;
 						}
-						else if (convert_unit == "Fahrenheit")
+						else if (convert_unit == "US_Gallon")
 						{
-							document.getElementById("display").innerHTML= get_input* 9/5 + 32 +" "+ convert_unit;
+							document.getElementById("display").innerHTML= get_input* 168.936 +" "+ convert_unit;
+						}
+						else if (convert_unit == "Imperial_Tea_Spoon")
+						{
+							document.getElementById("display").innerHTML= get_input / 3.785 +" "+ convert_unit;
 						}
 						else
 						{
-							alert("Please use proper selection, This is not a temperature...!!!");
+							alert("Please use proper selection, This is not a volume...!!!");
 						}
 						break;
 				}
-				case "Kel" :
+				case "MLtr" :
 				{
-						if (convert_unit == "Celsius")
+						if (convert_unit == "Liter")
 						{
-							document.getElementById("display").innerHTML=get_input - 273.15  + " " + convert_unit
+							document.getElementById("display").innerHTML=get_input / 1000 + " " + convert_unit;
 						}
-						else if (convert_unit == "Kelvin")
+						else if (convert_unit == "Milliliter")
 						{
-							document.getElementById("display").innerHTML=get_input * 1  + " " + convert_unit
+							document.getElementById("display").innerHTML= get_input  + " " + convert_unit;
 						}
-						else if (convert_unit == "Fahrenheit")
+						else if (convert_unit == "US_Gallon")
 						{
-							console.log(convert_unit);
-							temp=(get_input - 273.15) * 9/5
-							document.getElementById("display").innerHTML= temp  + 32  +" "+ convert_unit
+							document.getElementById("display").innerHTML= get_input / 3785.412 +" "+ convert_unit;
+						}
+						else if (convert_unit == "Imperial_Tea_Spoon")
+						{
+							document.getElementById("display").innerHTML= get_input / 5.919 +" "+ convert_unit;
 						}
 						else
 						{
-							alert("Please use proper selection, This is not a temperature...!!!");
+							alert("Please use proper selection, This is not a volume...!!!");
 						}
 						break;
 				}
-				case "F" :
+				case "USG" :
 				{
-						if (convert_unit == "Celsius")
+						if (convert_unit == "Liter")
 						{
-							temp=(get_input - 32) * 5/9
-							document.getElementById("display").innerHTML= temp  + " " + convert_unit
+							document.getElementById("display").innerHTML=get_input * 3.785 + " " + convert_unit;
 						}
-						else if (convert_unit == "Kelvin")
+						else if (convert_unit == "Milliliter")
 						{
-							temp=(get_input - 32) * 5/9 + 273.15
-							document.getElementById("display").innerHTML=temp  + " " + convert_unit
+							document.getElementById("display").innerHTML= get_input * 3785.412  + " " + convert_unit;
 						}
-						else if (convert_unit == "Fahrenheit")
+						else if (convert_unit == "US_Gallon")
 						{
-							document.getElementById("display").innerHTML=get_input +" "+ convert_unit
+							document.getElementById("display").innerHTML= get_input +" "+ convert_unit;
+						}
+						else if (convert_unit == "Imperial_Tea_Spoon")
+						{
+							document.getElementById("display").innerHTML= get_input * 639.494 +" "+ convert_unit;
 						}
 						else
 						{
-							alert("Please use proper selection, This is not a temperature...!!!");
+							alert("Please use proper selection, This is not a volume...!!!");
+						}
+						break;
+				}
+				case "ITS" :
+				{
+						if (convert_unit == "Liter")
+						{
+							document.getElementById("display").innerHTML=get_input / 168.936 + " " + convert_unit;
+						}
+						else if (convert_unit == "Milliliter")
+						{
+							document.getElementById("display").innerHTML= get_input * 5.919  + " " + convert_unit;
+						}
+						else if (convert_unit == "US_Gallon")
+						{
+							document.getElementById("display").innerHTML= get_input / 639.494 +" "+ convert_unit;
+						}
+						else if (convert_unit == "Imperial_Tea_Spoon")
+						{
+							document.getElementById("display").innerHTML= get_input +" "+ convert_unit;
+						}
+						else
+						{
+							alert("Please use proper selection, This is not a volume...!!!");
 						}
 						break;
 				}
 				default :
 				{
-					alert("This may be neither unit nor temperature, please select Proper...! ");
+					alert("This may be neither unit nor volume, please select Proper...! ");
 				}
 			}
+		}
 	</script>
 </body>
 </html>
+
