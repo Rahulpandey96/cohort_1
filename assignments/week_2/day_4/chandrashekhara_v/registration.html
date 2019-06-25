@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Registration</title>
+    <style type="text/css">
+      .main
+      {
+        background-color:black
+      }
+      .reg
+      {
+        margin-left: 130px;
+        margin-right: 130px;
+        height: 615px;
+        background-color: white;
+      }
+      .name
+      {
+        margin-top: -500px;
+        margin-left: 180px;
+        font-size: 25px;
+      }
+      .email
+      {
+        width: 250px;
+        height: 25px;
+        margin-top: 42px;
+        margin-left: 180px;
+        font-size: 25px;
+      }
+      .mobile
+      {
+        width: 250px;
+        height: 25px;
+        margin-top: 48px;
+        margin-left: 180px;
+        font-size: 25px;
+      }
+      .register
+      {
+        margin-left: 182px;
+        border: 2px solid black;
+        width: 250px;
+        height: 35px;
+        font-size: 20px;
+        color: white;
+        background-color: black;
+      }
+      .ret
+      {
+        border: 1px solid black;
+        height: 358px;
+        width: 370px;
+        margin-left: 640px;
+        margin-top: -360px;
+        background-color: black;
+        color: white;
+      }
+    </style>
+  </head>
+  <body class="main">
+    <div class="reg">
+
+
+    </div>
+    <p class="name" style="">NAME</p>
+    <input type="text" id="name" name="" value="" class="name" style="border: 2px solid black;width: 250px;">
+    <p class="email" style="">EMAIL</p>
+    <input type="text" name="" id="email" value="" class="name" style="border: 2px solid black;width: 250px;">
+    <p class="mobile" style="">MOBILE</p>
+    <input type="text" name="" id="mobile" value="" class="name" style="border: 2px solid black;width: 250px;">
+    <p id="op" style="color:red;font-size:15px;margin-left: 180px;"></p>
+    <p id="op1" style="color:red;font-size:15px;margin-left: 180px;"></p>
+    <p id="op2" style="color:red;font-size:15px;margin-left: 180px;"></p>
+    <button type="button" name="button" class="register" onclick="register()">REGISTER</button>
+    <div class="ret" style="border:1px solid black">
+      <p style="margin-top: 60px;margin-left: 40px;">NAME</p>
+      <h2 id="name1" style="margin-top: -10px;margin-left: 40px;"></h2>
+      <p style="margin-top: 45px;margin-left: 40px;">EMAIL</p>
+      <p id="email1" style="margin-top: -10px;margin-left: 40px;"></p>
+      <p style="margin-top: 55px;margin-left: 40px;">MOBILE</p>
+      <p id="mobile1" style="margin-top: -10px;margin-left: 40px;"></p>
+    </div>
+    <script type="text/javascript">
+      function register()
+      {
+        var name=document.getElementById('name').value;
+        if(name.length>3)
+        {
+          document.getElementById('name1').innerHTML=document.getElementById('name').value;
+        }
+        else {
+          document.getElementById('op1').innerHTML="Name should be more than 3 characters"
+        }
+        var mail = document.getElementById("email").value;
+  			var at=mail.lastIndexOf("@");
+  			var com=mail.lastIndexOf(".com");
+        if(mail == '')
+        {
+          document.getElementById('op2').innerHTML="Enter the email address"
+        }
+  			else if(at < 1 || (com - at < 2) || (at-com == -1 ))
+        {
+  				document.getElementById('op2').innerHTML="invalid email"
+
+
+  			}
+
+        else
+        {
+  				document.getElementById("email1").innerHTML=document.getElementById("email").value;
+          document.getElementById("email1").value=""
+
+  			}
+
+        var mob= document.getElementById("mobile").value;
+
+
+
+          if(mob.length != 10)
+          {
+            document.getElementById('op').innerHTML="Enter 10 digits"
+
+
+          }
+          else if(mob.length==10)
+          {
+            for(var i =0;i<mob.length;i++)
+            {
+              if(mob[i]=='0'||mob[i]=='1'||mob[i]=='2'||mob[i]=='3'||mob[i]=='4'||mob[i]=='5'||mob[i]=='6'||mob[i]=='7'||mob[i]=='8'||mob[i]=='9')
+              {
+                console.log("valid");
+                document.getElementById('mobile1').innerHTML+=mob[i];
+              }
+              else {
+                document.getElementById('mobile1').innerHTML = ''
+                document.getElementById('op').innerHTML="Not a valid mobile number"
+              }
+            }
+
+          }
+          else
+          {
+
+            document.getElementById('op').innerHTML="not a number"
+          }
+
+
+
+
+    }
+
+
+
+    </script>
+  </body>
+</html>

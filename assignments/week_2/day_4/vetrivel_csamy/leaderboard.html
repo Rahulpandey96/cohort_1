@@ -166,25 +166,24 @@
         var highScore = document.getElementById("highscore").value;
         var lowScore = document.getElementById("lowscore").value;
 
-        if (mainScore < highScore) {
+        if (mainScore < lowScore) {
           document.getElementById("lowscore").value = mainScore;
           document.getElementById("enterdisplay").value = "";
-        } else if (mainScore > lowScore) {
+        } else if (mainScore > highScore) {
           document.getElementById("highscore").value = mainScore;
           document.getElementById("enterdisplay").value = "";
         } else if (mainScore == lowScore) {
-          alert("Number " + mainScore + " Equal To " + lowScore);
+          alert("Number " + mainScore + " Equal To " + " " + lowScore);
           document.getElementById("enterdisplay").value + "";
         } else if (mainScore == highScore) {
-          alert("Number " + mainScore + "Equal To " + highScore);
+          alert("Number " + mainScore + "Equal To " + "" + highScore);
           document.getElementById("enterdisplay").value = "";
-        } else if (mainScore > lowScore && mainScore < highScore) {
+        } else if (mainScore < lowScore && mainScore > highScore) {
           document.getElementById("errorText").innerText =
             "Number" + mainScore + " " + lowScore + " " + highScore;
           document.getElementById("enterdisplay").value + "";
         } else {
-          document.getElementById("errorText").innerText =
-            "Integers Number || Ex: -15, 0, 27, 1102";
+          document.getElementById("errorText").innerText = "error";
         }
       }
     </script>

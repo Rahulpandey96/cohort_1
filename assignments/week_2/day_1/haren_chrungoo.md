@@ -22,7 +22,7 @@ The files contains marks the data of 2000 students from India and Pakistan one f
 1. Find the total number of students from Pakistan
 
 ```
-   500
+ANSWER   500
 ```
 
 Commands on how you got the answer
@@ -33,7 +33,7 @@ Commands on how you got the answer
 ```
 2. No of students from India who are in the bottom 200 list based on the marks scored
 ```
- 156
+ANSWER 156
 ```
 Commands on how you got the answer
 
@@ -61,7 +61,7 @@ Mumbai,Isadora U. Ward
 1. Find the total number of orders from Mumbai
 
 ```
- 269
+ANSWER 269
 ```
 
 Commands on how you got the answer
@@ -73,7 +73,7 @@ Commands on how you got the answer
 2. Find the total number of users from Bangalore
 
 ```
- 100
+ANSWER 100
 ```
 
 Commands on how you got the answer
@@ -85,7 +85,7 @@ Commands on how you got the answer
 3. Total no of users who have more than one order
 
 ```
-  102
+ANSWER  102
 ```
 
 Commands on how you got the answer
@@ -128,7 +128,7 @@ Commands on how you got the answer
 Clone the repo https://github.com/jlevy/the-art-of-command-line
 1. Total no of commits made to the repository
 ```
- 1218
+ANSWER 1218
 ```
 
 Commands on how you got the answer
@@ -139,7 +139,7 @@ Commands on how you got the answer
 ```
 2. No. of contributors to the repository
 ```
- 190
+ANSWER 190
 ```
 
 Commands on how you got the answer
@@ -166,7 +166,7 @@ Commands on how you got the answer
 
 4. Commits made in the month of January for the year 2018
 ```
- 8
+ANSWER 8
 ```
 Commands on how you got the answer
 
@@ -175,8 +175,8 @@ Commands on how you got the answer
 
 ```
 5. Commits made on Sundays for the year 2019
-``
- 0
+```
+ANSWER 0
 ```
 Commands on how you got the answer
 
