@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Leader-Board</title>
+  <style type="text/css">
+    
+ .container{
+    margin: auto;
+    width: 600px;
+    margin-top: 200px;
+ }
+
+ .display{
+    height:150px;
+    width:350px;
+    background-color:grey;
+    margin-left:89px; 
+    border: 2px solid black;
+    font-size: 40px;
+    text-align: center;
+
+ }
+  .key{
+    float: left;
+    width:80px;
+    height:80px;
+    border:2px solid black;
+    margin:30px 30px 0 30px;
+    font-size: 30px;
+    padding:5px
+}
+
+  #leftscorebox{
+    margin-left: -40px;
+    margin-top: -50px;  
+  }
+
+  .leftminscbox{
+    width:100px;
+    height:100px;
+    border:2px solid black;
+    margin-top: -120px;
+    margin-left:-50px;
+    text-align: center;
+    font-size: 35px;
+    float:left;
+    padding-bottom: 1px;
+
+  }
+
+  .leftminscboxprop{
+    background-color: red;
+  }
+
+  #rightscorebox{
+    margin-right: 35px;
+    margin-top: -50px;
+  }
+  
+  .rightmaxscbox{
+    float: right;
+    width:100px;
+    height:100px;
+    border:2px solid black;
+    margin-top: -165px;
+    margin-right: 20px;
+    text-align: center;
+    font-size: 35px;
+  }
+
+  .rightmaxscboxprop{
+    background-color: green;
+  }
+
+  .start{
+    height: 100px;
+    width: 200px;
+    text-align: center;  
+    font-size: 25px;
+    background-color:2px solid white;
+  }
+
+  .clear{
+    clear: left;
+  }
+  </style>
+</head>
+<body>
+<div class="container">
+    <div>
+            <input type="text" name="inputmin" class="leftminscbox leftminscboxprop" value="43" id="lowscr">
+            <h2 id="leftscorebox">MIN</h2>
+    
+            <input type="text" name="inputmax" class="rightmaxscbox rightmaxscboxprop" value="2019" id="highscr">
+            <h2 id="rightscorebox" style="margin-left:492px;padding-left: 1px">MAX</h2>
+    </div>
+
+
+<div id="displaynum" class="display "></div>
+
+<button class="key clear" style="background-color: green;margin-left: 88px" onclick="display('1')" value="1">1</button>
+
+<button class="key" style="background-color:orange" onclick="display('2')" value="1">2</button>
+    
+<button class="key" style="background-color: green" onclick="display('3')" value="1">3</button>
+
+<button class="key clear" style="background-color: orange;margin-left: 88px" onclick="display('4')" value="1">4</button>
+
+<button class="key" style="background-color: orange" onclick="display('5')" value="1">5</button>
+
+<button class="key" style="background-color: orange" onclick="display('6')" value="1">6</button>
+
+<button class="key clear" style="background-color: green; margin-left: 88px" onclick="display('7')" value="1">7</button>
+
+<button class="key" style="background-color: orange" onclick="display('8')" value="1">8</button>
+
+<button class="key" style="background-color: green" onclick="display('9')" value="1">9</button>
+
+<button class="key clear" style="background-color: purple;margin-left: 227px" style="margin-left: 140px" onclick="display('0')" value="1">0</button>
+
+<button id="startkey" class="start" style="margin-top: 468px;margin-left: -300px" onclick="start()" value="start">START</button>
+
+</div>
+
+<script type="text/javascript">
+
+function start(){
+    var score = document.getElementById("displaynum");
+    var lowscore = document.getElementById("lowscr").value;
+    var highscore = document.getElementById("highscr").value;
+
+    if (score > lowscore) {
+          document.getElementById("highscr").value = score;
+          document.getElementById("displaynum").value = "";
+        } else if (score < highscore) {
+          document.getElementById("lowscr").value = score;
+          document.getElementById("displaynum").value = "";
+        } else if (score == highscore) {
+          alert("Number " + score + " is Equal To " + highscore);
+          document.getElementById("displaynum").value="";
+        } else if (score == lowcore) {
+          alert("Number " + score + "is Equal To " + lowscore);
+          document.getElementById("displaynum").value="";
+        }
+
+        function display(val){
+            document.getElementById("displaynum").innerHTML+=val;
+        }
+}
+
+</script>
+</body>
+</html>
