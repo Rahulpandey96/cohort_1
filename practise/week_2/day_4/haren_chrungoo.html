@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>CS 1 Week2Day4</title>
+</head>
+
+<body>
+	<!-- These elements below are for FSD.W2.4.1_1-->
+	<h1> Create your own exponentiation function! </h1>
+	<input id="i1" type="text" name="num1">
+	<input id="i2" type="text" name="num2">
+	<p id="resultexpo"> </p>
+	</hr>
+
+	<button onclick="exponent()">Click here to find the exponent!</button>
+	<!-- These elements above are for FSD.W2.2.2_1-->
+
+	<!-- These elements below are for FSD.W2.2.2_3-->
+	<h1>Sum of multiples of 3 and 5!</h1>
+	<p id="resultsum"></p>
+	<input id="i3" type="text">
+    <button onclick="sumOf3And5()">Click here for the output!</button>
+    
+
+    
+
+	<!-- These elements above are for FSD.W2.2.2_2-->
+
+	<!-- These elements below are for FSD.W2.2.2_3-->
+	<h1>Check if the users email is valid!</h1>
+	<label for="email">Email</label>
+	<input id="i4" type="text" />
+	<button onclick="valEmail()">Check Email!</button>
+	<!-- These elements above are for FSD.W2.2.2_2-->
+	<script type="text/javascript">
+		//Write javascript for FSD.W2.4.1_1 here
+		function exponent() {
+			var num1 = document.getElementById('i1').value;
+			var num2 = document.getElementById('i2').value;
+			if (num2 == 0) {
+				document.getElementById('resultexpo').innerHTML = 1;
+			}
+			if (num2 == 1) {
+				document.getElementById('resultexpo').innerHTML = num1;
+			}
+			if (num2 > 1) {
+				var j = 1
+				for (var i = 0; i < num2; i++) {
+					j = j * num1;
+				}
+				document.getElementById('resultexpo').innerHTML = j;
+			}
+		}
+		//Write javascript for FSD.W2.4.1_2 here
+		function sumOf3And5() {
+			var num3 = document.getElementById('i3').value;
+			var j = 0;
+			for (var i = 1; i <= num3; i++) {
+				if ((i % 3 == 0) && (i % 5 == 0)) {
+					j = j + i;
+				}
+			}
+			document.getElementById('resultsum').innerHTML = j;
+		}
+		//Write javascript for FSD.W2.4.1_3 here
+		function valEmail() {
+			var s = document.getElementById('i4').value;
+			for (var i = 0; i < s.length; i++) {
+				if (s[i] == '@') {
+					console.log(s[s.length - 4], s[s.length - 3], s[s.length - 2])
+					if ((s[0] != "@") && (s[s.length - 3] == "c") && (s[s.length - 2] == "o") && (s[s.length - 1] == "m")) {
+						if ((s[s.length - 4] == '.') && (s[s.length - 5] != "@") && (s[s.length - 4] != 'c')) {
+							alert("valid email");
+						} else {
+							alert("invalid email");
+						}
+					} else {
+						alert("invalid email");
+					}
+				}
+			}
+			alert("invalid email");
+		}
+	</script>
+</body>
+
+</html>
