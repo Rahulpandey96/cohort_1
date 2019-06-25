@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>NumberPad</title>
+    <style media="screen">
+      .div{
+        margin-right: 300px;
+        font-size: 30px;
+        text-align: center;
+      }
+      .num
+      {
+        border:2px black solid;
+        height:100px;
+        width:300px;
+        background-color:grey;
+        text-align:center;
+      }
+      #num1
+      {
+        text-align:center
+      }
+      .num2
+      {
+        margin-left:0px;
+        padding-left:0px;
+        background-color:red
+        height:75px;
+        width:95px;
+        border:2px black solid;
+        margin-top:35px;
+        text-align:center;
+        color:white;
+      }
+
+
+    </style>
+  </head>
+  <body>
+    <div class="num">
+      <h3 id="num1" style="text-align: center;margin-right: 100px;">#</h3>
+
+    <s/div>
+    <div class="" style="margin:auto">
+      <table>
+        <tr>
+          <td >
+            <button   class="num2" onclick="key('1')" id="button1" value="1" style="height:90px;background-color:yellowgreen;">
+            <span  style="text-align:center ">1</span>
+            </button>
+          </td>
+
+          <td >
+            <button   class="num2" onclick="key('2')" id="button2" value="2" style="height:90px;background-color:darkorange;" >
+            <span  style=" ">2</span>
+            </button>
+          </td>
+          <td >
+            <button   class="num2" onclick="key('3')" id="button3" value="3" style="height:90px;background-color:yellowgreen;" >
+            <span  style=" ">3</span>
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td >
+            <button   class="num2" onclick="key('4')" id="button4" value="4" style="height:90px;background-color:darkorange;" >
+            <span  style="text-align:center ">4</span>
+            </button>
+          </td>
+
+          <td >
+            <button   class="num2" onclick="key('5')" id="button5" value="5" style="height:90px;background-color:darkorange;" >
+            <span  style=" ">5</span>
+            </button>
+          </td>
+          <td >
+            <button   class="num2" onclick="key('6')" id="button6" value="6" style="height:90px;background-color:darkorange;" >
+            <span  style=" ">6</span>
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td >
+            <button   class="num2" onclick="key('7')" id="button7" value="7" style="height:90px;background-color:yellowgreen;" >
+            <span  style="text-align:center ">7</span>
+            </button>
+          </td>
+
+          <td >
+            <button   class="num2" onclick="key('8')" id="button8" value="8" style="height:90px;background-color:darkorange;" >
+            <span  style=" ">8</span>
+            </button>
+          </td>
+          <td >
+            <button   class="num2" onclick="key('9')" id="button9" value="9" style="height:90px;background-color:yellowgreen;" >
+            <span  style=" ">9</span>
+            </button>
+          </td>
+        </tr>
+
+      </table>
+
+    </div>
+    <div class="">
+      <table>
+        <tr>
+          <td >
+            <button   class="num2" onclick="key('0')" id="button0" value="0" style="height:90px;background-color:purple;margin-left: 30px;" >
+            <span  style=" ">0</span>
+            </button>
+          </td>
+        </tr>
+      </table>
+
+
+    </div>
+    <script type="text/javascript">
+      function key(val)
+      {
+        document.getElementById('num1').innerHTML += val;
+      }
+
+    </script>
+
+  </body>
+</html>

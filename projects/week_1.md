@@ -13,7 +13,7 @@ Build a superhero profile
 | Mahesh | Flash | [github](https://github.com/mahi-mp/masai-week-1) |
 | Mousumi | Professor X | [github](https://github.com/mousumiahmed/masasi-week-1) |
 | Pavan | Jean Grey | [github](https://github.com/Pavanpatil08/masai-week-1) |
-| Priyanshu | Hulk |  |
+| Priyanshu | Hulk | [github](https://github.com/priyanshu-09/projects) |
 | Racky | Wolverine | |
 | Rahul | Wonder Woman | [github](https://github.com/RaulB-masai/masai-week-1) |
 | Sumanta | Thor | [github](https://github.com/Sumanta-123/masai-week-1) |

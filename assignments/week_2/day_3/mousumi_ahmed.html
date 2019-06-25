@@ -11,17 +11,18 @@
         padding: 0px;
     }
     .converter_body{
-        width: 420px;
+        width: 500px;
         height: 200px;
-  
+        background-color: rgb(12, 59, 59);
         position: absolute;
-        margin-left: 350px;
+        margin-left: 400px;
         margin-top: 150px;
         box-shadow: 0px 0px 2px 1px #cacaca;
     }
     .converter_title{
         text-align: center;
-        margin:13px 0px;
+        margin-top:15px;
+        margin-left: -30px;
     }
     input
     {
@@ -30,12 +31,33 @@
     #input{
         margin-left: 25px;
     }
-    #my_select,#my_result{
+    #input_left,#input_right{
         width:180px;
         margin-left:25px;  
     }
-    #my_result{
-        margin-left: 12.5px
+    #input_right{
+        margin-left: 2px
+    }
+    select{
+        width: 2500px;
+        height: 50px;
+
+
+    }
+    .convert{
+        height:30px;
+        width:150px;
+        background-color: black;
+        color:blanchedalmond;
+        margin-left: 120px;
+    }
+    .shift_left{
+        margin-right: 110px;
+        float:right;
+    }
+    .margin_left{
+        margin-left: 5px;
+        
     }
 
     
@@ -43,69 +65,277 @@
 </head>
 <body>
     <div class="converter_body">
-    <h1 class="converter_title">Converter</h1>
+            <h1 class="converter_title">Converter</h1>
+    <!--    <button class="converter_title margin_left">LENGTH</button>
+    <button class="converter_title margin_left">VOLUME</button>
+    <button class="converter_title margin_left">TEMPERATURE</button>-->
+    <div>
     <input type="text" name="input" id="input">
-    <span>=</span>
+
     <input type="text" name="result" id="result">
-    <select id="my_select">
+
+    <select class="dispaly_left" id="input_left">
     <option value="meter">Meter</option>
     <option value="kilometer">kilometer</option>
-    <option value="centimeter">centimeter</option>
-    <select>
-   <select id="my_result">
+    <option value="mile">Mile</option>
+    <option value="light_year">Light Year</option>
+
+    <option value="celsius">Celsius</option>
+    <option value="kelvin">Kelvin</option>
+    <option value="fahrenheit">Fahrenheit</option>
+    <option value="liter">Liter</option>
+    <option value="milliliter">Milliliter</option>
+    <option value="us_gallon">US Gallon</option>
+    <option value="imperial">Imperial Tea Spoon</option>
+    
+    </select>
+   <select class="shift_left" id="input_right">
             <option value="meter">Meter</option>
             <option value="kilometer">kilometer</option>
-            <option value="centimeter">centimeter</option>
-</select>
+            <option value="mile">Mile</option>
+            <option value="light_year">Light Year</option>
+
+            <option value="celsius">Celsius</option>
+             <option value="kelvin">Kelvin</option>
+             <option value="fahrenheit">Fahrenheit</option>
+             <option value="liter">Liter</option>
+             <option value="milliliter">Milliliter</option>
+             <option value="us_gallon">US Gallon</option>
+             <option value="imperial">Imperial Tea Spoon</option>
+</select><br>
+</div>
+<button  onclick="my_result()" class="convert">CONVERT</button>
+
 </div>
 
     <script>
-        var input = document.getElementById(input);
-        var result = document.getElementById(result);
-        var my_select = document.getElementById(my_select);
-        var my_result = document.getElementById(my_result);
+        
 
-        document.getElementById(input).value = (my_result());
-        document.getElementById(my_select).value = (my_result());
-        document.getElementById(my_result).value = (my_result());
+        
+        
+        function my_result()
+        {
+            var input = parseInt(document.getElementById("input").value);
+           
+             var input_type = document.getElementById("input_left").value;
+             var result_type = document.getElementById("input_right").value;
+            
 
-        var input_type = my_select.value;
-        var result_type = my_result.value;
-        function my_result(){
-            if(input_type == "meter" && result_type == "kilometer"){
-                result.value = parseInt(input.value)*0.001;
-            }
-            elseif(input_type == "meter" && result_type == "centimeter")
+            if(input_type === "meter" && result_type === "kilometer")
             {
-                result.value = parseInt(input.value)*100;
+                
+               document.getElementById("result").value = input*0.001;
+
             }
-            elseif(input_type == "meter" && result_type == "meter")
+            else if(input_type === "meter" && result_type === "mile")
             {
-                result.value = parseInt(input.value);
+                document.getElementById("result").value = input/1609.344;
             }
-            elseif(input_type == "kilometer" && result_type == "meter")
+              
+            else if(input_type === "meter" && result_type === "meter")
             {
-                result.value = parseInt(input.value)*1000;
+                document.getElementById("result").value = input;
+               
             }
-            elseif(input_type == "kilometer" && result_type == "meter")
+            else if(input_type === "kilometer" && result_type === "mile")
             {
-                result.value = parseInt(input.value)*1000;
+                document.getElementById("result").value = input/1.609;
+                
             }
-            elseif(input_type == "kilometer" && result_type == "kilometer")
+            else if(input_type === "kilometer" && result_type === "meter")
             {
-                result.value = parseInt(input.value);
+                document.getElementById("result").value = input*1000;
+              
             }
-            elseif(input_type == "centimeter" && result_type == "kilometer")
+            else if(input_type === "kilometer" && result_type === "kilometer")
             {
-                result.value = parseInt(input.value)*0.00001;
+                document.getElementById("result").value =input;
+             
             }
-            elseif(input_type == "centimeter" && result_type == "meter")
+            else if(input_type === "mile" && result_type === "kilometer")
             {
-                result.value = parseInt(input.value)*0.01;
+                document.getElementById("result").value = input*1.609;
+               
             }
-            elseif(input_type == "centimeter" && result_type == "centimeter")
+            else if(input_type === "mile" && result_type === "meter")
             {
-                result.value = parseInt(input.value);
+                document.getElementById("result").value =input*1609.344;
+                
+            }
+            else if(input_type === "mile" && result_type === "mile")
+            {
+                document.getElementById("result").value =input;
+                
+            }
+
+            else if(input_type === "light_year" && result_type === "meter")
+            {
+                document.getElementById("result").value =input*9.461e+15;
+                
+            }
+            else if(input_type === "meter" && result_type === "light_year")
+            {
+                document.getElementById("result").value =input/light_year;
+                
+            }
+            else if(input_type === "light_year" && result_type === "kilometer")
+            {
+                document.getElementById("result").value =input*9.461e+12;
+                
+            }
+            else if(input_type === "kilometer" && result_type === "light_year")
+            {
+                document.getElementById("result").value =input/9.461e+12;
+                
+            }
+            else if(input_type === "light_year" && result_type === "mile")
+            {
+                document.getElementById("result").value =input*5.879e+12;
+                
+            }
+            else if(input_type === "mile" && result_type === "light_year")
+            {
+                document.getElementById("result").value =input/5.879e+12;
+                
+            }
+            else if(input_type === "light_year" && result_type === "light_year")
+            {
+                document.getElementById("result").value =input;
+                
+            }
+
+
+            else if(input_type === "celsius" && result_type === "kelvin")
+            {
+                document.getElementById("result").value =input+273.15;
+                
+            }
+            else if(input_type === "kelvin" && result_type === "celsius")
+            {
+                document.getElementById("result").value =input-273.15;
+                
+            }
+            else if(input_type === "celsius" && result_type === "fahrenheit")
+            {
+                document.getElementById("result").value =input*(9/5)+32;
+                
+            }
+            else if(input_type === "fahrenheit" && result_type === "celsius")
+            {
+                document.getElementById("result").value =(input-32)*5/9;
+                
+            }
+            else if(input_type === "celsius" && result_type === "celsius")
+            {
+                document.getElementById("result").value =input;
+                
+            }
+            else if(input_type === "kelvin" && result_type === "fahrenheit")
+            {
+                document.getElementById("result").value =(input-273.15)*9/5+32;
+                
+            }
+            else if(input_type === "fahrenheit" && result_type === "kelvin")
+            {
+                document.getElementById("result").value =(input-32)*(5/9)+273.15;
+                
+            }
+            else if(input_type === "kelvin" && result_type === "kelvin")
+            {
+                document.getElementById("result").value =input;
+                
+            }
+            else if(input_type === "fahrenheit" && result_type === "fahrenheit")
+            {
+                document.getElementById("result").value =input;
+                
+            }
+
+
+
+            else if(input_type === "liter" && result_type === "liter")
+            {
+                document.getElementById("result").value =input;
+                
+            }
+            else if(input_type === "milliliter" && result_type === "milliliter")
+            {
+                document.getElementById("result").value =input;
+                
+            }
+            else if(input_type === "us_gallon" && result_type === "us_gallon")
+            {
+                document.getElementById("result").value =input;
+                
+            }
+            else if(input_type === "imperial" && result_type === "imperial")
+            {
+                document.getElementById("result").value =input;
+                
+            }
+            else if(input_type === "liter" && result_type === "milliliter")
+            {
+                document.getElementById("result").value =input*1000;
+                
+            }
+            else if(input_type === "milliliter" && result_type === "liter")
+            {
+                document.getElementById("result").value =input/1000;
+                
+            }
+            else if(input_type === "liter" && result_type === "us_gallon")
+            {
+                document.getElementById("result").value =input/3.785;
+                
+            }
+            else if(input_type === "us_gallon" && result_type === "liter")
+            {
+                document.getElementById("result").value =input*3.785;
+                
+            }
+            else if(input_type === "liter" && result_type === "imperial")
+            {
+                document.getElementById("result").value =input*168.936;
+                
+            }
+            else if(input_type === "imperial" && result_type === "liter")
+            {
+                document.getElementById("result").value =input/168.936;
+                
+            }
+            else if(input_type === "milliliter" && result_type === "us_gallon")
+            {
+                document.getElementById("result").value =input/3785.412;
+                
+            }
+            else if(input_type === "us_gallon" && result_type === "milliliter")
+            {
+                document.getElementById("result").value =input*3785.412;
+                
+            }
+            else if(input_type === "milliliter" && result_type === "imperial")
+            {
+                document.getElementById("result").value =input/5.919;
+                
+            }
+            else if(input_type === "imperial" && result_type === "milliliter")
+            {
+                document.getElementById("result").value =input*5.919;
+                
+            }
+            else if(input_type === "us_gallon" && result_type === "imperial")
+            {
+                document.getElementById("result").value =input*639.494;
+                
+            }
+            else if(input_type === "imperial" && result_type === "us_gallon")
+            {
+                document.getElementById("result").value =input/639.494;
+                
+            }
+
+            else{
+                document.getElementById("result").value="Invalid Conversion";
             }
 
 

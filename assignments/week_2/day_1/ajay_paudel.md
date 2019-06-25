@@ -22,23 +22,23 @@ The files contains marks the data of 2000 students from India and Pakistan one f
 1. Find the total number of students from Pakistan
 
 ```
-ANSWER   500
+   500
 ```
 
 Commands on how you got the answer
 
 ```
-root@DESKTOP-IVJM7RA:/home/W2D1A# grep -i "pakistan" marks_rand_2000.csv |wc -l
+ grep -i "pakistan" marks_rand_2000.csv |wc -l
 
 ```
 2. No of students from India who are in the bottom 200 list based on the marks scored
 ```
-ANSWER 156
+ 156
 ```
 Commands on how you got the answer
 
 ```
-root@DESKTOP-IVJM7RA:/home/W2D1A# sort -n -r marks_rand_2000.csv | tail -n 200  |grep -i "india"  | wc -l
+ sort -n -r marks_rand_2000.csv | tail -n 200  |grep -i "india"  | wc -l
 
 ```
 
@@ -61,37 +61,37 @@ Mumbai,Isadora U. Ward
 1. Find the total number of orders from Mumbai
 
 ```
-ANSWER 269
+ 269
 ```
 
 Commands on how you got the answer
 
 ```
-root@DESKTOP-IVJM7RA:/home/W2D1A# grep -i "mumbai" city_names_orders_rand.csv | wc -l
+ grep -i "mumbai" city_names_orders_rand.csv | wc -l
 
 ```
 2. Find the total number of users from Bangalore
 
 ```
-ANSWER 100
+ 100
 ```
 
 Commands on how you got the answer
 
 ```
-root@DESKTOP-IVJM7RA:/home/W2D1A# sort -r city_names_orders_rand.csv |uniq |grep -i "bangalore"|wc -l
+ sort -r city_names_orders_rand.csv |uniq |grep -i "bangalore"|wc -l
 
 ```
 3. Total no of users who have more than one order
 
 ```
-ANSWER  102
+  102
 ```
 
 Commands on how you got the answer
 
 ```
-root@DESKTOP-IVJM7RA:/home/W2D1A# sort city_names_orders_rand.csv |uniq -d | wc -l
+ sort city_names_orders_rand.csv |uniq -d | wc -l
 
 ```
 4. User having the most no of orders
@@ -104,7 +104,7 @@ COUNT OF ORDERS 18
 Commands on how you got the answer
 
 ```
-root@DESKTOP-IVJM7RA:/home/W2D1A# sort -r city_names_orders_rand.csv |uniq -c|sort -n -r| head -n 1
+ sort -r city_names_orders_rand.csv |uniq -c|sort -n -r| head -n 1
 
 ```
 5. User from Mumbai having the most no of orders
@@ -117,7 +117,7 @@ COUNT OF ORDERS 11
 Commands on how you got the answer
 
 ```
-root@DESKTOP-IVJM7RA:/home/W2D1A# sort -r city_names_orders_rand.csv |uniq -c|sort -n -r| grep -i "mumbai"|head -n 1
+ sort -r city_names_orders_rand.csv |uniq -c|sort -n -r| grep -i "mumbai"|head -n 1
      
 ```
 
@@ -128,24 +128,24 @@ root@DESKTOP-IVJM7RA:/home/W2D1A# sort -r city_names_orders_rand.csv |uniq -c|so
 Clone the repo https://github.com/jlevy/the-art-of-command-line
 1. Total no of commits made to the repository
 ```
-ANSWER 1218
+ 1218
 ```
 
 Commands on how you got the answer
 
 ```
-root@DESKTOP-IVJM7RA:/home/W2D1A/the-art-of-command-line# git log |grep commit|wc -l
+ git log |grep commit|wc -l
 
 ```
 2. No. of contributors to the repository
 ```
-ANSWER 190
+ 190
 ```
 
 Commands on how you got the answer
 
 ```
-root@DESKTOP-IVJM7RA:/home/W2D1A/the-art-of-command-line# git log | grep Author | sort |uniq | wc -l
+ git log | grep Author | sort |uniq | wc -l
 
 ```
 
@@ -160,28 +160,28 @@ NO OF COMMITS 24
 Commands on how you got the answer
 
 ```
-root@DESKTOP-IVJM7RA:/home/W2D1A/the-art-of-command-line# git log | grep Author | uniq -c | sort -n | tail -n 1
+ git log | grep Author | uniq -c | sort -n | tail -n 1
 
 ```
 
 4. Commits made in the month of January for the year 2018
 ```
-ANSWER 8
+ 8
 ```
 Commands on how you got the answer
 
 ```
-root@DESKTOP-IVJM7RA:/home/W2D1A/the-art-of-command-line# git log | grep Author | uniq -c | sort -n | tail -n 1
+ git log | grep Author | uniq -c | sort -n | tail -n 1
 
 ```
 5. Commits made on Sundays for the year 2019
-```
-ANSWER 0
+``
+ 0
 ```
 Commands on how you got the answer
 
 ```
-root@DESKTOP-IVJM7RA:/home/W2D1A/the-art-of-command-line# git log | grep Sun |grep 2019 |wc -l
+ git log | grep Sun |grep 2019 |wc -l
 
 ```
 

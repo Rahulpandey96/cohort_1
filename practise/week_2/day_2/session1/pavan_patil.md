@@ -1,22 +1,22 @@
+# Week 2 - Day 2
 
-Week 2 - Day 2
-SUBMISSION:
+**SUBMISSION:**
+- Pull the `cohort_1` repo
 
-Pull the cohort_1 repo
+- Go to `practise/week_2/day_2/session1` 
 
-Go to practise/week_2/day_2/session1
+- Copy `w2_day_2_coding1.md` with `firstname_lastname.md`
 
-Copy w2_day_2_coding1.md with firstname_lastname.md
+- Fill the answers
 
-Fill the answers
+- Push the file `firstname_lastname.md` back to the online repo
 
-Push the file firstname_lastname.md back to the online repo
-
-Don't use the web browser or any online tool to answer these questions. Only refer to the notes and apply the basic concepts
+<u>Don't use the web browser or any online tool to answer these questions. Only refer to the notes and apply the basic concepts</u>
 
 Consider the below styles for solving the problems
 
- {
+```css
+* {
     color: yellow;
     font-size: 12px;
 }
@@ -84,161 +84,327 @@ div {
     color: purple;
     background-color: red;
 }
+```
 
- 1.FSD.W2.2.1_1
+
+
+### FSD.W2.2.1_1
+
+```
 <div>MASAI</div>
-Fill the below property values for the div
-
-Color: white
+```
+Fill the below property values for the `div`
+1. Color
+```
+white;
   
-Height : 100px;
+```
+2. Height
+```
+100px;
 
-2.FSD.W2.2.1_2
+```
+
+### FSD.W2.2.1_2
+
+```
 <div style="height:50px;">MASAI</div>
-Fill the below property values for the div
+```
+Fill the below property values for the `div`
+1. Width
+```
+100px;
 
-Width: 100px;
+```
+2. Height
+```
+100px;
 
-Height:50px;
+```
+3. Padding
+```
+4px;
 
-Padding: 4px;
-
-3.FSD.W2.2.1_3
+```
+### FSD.W2.2.1_3
+```
 <div class="class1">MASAI</div>
-Width 100px;
+```
+1. Width
+```
+100px;
 
-Height 100px;
+```
+2. Height
+```
 
-Padding-Left :4x;
+100px;
 
-Margin-Right6px;
+```
+3. Padding-Left
+```
+4px
+```
+4. Margin-Right
+```
+6px
 
-Font-Size: 16px;
-
-Color black;:
-
-4.FSD.W2.2.1_4
+```
+5. Font-Size
+```
+16px
+```
+6. Color
+```
+black
+```
+### FSD.W2.2.1_4
+```
 <div id="id2">MASAI</div>
-Color :white
-
-Background Color : red;
-
-Padding-Bottom:4px;
-
-Margin-Top:10px;
-
-Font-Size :20px;
-
-Height:50px;
-
-5.FSD.W2.2.1_5
+```
+1. Color
+```
+white
+```
+2. Background Color
+```
+black
+```
+3. Padding-Bottom
+```
+4px
+```
+4. Margin-Top
+```
+6px
+```
+5. Font-Size
+```
+12px
+```
+6. Height
+```
+100px
+```
+### FSD.W2.2.1_5
+```
 <div class="class1 class4" style="color:violet">MASAI</div>
-Width :100px;
-
-Background Color :red;
-
-Padding-Bottom :4px;
-
-Margin-Right :6px;
-
-Font-Size:11px;
-
-Color :purple;
-
-6.FSD.W2.2.1_6
+```
+1. Width
+```
+100px
+```
+2. Background Color
+```
+red
+```
+3. Padding-Bottom
+```
+4px
+```
+4. Margin-Right
+```
+6px
+```
+5. Font-Size
+```
+11px
+```
+6. Color
+```
+white
+```
+### FSD.W2.2.1_6
+```
 <div class="class5 class3" id="id1">MASAI</div>
-Width :100px;
-
-Color:red;
-
-Padding-Right:20px;
-
-Margin-Left:15px;
-
-Font-Size:12px;
-
-Background Color:black;
-
-7.FSD.W2.2.1_7
+```
+1. Width
+```
+100px
+```
+2. Color
+```
+red
+```
+3. Padding-Right
+```
+20px
+```
+4. Margin-Left
+```
+6px
+```
+5. Font-Size
+```
+12px
+```
+6. Background Color
+```
+black
+```
+### FSD.W2.2.1_7
+```
 <div class="class2" id="id2">MASAI</div>
-Width:75px;
-
-Height:50px;
-
-Padding-Top 
-
-Margin-Bottom :10px;
-
-Font-Size:20px;
-
-Color:black;
-
-8.FSD.W2.2.1_8
+```
+1. Width
+```
+150px
+```
+2. Height
+```
+100px
+```
+3. Padding-Top
+```
+4px
+```
+4. Margin-Bottom
+```
+10px
+```
+5. Font-Size
+```
+22px
+```
+6. Color
+```
+white
+```
+### FSD.W2.2.1_8
+```
 <div class="class4 class2 class6" style="font-size:20px">MASAI</div>
-Width:100px;
-
-Height:50;
-
-Padding-Left:6px;
-
-Margin-Right
-
-Font-Size:20px;
-
-Color :purple;
-
-9.FSD.W2.2.1_9
+```
+1. Width
+```
+100px
+```
+2. Height
+```
+100px
+```
+3. Padding-Left
+```
+6px
+```
+4. Margin-Right
+```
+6px
+```
+5. Font-Size
+```
+20px
+```
+6. Color
+```
+orange
+```
+### FSD.W2.2.1_9
+```
 <div class="class5 class3" id="id2">MASAI</div>
-Width:75px;
-
-Height:100px;
-
-Background Color:red;
-
-Color:red;
-
-Font-Size:20px;
-
-10.FSD.W2.2.1_10
+```
+1. Width
+```
+75px
+```
+2. Height
+```
+100px
+```
+3. Background Color
+```
+black
+```
+4. Color
+```
+red
+```
+5. Font-Size
+```
+12px
+```
+### FSD.W2.2.1_10
+```
 <div class="class2 class4 class5" id="id3" style="margin-left:22px">MASAI</div>
-Width :150px;
-
-Height:50px;
-
-Padding-Top :6px;
-
-Margin-Left:22px;
-
-Font-Size:14px;
-
-Color:blue;
-
-11.FSD.W2.2.1_11
+```
+1. Width
+```
+100px
+```
+2. Height
+```
+100px
+```
+3. Padding-Top
+```
+4px
+```
+4. Margin-Left
+```
+22px
+```
+5. Font-Size
+```
+11px
+```
+6. Color
+```
+blue
+```
+### FSD.W2.2.1_11
+```
 <div class="class5 class3" id="id3" style="color:orange; font-size:28px; margin:20px">MASAI</div>
-Background Color:black;
-
-Height:100px;
-
-Margin-Left:10px;
-
-Padding-Right
-
-Font-Size:28px;
-
-Color:orange;
-
-12.FSD.W2.2.1_12
+```
+1. Background Color
+```
+black
+```
+2. Height
+```
+100pxx
+```
+3. Margin-Left
+```
+20px
+```
+4. Padding-Right
+```
+20px
+```
+5. Font-Size
+```
+28px
+```
+6. Color
+```
+orange
+```
+### FSD.W2.2.1_12
+```
 <div id="id2">MASAI</div>
-Width:75;
-
-Height:100px;
-
-Background Color:red;
-
-Margin-Right:20px;
-
-Font-Size:20px;
-
-Color:yellow;
+```
+1. Width
+```
+75px
+```
+2. Height
+```
+100px
+```
+3. Background Color
+```
+black
+```
+4. Margin-Right
+```
+10px
+```
+5. Font-Size
+```
+12px
+```
+6. Color
+```
+white
+```
 
 

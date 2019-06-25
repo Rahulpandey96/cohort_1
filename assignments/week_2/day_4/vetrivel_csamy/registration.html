@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Registration</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      .wrapper {
+        width: 100%;
+        max-width: 960px;
+        margin: 0 auto;
+      }
+      section {
+        height: 100vh;
+      }
+
+      button {
+        border: none;
+        height: 40px;
+        width: 50%;
+        align-content: center;
+        background: #010101;
+        color: #f1f1f1;
+        text-transform: uppercase;
+      }
+      input[type="text"],
+      [type="email"],
+      [type="tel"] {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0 10px 0;
+        box-sizing: border-box;
+      }
+      .col-1 {
+        width: 30%;
+        padding-top: 19%;
+        float: left;
+      }
+      .col-2 {
+        width: 50%;
+        height: 35%;
+        float: right;
+        margin-top: 12%;
+        padding-top: 13%;
+        padding-left: 10%;
+        background: #010101;
+        color: #f1f1f1;
+        text-align: left;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <section>
+        <div class="col-1">
+          <form>
+            <label for="name">Name</label>
+            <input type="text" id="inputName" />
+            <span id="error-name"></span>
+            <p></p>
+            <label for="email">Email</label>
+            <input type="text" id="email" />
+            <span id="error-email"></span>
+            <p></p>
+            <label for="phone">Phone</label>
+            <input type="text" id="phone" />
+            <span id="error-phone"></span>
+
+            <p></p>
+            <button type="submit" onclick="clickSumbit()">Sumbit</button>
+          </form>
+        </div>
+        <div class="col-2">
+          <span>Name</span>
+          <h1>Masai School</h1>
+          <span>Email</span>
+          <h2>Masai@masaischool.com</h2>
+          <span>Phone</span>
+          <h3>+9876543210</h3>
+        </div>
+      </section>
+    </div>
+    <script type="text/javascript">
+      function clickSumbit() {
+        var email = document.getElementById("email").value.indexOf("@");
+        var phone = document.getElementById("phone").value;
+        var inputName = document.getElementById("inputName").value;
+        submitOK = "false";
+
+        if (name.length < 8) {
+          document.getElementById("error-name").innerHTML =
+            "Please Enter Vaid Name";
+          document.getElementById("error-name").style.color = "red";
+          submitOK == false;
+        }
+
+        if (phone.length < 10) {
+          document.getElementById("error-phone").innerHTML =
+            "Please Enter Vaid Phone Number";
+          document.getElementById("error-phone").style.color = "red";
+          submitOK = "false";
+        }
+
+        if (email == -1) {
+          document.getElementById("error-email").innerHTML =
+            "Please Enter Vaid Email";
+          document.getElementById("error-email").style.color = "red";
+          submitOK = "false";
+        }
+
+        if (submitOK == "false") {
+          return false;
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+		.key_style
+		{
+			width: 50px;
+			height: 50px;
+			color: white;
+			float:left;
+			font-size: 28px;
+			text-align: center;
+			background-color:maroon;
+			border-width: 3px;
+			border-color: yellow;
+			border-style: dotted;
+			margin: 5px;
+			border-radius: 10px;
+			padding-top: 10px;
+		}
+
+		.clear_float
+		{
+			clear: left;
+		}
+
+		#body_specific
+		{
+			margin-top: 0px;
+			margin-bottom: 0px;
+			margin-left: auto;
+			margin-right: auto;
+			background-color: black;
+		}
+		.div_align
+		{
+			padding-left: 120px;
+			padding-top: 50px;
+			margin-left: 400px;
+			margin-right: 400px;
+			height: 100vh;
+			width: 600px;
+			background-color:white;
+		}
+
+		#zero_btn_leftmargin
+		{
+			margin-left: 75px;
+		}
+
+		.display_input
+		{
+			margin-left: 120px;
+			margin-bottom: 30px;
+			height: 90px;
+			width: 190px;
+			padding-top: 20px;
+			text-align: center;
+			font-size: 38px;
+			border-style: dashed;
+			border-width: 4px;
+			background-color: gray;
+			border-radius: 10px;
+			color:white;
+		}
+
+		.plus_sign_color
+		{
+			background-color: orange;
+		}
+
+		.keys_margin_left
+		{
+			margin-left: 120px;
+		}
+
+		.zero_back_color
+		{
+			background-color: purple;
+		}
+	</style>
+	<title>Numpad</title>
+</head>
+<body id="body_specific">
+	<div class="div_align">
+		<div>
+			<div class="display_input"  id="hash"></div>
+		</div>
+		<div class="keys_margin_left" >
+			<div class="key_style" onclick="display('1')">1</div>
+			<div class="key_style plus_sign_color" onclick="display('2')">2</div>
+			<div class="key_style" onclick="display('3')">3</div>
+			<div class="key_style clear_float plus_sign_color" onclick="display('4')">4</div>
+			<div class="key_style" onclick="display('5')">5</div>
+			<div class="key_style plus_sign_color" onclick="display('6')">6</div>
+			<div class="key_style clear_float" onclick="display('7')">7</div>
+			<div class="key_style plus_sign_color" onclick="display('8')">8</div>
+			<div class="key_style" onclick="display('9')">9</div>
+			<div id="zero_btn_leftmargin" class="key_style clear_float zero_back_color" onclick="display('0')">0</div>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		function display(input)
+		{
+			document.getElementById("hash").innerHTML+=input;
+		}
+	</script>
+</body>
+</html>
