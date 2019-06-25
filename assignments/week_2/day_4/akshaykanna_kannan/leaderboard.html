@@ -208,33 +208,8 @@
 
     function display(input)
     {
-<<<<<<< HEAD
+
       document.getElementById("score").value+=input;
-=======
-        var mainScore = document.getElementById("screen_display").value;
-        var highScore = document.getElementById("highscore").value;
-        var lowScore = document.getElementById("lowscore").value;
-        if (mainScore < highScore) {
-          document.getElementById("lowscore").value = mainScore;
-          document.getElementById("screen_display").value = "";
-        } else if (mainScore > lowScore) {
-          document.getElementById("highscore").value = mainScore;
-          document.getElementById("screen_display").value = "";
-        } else if (mainScore == lowScore) {
-          alert("Number " + mainScore + " Equal To " + lowScore);
-          document.getElementById("screen_display").value + "";
-        } else if (mainScore == highScore) {
-          alert("Number " + mainScore + "Equal To " + highScore);
-          document.getElementById("screen_display").value = "";
-        } else if (mainScore > lowScore && mainScore < highScore) {
-          document.getElementById("errorText").innerText =
-            "Number" + mainScore + " " + lowScore + " " + highScore;
-          document.getElementById("screen_display").value + "";
-        } else {
-          document.getElementById("errorText").innerText =
-            "";
-        }
->>>>>>> 2e5993a2163df4af6efec0e3d8617063b672633d
     }
 
     function submit()
@@ -242,19 +217,14 @@
       var curent_score = Number(document.getElementById("score").value)
       var min_score = Number(document.getElementById("input_min").value)
       var max_score = Number(document.getElementById("input_max").value)
-      if (curent_score < max_score) 
+      if (curent_score < min_score) 
       {
         document.getElementById("input_min").value= curent_score;
       }
 
-      else if(curent_score > min_score)
+      else if(curent_score > max_score)
       {
         document.getElementById("input_max").value= curent_score;
-      }
-      
-      else
-      {
-        document.getElementById("score").value="";
       }
     }
       
