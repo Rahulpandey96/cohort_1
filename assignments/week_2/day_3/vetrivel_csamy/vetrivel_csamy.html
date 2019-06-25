@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Unit Cala</title>
+  </head>
+  <body>
+    <center>
+      <h2 id="calculatorOutput"></h2>
+      <label>From</label>
+      <input type="number" id="inputValue" />
+      <select id="coverters">
+        <option value="1"> (Meter)</option>
+        <option value="2">(Kilometer)</option>
+        <option value="3">(Mile)</option>
+        <option value="4">( Light Year) </option>
+        <option value="5">(Kelvin)</option>
+        <option value="6">(Fahrenheit) </option>
+        <option value="7">(Temperature)</option>
+        <option value="8"> (Liter)</option>
+        <option value="9">(Milliliter)</option>
+        <option value="10">( US Gallon) </option>
+        <option value="11">(Imperial Tea Spoon) </option>
+      </select>
+      <p></p>
+      <!-- lenght -->
+      <label>To</label>
+      <select id="length">
+        <option value="meter"> Meter</option>
+        <option value="kilometer">Kilometer</option>
+        <option value="Mile">Mile</option>
+        <option value="light"> Light Year </option>
+        <option value="celsius"> Celsius</option>
+        <option value="kelvin">Kelvin</option>
+        <option value="fahrenheit"> Fahrenheit </option>
+        <option value="liter"> Liter</option>
+        <option value="milliliter">Milliliter</option>
+        <option value="usgallon"> US Gallon </option>
+        <option value="its"> Imperial Tea Spoon </option>
+      </select>
+      <p></p>
+      <!-- convert -->
+      <button onclick="calculate()">Convert</button>
+    </center>
+    <script type="text/javascript">
+      function calculate() {
+        var inputValue = document.getElementById("inputValue").value;
+        var coverters = document.getElementById("coverters").value;
+        var length = document.getElementById("length").value;
+        switch (coverters) {
+          case "1":
+          case "2":
+          case "3":
+          case "4":
+          case "5":
+          case "6":
+          case "7":
+          case "8":
+          case "9":
+          case "10":
+          case "11":
+            if (length == "meter") {
+              document.getElementById("calculatorOutput").innerHTML =
+                inputValue * 1;
+            } else if (length == "kilometer") {
+              document.getElementById("calculatorOutput").innerHTML =
+                inputValue / 1000;
+            } else if (length == "Mile") {
+              document.getElementById("calculatorOutput").innerHTML =
+                inputValue * 1609.344;
+            } else if (length == "light") {
+              document.getElementById("calculatorOutput").innerHTML =
+                inputValue / 9.461e15;
+            } else if (length == "celsius") {
+              document.getElementById("calculatorOutput").innerHTML =
+                inputValue / 1.8;
+            } else if (length == "kelvin") {
+              document.getElementById("calculatorOutput").innerHTML =
+                inputValue + 273.15;
+            } else if (length == "fahrenheit") {
+              document.getElementById("calculatorOutput").innerHTML =
+                inputValue + 32;
+            } else if (length == "liter") {
+              document.getElementById("calculatorOutput").innerHTML =
+                inputValue * 1000;
+            } else if (length == "milliliter") {
+              document.getElementById("calculatorOutput").innerHTML =
+                inputValue * 1e6;
+            } else if (length == "usgallon") {
+              document.getElementById("calculatorOutput").innerHTML =
+                inputValue * 264.172;
+            } else if (length == "milliliter") {
+              document.getElementById("calculatorOutput").innerHTML =
+                inputValue * 168936.313;
+            } else {
+              document.getElementById("calculatorOutput").innerHTML = "error";
+            }
+            break;
+        }
+      }
+    </script>
+  </body>
+</html>
