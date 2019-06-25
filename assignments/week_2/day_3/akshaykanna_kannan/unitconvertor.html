@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>UNIT CONVERTOR</title>
+  <meta charset="utf-8">
+</head>
+<body>
+    <div>
+        <form>
+            <label for="length_convert_from">From </label><br>
+            <select class="input_value" id="length_convert_from">                    
+                <option value="Meter">Meter</option>
+                <option value="Kilometer">Kilometer</option>
+                <option value="Mile">Mile</option>
+                <option value="Light Year">Light Year</option>             
+                <option value="Celsius">Celsius</option>
+                <option value="Kelvin">Kelvin</option>
+                <option value="Fahrenhiet">Fahrenhiet</option>
+                <option value="Litre">Litre</option>
+                <option value="Millilitre">Millilitre</option>
+                <option value="US_Gallon">US_Gallon</option>
+                <option value="Imperial_Tea_Spoon">Imperial_Tea_Spoon</option>
+            </select>
+        </form>
+        
+        <input type="text" name="" id="length_input">       
+        
+        <div>
+            <label for="length_convert_to">To </label><br>
+            <select id="length_convert_to">          
+                <option value="Meter">Meter</option>
+                <option value="Kilometer">Kilometer</option>
+                <option value="Mile">Mile</option>
+                <option value="Light Year">Light Year</option>
+                <option value="Celsius">Celsius</option>
+                <option value="Kelvin">Kelvin</option>
+                <option value="Fahrenhiet">Fahrenhiet</option>
+                <option value="Litre">Litre</option>
+                <option value="Millilitre">Millilitre</option>
+                <option value="US_Gallon">US_Gallon</option>
+                <option value="Imperial_Tea_Spoon">Imperial_Tea_Spoon</option>
+            </select>
+        </div>
+
+        <div>
+            <p id="length_result">#</p>
+        </div>
+        <button onclick="length_convertor()" >Convert</button>
+    </div>
+
+        <script>
+            function length_convertor()
+            {  
+                var from = document.getElementById('length_convert_from').value;
+                var to = document.getElementById('length_convert_to').value;
+                var length_input_value = document.getElementById("length_input").value
+
+                if (from == "Meter") 
+                {
+                    switch(to)
+                    {
+                        case "Meter" :
+                            document.getElementById('length_result').innerHTML= length_input_value
+                            break;
+                        case "Kilometer":
+                            document.getElementById("length_result").innerHTML= length_input_value/1000
+                            break;
+                        case "Mile":
+                            document.getElementById("length_result").innerHTML= length_input_value/1609.344
+                            break;
+                        case "Light Year":
+                            document.getElementById("length_result").innerHTML= length_input_value/9.461
+                            break;
+                        case "Celsius" :
+                            alert("Ouch !Cannot be Converted");
+                            break;
+                        case "Kelvin":
+                            alert("Ouch !Cannot be Converted");
+                            break;
+                        case "Fahrenhiet":
+                            alert("Ouch !Cannot be Converted");
+                            break;
+                        case "Litre" :
+                            alert("Ouch !Cannot be Converted");
+                            break
+                        case "Millilitre":
+                            alert("Ouch !Cannot be Converted");
+                            break
+                        case "US Gallon":
+                            alert("Ouch !Cannot be Converted");
+                            break
+                        case "Imperial Tea Spoon":
+                            alert("Ouch !Cannot be Converted");
+                            break                 
+                    }
+                }
+
+
+                if (from == "Kilometer") 
+                {
+                    switch(to)
+                    {
+                        case "Meter" :
+                            document.getElementById('length_result').innerHTML= length_input_value*1000
+                            break
+                        case "Kilometer":
+                            document.getElementById("length_result").innerHTML= length_input_value
+                            break
+                        case "Mile":
+                            document.getElementById("length_result").innerHTML= length_input_value/1.609
+                            break
+                        case "Light Year":
+                            document.getElementById("length_result").innerHTML= length_input_value/9.461
+                            break
+                        case "Celsius" :
+                            alert("Ouch !Cannot be Converted");
+                            break
+                        case "Kelvin":
+                            alert("Ouch !Cannot be Converted");
+                            break
+                        case "Fahrenhiet":
+                            alert("Ouch !Cannot be Converted");
+                            break
+                        case "Litre" :
+                            alert("Ouch !Cannot be Converted");
+                            break
+                        case "Millilitre":
+                            alert("Ouch !Cannot be Converted");
+                            break
+                        case "US Gallon":
+                           alert("Ouch !Cannot be Converted");
+                            break
+                        case "Imperial Tea Spoon":
+                            alert("Ouch !Cannot be Converted");
+                            break       
+                    }
+                }
+
+
+                if (from == "Mile") 
+                {
+                    switch(to)
+                    {
+                        case "Meter" :
+                            document.getElementById('length_result').innerHTML= length_input_value*1609.344
+                            break
+                        case "Kilometer":
+                            document.getElementById("length_result").innerHTML= length_input_value*1.609
+                            break
+                        case "Mile":
+                            document.getElementById("length_result").innerHTML= length_input_value
+                            break
+                        case "Light Year":
+                            document.getElementById("length_result").innerHTML= length_input_value/ 5.879e+12
+                            break
+                        case "Celsius" :
+                            alert("Ouch !Cannot be Converted");
+                            break  
+                        case "Kelvin":
+                            alert("Ouch !Cannot be Converted");
+                            break
+                        case "Fahrenhiet":
+                            alert("Ouch !Cannot be Converted");
+                            break
+                        case "Litre" :
+                            alert("Ouch !Cannot be Converted");
+                            break
+                        case "Millilitre":
+                            alert("Ouch !Cannot be Converted");
+                            break
+                        case "US Gallon":
+                            alert("Ouch !Cannot be Converted");
+                            break
+                        case "Imperial Tea Spoon":
+                            alert("Ouch !Cannot be Converted");
+                            break      
+                    }
+                }
+
+                if (from == "Light Year") 
+                {
+                    switch(to)
+                    {
+                        case "Meter" :
+                            document.getElementById('length_result').innerHTML= length_input_value*9.461e+15
+                            break
+                        case "Kilometer":
+                            document.getElementById("length_result").innerHTML= length_input_value*9.461e+12
+                            break
+                        case "Mile":
+                            document.getElementById("length_result").innerHTML= length_input_value*5.879+12
+                            break
+                        case "Light Year":
+                            document.getElementById("length_result").innerHTML= length_input_value
+                            break
+                        case "Celsius" :
+                            alert("Ouch !Cannot be Converted");
+                            break
+                        case "Kelvin":
+                            alert("Ouch !Cannot be Converted");
+                            break
+                        case "Fahrenhiet":
+                            alert("Ouch !Cannot be Converted");
+                            break
+                        case "Litre" :
+                            alert("Ouch !Cannot be Converted");
+                            break
+                        case "Millilitre":
+                            alert("Ouch !Cannot be Converted");
+                            break
+                        case "US Gallon":
+                            alert("Ouch !Cannot be Converted");
+                            break
+                        case "Imperial Tea Spoon":
+                            alert("Ouch !Cannot be Converted");
+                            break        
+                    }
+                }
+
+                if (from == "Fahrenhiet") 
+                {
+                    switch(to)
+                    {
+                        case "Celsius" :
+                            document.getElementById('length_result').innerHTML= (length_input_value - 32) * (5/9)
+                            break
+                        case "Kelvin":
+                            document.getElementById("length_result").innerHTML= (length_input_value - 32) * (5/9) + 273.15
+                            break
+                        case "Fahrenhiet":
+                            document.getElementById("length_result").innerHTML= length_input_value
+                            break
+                        case "Litre" :
+                            alert("Ouch !Cannot be Converted");
+                            break 
+                        case "Millilitre":
+                            alert("Ouch !Cannot be Converted");
+                            break
+                        case "US Gallon":
+                            alert("Ouch !Cannot be Converted");
+                            break
+                        case "Imperial Tea Spoon":
+                            alert("Ouch !Cannot be Converted");
+                            break        
+                        case "Meter" :
+                            alert("Ouch !Cannot be Converted");
+                            break
+                        case "Kilometer":
+                            alert("Ouch !Cannot be Converted");
+                            break
+                        case "Mile":
+                            alert("Ouch !Cannot be Converted");
+                            break
+                        case "Light Year":
+                            alert("Ouch !Cannot be Converted");
+                            break                          
+                    }
+                }  
+
+        
+                if (from == "Celsius") 
+                {
+                    switch(to)
+                    {
+                        case "Celsius" :
+                            document.getElementById('length_result').innerHTML= length_input_value
+                            break
+                        case "Kelvin":
+                            document.getElementById("length_result").innerHTML= length_input_value +273.15
+                            break
+                        case "Fahrenhiet":
+                            document.getElementById("length_result").innerHTML= (length_input_value*9/5)+32
+                            break
+                        case "Litre" :
+                            alert("Ouch !Cannot be Converted");
+                            break 
+                        case "Millilitre":
+                            alert("Ouch !Cannot be Converted");
+                            break  
+                        case "US Gallon":
+                            alert("Ouch !Cannot be Converted");
+                            break 
+                        case "Imperial Tea Spoon":
+                            alert("Ouch !Cannot be Converted");
+                            break         
+                        case "Meter" :
+                            alert("Ouch !Cannot be Converted");
+                            break 
+                        case "Kilometer":
+                            alert("Ouch !Cannot be Converted");
+                            break 
+                        case "Mile":
+                            alert("Ouch !Cannot be Converted");
+                            break 
+                        case "Light Year":
+                            alert("Ouch !Cannot be Converted");
+                            break              
+                    }
+                }
+
+
+                if (from == "Kelvin") 
+                {
+                    switch(to)
+                    {
+                        case "Celsius" :
+                            document.getElementById('length_result').innerHTML= length_input_value-273.15
+                            break
+                        case "Kelvin":
+                            document.getElementById("length_result").innerHTML= length_input_value
+                            break
+                        case "Fahrenhiet":
+                            document.getElementById("length_result").innerHTML= (length_input_value-273.15) *( 9/5) + 32
+                            break
+                        case "Litre" :
+                            alert("Ouch !Cannot be Converted");
+                            break 
+                        case "Millilitre":
+                            alert("Ouch !Cannot be Converted");
+                            break
+                        case "US Gallon":
+                            alert("Ouch !Cannot be Converted");
+                            break
+                        case "Imperial Tea Spoon":
+                            alert("Ouch !Cannot be Converted");
+                            break        
+                        case "Meter" :
+                            alert("Ouch !Cannot be Converted");
+                            break
+                        case "Kilometer":
+                            alert("Ouch !Cannot be Converted");
+                            break
+                        case "Mile":
+                            alert("Ouch !Cannot be Converted");
+                            break
+                        case "Light Year":
+                            alert("Ouch !Cannot be Converted");
+                            break               
+                    }
+                }        
+      
+
+                if (from == "Litre") 
+                {
+                    switch(to)
+                    {
+                        case "Litre" :
+                            document.getElementById('length_result').innerHTML= length_input_value
+                            break
+                        case "Millilitre":
+                            document.getElementById("length_result").innerHTML= length_input_value*1000
+                            break
+                        case "US Gallon":
+                            document.getElementById("length_result").innerHTML= length_input_value/3.785
+                            break
+                        case "Imperial Tea Spoon":
+                            document.getElementById("length_result").innerHTML= length_input_value*168.936
+                            break        
+                        case "Meter" :
+                            alert("Ouch !Cannot be Converted");
+                            break
+                        case "Kilometer":
+                            alert("Ouch !Cannot be Converted");
+                            break
+                        case "Mile":
+                            alert("Incorrect Units are selected")
+                            break
+                        case "Light Year":
+                            alert("Ouch !Cannot be Converted");
+                            break        
+                        case "Celsius" :
+                            alert("Ouch !Cannot be Converted");
+                            break
+                        case "Kelvin":
+                            alert("Ouch !Cannot be Converted");
+                            break
+                        case "Fahrenhiet":
+                            alert("Ouch !Cannot be Converted");
+                            break      
+                    }
+                }        
+                
+                if (from == "Imperial_Tea_Spoon") 
+                {
+
+                    switch(to)
+                    {
+                        case "Litre" :
+                            document.getElementById('length_result').innerHTML= length_input_value/168.936
+                            break
+                        case "Millilitre":
+                            document.getElementById("length_result").innerHTML= length_input_value*5.919
+                            break
+                        case "US Gallon":
+                            document.getElementById("length_result").innerHTML= length_input_value/639.494
+                            break
+                        case "Imperial Tea Spoon":
+                            document.getElementById("length_result").innerHTML= length_input_value
+                            break
+                        case "Meter" :
+                            alert("Ouch !Cannot be Converted");
+                            break
+                        case "Kilometer":
+                            alert("Ouch !Cannot be Converted");
+                            break
+                        case "Mile":
+                            alert("Ouch !Cannot be Converted");
+                            break
+                        case "Light Year":
+                            alert("Ouch !Cannot be Converted");
+                            break
+                        case "Celsius" :
+                            alert("Ouch !Cannot be Converted");
+                            break
+                        case "Kelvin":
+                            alert("Ouch !Cannot be Converted");
+                            break
+                        case "Fahrenhiet":
+                            alert("Ouch !Cannot be Converted");
+                            break                   
+                    }
+                }
+
+
+                if (from == "Millilitre") 
+                {
+                    switch(to)
+                    {
+                        case "Litre" :
+                            document.getElementById('length_result').innerHTML= length_input_value/1000
+                            break
+                        case "Millilitre":
+                            document.getElementById("length_result").innerHTML= length_input_value
+                            break
+                        case "US Gallon":
+                            document.getElementById("length_result").innerHTML= length_input_value/3785.412
+                            break
+                        case "Imperial Tea Spoon":
+                            document.getElementById("length_result").innerHTML= length_input_value/5.919
+                            break        
+                        case "Meter" :
+                            alert("Ouch !Cannot be Converted");
+                            break
+                        case "Kilometer":
+                            alert("Ouch !Cannot be Converted");
+                            break
+                        case "Mile":
+                            alert("Ouch !Cannot be Converted");
+                            break
+                        case "Light Year":
+                            alert("Ouch !Cannot be Converted");
+                            break        
+                        case "Celsius" :
+                            alert("Ouch !Cannot be Converted");
+                            break
+                        case "Kelvin":
+                            alert("Ouch !Cannot be Converted");
+                            break
+                        case "Fahrenhiet":
+                            alert("Ouch !Cannot be Converted");
+                            break          
+                    }
+                }        
+        
+
+                if (from == "US_Gallon") 
+                {
+                    switch(to)
+                    {
+                        case "Litre" :
+                            document.getElementById('length_result').innerHTML= length_input_value*3.785
+                            break
+                        case "Millilitre":
+                            document.getElementById("length_result").innerHTML= length_input_value*3785.412
+                            break
+                        case "US Gallon":
+                            document.getElementById("length_result").innerHTML= length_input_value
+                            break
+                        case "Imperial Tea Spoon":
+                            document.getElementById("length_result").innerHTML= length_input_value*639.494
+                            break
+                        case "Meter" :
+                            alert("Ouch !Cannot be Converted");
+                            break
+                        case "Kilometer":
+                            alert("Ouch !Cannot be Converted");
+                            break
+                        case "Mile":
+                            alert("Ouch !Cannot be Converted");
+                            break
+                        case "Light Year":
+                            alert("Ouch !Cannot be Converted");
+                            break        
+                        case "Celsius" :
+                            alert("Ouch !Cannot be Converted");
+                            break
+                        case "Kelvin":
+                            alert("Ouch !Cannot be Converted");
+                            break
+                        case "Fahrenhiet":
+                            alert("Ouch !Cannot be Converted");
+                            break       
+                                
+                    }
+                }        
+    
+            } 
+
+        </script>
+</body>
+</html>
