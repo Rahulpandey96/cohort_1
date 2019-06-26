@@ -11,40 +11,66 @@
   
   <!-- FSD.W3.3.1_3 !-->
   <h1>The buttons color changes to a random value when it is clicked! But only two times!</h1>
-  <button id="btn_once">Click here to change my color!</button>
+  <button id="btn_once">Click here to change my color!</button><br/>
+  <!--<button id="btn_array">Click me to change my color to an array value!</button>!-->
   <script>
     // this return function of random colors which stored in number 
     function random(number){
         return Math.floor(Math.random()*number);
       }
+        // first line functionality goes here 
+  var btnChangeColor = document.getElementById('btn_text');
+     function changeBtnTextColor()
+    {
+       var changeColor = document.getElementById('btn_text');
+        var randomColor = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
+      changeColor.style.color= randomColor;
+    }
+    btnChangeColor.addEventListener('click',changeBtnTextColor);
       // second functionality scripting goes here 
       var clickChangeColor = document.getElementById('btn_one');
     function changeMyColor()
     {
-     var changeColor = document.getElementById('text_h1');
-     var randomColor = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
-     changeColor.style.color= randomColor;
+      var changeColor = document.getElementById('text_h1');
+      var randomColor = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
+      changeColor.style.color= randomColor;
     }
     clickChangeColor.addEventListener('dblclick',changeMyColor);
-  // first line functionality goes here 
-  var btnChangeColor = document.getElementById('btn_text');
-     function changeBtnTextColor()
-    {
-     var changeColor = document.getElementById('btn_text');
-     var randomColor = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
-     changeColor.style.color= randomColor;
-    }
-    btnChangeColor.addEventListener('click',changeBtnTextColor);
+
 // third functionality coding goes here
- var btnOnce = document.getElementById('btn_once');
+      var btnOnce = document.getElementById('btn_once');
+      var i=1;
      function btnChangeColor_Once()
     {
-     var changeColor = document.getElementById('btn_once');
-     var randomColor = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
-     changeColor.style.backgroundColor= randomColor;
-      btnOnce.removeEventListener('click',btnChangeColor_Once);
-    }
+        var changeColor = document.getElementById('btn_once');
+        var randomColor = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
+          changeColor.style.backgroundColor= randomColor;
+      if (i==2) {
+        btnOnce.removeEventListener('click',btnChangeColor_Once);
+        }
+        i++;
+      }
     btnOnce.addEventListener('click',btnChangeColor_Once);
-  </script>
+  // Bonus button coding goes here 
+   /* var btn_array_color = document.getElementById('btn_array');
+    var j=0;
+function btn_Array()
+{   
+    var btn_array = document.getElementById('btn_array');
+    var bgColor = ['red','green','blue','yellow','lightgreen','black'];
+    var bgColorLegnth = bgColor.length;
+    if (j==bgColorLenth)
+    {
+       var i;
+        for(i=0;i<bgColorLegnth;i++)
+    {
+      btn_array.style.backgroundColor=bgColor[i];
+    }
+  }
+  j++;
+}
+btn_array_color.addEventListener('click',btn_Array);
+*/
+ </script>
 </body>
 </html>
