@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Coding Session 1!</title>
+</head>
+<body>
+	<!-- These elements below are for FSD.W2.4.1_1-->
+	<h1> Create your own exponentiation function! </h1>
+	<input id="input_first" type="text" name = "input_first">
+	<input id="input_second" type="text" name = "input_second">
+	<p id="put"> </p>
+	</hr>
+	<button type="button" onclick="exponent()">Click here to find the exponent!</button>
+	<!-- These elements above are for FSD.W2.2.2_1-->
+
+	<!-- These elements below are for FSD.W2.2.2_3-->
+	<h1>Sum of multiples of 3 and 5!</h1>
+	<input id="input_first2" type="text">
+	<p id="put2"></p>
+	<button type="button" onclick="sumOf3And5()">Click here for the output!</button>
+	
+	<!-- These elements above are for FSD.W2.2.2_2-->
+
+	<!-- These elements below are for FSD.W2.2.2_3-->
+	<h1>Check if the users email is valid!</h1>
+	<label for="Email">Email</label>
+	<input id="inputEmail" type="text" />
+	<button type="button" onclick="validateEmail()">Check Email!</button>
+	<!-- These elements above are for FSD.W2.2.2_2-->
+	<script type="text/javascript">
+		
+
+		
+		//Write javascript for FSD.W2.4.1_1 here
+		function exponent(){
+		var first_in=Number(document.getElementById("input_first").value)
+		var second_in=Number(document.getElementById("input_second").value)
+		var result=1;
+			for(var i=0;i<second_in;i++)
+			{
+				result*=first_in
+			}
+			document.getElementById("put").innerHTML=result
+		//	var  first_in * second_in
+		}
+		//Write javascript for FSD.W2.4.1_2 here
+		function sumOf3And5(){
+			var limit=Number(document.getElementById("input_first2").value)
+			var add=0
+			for(var i=0;i<=limit;i++)
+			{
+				if(i%3==0 && i%5==0)
+				{
+					add+=i
+				}
+			}
+			document.getElementById("put2").innerHTML=add
+		//	var  first_in * second_in
+		}
+
+		//Write javascript for FSD.W2.4.1_3 here
+		function validateEmail()
+		{
+				var inp=document.getElementById("inputEmail").value
+				var flag
+				console.log(inp)
+
+				for(var i=0; i < inp.length-1; i++)
+				{
+					if (inp[i]=='@' ) 
+					{
+						alert("Valid Email!")
+						break;
+
+					}	
+					else
+					{
+						alert("Invalid Email!");
+						break;
+					}				
+				}/*
+				if (flag==true) {
+					alert("Valid Email!");
+				}
+				else
+					{
+						alert("Invalid Email!");
+					}*/
+		}
+	</script>
+</body>
+</html>

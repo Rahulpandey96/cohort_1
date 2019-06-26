@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Coding Session 2</title>
+</head>
+<body>
+	<!-- These elements below are for FSD.W2.2.2_1-->
+	<h1> Check if you can drive in India! </h1>
+	<input type="text" id="drive" name ="drive">
+	<p id="nDrive"> </p>
+	</hr>
+	<button onclick="check_drive()">Click here to check!</button>
+	<!-- These elements above are for FSD.W2.2.2_1-->
+
+	<!-- These elements below are for FSD.W2.2.2_2-->
+	<h1>Input your color in the textbox!</h1>
+	<input type="text" id="color">
+	<button id="nColor" onclick="change_color()">Click here to change my color</button>
+	<!-- These elements above are for FSD.W2.2.2_2-->
+
+	<!-- These elements below are for FSD.W2.2.2_3-->
+	<h1>Find your continent!</h1>
+	<label for="country_select">Choose your Country</label>
+	<select id="conti">
+		<option value="russia"> Russia</option>
+		<option value="finland">Finland</option>
+		<option value="japan"> Japan </option>	
+		<option value="india"> India </option>	
+	</select>
+	<button onclick="find_continent()">Find Continent</button>
+	<!-- These elements above are for FSD.W2.2.2_2-->
+	<script type="text/javascript">
+	  function check_drive(){
+	  //Write javascript for FSD.W2.2.2_1 here
+      var age = document.getElementById('drive').value; 
+      age = age;
+      if(age >= 18){
+	    document.getElementById("nDrive").innerHTML = "GO Drive Now!";
+	    }
+	  else{
+	    document.getElementById("nDrive").innerHTML = "Let We Drive Babe Cycle!";
+		 }
+	   }
+		function change_color(){
+			//Write javascript for FSD.W2.2.2_2 here
+		var color = document.getElementById('color').value
+		document.getElementById("nColor").style.background = color;
+	    }
+		function find_continent(){
+		//Write javascript for FSD.W2.2.2_3 here
+		var continent = document.getElementById('conti').value;
+		value = continent
+		switch (continent) {
+		  case "russia":
+		   case "finland":
+		     continent = "europe";
+		    break;
+		  case "india":
+		  case "japan":
+		    continent = "asia";
+		    break;
+		    default:
+		    continent = "sorry";
+		 }
+		alert(continent)
+		}
+	</script>
+</body>
+</html>
