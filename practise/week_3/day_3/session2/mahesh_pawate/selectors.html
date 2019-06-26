@@ -1,0 +1,96 @@
+<html>
+    <head>
+        <title>Practise Selectors</title>
+    </head>
+    <body>
+        <h1 id="f_h1" >First H1</h1>
+        <h1>Second H1</h1>
+        <h3>First H3</h3>
+        <h3>Second H3</h3>
+        <h5>First H5</h5>
+        <h5>Second H5</h5>
+        <h5>Third H5</h5>
+        <div class="green">First DIV</div>
+        <div class="red">Second DIV</div>
+        <div class="blue">Third DIV</div>
+        <p class="green">First P</p>
+        <p class="red">Second P</p>
+        <p class="blue">Third P</p>
+        <hr/>
+        <button id="change_h1">Change H1</button>
+        <button id="all_h3">Change H3</button>
+        <button id="all_h5">Change H5</button>
+        <button id="change_green">Change Green</button>
+        <button id="change_red">Change Red</button>
+        <button id="change_blue">Change Blue</button>
+        <script>
+
+            function change_red_all()
+            {
+                var temp=0
+                var changeall=document.querySelectorAll('.red');
+                for(var i=0;i<changeall.length;i++)
+                {
+                    temp=changeall[i];
+                    temp.style.color='red'
+                }
+            }
+            change_red.addEventListener('click',change_red_all)
+
+            function change_blue_all()
+            {
+                var temp=0
+                var changeall=document.querySelectorAll('.blue');
+                for(var i=0;i<changeall.length;i++)
+                {
+                    temp=changeall[i];
+                    temp.style.color='blue'
+                }
+            }
+            change_blue.addEventListener('click',change_blue_all)
+
+            function change_green_all()
+            {
+                var temp=0
+                var changeall=document.querySelectorAll('.green');
+                for(var i=0;i<changeall.length;i++)
+                {
+                    temp=changeall[i];
+                    temp.style.color='green'
+                }
+            }
+            change_green.addEventListener('click',change_green_all)
+
+            function change_color_h3()
+            {
+                var temp=0
+                var changeall=document.querySelectorAll('h3');
+                for(var i=0;i<changeall.length;i++)
+                {
+                    temp=changeall[i];
+                    temp.style.color='green'
+                }
+            }
+            all_h3.addEventListener('click',change_color_h3)
+
+            function change_color_h5()
+            {
+                var temp=0
+                var changeall=document.querySelectorAll('h5');
+                for(var i=0;i<changeall.length;i++)
+                {
+                    temp=changeall[i];
+                    temp.style.color='blue'
+                }
+            }
+            all_h5.addEventListener('click',change_color_h5)
+
+            function change_color_h1()
+            {
+                var change=document.querySelector('h1');
+                change.style.color='red';
+            }
+            change_h1.addEventListener('click',change_color_h1)
+        </script>
+    </body>
+</html>

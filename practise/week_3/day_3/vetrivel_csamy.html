@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>vetrivel</title>
+  </head>
+  <body id="backgroundchnge">
+    <button type="submit" id="colorchange">
+      click me to change my color to an array value!
+    </button>
+    <h1 id="changecolortext"></h1>
+    <button type="submit" id="dblclicked">double color text</button>
+    <button id="backgroundchanger">change background</button>
+    <script>
+      var colorchange = document.getElementById("colorchange");
+      var dblclickedd = document.getElementById("dblclicked");
+      var changecolortext = document.getElementById("changecolortext");
+      var backgroundchange = document.getElementById("backgroundchnge");
+      var backgroundchanger = document.getElementById("backgroundchanger");
+
+      //global color function
+      function random(number) {
+        return Math.floor(Math.random() * number);
+      }
+      //single click
+      function colorchanged() {
+        var randomColor =
+          "rgb(" + random(255) + "," + random(255) + "," + random(255) + ")";
+        colorchange.style.color = randomColor;
+      }
+      colorchange.addEventListener("click", colorchanged);
+      // button click text color change
+      function doubeclicked() {
+        var randomColor =
+          "rgb(" + random(255) + "," + random(191) + "," + random(255) + ")"; // random is a function that I have defined above
+
+        changecolortext.style.color = randomColor;
+        changecolortext.innerHTML =
+          "My color should change when I double click the button!";
+      }
+      dblclickedd.addEventListener("dblclick", doubeclicked);
+
+      // background color change
+      function switchColorDouble() {
+        var randomColor =
+          "rgb(" + random(255) + "," + random(191) + "," + random(255) + ")"; // random is a function that I have defined above
+        backgroundchange.style.backgroundColor = randomColor;
+        backgroundchanger.removeEventListener("click", switchColorDouble);
+      }
+      backgroundchanger.addEventListener("click", switchColorDouble);
+      //
+      function switchColorDoubleOne() {
+        var randomColor =
+          "rgb(" + random(255) + "," + random(191) + "," + random(255) + ")"; // random is a function that I have defined above
+
+        backgroundchange.style.backgroundColor = randomColor;
+        backgroundchanger.addEventListener("click", switchColorDouble);
+        backgroundchanger.removeEventListener("click", switchColorDoubleOne);
+      }
+      backgroundchanger.addEventListener("click", switchColorDoubleOne);
+    </script>
+  </body>
+</html>
