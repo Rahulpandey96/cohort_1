@@ -5,27 +5,33 @@
 </head>
 <div style=" background-color:white;
              
-		     color: black;"><br>
-	               <input type="text" id= "key"  style="width: 300px;height:400px;border: solid;font-size: 25px;float:right;margin-right: 350px;background-color: black;"/><span><br>
+		     color: black;">
+		     <br>
+	               <p input type="text" id= "key" style="width: 300px;height:400px;border: solid;font-size: 35px;color:white;float:right;margin-right: 350px; background-color: black;">NAME: <br><span id="email" style="float:center;">EMAIL: </span></p>
 	                <h3 style="margin-left: 300px;">NAME</h3> 
-	                <input type="text" id= "n1" style="width: 300px;height:30px;border: solid;font-size: 25px;margin-left:300px;"/> 
+	                <input type="text" id= "name" style="width: 300px;height:30px;border: solid;font-size: 25px;margin-left:300px;"/> 
 	                <h3 style="margin-left: 300px;">EMAIL</h3>
-	                <input type="text" id= "n2" style="width: 300px;height:30px;border: solid;font-size: 25px;margin-left: 300px;"/>
+	                <input type="text" id= "email" style="width: 300px;height:30px;border: solid;font-size: 25px;margin-left: 300px;"/>
 	                <h3 style="margin-left: 300px;">MOBILE</h3>
-	                <input type="text" id= "n3"  style="width: 300px;height:30px;border: solid;font-size: 25px;margin-left: 300px;"/> 
+	                <input type="text" id= "num" style="width: 300px;height:30px;border: solid;font-size: 25px;margin-left: 300px;"/> 
 	                <br><br><br><br>
-	                <button onclick="reg()" style="width: 300px;height: 50px;border:solid;font-size:25px;margin-left:300px;color:white;background-color: black;">RIGISTER</button><br>
+	                <button onclick="submit()" style="width: 300px;height: 50px;border:solid;font-size:25px;margin-left:300px;color:white;background-color: black;color:white">REGISTER</button><br>
 	                </span>
-	                <script type="text/javascript">
-                     function reg(){
-	                    var  s =  document.getElementById('n1').value 
-	                              document.getElementById('n2').value
-	                              document.getElementById('n3').value
-                                 
-                                document.getElementById('key').value = 's'
-                            }
-	               
+	                <script>
+                     function submit(){
+	                 var name = document.getElementById("name").value;
+	                 var email = document.getElementById("email").value;
+	                 var num = document.getElementById("num").value;
+	              
+	                 	document.getElementById('key').innerHTML += name;
+	                 	document.getElementById('key').innerHTML += email;  
+                     	document.getElementById('key').innerHTML += num;
+                       	
+                     }
+                  
+</script>
+</div>
+</html>               
 
-</style></div></html>
 
 	
