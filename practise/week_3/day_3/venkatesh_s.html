@@ -51,6 +51,7 @@
   function switchColorTwice(){
       var randomColor='rgb(' + random(255) + ',' + random(255) + ',' + random(255 +')';
       buttonTwice.style.backgroundColor=randomColor;
+      buttonTwice.addEventListener('click'.switchColorTwice);
       buttonTwice.removeEventListener('click'.switchColorTwice);
   }
 
