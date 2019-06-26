@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <style type="text/css">
+.body{
+  width:1140px;
+  margin:0 auto;
+}
+.container{
+  margin:10px 200px;
+}
+.screen{
+  width:80%;
+  height: 110px;
+  border:2px solid #000;
+  font-size: 80px;
+  padding:5% 0 5% 5%;
+
+}
+.clear{
+  clear:left;
+}
+.btn_inner_alignment{
+  font-size: 30px;
+  padding:9px;
+}
+.sub_button1{
+
+float: left;
+width:10%;
+height:50px;
+border:2px solid #000;
+margin:40px 40px 0 40px;
+margin-left:65px;
+}
+.additional_margin{
+  margin-left:36%;
+}
+.green_bg{background-color: green;}
+.orange_bg{background-color: orange;}
+.grey_bg{background-color: grey;}
+.purple_bg{background-color: purple;}
+
+  </style>
+  <title>Numpad</title>
+</head>
+<body class="body">
+  <div class="container">
+    <div id="screendisplay" class="screen grey">#</div>
+    <div onclick="display1()" id="press1" class="clear sub_button1 green_bg btn_inner_alignment">1</div>
+    <div onclick="display2()" id="press2" class="sub_button1 orange_bg btn_inner_alignment">2</div>
+    <div onclick="display3()" id="press3" class="sub_button1 green_bg btn_inner_alignment">3</div>
+    <div onclick="display4()" id="press4" class="clear sub_button1 orange_bg btn_inner_alignment">4</div>
+    <div onclick="display5()" id="press5" class="sub_button1 orange_bg btn_inner_alignment">5</div>
+    <div onclick="display6()" id="press6" class="sub_button1 orange_bg btn_inner_alignment">6</div>
+    <div onclick="display7()" id="press7" class="clear sub_button1 green_bg btn_inner_alignment">7</div>
+    <div onclick="display8()" id="press8" class="sub_button1 orange_bg btn_inner_alignment">8</div>
+    <div onclick="display9()" id="press9" class="sub_button1 green btn_inner_alignment">9</div>
+    <div onclick="display0()" id="press0" class="clear sub_button1 additional_margin purple_bg btn_inner_alignment">0</div>
+
+  </div>
+<script>
+function display1(){
+document.getElementById('screendisplay').innerHTML="1";
+}
+function display2(){
+document.getElementById('screendisplay').innerHTML="2";
+}
+function display3(){
+document.getElementById('screendisplay').innerHTML="3";
+}
+function display4(){
+document.getElementById('screendisplay').innerHTML="4";
+}
+function display5(){
+document.getElementById('screendisplay').innerHTML="5";
+}
+function display6(){
+document.getElementById('screendisplay').innerHTML="6";
+}
+function display7(){
+document.getElementById('screendisplay').innerHTML="7";
+}
+function display8(){
+document.getElementById('screendisplay').innerHTML="8";
+}
+function display9(){
+document.getElementById('screendisplay').innerHTML="9";
+}
+function display0(){
+document.getElementById('screendisplay').innerHTML="0";
+}
+
+</script>
+</body>
+</html>

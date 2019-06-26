@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>
+            Leaderboard
+        </title>
+        <style>
+            .box
+            {
+                border: 1px solid black;
+                height: 900px;
+                width: 500px;
+                margin-left: 400px;
+            }
+            .box1{
+			border: 1px solid black;
+			height: 100px; 
+			width: 350px ;
+			margin-left: 77px ;
+			 margin-top: 30px;
+			 background-color: grey;
+            }
+            .para1{
+			font-size: 30px;
+			text-align: center;
+		}
+		.buttonbox1{
+			float: left;
+			 border: 1px solid black; 
+			 height: 65px; 
+			width: 65px;
+			 margin-top: 30px ;
+			 margin-left: 100px;
+        }
+        #greenbutt{
+			font-size: 30px;
+			 text-align: center;
+			 height: 65px; 
+			 width: 65px; 
+			background-color: green
+		}
+		#orangebutt{
+			font-size: 30px;
+			 text-align: center;
+			 height: 65px;
+			 width: 65px; 
+			 background-color: orange
+		}
+        .buttonbox2{
+			float: left;
+			 border: 1px solid black;
+			 height: 65px;
+			 width: 65px;
+			 margin-top: 30px ;
+			 margin-left: 50px;
+		}
+		.buttonbox3{
+			float: left;
+			 border: 1px solid black;
+			 height: 65px;
+			 width: 65px;
+			 margin-top: 30px ;
+			 margin-left: 50px
+		}
+		.buttonbox4{
+			clear: both;
+			float: left;
+			 border: 1px solid black;
+			 height: 65px;
+			  width: 65px; 
+			  margin-left: 100px ;
+			  margin-top: 30px
+		}
+		#violetbutt{
+			font-size: 30px;
+			 text-align: center;
+			 height: 65px; 
+			 width: 65px;
+			 background-color: violet;
+		}
+        .buttonbox5{
+			clear: both;
+			float: left; 
+			border: 1px solid black;
+			height: 65px;
+			 width: 65px;
+			 margin-left: 218px ;
+			 margin-top: 30px
+		}
+		.minbox{
+			
+			border: 1px solid black ;
+			height: 80px;
+			width: 100px ;
+			 margin-top: 50px; 
+			 margin-left: 50px;
+			 background-color:red;
+		}
+		.text{
+			font-size: 30px;
+			text-align:center;
+		}
+		.maxbox{
+			float: right;
+			border: 1px solid black ;
+			height: 80px;
+			width: 150px ;
+			 margin-top: -80px;
+			 margin-right: 50px;
+			 background-color: green;
+		}
+		.minword{
+			clear: both;
+			height: 80px;
+			width: 100px ;
+			margin-top: 1px; 
+			 margin-left: 50px;
+		}
+		.maxword{
+			float: right;
+			height: 80px;
+			width: 150px ;
+			 margin-top: -110px;
+			 margin-right: 50px;
+		}
+		.outerenterbox{
+			clear: both;
+			float: left; 
+			border: 1px solid black;
+			height: 50px;
+			 width: 130px;
+			 margin-left: 150px ;
+			 margin-top: 30px;
+		}
+		.enter_button{
+			height: 50px;
+			 width: 130px;
+             border: 1px solid black;
+        }
+         .resetouterbutton{
+			float: left; 
+			border: 1px solid black;
+			height: 50px;
+			 width: 130px;
+			 margin-left: 30px;
+			 margin-top:30px;
+		}
+		
+		.reset_button{
+			float: left; 
+			border: 1px solid black;
+			height: 50px;
+			 width: 130px;
+		}
+        
+        </style>
+    </head>
+    <body>
+        <div class="box">
+            <div class="minbox">
+                <p id="min" class="text">43</p>
+            </div>
+            <div class="maxbox">
+                <p id="max" class="text">2019</p>
+            </div>
+            <div class="minword">
+                <p class="text">Min</p>
+            </div>
+            <div class="maxword">
+                <p class="text">Max</p>
+            </div>
+            <div class="box1">
+                <p id="para1">#</p>
+            </div>
+            <div class="buttonbox1">
+                <button onclick="shownumber(1)" id="greenbutt">1</button>
+            </div>
+            <div class="buttonbox2">
+                <button onclick="shownumber(2)" id="orangebutt">2</button>
+                </div>
+            <div class="buttonbox3">
+                <button onclick="shownumber(3)" id="greenbutt">3</button>
+                </div>
+            <div class="buttonbox4">
+                <button onclick="shownumber(4)" id="orangebutt">4</button>
+                </div>
+            <div class="buttonbox2">
+                <button onclick="shownumber(5)" id="orangebutt">5</button>
+                </div>
+            <div class="buttonbox3">
+                <button onclick="shownumber(6)" id="orangebutt">6</button>
+                </div>
+            <div class="buttonbox4">
+                <button onclick="shownumber(7)" id="greenbutt">7</button>
+                </div>
+            <div class="buttonbox2">
+                <button onclick="shownumber(8)" id="orangebutt">8</button>
+                </div>
+            <div class="buttonbox3">
+                <button onclick="shownumber(9)" id="greenbutt">9</button>
+                </div>
+            <div class="buttonbox5">
+                <button onclick="shownumber(0)" id="violetbutt">0</button>
+                </div>
+            <div class="outerenterbox" >
+                <button onclick="enter()" class="text enter_button">Enter</button>
+                 </div>
+             <div class="resetouterbutton">
+                <button onclick="reset()" class="text reset_button" >Reset</button>
+                </div>
+        </div>
+        <script>
+                function shownumber(num) {
+                    if (document.getElementById("para1").innerHTML== "#")
+                        {
+                            document.getElementById('para1').innerHTML =""
+                        }
+                    
+                            document.getElementById("para1").innerHTML +=num
+                    }
+                function enter()
+                {
+                    var inputvalue =Number (document.getElementById("para1").innerHTML)
+                    var minvalue =Number (document.getElementById("min").innerHTML)
+                    var maxvalue =Number (document.getElementById("max").innerHTML)
+                    if ( minvalue > inputvalue || maxvalue > inputvalue ) 
+                    {
+                        document.getElementById("min").innerHTML =inputvalue
+                    }
+                    if(  maxvalue < inputvalue  )
+                    {
+                        document.getElementById("max").innerHTML =inputvalue
+                    }
+                }
+                function reset()
+                {
+                    document.getElementById("para1").innerHTML = "#"
+                }
+                
+                
+            </script>
+    </body>
+</html>

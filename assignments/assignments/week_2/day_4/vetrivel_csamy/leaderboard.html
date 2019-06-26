@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Leadboard</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      .wrapper {
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
+      }
+      h2 {
+        text-align: center;
+        text-transform: uppercase;
+      }
+      button {
+        background-color: #d8d9db;
+        color: black;
+        height: 100px;
+        width: 24.5%;
+        border: none;
+        border-radius: 0;
+        font-size: 40px;
+        cursor: pointer;
+        border: 2px solid #010101;
+      }
+      .display {
+        color: #fff;
+        background: #727272;
+        border: 2px solid #010101;
+        font-size: 40px;
+        text-align: center;
+        padding: 20px 5px;
+        margin-bottom: 2%;
+        margin-top: -0%;
+        height: 40px;
+        width: 385px;
+      }
+      .btn-row {
+        display: flex;
+        align-content: stretch;
+        justify-content: space-between;
+        margin-bottom: 2.5%;
+      }
+      .btn-row > button {
+        background: orange;
+      }
+      #btn-1 > button:nth-of-type(2n + 1) {
+        background-color: green;
+      }
+      #btn-2 > button {
+        background: orange;
+        color: #010101;
+      }
+      #btn-3 > button:nth-of-type(2n + 1) {
+        background: green;
+      }
+      #zerobtn > button {
+        align-content: center;
+        margin-left: 38%;
+        margin-bottom: 2.5%;
+        color: #fff;
+        background: darkviolet;
+      }
+      .lastbtn {
+        align-content: center;
+        margin-left: 15%;
+      }
+      #enterbtn {
+        width: 74.8%;
+        font-size: 28px;
+        background: #010101;
+        color: #d8d9db;
+        text-transform: uppercase;
+      }
+      .first-col {
+        margin-bottom: 8%;
+        margin-top: 20%;
+      }
+      .output-one > input {
+        height: 80px;
+        width: 120px;
+        background: #d42121;
+        color: #fff;
+        text-align: center;
+        font-size: 28px;
+        float: left;
+        margin-bottom: 2%;
+        border: none;
+      }
+      .output-two > input {
+        height: 80px;
+        width: 120px;
+        background: #009b53;
+        color: #fff;
+        text-align: center;
+        font-size: 28px;
+        float: right;
+        margin-bottom: 2%;
+        padding: 1px 5px;
+        border: none;
+      }
+      p {
+        text-align: center;
+        color: #bb074c;
+        text-transform: uppercase;
+        font-family: cursive;
+        font-size: 1.2em;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <centre>
+        <p id="errorText"></p>
+        <div>
+          <div class="first-col">
+            <div class="output-one">
+              <input id="lowscore" type="text" value="43" />
+            </div>
+          </div>
+          <div>
+            <div class="output-two">
+              <input id="highscore" type="text" value="2019" />
+            </div>
+          </div>
+        </div>
+        <h2>Score</h2>
+        <input id="enterdisplay" class="display" />
+        <div id="btn-1" class="btn-row">
+          <button onclick="input(1)">1</button>
+          <button onclick="input(2)">2</button>
+          <button onclick="input(3)">3</button>
+        </div>
+        <div id="btn-2" class="btn-row">
+          <button onclick="input(4)">4</button>
+          <button onclick="input(5)">5</button>
+          <button onclick="input(6)">6</button>
+        </div>
+        <div id="btn-3" class="btn-row">
+          <button onclick="input(7)">7</button>
+          <button onclick="input(8)">8</button>
+          <button onclick="input(9)">9</button>
+        </div>
+        <div id="zerobtn">
+          <button onclick="input(0)">0</button>
+        </div>
+        <div class="lastbtn">
+          <button id="enterbtn" onclick="enter()">Enter</button>
+        </div>
+      </centre>
+    </div>
+    <script type="text/javascript">
+      function input(output) {
+        document.getElementById("enterdisplay").value += output;
+      }
+      function enter() {
+        var mainScore = document.getElementById("enterdisplay").value;
+        var highScore = document.getElementById("highscore").value;
+        var lowScore = document.getElementById("lowscore").value;
+
+        if (mainScore < lowScore) {
+          document.getElementById("lowscore").value = mainScore;
+          document.getElementById("enterdisplay").value = "";
+        } else if (mainScore > highScore) {
+          document.getElementById("highscore").value = mainScore;
+          document.getElementById("enterdisplay").value = "";
+        } else if (mainScore == lowScore) {
+          alert("Number " + mainScore + " Equal To " + " " + lowScore);
+          document.getElementById("enterdisplay").value + "";
+        } else if (mainScore == highScore) {
+          alert("Number " + mainScore + "Equal To " + "" + highScore);
+          document.getElementById("enterdisplay").value = "";
+        } else if (mainScore < lowScore && mainScore > highScore) {
+          document.getElementById("errorText").innerText =
+            "Number" + mainScore + " " + lowScore + " " + highScore;
+          document.getElementById("enterdisplay").value + "";
+        } else {
+          document.getElementById("errorText").innerText = "error";
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -13,7 +13,7 @@ Build a typewriter with one special functionality
 | Mahesh | CLEAN | [github](https://github.com/mahi-mp/masai-week-2) |
 | Mousumi | CLEAN | |
 | Pavan | REV | [github](https://github.com/Pavanpatil08/masai-week-2) |
-| Priyanshu |ALL  |[github](https://github.com/priyanshu-09/masai-school)  |
+| Priyanshu |  |  |
 | Racky | -- | -- |
 | Rahul | CAPS | [github](https://github.com/RaulB-masai/masai-week-2) |
 | Sumanta | SHIFT | [github](https://github.com/Sumanta-123/masai-week-2) |

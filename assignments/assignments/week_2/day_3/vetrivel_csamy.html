@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Unit Cala</title>
+</head>
+<body>
+ <h2 id="calculatorOutput"> </h2>
+  <span>
+  	<label>From</label>
+    <input type="text" id="firstNumber"/>
+    <p></p>
+    <label>Length</label>
+    <select id="operator">
+		<option value="meter"> Meter</option>
+		<option value="kilometer">Kilometer</option>
+	<!-- 	<option value="mile"> Mile </option>	
+		<option value="light"> Light Year </option>	 -->
+	</select>
+    <p></p>
+    <label>To</label>
+    <input type="text" id="secondNumber"/>
+  </span>
+  <p></p>
+  <button onclick="calculate()">Convert</button> 
+
+  <script type="text/javascript">
+  	function calculate(){
+  var num1 = document.getElementById('firstNumber').value;
+  num1 = parseInt(num1)
+  var num2 = document.getElementById('secondNumber').value;
+  num2 = parseInt(num2)
+  var operator = document.getElementById('operator').value;
+  var output;
+  
+  switch(operator){
+    case 'meter':
+      output = num1 += 0;
+      break;
+    case 'kilometer':
+      output = num1 / 1.609344;
+      break;
+    case 'light':
+      output = num1 - num2;
+      break;
+    default:
+      output = num1 % num2
+  }
+  
+  document.getElementById('calculatorOutput').innerHTML = output;
+}
+  </script>
+</body>
+</html>

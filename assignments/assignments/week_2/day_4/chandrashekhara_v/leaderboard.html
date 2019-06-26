@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>LeaderBoard</title>
+    <style media="screen">
+      *{
+
+        margin-left: 70px;
+        font-size:28px;
+      }
+      .num
+      {
+        border:2px black solid;
+        height:100px;
+        width:300px;
+        background-color:cadetblue
+
+      }
+      .nu
+      {
+        border:2px black solid;
+        height:100px;
+        width:100px;
+        background-color:red;
+        text-align:center;
+      }
+      #numb
+      {
+        text-align:center
+      }
+      .numbs
+      {
+        margin-left:0px;
+        padding-left:0px;
+        background-color:red
+        height:75px;
+        width:auto;
+        border:2px black solid;
+        margin-top:35px;
+        text-align:center;
+        color:white;
+      }
+
+
+    </style>
+  </head>
+  <body>
+
+    <input type="text" id= "min" class="nu" value="43" />
+
+    <input type="text" id= "max" class="nu" value="2019" style="background-color:green"/>
+    <h2  style="margin-top: 4px;">MIN </h2>
+    <h2 style="margin-left: 260px;margin-top: -56.767px;">MAX</h2>
+
+
+
+    <input class="num" id="numb"  style="margin-top:-20px">
+  </input>
+
+      <table style="margin-top:-35px">
+        <tr style="margin-top:-35px">
+          <td >
+            <button   class="numbs" onclick="key('1')" id="button1" value="1" style="height:70px;background-color:green;" >
+            <span  style="text-align:center ">1</span>
+            </button>
+          </td>
+
+          <td >
+            <button   class="numbs" onclick="key('2')" id="button2" value="2" style="height:70px;background-color:orange;" >
+            <span  style=" ">2</span>
+            </button>
+          </td>
+          <td >
+            <button   class="numbs" onclick="key('3')" id="button3" value="3" style="height:70px;background-color:green;" >
+            <span  style=" ">3</span>
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td >
+            <button   class="numbs" onclick="key('4')" id="button4" value="4" style="height:70px;background-color:orange;" >
+            <span  style="text-align:center ">4</span>
+            </button>
+          </td>
+
+          <td >
+            <button   class="numbs" onclick="key('5')" id="button5" value="5" style="height:70px;background-color:orange;" >
+            <span  style=" ">5</span>
+            </button>
+          </td>
+          <td >
+            <button   class="numbs" onclick="key('6')" id="button6" value="6" style="height:70px;background-color:orange;" >
+            <span  style=" ">6</span>
+            </button>
+          </td>
+        </tr>
+        <tr style="margin-top:-35px">
+          <td >
+            <button   class="numbs" onclick="key('7')" id="button7" value="7" style="height:70px;background-color:green;" >
+            <span  style="text-align:center ">7</span>
+            </button>
+          </td>
+
+          <td >
+            <button   class="numbs" onclick="key('8')" id="button8" value="8" style="height:70px;background-color:orange;" >
+            <span  style=" ">8</span>
+            </button>
+          </td>
+          <td >
+            <button   class="numbs" onclick="key('9')" id="button9" value="9" style="height:70px;background-color:green;" >
+            <span  style=" ">9</span>
+            </button>
+          </td>
+        </tr>
+
+      </table>
+
+    </div>
+    <div class="">
+      <table>
+        <tr>
+          <td >
+            <button   class="numbs" onclick="key('0')" id="button0" value="0" style="height:70px;background-color:deeppink;margin-left: 30px;" >
+            <span  style=" ">0</span>
+            </button>
+          </td>
+        </tr>
+      </table>
+
+
+
+    <div>
+      <button class=" nu" onclick="enter()" style="height: 65px;width: 201px;background-color: black;margin-left: 0px;">Enter</button>
+    </div>
+
+    <script type="text/javascript">
+
+      function key(val)
+      {
+        document.getElementById('numb').value += val;
+      }
+      function enter()
+      {
+        var score = parseInt(document.getElementById('numb').value)
+        var min = parseInt(document.getElementById('min').value)
+        var max = parseInt(document.getElementById('max').value)
+        if(score < min)
+        {
+          document.getElementById('min').value = score
+        }
+        else if(score > max)
+        {
+          document.getElementById('max').value = score;
+        }
+        else {
+          alert(score+' is between 43 and 2019')
+
+
+        }
+        document.getElementById('numb').value=""
+
+      }
+
+    </script>
+
+  </body>
+</html>
