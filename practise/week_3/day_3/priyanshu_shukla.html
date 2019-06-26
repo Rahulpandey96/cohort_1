@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<body id="body">
+  <!-- FSD.W3.3.1_1 !-->
+  <h1>Change the buttons text color random value</h1>
+  <button id="changeColor">Click here to change my color</button>
+
+  <!-- FSD.W3.3.1_2 !-->
+  <h1 id="changeH">My color should change when I double click the button!</h1>
+  <button id="changeHead">Double Click here to change the color of the h1 tag !</button>
+  
+  <!-- FSD.W3.3.1_3 !-->
+  <h1 >The buttons color changes to a random value when it is clicked! But only two times!</h1>
+  <button id="changeBody">Click here to change my color!</button>
+  <button id="changearr">point at adjacent button to change my size and click me to change background color chosen from an array orderly</button>
+  <script>
+    var changeButton= document.getElementById('changeColor');
+    var arr =['red','black','blue','green','white'];
+    var body = document.getElementById('body');
+    var changeBody = document.getElementById('changeBody');
+    var changeHead = document.getElementById('changeHead');
+    var changeH =document.getElementById('changeH');
+    var changearr=document.getElementById('changearr');
+
+    function random(number){
+      return Math.floor(Math.random()*number)
+    }
+    var index = 0
+    function switchColor5(){
+      index++
+      if(index==5){
+        index=0
+      }
+      body.style.backgroundColor = arr[index]
+    }
+    changearr.addEventListener('click',switchColor5);
+    
+    function switchColor(){
+      var randomColor = 'rgb('+random(255)+','+random(255)+','+random(255)+')'
+      changeButton.style.color=randomColor;
+    }
+    changeButton.addEventListener('click', switchColor);
+
+   
+    
+    function switchColor2(){
+      var randomColor = 'rgb('+random(255)+','+random(255)+','+random(255)+')'
+      changeH.style.color=randomColor;
+    }
+    changeHead.addEventListener('dblclick', switchColor2);
+
+    
+    
+    function switchColor3(){
+      
+      var randomColor = 'rgb('+random(255)+','+random(255)+','+random(255)+')'
+      body.style.backgroundColor=randomColor;
+      changeBody.removeEventListener('click',switchColor3)
+      
+    }
+    
+    function switchColor4(){
+      
+      var randomColor = 'rgb('+random(255)+','+random(255)+','+random(255)+')'
+      body.style.backgroundColor=randomColor;
+      changeBody.addEventListener('click', switchColor3);
+      changeBody.removeEventListener('click',switchColor4)
+      
+    }
+    function switchtext(){
+      var randomtext = random(10)
+      changearr.style.fontSize= randomtext+'px';
+    }
+    
+    changeBody.addEventListener('click', switchColor4);
+    changeBody.addEventListener('mouseover', switchtext);
+
+   
+  
+  </script>
+</body>
+</html>
