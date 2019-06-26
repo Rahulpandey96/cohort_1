@@ -1,0 +1,87 @@
+<html>
+    <head>
+        <title>Practise Deletions</title>
+    </head>
+    <body>
+        <h1 id="head1">First H1</h1>
+        <h1>Second H1</h1>
+        <h3 id="head3">First H3</h3>
+        <h3 id="head33">Second H3</h3>
+        <div id="headings">
+            <h5 id="head5">First H5</h5>
+            <h5 id="head55">Second H5</h5>
+            <h5 id="head555">Third H5</h5>
+        </div>
+        <div id="cont">
+            <div class="green">First DIV</div>
+            <div class="red">Second DIV</div>
+            <div class="blue">Third DIV</div>
+            <p class="green">First P</p>
+            <p class="red">Second P</p>
+            <p class="blue">Third P</p>
+        </div>
+        <hr/>
+        <button onclick="removeH1()">Remove H1</button>
+        <button onclick="removeH3()">Remove H3</button>
+        <button onclick="removeH5()">Remove H5</button>
+        <button onclick="removered()">Remove Red</button>
+        <button onclick="removediv()">Remove DIVS</button>
+        <script>
+            function removeH1()
+        {
+            var headingH1 = document.getElementById("head1");
+            var bodyElem = document.querySelector('body');
+            bodyElem.removeChild(headingH1);  
+            //headingH1.removeChild(headingH1);
+        }
+           function removeH3()
+           {
+               var headingH3 = document.getElementById("head3");
+               var headingH33= document.getElementById("head33");
+               var bodyElem = document.querySelectorAll('body');
+               for (i = 0; i < bodyElem.length; i++)
+                { 
+                var divs = bodyElem[i];
+                divs.removeChild(headingH3);
+                divs.removeChild(headingH33);
+                }
+           }
+           function removeH5()
+           {
+               var headingH5 = document.getElementById("head5");
+               var headingH55= document.getElementById("head55");
+               var headingH555= document.getElementById("head555");
+               var bodyElem = document.querySelectorAll('#headings');
+               for (i = 0; i < bodyElem.length; i++)
+                { 
+                var divs = bodyElem[i];
+                divs.removeChild(headingH5);
+                divs.removeChild(headingH55);
+                divs.removeChild(headingH555);
+
+                }
+           }
+
+           function removered()
+           {
+               var seconddiv = document.getElementById("cont");
+               var bodyElem = document .querySelectorAll('.red');
+               for (i=0; i<bodyElem.length; i++)
+               {
+                   seconddiv.removeChild(bodyElem[i]);
+               }
+           }
+
+           function removediv()
+           {
+            var bodyElem= document.querySelector('#cont');
+            var removediv= document.querySelector('.green');
+            bodyElem.removeChild(removediv);
+           var removediv1 = document.querySelector('.red');
+            bodyElem.removeChild(removediv1);
+           var removediv2 = document.querySelector('.blue');
+            bodyElem.removeChild(removediv2);
+           }
+        </script>
+    </body>
+</html>
