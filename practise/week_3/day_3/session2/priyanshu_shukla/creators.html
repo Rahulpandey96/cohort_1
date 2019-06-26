@@ -1,0 +1,61 @@
+<html>
+    <head>
+        <title>Practise Creators</title>
+    </head>
+    <body id="bodyelem">
+        <div id="headings">
+        </div>
+        <div id="cont">
+        </div>
+        <ul id="vikings">
+            <li>Priyanshu</li>
+        </ul>
+        <button id ="hu" onclick="createhead()">Create H1</button>
+        <button onclick="createheads()">Create 2 H3</button>
+        <button onclick="createdivs()">Create DIVS</button>
+        <button onclick="addstu()">Add Students</button>
+        <button onclick="addcopy()">Add Copyright</button>
+        <script>
+            var students = ['Ajay','Akshay','Anusha','Chandrashekhara','Haren','Hasaan','Mahesh','Mousumi','Pavan','Rahul','Sumanta','Venkatesh','Vetrival','Vijayendra'];
+            var divhead= document.querySelector('div')
+            var divdiv= document.getElementById('cont')
+            var stu=document.getElementById('vikings')
+            var bodyelem=document.getElementById('bodyelem')
+            function createhead(){
+                var head1 = document.createElement('h1')
+                head1.textContent = 'Welcome to Masai School'
+                divhead.appendChild(head1)
+            }
+            function createheads(){
+                var head21 = document.createElement('h3')
+                head21.textContent ='A Transformation in education!'
+                var head22 = document.createElement('h3')
+                head22.textContent = 'Learn to earn, pay when you get.'
+                divhead.appendChild(head21)
+                divhead.appendChild(head22)
+            }
+            function createdivs(){
+                for(var i=1;i<11;i++){
+                    var divs = document.createElement('div')
+                    divs.textContent='content'+i;
+                    divdiv.appendChild(divs)
+
+
+                }
+            }
+            var btn= document.getElementById('hu');
+            function addstu(){
+                for(var i=0;i<students.length;i++){
+                    var div = document.createElement('div')
+                    div.innerHTML='<ul><li>'+students[i]+'</li><ul>'
+                    stu.appendChild(div)
+                }
+            }
+            function addcopy(){
+                var para=document.createElement('p')
+                para.textContent='@ masai 2019'
+                bodyelem.insertBefore(para, btn);
+            }
+        </script>
+    </body>
+</html>

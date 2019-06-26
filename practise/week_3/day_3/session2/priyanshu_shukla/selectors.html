@@ -1,0 +1,85 @@
+<html>
+    <head>
+        <title>Practise Selectors</title>
+    </head>
+    <body>
+        <h1>First H1</h1>
+        <h1>Second H1</h1>
+        <h3>First H3</h3>
+        <h3>Second H3</h3>
+        <h5>First H5</h5>
+        <h5>Second H5</h5>
+        <h5>Third H5</h5>
+        <div class="green">First DIV</div>
+        <div class="red">Second DIV</div>
+        <div class="blue">Third DIV</div>
+        <p class="green">First P</p>
+        <p class="red">Second P</p>
+        <p class="blue">Third P</p>
+        <hr/>
+        <button id="cH1">Change H1</button>
+        <button id="cH3">Change H3</button>
+        <button id="cH5">Change H5</button>
+        <button id="cG">Change Green</button>
+        <button id="cB">Change Red</button>
+        <button id="cR">Change Blue</button>
+        <script>
+            var changeh1 = document.querySelector('h1');
+            var changeh3 = document.querySelectorAll('h3');
+            var changeh5 = document.querySelectorAll('h5');
+            var changegreen = document.querySelectorAll('.green')
+            var changeblue = document.querySelectorAll('.blue')
+            var changered = document.querySelectorAll('.red')
+            var cH1 = document.getElementById('cH1')
+            var cH3 = document.getElementById('cH3')
+            var cH5 = document.getElementById('cH5')
+            var cG = document.getElementById('cG')
+            var cB = document.getElementById('cB')
+            var cR = document.getElementById('cR')
+
+            function cheading1(){
+                changeh1.style.color = 'red';
+            }
+
+            function cheading3(){
+                for(var i=0; i<changeh3.length; i++){
+                var h3=changeh3[i]
+                h3.style.color = 'green';
+                }
+            }
+
+
+            function cheading5(){
+                for(var i=0; i<changeh5.length; i++){
+                var h5=changeh5[i]
+                h5.style.color = 'blue';
+                }
+            }
+            function cgreen(){
+               for(var i=0; i<changegreen.length; i++){
+                var g=changegreen[i]
+                g.style.color = 'green';
+                }
+            }
+            function cblue(){
+               for(var i=0; i<changeblue.length; i++){
+                var b=changeblue[i]
+                b.style.color = 'blue';
+                }
+            }
+            function cred(){
+                for(var i=0; i<changered.length; i++){
+                var r=changered[i]
+                r.style.color = 'red';
+                }
+            }
+            cH1.addEventListener('click', cheading1);
+            cH3.addEventListener('click', cheading3);
+            cH5.addEventListener('click', cheading5);
+            cG.addEventListener('click', cgreen);
+            cB.addEventListener('click', cblue);
+            cR.addEventListener('click', cred);
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,94 @@
+<html>
+    <head>
+        <title>Practise Deletions</title>
+    </head>
+    <body>
+        <h1 id="firsth1">First H1</h1>
+        <h1>Second H1</h1>
+        <h3>First H3</h3>
+        <h3>Second H3</h3>
+        <div id="headings">
+            <h5>First H5</h5>
+            <h5>Second H5</h5>
+            <h5>Third H5</h5>
+        </div>
+        <div id="cont">
+            <div class="green div1">First DIV</div>
+            <div class="red div1">Second DIV</div>
+            <div class="blue div1">Third DIV</div>
+            <p class="green ">First P</p>
+            <p class="red">Second P</p>
+            <p class="blue">Third P</p>
+        </div>
+        <hr/>
+        <button onclick="removeFirsth1()">Remove H1</button>
+        <button onclick="removeAllh3()">Remove H3</button>
+        <button onclick="removeAllh5()">Remove H5</button>
+        <button onclick="removeRed()">Remove Red</button>
+        <button onclick="removeDiv()">Remove DIVS</button>
+
+
+        <script>
+
+
+
+           function removeFirsth1() {
+            var ele = document.querySelector('body');
+             var firstheader1 = document.getElementById("firsth1");
+  
+             ele.removeChild(firstheader1);  
+ 
+            }
+
+            function removeAllh3() {
+            var ele = document.querySelector('body');
+            var removeall = document.querySelectorAll('h3');
+            for (i = 0; i < removeall.length; i++){
+
+                ele.removeChild(removeall[i]);
+ 
+            }
+
+            }
+            function removeAllh5() {
+            var ele = document.getElementById('headings');
+            var removeall = document.querySelectorAll('h5');
+            for (i = 0; i < removeall.length; i++){
+
+                ele.removeChild(removeall[i]);
+ 
+            }
+
+            }
+
+            function removeRed() {
+            var ele = document.getElementById('cont');
+            var removeall = document.querySelectorAll('.red');
+            for (i = 0; i < removeall.length; i++){
+
+                ele.removeChild(removeall[i]);
+ 
+            }
+
+            }
+
+            function removeDiv() {
+            var ele = document.getElementById('cont');
+            var removeall = document.querySelectorAll('.div1');
+            for (i = 0; i < removeall.length; i++){
+
+                ele.removeChild(removeall[i]);
+ 
+            }
+
+            }
+
+
+
+  
+  
+
+
+        </script>
+    </body>
+</html>
