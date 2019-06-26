@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>LEADERBOARD</title>
+	<style type="text/css">
+		#screen
+		{
+  			height:150px;
+  			width:280px;
+  			background-color:grey;
+  			margin-left:500px; 
+            margin-top:50px;
+  			font-size:45px;
+		}
+		.margin_top_and_left
+		{
+			/* margin for button(1,4,7) */
+			margin-top: 50px;
+			margin-left: 500px;
+		}
+		.margin_left_and_top
+		{
+			/* margin for button(2,3,5,6,8,9) */
+			margin-top: 50px;
+			margin-left: 20px;
+		}
+		.margin_0
+		{
+			margin-top: 50px;
+			margin-left: 600px;
+		}
+        .measurement
+		{
+            height: 75px;
+			width: 75px;
+        }
+        .font_size
+		{
+            font-size: 20px;
+        }
+        .bg_green
+		{
+            background-color: green;
+        }
+        .bg_orange
+		{
+            background-color:orange;
+        }
+		.bg_purple
+		{
+			background-color: purple;
+		}
+        .border
+		{
+            border: 2px solid black;
+        }
+        .enter_button
+        {
+            margin-top: 30px;
+            margin-left: 550px;
+            background-color: black;
+            height: 75px;
+            width: 170px;
+            color: white;
+        }
+        .min_box
+        {
+            height: 75px;
+            width: 140px;
+            background-color: red;
+            margin-left: 300px;
+            margin-top: 30px;
+			color: black;
+        }
+		.max_box
+		{
+			height: 75px;
+			width: 140px;
+			background-color: blue;
+			margin-left: 350px;
+			margin-top: 100px;
+			color: black;
+		}
+		.reset_button
+		{
+			height: 50px;
+			width: 80px;
+			margin-left: 30px;
+			color: white;
+			background-color: black;
+		}
+	</style>
+</head>
+<body>
+		<input type="text" class="min_box font_size" id="min_score" value="43"/>
+		<input type="text" class="max_box font_size" id="max_score" value="2019"><br>
+    	<input type="text" id="screen" class="border" /><br><br>
+
+    	<button class="bg_green margin_top_and_left border measurement font_size" onclick="show('1')" value="1">1</button>
+    	<button class="bg_orange margin_left_and_top border measurement font_size" onclick="show('2')" value="2">2</button>
+    	<button class="bg_green margin_left_and_top border measurement font_size" onclick="show('3')" value="3">3</button><br>
+    	<button class="bg_orange margin_top_and_left border measurement font_size" onclick="show('4')" value="4">4 &nbsp;</button>
+    	<button class="bg_orange margin_left_and_top border measurement font_size" onclick="show('5')" value="5">5</button>
+    	<button class="bg_orange margin_left_and_top border measurement font_size" onclick="show('6')" value="6">6</button><br>
+    	<button class="bg_green margin_top_and_left border measurement font_size" onclick="show('7')" value="7">7</button>
+    	<button class="bg_orange margin_left_and_top border measurement font_size" onclick="show('8')" value="8">8</button>
+    	<button class="bg_green margin_left_and_top border measurement font_size" onclick="show('9')" value="9">9</button><br>
+        <button class="border margin_0 measurement font_size" onclick="show('0')" value="0">0</button><br>
+		<button class="font_size enter_button" onclick="enter()">ENTER</button>
+		<button class="font_size reset_button" onclick="reset()">RESET</button>
+    	<script type="text/javascript">
+       		console.log("ready")
+			   function show(val)
+			{
+    			document.getElementById("screen").value+=val;
+    		}
+			function reset()
+			{
+				console.log("qwerty")
+				document.getElementById("screen").value=""
+			}
+			function enter()
+			{	
+				var score= Number(document.getElementById("screen").value);
+				var min_score=Number(document.getElementById("min_score").value);
+				var max_score=Number(document.getElementById("max_score").value);
+				
+				if(score<min_score)
+				{
+					document.getElementById("min_score").value=score;
+				}
+				else if(score>max_score)
+				{
+					document.getElementById("max_score").value=score;
+				}	
+			}
+    	</script>
+
+</body>
+</html>

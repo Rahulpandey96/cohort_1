@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration Form </title>
+
+    <style>
+    .box
+    {
+      height: 600px;
+      width: 100px;
+      border: 2px solid black;
+      margin: 20px;
+    }
+    .box_left
+    {
+      height: 500px;
+      width:500px;    
+      margin-top:-10px;
+      margin-left:250px;
+      padding: 20px;
+      text-align: justify;
+      font-size: 25px;
+      float:left;
+    }
+    .box_right
+    {
+      height: 400px;
+      width:380px;    
+      border:2px solid black;
+      margin-top:100px;
+      margin-left: 850px;
+      padding: 20px;
+      font-size: 25px;
+      color:white;
+    }
+    input
+    {
+      width: 300px;
+      padding: 15px;
+      border: 2px solid black;
+    }
+    .background_black
+    {
+      background-color: black;
+    }
+    .background_red
+    {
+      color:red;
+    }
+    #btn_style
+    {
+      width:100px;
+      background-color: black;
+      color: white;
+      height: 50px;
+      margin-left: 120px;
+      font-size: 20px;
+    }
+    .font_style
+    {
+      font-size: 20px;
+    }
+
+  </style>
+</head>
+<body>
+    <div>
+        <div class="box_left">
+          <p> <label for="name" >NAME</label><br>
+          <input type="text" name="name" id="name"></p>
+          <p class="background_red" id="valid_name"></p>
+          <p> <label for="email" >EMAIL</label><br>
+          <input type="text" name="email" id="email"></p>  
+          <p id="valid_emailid" class="background_red"></p>
+          <p> <label for="mobile" >MOBILE</label><br>
+          <input type="text" name="mobile" id="mobile"></p>
+          <p id="valid_mobile"class="background_red"></p>
+          <button id="btn_style" onclick="register()">Register</button>
+        </div>
+        <div class="box_right background_black">
+          <h4>NAME<br><span class="font_style" id="name_post"></span></h4>
+          <h4>EMAIL<br><span class="font_style" id="email_post"></span></h4>
+          <h4>MOBILE<br><span class="font_style" id="mobile_post"></span></h4>
+        </div>
+    </div>
+    <script>
+        function register()
+        {
+          var name = document.getElementById("name").value;
+          if(name.length < 3 || name.length >10)
+          {
+            document.getElementById("valid_name").innerHTML="Name must be 3 - 10 character "
+          }
+          else
+          {
+            document.getElementById("valid_name").innerHTML=" "
+          }
+          var mobile = document.getElementById("mobile").value;
+          if(mobile.length !=10 )
+          {
+            document.getElementById("valid_mobile").innerHTML="Mobile Number must be 10 character"
+          }
+          else
+          {
+            document.getElementById("valid_mobile").innerHTML=" " 
+          }
+          
+          var email = document.getElementById('email').value;
+          for (var i = 0; i < email.length; i++) 
+          {
+            if (email[i] == '@') 
+            {
+              if ((email[0] != "@") && (email[email.length - 3] == "c") && (email[email.length - 2] == "o") && (email[email.length - 1] == "m")) 
+              {
+                if ((email[email.length - 4] == '.') && (email[email.length - 5] != "@") && (email[email.length - 4] != 'c')) 
+                {
+                  document.getElementById("name_post").innerHTML=name;
+                  document.getElementById("email_post").innerHTML=email; 
+                  document.getElementById("mobile_post").innerHTML=mobile;
+                }       
+              } 
+              else 
+              {
+                document.getElementById("valid_emailid").innerHTML = " Please enter a valid email id ";
+              }
+            }     
+          }
+        }
+    </script>
+</body>
+</html>

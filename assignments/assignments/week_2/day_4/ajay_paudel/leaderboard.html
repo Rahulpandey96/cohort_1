@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Leader Board</title>
+	<meta charset="utf-8">
+	<style >
+		.outer_box{
+			border: 1px solid black;
+			 height: 950px; 
+			 width:500px;
+			 margin-left: 400px;
+		}
+		.recbox{
+
+			border: 1px solid black;
+			height: 100px; 
+			width: 350px ;
+			margin-left: 77px ;
+			 margin-top: 30px;
+			 background-color: grey;
+		}
+		#para1{
+			font-size: 30px;
+			text-align: center;
+		}
+		.outer_button_box1{
+			float: left;
+			 border: 1px solid black; 
+			 height: 65px; 
+			width: 65px;
+			 margin-top: 30px ;
+			 margin-left: 100px;
+		}
+
+		#green_button{
+			font-size: 30px;
+			 text-align: center;
+			 height: 65px; 
+			 width: 65px; 
+			background-color: green
+		}
+		#orange_button{
+			font-size: 30px;
+			 text-align: center;
+			 height: 65px;
+			 width: 65px; 
+			 background-color: orange
+		}
+		.outer_button_box2{
+			float: left;
+			 border: 1px solid black;
+			 height: 65px;
+			 width: 65px;
+			 margin-top: 30px ;
+			 margin-left: 50px;
+		}
+		.outer_button_box3{
+			float: left;
+			 border: 1px solid black;
+			 height: 65px;
+			 width: 65px;
+			 margin-top: 30px ;
+			 margin-left: 50px
+		}
+		.outer_button_box4{
+			clear: both;
+			float: left;
+			 border: 1px solid black;
+			 height: 65px;
+			  width: 65px; 
+			  margin-left: 100px ;
+			  margin-top: 30px
+		}
+		#violet_button{
+			font-size: 30px;
+			 text-align: center;
+			 height: 65px; 
+			 width: 65px;
+			 background-color: violet;
+		}
+		.outer_button_box5{
+			clear: both;
+			float: left; 
+			border: 1px solid black;
+			height: 65px;
+			 width: 65px;
+			 margin-left: 218px ;
+			 margin-top: 30px
+		}
+		.min_box{
+			
+			border: 1px solid black ;
+			height: 80px;
+			width: 100px ;
+			 margin-top: 50px; 
+			 margin-left: 50px;
+			 background-color:red;
+		}
+		.text{
+			font-size: 30px;
+			text-align:center;
+		}
+		.max_box{
+			float: right;
+			border: 1px solid black ;
+			height: 80px;
+			width: 150px ;
+			 margin-top: -80px;
+			 margin-right: 50px;
+			 background-color: green;
+		}
+		.min_word{
+			clear: both;
+			height: 80px;
+			width: 100px ;
+			margin-top: 1px; 
+			 margin-left: 50px;
+
+		}
+		.max_word{
+			float: right;
+			height: 80px;
+			width: 150px ;
+			 margin-top: -110px;
+			 margin-right: 50px;
+		}
+		.outer_enter_box{
+			clear: both;
+			float: left; 
+			border: 1px solid black;
+			height: 50px;
+			 width: 130px;
+			 margin-left: 150px ;
+			 margin-top: 30px;
+		}
+		.enter_button{
+			height: 50px;
+			 width: 130px;
+
+		}
+		.reset_outer_button{
+			float: left; 
+			border: 1px solid black;
+			height: 50px;
+			 width: 130px;
+			 margin-left: 30px;
+			 margin-top:30px;
+
+		}
+		.reset_button{
+			
+			height: 50px;
+			width: 130px;
+			background-color:orange;
+
+		}
+
+	</style>
+</head>
+<body>
+	<div class="outer_box" >
+		<div class="min_box">
+			<p id="min" class="text">43</p>
+		</div>
+
+		<div class="max_box" >
+			<p id="max" class="text">2019</p>
+		</div>
+
+		<div class="min_word">
+			<p class="text">Min</p>
+		</div>
+
+		<div class="max_word">
+			<p class="text">Max</p>
+		</div>
+
+		<div class="recbox">
+			<p id="para1">#</p>
+		</div>
+
+		<div class="outer_button_box1">
+			<button onclick="show_number(1)" id="green_button">1</button>	
+		</div>
+
+		<div class="outer_button_box2">
+			<button onclick="show_number(2)" id="orange_button">2</button>
+		</div>
+
+		<div class="outer_button_box3">
+			<button onclick="show_number(3)" id="green_button">3</button>
+		</div>
+
+		<div class="outer_button_box4">
+			<button onclick="show_number(4)" id="orange_button">4</button>
+			
+		</div>
+
+		<div class="outer_button_box2">
+			<button onclick="show_number(5)" id="orange_button">5</button>
+		</div>
+
+		<div class="outer_button_box3">
+			<button onclick="show_number(6)" id="orange_button">6</button>
+		</div>
+
+		<div class="outer_button_box4">
+			<button onclick="show_number(7)" id="green_button">7</button>
+		</div>
+
+		<div class="outer_button_box2">
+			<button onclick="show_number(8)" id="orange_button">8</button>
+		</div>
+
+		<div class="outer_button_box3">
+			<button onclick="show_number(9)" id="green_button">9</button>
+		</div>
+
+		<div class="outer_button_box5">
+			<button onclick="show_number(0)" id="violet_button">0</button>
+		</div>
+
+		<div class="outer_enter_box" >
+			<button onclick="enter()" class="text enter_button">Enter</button>
+			
+		</div>
+		<div class="reset_outer_button">
+		<button onclick="reset()" class="reset_button" >Reset</button>
+		</dir>
+
+	</div>
+
+	<script>
+		function show_number(num) {
+			if (document.getElementById("para1").innerHTML== "#")
+				{
+					document.getElementById('para1').innerHTML =""
+				}
+			
+					document.getElementById("para1").innerHTML +=num
+
+			}
+
+		function enter()
+		{
+			var input_value =Number (document.getElementById("para1").innerHTML)
+			var min_value =Number (document.getElementById("min").innerHTML)
+			var max_value =Number (document.getElementById("max").innerHTML)
+			if ( min_value > input_value || max_value > input_value ) 
+			{
+				document.getElementById("min").innerHTML =input_value
+
+			}
+			if(  max_value < input_value  )
+			{
+				document.getElementById("max").innerHTML =input_value
+
+			}
+
+		}
+
+		function reset()
+		{
+			document.getElementById("para1").innerHTML = "#"
+		}
+		
+		
+
+	</script>
+</body>
+</html>

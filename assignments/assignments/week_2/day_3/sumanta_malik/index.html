@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Unit conveter</title>
+	<style type="text/css">
+		.con_one{
+			width:350px;
+			height:200px;
+			border:25px groove #ccc;
+			margin-left:10px;
+			margin:20px auto;
+			padding-left:20px;
+			padding-top:30px;
+			float: left;
+		}
+		.one_temp{
+			border:25px groove red;
+		}
+		.vol_con{
+			border:25px groove red;
+		}
+		.number{
+			padding:5px;
+		}
+		.converter_btn{
+			padding:5px;
+			margin-left:17px;
+			color:black;
+			font-weight:bolder;
+			background-color:cyan;
+		}
+		.result_box{
+			width:300px;
+			height:50px;
+			border:2px solid green;
+			margin-top:20px;
+			background-color:orange;
+			font-family:sans-serif;
+			font-size:20px;
+			text-align:center;
+			padding-top:15px;
+		}
+		/* Temperature container coding goes here */
+		#developer{
+			margin:50px auto;
+		}
+		span{
+			color:red;
+			font-size:30px;
+			margin-left:270px;
+			margin-top:500px;
+		}
+		h2{
+			padding:0;
+			margin:0;
+			margin-left:50px;
+		}
+		.temp_text{
+			color:blue;
+		}
+		.length_text{
+			color:red;
+		}
+		.weight_text{
+			color:lightgreen;
+		}
+	</style>
+</head>
+<body>
+	<!--Temperature unit converter goes here !-->
+	<div class="con_one one_temp" id="temp_con">
+		<h2 class="temp_text">Temperature</h2>
+		<input type="text" name="input_unit" class="number" id="temp-number"/>
+			<button class="converter_btn" id="temp_btn" onclick="temp()">
+				Click Convert
+			</button><br/><br/>
+	<label>From unit</label>
+	<select id="from_temp">
+		<option>Kelvin</option>
+		<option>Celsius</option>
+		<option>Farenheit</option>
+	</select>
+	<label>To unit</label>
+	<select id="to_temp">
+		<option>Kelvin</option>
+		<option>Celsius</option>
+		<option>Farenheit</option>
+	</select>
+	<div class="result_box" id="result_temp"></div>
+</div>
+	<!-- Length unit converter of html element goes here !-->
+	<div class="con_one" id="unit_con">
+		<h2 class="length_text">Length</h2>
+		<input type="text" name="input_unit" class="number"  id="number"/>
+		<button class="converter_btn" onclick="unit_converter()">
+			Click Convert
+		</button><br/><br/>
+	<label>From unit</label>
+	<select id="from_unit">
+		<option>Kilometer</option>
+		<option>Centimeter</option>
+		<option>Milimeter</option>
+		<option>Nanometer</option>
+		<option>Mile</option>
+		<option>Inch</option>
+		<option>Light Year</option>
+	</select>
+	<label>To unit</label>
+	<select id="to_unit">
+		<option>Kilometer</option>
+		<option>Centimeter</option>
+		<option>Milimeter</option>
+		<option>Nanometer</option>
+		<option>Mile</option>
+		<option>Inch</option>
+		<option>Light Year</option>
+	</select>
+	<div class="result_box" id="result"></div>
+	</div><br/><br/>
+	<!-- Quantity converter coding goes here !-->
+<div class="con_one vol_con" id="qnty_con">
+		<h2 class="weight_text">Volume</h2>
+		<input type="text" name="input_unit" class="number" id="qnty_input"/>
+		<button class="converter_btn" id="qty_btn" onclick="volume()">
+			Click Convert
+		</button><br/><br/>
+	<label>From unit</label>
+	<select id="from_qty">
+			<option>Liter</option>
+			<option>Mililiter</option>
+			<option>Us Gallon</option>
+			<option>Imperial Tea Spoon</option>
+	</select>
+	<label>To unit</label>
+	<select id="to_qty">
+			<option>Liter</option>
+			<option>Mililiter</option>
+			<option>Us Gallon</option>
+			<option>Imperial Tea Spoon</option>
+	</select>
+	<div class="result_box" id="result_qty"></div>
+</div>
+	<h3 id="developer">
+		<span>C</span>onverter <span>D</span>eveloped by <span>S</span>umanta!
+	</h3>
+<!-- Scripting coding goes down from here -->
+	<script>
+		function unit_converter() 
+		{	
+			var from_unit = document.getElementById('from_unit').value;
+			var to_unit = document.getElementById('to_unit').value;
+			var result = document.getElementById('result');
+			var n = Number(document.getElementById('number').value);
+			// Convert from kilometer to other script coding
+			if (from_unit=="Kilometer")
+			 {
+			 	if (to_unit=="Centimeter")
+			 	{
+			 		{result.innerHTML=(n*(10**5));}
+			 	}
+			 	if(to_unit=="Milimeter")
+			 	{
+			 		{result.innerHTML = (n*(10**6));}
+			 	}
+			 	if(to_unit=="Nanometer")
+			 	{
+			 		{result.innerHTML = (n*(10**12));}
+			 	}
+			 	if(to_unit=="Mile")
+			 	{
+			 		{result.innerHTML = (n*0.6213688756);}
+			 	}
+			 	if(to_unit=="Inch")
+			 	{
+			 		{result.innerHTML = (n*39370.07874);}
+			 	}
+			 	if(to_unit=="Light Year")
+			 	{
+			 		{result.innerHTML = (n*(1.057008707E-13));}
+			 	}
+			 	if (to_unit=="kilometer")
+			 	{
+			 		{result.innerHTML= "Both unit are equal";}
+			 	}
+			 }	
+			 // convert from centimeter to other scripting coding
+			 if (from_unit=="Centimeter")
+			 {
+			 	if (to_unit=="Kilometer") 
+			 	{
+			 		{result.innerHTML=(n/(10**5));}
+			 	}
+			 	if(to_unit=="Milimeter")
+			 	{
+			 		{result.innerHTML=(n*10);}
+			 	}
+			 	if(to_unit=="Nanometer")
+			 	{
+			 		{result.innerHTML=(n*(10**7));}
+			 	}
+			 	if(to_unit=="Mile")
+			 	{
+			 		{result.innerHTML=(n*0.0000062137);}
+			 	}
+			 	if(to_unit=="Inch")
+			 	{
+			 		{result.innerHTML=(n*0.3937007874);}
+			 	}
+			 	if(to_unit=="Light Year")
+			 	{
+			 		{result.innerHTML=(n*(1.057008707E-18));}
+			 	}
+			 	if (to_unit=="Centimeter")
+			 	{
+			 		{result.innerHTML= "Both unit are equal";}
+			 	}
+			 }
+			 // Nanometer to other length converter goes here
+			  if (from_unit=="Nanometer")
+			 {
+			 	if (to_unit=="Kilometer")
+			 	{
+			 		{result.innerHTML=n*(1.E-12);}
+			 	}
+			 	if(to_unit=="Milimeter")
+			 	{
+			 		{result.innerHTML=(n*0.000001);}
+			 	}
+			 	if(to_unit=="Centimeter")
+			 	{
+			 		{result.innerHTML=(n*(1.E-7));}// not given
+			 	}
+			 	if(to_unit=="Mile")
+			 	{
+			 		{result.innerHTML=(n*(6.213688756E-13));}
+			 	}
+			 	if(to_unit=="Inch")
+			 	{
+			 		{result.innerHTML=(n*(3.937007874E-8));}// not given
+			 	}
+			 	if(to_unit=="Light Year")
+			 	{
+			 		{result.innerHTML=(n*(1.057008707E-25));}
+			 	}
+			 	if (Nanometer=="Nanometer")
+			 	{
+			 		{result.innerHTML= "Both unit are equal";}
+			 	}
+			 }
+			 // script coding of mile to other
+			  if (from_unit=="Mile")
+			 {
+			 	if (to_unit=="Kilometer")
+			 	{
+			 		{result.innerHTML=(n*1.60935);}
+			 	}
+			 	if(to_unit=="Milimeter")
+			 	{
+			 		{result.innerHTML=(n*1609350);}
+			 	}
+			 	if(to_unit=="Centimeter")
+			 	{
+			 		{result.innerHTML=(n*160935);}
+			 	}
+			 	if(to_unit=="Nanometer")
+			 	{
+			 		{result.innerHTML=(n*(160935*(10**7)));}
+			 	}
+			 	if(to_unit=="Inch")
+			 	{
+			 		{result.innerHTML=(n*63360.23622);}
+			 	}
+			 	if(to_unit=="Light Year")
+			 	{
+			 		{result.innerHTML=n*(1.701096963E-13);}
+			 	}
+			 	if(to_unit=="Mile")
+			 	{
+			 		{result.innerHTML= "Both unit are equal";}
+			 	}
+			 }
+			// scripting coding of Inch goes here
+			  if (from_unit=="Inch")
+			 {
+			 	if (to_unit=="Kilometer")
+			 	{
+			 		{result.innerHTML=(n*0.0000254);}
+			 	}
+			 	if(to_unit=="Milimeter")
+			 	{
+			 		{result.innerHTML=(n*25.4);}
+			 	}
+			 	if(to_unit=="Centimeter")
+			 	{
+			 		{result.innerHTML=(n*2.54);}
+			 	}
+			 	if(to_unit=="Nanometer")
+			 	{
+			 		{result.innerHTML=(n*25400000);}
+			 	}
+			 	if(to_unit=="Mile")
+			 	{
+			 		{result.innerHTML=(n*0.0000157828);}
+			 	}
+			 	if(to_unit=="Light Year")
+			 	{
+			 		{result.innerHTML=(n*(2.684802117E-18));}
+			 	}
+			 	if(to_unit=="Inch")
+			 	{
+			 		{result.innerHTML= "Both unit are equal";}
+			 	}
+			 }
+			 // light functionality coding goes heres
+			   if (from_unit=="Light Year")
+			 {
+			 	if (to_unit=="Kilometer")
+			 	{
+			 		{result.innerHTML=(n*9460660000000);}
+			 	}
+			 	if(to_unit=="Milimeter")
+			 	{
+			 		{result.innerHTML=(n*9460660000000000000);}
+			 	}
+			 	if(to_unit=="Centimeter")
+			 	{
+			 		{result.innerHTML=(n*946066000000000000);}
+			 	}
+			 	if(to_unit=="Nanometer")
+			 	{
+			 		{result.innerHTML=(n*(9.460659999E+24));}
+			 	}
+			 	if(to_unit=="Mile")
+			 	{
+			 		{result.innerHTML=(n*5878559666946);}
+			 	}
+			 	if(to_unit=="Inch")
+			 	{
+			 		{result.innerHTML=(n*372466929133858300);}
+			 	}
+			 	if(to_unit=="Light Year")
+			 	{
+			 		{result.innerHTML= "Both unit are equal";}
+			 	}
+			}
+	}	
+	// Temperature functionality coding goes here 
+ 
+function temp()
+{
+	var t = Number(document.getElementById('temp-number').value);
+	var result_temp = document.getElementById('result_temp');
+ var from_temp = document.getElementById('from_temp').value; // value given by input temperatuer
+ var to_temp = document.getElementById('to_temp').value; // value of convert to output temperature 
+	  if (from_temp=="Kelvin")
+			 {
+			 	if (to_temp=="Celsius")
+			 	{
+			 		{result_temp.innerHTML=(t-272.15+"C");}
+			 	}
+			 	if(to_temp=="Farenheit")
+			 	{
+			 		{result_temp.innerHTML=(t-457.87+"F");}
+			 	}
+			}
+		if (from_temp=="Celsius")
+			 {
+			 	if (to_temp=="Kelvin")
+			 	{
+			 		{result_temp.innerHTML=(t+274.15+"K");}
+			 	}
+			 	if(to_temp=="Farenheit")
+			 	{
+			 		{result_temp.innerHTML=(t+33.8+"F");}
+			 	}
+			}
+		if (from_temp=="Farenheit")
+			 {
+			 	if (to_temp=="Kelvin")
+			 	{
+			 		{result_temp.innerHTML=(t+255.92777778+"K");}
+			 	}
+			 	if(to_temp=="Celsius")
+			 	{
+			 		{result_temp.innerHTML=(t-17.222222222+"F");}
+			 	}
+			}	
+}
+// Quanity scripting coding goes here 
+function volume()
+{
+var q = Number(document.getElementById('qnty_input').value);
+var result_qty = document.getElementById('result_qty');
+ var from_qty = document.getElementById('from_qty').value; // value given by input temperatuer
+ var to_qty = document.getElementById('to_qty').value; // value of convert to output temperature 
+	  if (from_qty=="Liter")
+			 {
+			 	if (to_qty=="Mililiter")
+			 	{
+			 		{result_qty.innerHTML=(q+1000+" ml");}
+			 	}
+			 	if(to_qty=="Us Gallon")
+			 	{
+			 		{result_qty.innerHTML=(q*0.2641721769+" Us Gallon");}
+			 	}
+			 	if(to_temp=="Imperial Tea Spoon")
+			 	{
+			 		{result_qty.innerHTML=(q*168.93638269+ " Imp ts");}
+			 	}
+			}
+		if (from_qty=="Mililiter")
+			 {
+			 	if (to_qty=="Liter")
+			 	{
+			 		{result_qty.innerHTML=(q*0.001+" ltr");}
+			 	}
+			 	if(to_qty=="Us Gallon")
+			 	{
+			 		{result_qty.innerHTML=(q*0.0002641722+"Us Gln");}
+			 	}
+			 	if(to_qty=="Imperial Tea Spoon")
+			 	{
+			 		{result_qty.innerHTML=(q*0.1689363827 +"Imp ts");}
+			 	}
+			}
+		if (from_qty=="Us Gallon")
+			 {
+			 	if (to_qty=="Liter")
+			 	{
+			 		{result_qty.innerHTML=(q*3.78541+" ltr");}
+			 	}
+			 	if(to_qty=="Mililiter")
+			 	{
+			 		{result_qty.innerHTML=(q*3785.41+" ml");}
+			 	}
+			 	if (to_qty=="Imperial Tea Spoon")
+			 	{
+			 		{result_qty.innerHTML=(q*639.49347241+"imp ts");}
+			 	}
+			}	
+}
+</script>
+</body>
+</html>
