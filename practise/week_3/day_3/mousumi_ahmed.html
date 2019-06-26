@@ -4,6 +4,7 @@
   <!-- FSD.W3.3.1_1 !-->
   <h1 >Change the buttons text color random value</h1>
   <button id="changeColor">Click here to change my color</button>
+  <button id="changeArrayColor"> me to change my color to an array value!</button>
 
   <!-- FSD.W3.3.1_2 !-->
   <h1 id="changeColorDouble" >My color should change when I double click the button!</h1>
@@ -29,6 +30,26 @@
           changeButton.addEventListener('click', switchColor);
 
 
+
+
+          var changeArrayButton = document.getElementById('changeArrayColor');
+
+        
+          function switchColorArray()
+          {
+            //var randomColor = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
+            var colorarray = ["red", "blue", "red"];
+            for(var i=0;i<=colorarray.length;i++)
+            {
+            changeArrayButton.style.color = colorarray[i];
+            }
+
+          }
+          changeArrayButton.addEventListener('click', switchColorArray);
+
+
+
+
     var doubleButton = document.getElementById('changeColorDouble');
     
     
@@ -42,16 +63,26 @@
 
 
 
+
+
     var changeButtonBack = document.getElementById('changeBackground');
+    var count=0;
     function switchColorBack()
           {
             var randomColor = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
+            var randomsize = 
             changeButtonBack.style.backgroundColor = randomColor;
+            count++;
+            if(count==2){
+              changeButtonBack.removeEventListener('click', switchColorBack)
+            }
             
-            changeButtonBack.removeEventListener('click', switchColorBack)
 
           }
           changeButtonBack.addEventListener('click', switchColorBack);
+
+          var changeButtonBack = document.getElementById('changeBackground');
+    
           
 
 
