@@ -3,7 +3,7 @@
 <head>
 	<style type="text/css">
 		.btn123
-		{
+		{ 
 			font-size: 28px;
 		}
 	</style>
@@ -104,6 +104,13 @@ var last;
   	
   }
 thirdbtn.addEventListener('click',third_head_function);
+
+
+function text_size()
+{
+	document.getElementById("third_btn_heading").style.size= random(10) + "px"
+}
+third_btn_heading.addEventListener('onmouseover',text_size)
   </script>
 </body>
 </html>

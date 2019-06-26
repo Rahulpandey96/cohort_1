@@ -1,0 +1,83 @@
+<html>
+    <head>
+        <title>Practise Deletions</title>
+        <style type="text/css">
+            .red
+            {
+                background-color: red;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 id="h1_heading">First H1</h1>
+        <h1>Second H1</h1>
+        <h3 id="h3_1">First H3</h3>
+        <h3 id="h3_2">Second H3</h3>
+        <div id="headings">
+            <h5>First H5</h5>
+            <h5>Second H5</h5>
+            <h5>Third H5</h5>
+        </div>
+        <div id="cont">
+            <div class="green">First DIV</div>
+            <div id="div_red" class="red">Second DIV</div>
+            <div class="blue">Third DIV</div>
+            <p class="green">First P</p>
+            <p class="red">Second P</p>
+            <p class="blue">Third P</p>
+        </div>
+        <hr/>
+        <button id="remove_h1">Remove H1</button>
+        <button id="remove_h3">Remove H3</button>
+        <button id="remove_h5">Remove H5</button>
+        <button id="remove_red">Remove Red</button>
+        <button>Remove DIVS</button>
+        <script>
+            //On clicking the button Remove Red all the elements inside cont with the class red should be removed from the page
+            function remove_red_fun()
+            {
+                console.log("hi");
+                var bodyElem = document.querySelector('cont');
+                var firstDiv = document.getElementById("div_red");
+               
+
+                var contDiv = document.getElementById("cont");
+                var child1=document.querySelectorAll(".red")
+                 bodyElem.removeChild(firstDiv); 
+                     contDiv.removeChild(child1);
+             }
+            remove_red.addEventListener('click',remove_red_fun);
+
+
+            function remove_h5_fun()
+            {
+                var bodyElem = document.querySelector('body');
+                var child=document.getElementById('headings')
+                     bodyElem.removeChild(child);
+                     
+                        
+            }
+            remove_h5.addEventListener('click',remove_h5_fun);
+
+            function remove_h3_fun()
+            {
+                var bodyElem = document.querySelector('body');
+                var child=document.getElementById('h3_1')
+                var child2=document.getElementById('h3_2')
+                     bodyElem.removeChild(child);
+                     bodyElem.removeChild(child2);
+                        
+            }
+            remove_h3.addEventListener('click',remove_h3_fun);
+
+
+            function remove_h1_fun()
+            {
+                var bodyElem = document.querySelector('body');
+                 var firstDiv = document.getElementById("h1_heading");
+                 bodyElem.removeChild(firstDiv);
+            }
+            remove_h1.addEventListener('click',remove_h1_fun);
+        </script>
+    </body>
+</html>
