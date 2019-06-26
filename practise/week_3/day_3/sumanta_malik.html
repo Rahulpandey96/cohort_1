@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <!-- FSD.W3.3.1_1 !-->
+  <h1>Change the buttons text color random value</h1>
+  <button id="btn_text">Click here to change my color</button>
+
+  <!-- FSD.W3.3.1_2 !-->
+  <h1 id="text_h1">My color should change when I double click the button!</h1>
+  <button id="btn_one">Double Click here to change the color of the h1 tag !</button>
+  
+  <!-- FSD.W3.3.1_3 !-->
+  <h1>The buttons color changes to a random value when it is clicked! But only two times!</h1>
+  <button id="btn_once">Click here to change my color!</button>
+  <script>
+    // this return function of random colors which stored in number 
+    function random(number){
+        return Math.floor(Math.random()*number);
+      }
+      // second functionality scripting goes here 
+      var clickChangeColor = document.getElementById('btn_one');
+    function changeMyColor()
+    {
+     var changeColor = document.getElementById('text_h1');
+     var randomColor = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
+     changeColor.style.color= randomColor;
+    }
+    clickChangeColor.addEventListener('dblclick',changeMyColor);
+  // first line functionality goes here 
+  var btnChangeColor = document.getElementById('btn_text');
+     function changeBtnTextColor()
+    {
+     var changeColor = document.getElementById('btn_text');
+     var randomColor = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
+     changeColor.style.color= randomColor;
+    }
+    btnChangeColor.addEventListener('click',changeBtnTextColor);
+// third functionality coding goes here
+ var btnOnce = document.getElementById('btn_once');
+     function btnChangeColor_Once()
+    {
+     var changeColor = document.getElementById('btn_once');
+     var randomColor = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
+     changeColor.style.backgroundColor= randomColor;
+      btnOnce.removeEventListener('click',btnChangeColor_Once);
+    }
+    btnOnce.addEventListener('click',btnChangeColor_Once);
+  </script>
+</body>
+</html>
