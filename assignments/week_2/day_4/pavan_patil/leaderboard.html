@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<title> Project2</title>
+	<div style=" background-color:white;
+		           text-align: center; 
+	                color: black;">
+	           
+<input type="text" id= "max"  style="width: 100px;height:60px;border: solid;font-size: 25px;margin-right: 200px;background-color:red"/>
+<input type="text" id= "min"  style="width: 100px;height:60px;border: solid;font-size: 25px;background-color: darkgreen"/><br>
+<h2 style="margin-right: 150px;">MAX <span style="margin-left:200px;"">MIN</span></h2>
+<h3>SCORE</h3>
+<input type="text" id= "key"  style="width: 200px;height:60px;border: solid;font-size: 25px;background-color:grey"/>
+<br><br>
+<button onclick="One()" style="width: 100px;height: 80px;font-size:25px;background-color: green;">1</button>
+<button onclick="Two()" style="width: 100px;height: 80px;font-size:25px;background-color: orange;">2</button>
+<button onclick="Thr()" style="width: 100px;height: 80px;font-size:25px;background-color: green;">3</button><br>
+<br>
+<button onclick="Fou()" style="width: 100px;height: 80px;font-size:25px;background-color: orange;">4</button>
+<button onclick="Fiv()" style="width: 100px;height: 80px;font-size:25px;background-color: orange;">5</button>
+<button onclick="Six()" style="width: 100px;height: 80px;font-size:25px;background-color: orange;">6</button>
+<br><br>
+<button onclick="Sev()" style="width: 100px;height: 80px;font-size:25px;background-color: green;">7</button>
+<button onclick="Eig()" style="width: 100px;height: 80px;font-size:25px;background-color: orange;">8</button>
+<button onclick="Nin()" style="width: 100px;height: 80px;font-size:25px;background-color: green;">9</button>
+<br><br>
+<button onclick="Zer()" style="width: 100px;height: 80px;font-size:25px;color:white;background-color: purple;">0</button><br><br>
+<button onclick="Ent()" style="width: 200px;height: 60px;font-size:25px;color:white;background-color: black;">Enter</button>
+<script type="text/javascript">
+        function One(){
+	     document.getElementById('key').value += "1"                        
+        } 
+        function Two(){
+	     document.getElementById('key').value += "2"                        
+        } 
+        function Thr(){
+	     document.getElementById('key').value += "3"                        
+        } 
+        function Fou(){
+	     document.getElementById('key').value += "4"                        
+        } 
+        function Fiv(){
+	     document.getElementById('key').value += "5"                        
+        } 
+        function Six(){
+	     document.getElementById('key').value += "6"                        
+        } 
+        function Sev(){
+	     document.getElementById('key').value += "7"                        
+        } 
+        function Eig(){
+
+	     document.getElementById('key').value += "8"                        
+        } 
+        function Nin(){
+	     document.getElementById('key').value += "9"                        
+        } 
+        function Zer(){
+	     document.getElementById('key').value += "0"                        
+        } 
+        function Ent(){   
+        var key1 = document.getElementById("key").value;
+        var max1 = document.getElementById("max").value;
+        var min1 = document.getElementById("min").value;
+
+            if( min1 > key1 || max > key1 ) {
+        	document.getElementById("min").value= key1;
+        	document.getElementById("key").value="";
+           }
+           else if(max1<key1){
+            	document.getElementById("max").value=key1;
+            	document.getElementById("key").value="";
+            }
+        	//document.getElementById("key").value= key1;
+        	//document.getElementById("key").value="";
+        //}else if(key== max){
+        //   document.getElementById("key").value=max;
+        //   document.getElementById("max").value="";
+        //}
+    }
+  
+</script>
+</html>
+  

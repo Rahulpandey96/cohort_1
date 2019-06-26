@@ -27,13 +27,10 @@ The files contains marks the data of 2000 students from India and Pakistan one f
 
 Commands on how you got the answer
 
+grep Pakistan marks_rand_20000.csv | wc -l
 ```
-grep Pakistan marks_rand_2000.csv | wc -l
-```
-
 2. No of students from India who are in the bottom 200 list based on the marks scored
-```
-156
+156```
 ```
 Commands on how you got the answer
 
@@ -95,12 +92,12 @@ sort city_names_orders_rand.csv | uniq -d | wc -l
 USERNAME
 ```
 ```
-18
+11
 ```
 Commands on how you got the answer
 
 ```
-sort city_names_orders_rand.csv | uniq -c | sort -nr | head -n 1
+sort city_names_orders_rand.csv | uniq -c |sort -nr |grep Mum |head -n 1
 ```
 5. User from Mumbai having the most no of orders
 ```
@@ -112,7 +109,7 @@ USERNAME
 Commands on how you got the answer
 
 ```
-sort city_names_orders_rand.csv | uniq -c | sort -nr | grep Mum | head -n 1
+sort city_ names_orders_rand.csv | uniq -c |sort -nr | grep Mum | head -n 1
 ```
 
 ## FSD.W2.1.C (30 min)
@@ -128,18 +125,17 @@ Clone the repo https://github.com/jlevy/the-art-of-command-line
 Commands on how you got the answer
 
 ```
-.git log | grep commit |wc -l
+.gti log | grep commit | wc -l
 ```
 2. No. of contributors to the repository
 ```
 1186
-
 ```
 
 Commands on how you got the answer
 
 ```
-git log | grep Author | wc -l 
+git log | grep Anuthor | wc -l
 ```
 
 3. User with the maximum no of commits to the repository
@@ -153,8 +149,7 @@ Joshua Levy
 Commands on how you got the answer
 
 ```
-git log | grep Author | uniq -c  | sort -nr |head -n 1 
-
+git log |grep Author | uniq -c | sort -nr |head -n 1
 ```
 
 4. Commits made in the month of January for the year 2018
@@ -164,7 +159,7 @@ git log | grep Author | uniq -c  | sort -nr |head -n 1
 Commands on how you got the answer
 
 ```
-git log | grep Jan | grep 2018 | wc -l
+git log | grep Jan | grep 2018 |wc -l
 ```
 5. Commits made on Sundays for the year 2019
 ```
@@ -172,8 +167,7 @@ git log | grep Jan | grep 2018 | wc -l
 ```
 Commands on how you got the answer
 
-```
-git log | grep Sun | grep 2019 |wc -l
+git log | grep Sun | grep 2019 | wc -l
 ```
 
 
