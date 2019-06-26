@@ -35,19 +35,26 @@
 
 
 
-function switch_text_color(){
-  var color= 'rgb(' + random(255) +','+ random(255) +','+ random(255) + ')';
-document.getElementById('color_text').style.color=color;
-}
-var btn2= document.getElementById('button_2')
-btn2.addEventListener('dblclick',switch_text_color)
+  function switch_text_color(){
+    var color= 'rgb(' + random(255) +','+ random(255) +','+ random(255) + ')';
+  document.getElementById('color_text').style.color=color;
+  }
+  var btn2= document.getElementById('button_2')
+  btn2.addEventListener('dblclick',switch_text_color)
 
-function switch_color_twice(){
-  var color= 'rgb(' + random(255) +','+ random(255) +','+ random(255) + ')';
+var s=0;
+function switch_color_first(){
+  if(s<2){
+    var color= 'rgb(' + random(255) +','+ random(255) +','+ random(255) + ')';
+    document.getElementById('btn_color_twice').style.backgroundColor=color
+    s++;
+  }
+  else{
+btn3.removeEventListener('click',switch_color_first)
+  }
+}
   var btn3=document.getElementById('btn_color_twice')
-}
-
-btn3.addEventListener('click',switch_color_twice)
+  btn3.addEventListener('click',switch_color_first)
 
 
   </script>
