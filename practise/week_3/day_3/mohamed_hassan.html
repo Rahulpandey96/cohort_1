@@ -17,13 +17,16 @@
 
   <!-- FSD.W3.3.1_3 !-->
   <h1>The buttons color changes to a random value when it is clicked! But only two times!</h1>
-  <button>Click here to change my color!</button>
+  <button id="btn_color_twice">Click here to change my color!</button>
   <script>
-var color= 'rgb(' + random(255) +','+ random(255) +','+ random(255) + ')';
   function random(number){
           return Math.floor(Math.random()*number)
   }
+
+
+
   function changecolor(){
+    var color= 'rgb(' + random(255) +','+ random(255) +','+ random(255) + ')';
           document.getElementById('change_text_color').style.color=color;
   }
   var btn=document.getElementById('change_text_color')
@@ -33,10 +36,20 @@ var color= 'rgb(' + random(255) +','+ random(255) +','+ random(255) + ')';
 
 
 function switch_text_color(){
+  var color= 'rgb(' + random(255) +','+ random(255) +','+ random(255) + ')';
 document.getElementById('color_text').style.color=color;
 }
 var btn2= document.getElementById('button_2')
-btn2.addEventListener()
+btn2.addEventListener('dblclick',switch_text_color)
+
+function switch_color_twice(){
+  var color= 'rgb(' + random(255) +','+ random(255) +','+ random(255) + ')';
+  var btn3=document.getElementById('btn_color_twice')
+}
+
+btn3.addEventListener('click',switch_color_twice)
+
+
   </script>
 </body>
 </html>
