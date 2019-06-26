@@ -1,0 +1,85 @@
+<html>
+    <head>
+        <title>Practise Deletions</title>
+    </head>
+    <body>
+        <h1 id="firstH1">First H1</h1>
+        <h1 id="firstH1">Second H1</h1>
+        <h3 id="firstH3">First H3</h3>
+        <h3 id="firstH3">Second H3</h3>
+        <div id="headings">
+            <h5 >First H5</h5>
+            <h5 >Second H5</h5>
+            <h5 >Third H5</h5>
+        </div>
+        <div id="cont">
+            <div class="green">First DIV</div>
+            <div class="red">Second DIV</div>
+            <div class="blue">Third DIV</div>
+            <p class="green">First P</p>
+            <p class="red">Second P</p>
+            <p class="blue">Third P</p>
+        </div>
+        <hr/>
+        <button onclick="removeH1()">Remove H1</button>
+        <button onclick="removeH3()">Remove H3</button>
+        <button onclick="removeH5()">Remove H5</button>
+        <button onclick="removeRed()">Remove Red</button>
+        <button onclick="removeDivs()">Remove DIVS</button>
+        <script>
+        function removeH1()
+        {
+          var bodyElem = document.querySelector('body');
+
+          var head = document.querySelectorAll('#firstH1');
+          for(var i=0;i<head.length;i++)
+          {
+            bodyElem.removeChild(head[i]);
+          }
+
+        }
+        function removeH3()
+        {
+          var bodyElem = document.querySelector('body');
+
+          var head = document.querySelectorAll('#firstH3');
+          for(var i=0;i<head.length;i++)
+          {
+            bodyElem.removeChild(head[i]);
+          }
+
+        }
+        function removeH5()
+        {
+          var bodyElem = document.querySelector('body');
+
+          var head = document.querySelector('#headings');
+          bodyElem.removeChild(head);
+          }
+          function removeRed()
+          {
+            var bodyElem = document.querySelector('#cont');
+
+            var head = document.querySelectorAll('.red');
+            for(var i=0;i<head.length;i++)
+            {
+              bodyElem.removeChild(head[i]);
+            }
+
+          }
+          function removeDivs()
+          {
+            var bodyElem = document.querySelector('#cont');
+
+            var head = document.querySelector('.green')
+            bodyElem.removeChild(head);
+            var head1 = document.querySelector('.red')
+            bodyElem.removeChild(head1);
+            var head2 = document.querySelector('.blue')
+            bodyElem.removeChild(head2);
+
+          }
+
+        </script>
+    </body>
+</html>
