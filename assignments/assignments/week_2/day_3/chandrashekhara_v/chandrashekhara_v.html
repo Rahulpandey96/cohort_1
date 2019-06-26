@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Unit Converter</title>
+
+  </head>
+  <body>
+     <h2 id="calc" >Unit Converter </h2>
+
+
+
+
+
+     <input type="text" id="inputNumber"/>
+
+
+
+      <p id="op"></p>
+      <table>
+        <tr>
+          <td>
+            <span style="font-size:22px;border: 2px solid coral;background-color:coral">Length : </span>
+            <button value="cMeter" onclick="cMeter()" > Meter</option>
+              <button value="cMeter" onclick="cKiloeter()" > KiloMeter</option>
+                <button value="cMeter" onclick="cMile()" > Mile</option>
+                  <button value="cMeter" onclick="cLyear()" > Light Year</option>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <span style="font-size:22px;border: 2px solid coral;background-color:coral">Temperature : </span>
+            <button value="cMeter" onclick="cCelcius()" > Celsius</option>
+              <button value="cMeter" onclick="cKelvin()" > Kelvin</option>
+                <button value="cMeter" onclick="cFahr()" > Fahrenheit</option>
+
+                  </td>
+        </tr>
+      
+          <td>
+            <span style="font-size:22px;border: 2px solid coral;background-color:coral">Volume : </span>
+            <button value="cMeter" onclick="cLtr()" > Liter</option>
+              <button value="cMeter" onclick="cMltr()" > Milliliter</option>
+                <button value="cMeter" onclick="cUsg()" > US Gallon</option>
+                  <button value="cMeter" onclick="cItea()" >Imperial Tea Spoon</option>
+                  </td>
+        </tr>
+      </table>
+
+
+      <script type="text/javascript">
+
+        function cMeter()
+        {
+          var ip = document.getElementById('inputNumber').value;
+
+
+          document.getElementById('op').innerHTML=ip+"Meter";
+
+        }
+        function cKiloeter()
+        {
+          var ip = document.getElementById('inputNumber').value;
+          ip = 1000 * ip;
+          document.getElementById('op').innerHTML=ip+"Meter";
+        }
+        function cMile()
+        {
+          var ip = document.getElementById('inputNumber').value;
+          ip = 1609.5 * ip;
+          document.getElementById('op').innerHTML=ip+"Meter";
+        }
+        function cLyear()
+        {
+          var ip = document.getElementById('inputNumber').value;
+          ip = 9460660000000000 * ip;
+          document.getElementById('op').innerHTML=ip+"Meter";
+        }
+        function cCelcius()
+        {
+          var ip = document.getElementById('inputNumber').value;
+          ip = ip * 1
+          document.getElementById('op').innerHTML=ip+"Celcius";
+
+        }
+
+        function cKelvin()
+        {
+          var ip = document.getElementById('inputNumber').value;
+          ip =  274.14 * ip
+          document.getElementById('op').innerHTML=ip+"Kelvin";
+
+        }
+        function cFahr()
+        {
+          var ip = document.getElementById('inputNumber').value;
+          ip = 33.8 * ip;
+          document.getElementById('op').innerHTML=ip+"Fahrenheit";
+        }
+        function cLtr()
+        {
+          var ip = document.getElementById('inputNumber').value;
+          ip = 1 * ip;
+          document.getElementById('op').innerHTML=ip+"Liter";
+        }
+        function cMltr()
+        {
+          var ip = document.getElementById('inputNumber').value;
+          ip = 0.001 * ip;
+          document.getElementById('op').innerHTML=ip+"Liter";
+        }
+        function cUsg()
+        {
+          var ip = document.getElementById('inputNumber').value;
+          ip = 3.78541 * ip;
+          document.getElementById('op').innerHTML=ip+"Liter";
+        }
+        function cItea()
+        {
+          var ip = document.getElementById('inputNumber').value;
+          ip = 0.005919388 * ip;
+          document.getElementById('op').innerHTML=ip+"Liter";
+        }
+
+
+      </script>
+
+
+  </body>
+</html>

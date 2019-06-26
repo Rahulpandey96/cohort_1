@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Coding Session 1!</title>
+</head>
+<body>
+	<!-- These elements below are for FSD.W2.4.1_1-->
+	<h1> Create your own exponentiation function! </h1>
+	<input type="text" name = "num1" id="no1">
+	<input type="text" name = "num2" id="no2">
+	<p id="power"> </p>
+	</hr>
+	<button onclick="exponent()">Click here to find the exponent!</button>
+	<!-- These elements above are for FSD.W2.2.2_1-->
+
+	<!-- These elements below are for FSD.W2.2.2_3-->
+	<h1>Sum of multiples of 3 and 5!</h1>
+	<p id="sum"> </p>
+	<input type="text" id="result">
+	<button onclick="sumOf3And5()">Click here for the output!</button>
+	
+	<!-- These elements above are for FSD.W2.2.2_2-->
+
+	<!-- These elements below are for FSD.W2.2.2_3-->
+	<h1>Check if the users email is valid!</h1>
+	<label for="Email">Email</label>
+	<input type="text" id="emailid">
+	<button onclick="validateEmail()">Check Email!</button>
+	<!-- These elements above are for FSD.W2.2.2_2-->
+	<script type="text/javascript">
+		//Write javascript for FSD.W2.4.1_1 here
+
+		function exponent(){
+			var number1=document.getElementById("no1").value
+			var number2=document.getElementById("no2").value
+
+			var no=1;
+			for(var i=0; i<number2; i++){
+                no=no*number1;
+            }
+            // console.log(x);
+            document.getElementById("power").innerHTML = no;
+		}
+		
+		//Write javascript for FSD.W2.4.1_2 here
+		function sumOf3And5(){
+			
+			var x=document.getElementById("result").value
+			var sum=0;
+			for (var i=0;i<=x;i++){
+				if(i % 3 ===0 && i % 5 ===0){
+					sum+=i;
+				}
+			}
+			// console.log(sum);
+			document.getElementById("sum").innerHTML = sum;
+		}
+
+		//Write javascript for FSD.W2.4.1_3 here
+		function validateEmail(){
+			var email = document.getElementById("emailid").value;
+			symbol=email.lastIndexOf("@");
+			dot=email.lastIndexOf(".com");
+
+			if(symbol < 1 || (dot - symbol < 2 )){
+				alert("invalid email")
+				document.getElementById("emailid");
+				return false;
+			}else{
+				alert("Correct Email Id")
+				return true;
+			}
+
+		}
+	</script>
+</body>
+</html>

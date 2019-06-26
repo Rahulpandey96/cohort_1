@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<head>
+	<style type="text/css">
+		* {font-size: 42px; }
+		#main_box {
+			height: 600px;
+			width: 500px;
+			 margin-left: 400px;
+			}
+		.boxes_for_each_line {
+							height: 60px; width:500px;
+							}
+		#grey {
+			background-color: grey;
+			padding-top: 30px;
+			border: 2px;
+			border-style: solid;
+		    margin-bottom: 5px;
+		    width: 450px;
+		    text-align: center;
+			  }
+		.small_box {
+			height: 50px;
+			 width: 50px;
+			  float: left;
+			  margin: 5px;
+			   padding: 40px;
+			   padding-left: 50px;
+			   }
+		.green {
+			background-color: green;
+			border: 2px;
+			border-style: solid;
+			   }
+		.orange {
+				background-color: orange;
+				border: 2px;
+				border-style: solid;
+			   }
+		#purple {
+				background-color: purple;
+				border: 2px;
+				border-style: solid;
+		 	    }
+	</style>
+</head>
+<body>
+	 <div id="main_box">
+	   <div class="boxes_for_each_line" id="grey" >#</div>
+	   <div class="boxes_for_each_line" >
+	       <div class="small_box green" >1</div>
+	       <div class="small_box orange" >2</div>
+	       <div class="small_box green" >3</div>
+	   </div>
+	   <div class="boxes_for_each_line" >
+	   	   <div class="small_box orange" >4</div>
+	       <div class="small_box orange" >5</div>
+	       <div class="small_box orange" >6</div>
+	   </div>
+	   <div class="boxes_for_each_line" >
+	   	   <div class="small_box green" >7</div>
+	       <div class="small_box orange" >8</div>
+	       <div class="small_box green" >9</div>
+	   </div>
+	   <div class="boxes_for_each_line">
+	   	   <div class="small_box"></div>
+	   	   <div class="small_box" id="purple">0</div>
+	   	   <div class="small_box"></div>
+	   </div>
+	 </div>
+</body>
