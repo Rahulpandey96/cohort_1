@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+		.btn123
+		{ 
+			font-size: 28px;
+		}
+	</style>
+	<title>ex</title>
+</head>
+<body>
+  <!-- FSD.W3.3.1_1 !-->
+  <h1>Change the buttons text color random value</h1>
+  <button id="change_color">Click here to change my color</button>
+
+
+  <select id="select_color_name" >
+  	<option value="red">red</option>
+  	<option value="green">green</option>
+  	<option value="blue" >blue</option>
+  </select>
+
+  <button id="clr_btn">Click me</button>
+
+  <button class="btn123" id="btn_3">excuse me</button>
+  
+  <!-- FSD.W3.3.1_2 !-->
+  <h1 id="heading">My color should change when I double click the button!</h1>
+  <button id="heading_btn" >Double Click here to change the color of the h1 tag !</button>
+  
+  <!-- FSD.W3.3.1_3 !-->
+  <h1 id="third_btn_heading">The buttons color changes to a random value when it is clicked! But only two times!</h1>
+  <button id="thirdbtn">Click here to change my color!</button>
+  <script type="text/javascript">
+function c_color()
+  {
+  	document.getElementById("change_color").style.backgroundColor=c_random();
+  }
+  function c_random()
+  {
+  	return 'rgb('+random(255)+','+random(255)+','+random(255)+')';
+  }
+
+  function random(number)
+  {
+  	return Math.floor(Math.random()*number);
+  }
+   change_color.addEventListener('click', c_color);
+
+  function btn1()
+  {
+	  var list_color=document.getElementById("select_color_name").value  
+  	if (list_color=="red")
+  		document.getElementById("clr_btn").style.backgroundColor="red";
+  	else if (list_color=="green") 
+  		document.getElementById("clr_btn").style.backgroundColor="green";
+  	else if (list_color=="blue") 
+  		document.getElementById("clr_btn").style.backgroundColor="blue";
+  	else
+  		document.getElementById("clr_btn").style.backgroundColor="white";
+  }
+   clr_btn.addEventListener('click',btn1);
+
+var count=0;
+var abc=0;
+ function btn3()
+ {
+ 	var color_arry=["silver","green","blue","black","purple","yellow","pink","navy"];
+ 		if (count==abc && abc<8)
+ 		{
+ 			document.getElementById("btn_3").style.color=color_arry[abc];
+ 			count++
+ 			abc++;
+ 		}
+ 		else
+ 		{
+ 			document.getElementById("btn_3").style.color="red"
+ 			count++;
+ 		}
+ }
+ btn_3.addEventListener('click',btn3);
+  
+  function head2()
+  {
+  	document.getElementById("heading").style.color=c_random()
+  }
+
+  heading_btn.addEventListener('dblclick',head2);
+
+var n_count=0;
+var pi=0;
+var last;
+  function third_head_function()
+  {
+  	if (n_count==pi && n_count<2)
+  	{
+  		last=document.getElementById("thirdbtn").style.backgroundColor=c_random()
+  		n_count++;
+  		pi++;
+  	}
+  	else
+  		document.getElementById("thirdbtn").style.backgroundColor=last
+  	
+  }
+thirdbtn.addEventListener('click',third_head_function);
+
+
+function text_size()
+{
+	document.getElementById("third_btn_heading").style.size= random(10) + "px"
+}
+third_btn_heading.addEventListener('onmouseover',text_size)
+  </script>
+</body>
+</html>

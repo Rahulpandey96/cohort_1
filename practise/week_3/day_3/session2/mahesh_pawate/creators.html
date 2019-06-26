@@ -1,0 +1,87 @@
+<html>
+    <head>
+        <title>Practise Creators</title>
+    </head>
+    <body>
+        <div id="headings">
+        </div>
+        <div id="cont">
+        </div>
+        <ul id="vikings">
+            <li>pragmasoft</li>
+        </ul>
+        <button id="create_h1">Create H1</button>
+        <button id="create_h2">Create 2 H3</button>
+        <button id="create_dives">Create DIVS</button>
+        <button id="add_std">Add Students</button>
+        <button id="copy_right" >Add Copyright</button>
+        <script>
+            function copy_right_f()
+            {
+                var add_p=document.createElement('p');
+                add_p.textContent="@ masai 2019";
+                var search=document.getElementById("headings") 
+                var bodyElem = document.querySelector('body');
+                var search=document.getElementById("headings") 
+                bodyElem.insertBefore(add_p, search);
+
+            }
+            copy_right.addEventListener('click',copy_right_f)
+            var students = ['Ajay','Akshay','Anusha','Chandrashekhara','Haren','Hasaan','Mahesh','Mousumi','Pavan','Rahul','Sumanta','Venkatesh','Vetrival','Vijayendra'];
+
+             function create_student()
+            {
+                var li_add=document.createElement('li');
+                var count=0;
+                    if(count<=students.length-1)
+                    {
+                        li_add.innerHTML='<li>'+ students[count]  +'</li>';
+                        document.getElementById("vikings").appendChild(li_add);
+                        count++;
+                       // console.log(count);
+                    }
+                               
+                //    if(count<=students.length-1)
+            }
+            add_std.addEventListener('click',create_student);
+
+
+            function create_ten_dives()
+            {
+                for(var i=0;i<10;i++)
+                {
+                     var div_add=document.createElement('div');
+                     inp=i+1;
+                     div_add.textContent="Content" +" "+ inp;
+                     document.getElementById("cont").appendChild(div_add);
+                }
+            }
+            create_dives.addEventListener('click',create_ten_dives);
+
+            function add_h2()
+            {
+                var second_add=document.createElement('h2');
+                second_add.textContent="A Transformation in education! and Learn to earn, pay when you get";
+
+                //var div_add=document.querySelector('div')
+               // div_add.appendChild(first_add);
+                document.getElementById("headings").appendChild(second_add);
+            }
+            create_h2.addEventListener('click',add_h2);
+
+            function add_h1()
+            {
+                var first_add=document.createElement('h1');
+                first_add.textContent="masai";
+
+                //var div_add=document.querySelector('div')
+               // div_add.appendChild(first_add);
+                document.getElementById("headings").appendChild(first_add);
+            }
+            create_h1.addEventListener('click',add_h1);
+
+
+            
+        </script>
+    </body>
+</html>

@@ -60,6 +60,7 @@
       <div class="form">
         <label id="name" class="float_left" for="name">Name</label>
         <input id="user_name" class="float_clear margin_top" type="text" name="name" value="">
+        <p id="name_warning" class="float_clear margin_top"></p>
         <label id="email" class="float_clear margin_top" for="email">E-mail</label>
         <input id="user_emailid" class="float_clear margin_top" type="text" name="emailid" value="">
         <p id="email_warning" class="float_clear"></p>
@@ -73,19 +74,35 @@
 
     <div class="float_right sub_div">
       <div class="">NAME</div>
-      <div class="font_size margin_top">MASAI</div>
+      <div  id="login_name"class="font_size margin_top">MASAI</div>
       <div class="margin_top">E-mail</div>
-      <div class="margin_top">email@masaischool.com</div>
+      <div id="login_id"class="margin_top">email@masaischool.com</div>
       <div class="margin_top">MOBILE</div>
-      <div class="margin_top">9876543210</div>
+      <div id="login_number"class="margin_top">9876543210</div>
     </div>
   </div>
   <script type="text/javascript">
     function check(){
       mobile_check();
       email_check();
+      name_check();
+// for name verification
+function name_check()
+{
+  var name=document.getElementById('user_name').value
+  if(name.length>3 && name.length<=10){
+    document.getElementById('login_name').innerHTML=name;
+    document.getElementById('user_name').value=""
+    document.getElementById('name_warning').innerHTML=""
 
+  }
+  else{
+    document.getElementById("name_warning").style.color="red";
+    document.getElementById('name_warning').innerHTML="PLEASE ENTER A VALID NAME"
+  }
+}
 //for mobile number verification
+
 
       function mobile_check() {
         var mobile = parseInt(document.getElementById("user_number").value)
@@ -99,8 +116,10 @@
           }
           console.log(count)
           if (count == 10) {
-            document.getElementById("mobie_warning").style.color="green";
-            document.getElementById('mobie_warning').innerHTML = "NUMBER TAKEN"
+          //  var number=document.getElementById('user_number').innerHTML
+            document.getElementById('login_number').innerHTML =mobile;
+            document.getElementById("mobie_warning").innerHTML = ""
+            document.getElementById("user_number").value=""
           } else {
             document.getElementById('mobie_warning').style.color="red"
             document.getElementById("mobie_warning").innerHTML = "INCORRECT NUMBER"
@@ -115,24 +134,27 @@
 
       function email_check() {
         var email = document.getElementById("user_emailid").value
-        if (typeof(email) == "string") {
-          for (var i = 0; i < email.length; i++) {
-            var email = document.getElementById("user_emailid").value
+        if (typeof(email) == "string" && email !== "") {
+          for (var i = 0; i < email.length-1; i++) {
             if (email[i] == '@') {
-              var email = document.getElementById("user_emailid").value
+
+              //var email = document.getElementById("user_emailid").value
               if ((email[0] != "@") && (email[email.length - 4] == '.') && (email[email.length - 3] == 'c') && (email[email.length - 2] == 'o') && (email[email.length - 1] == 'm')) {
                 console.log(email[email.length - 4])
                 if ((email[email.length - 5] != '@') && (email[email.length - 4] == '.')) {
                   console.log(email[email.length - 2])
-                  document.getElementById('email_warning').style.color="green"
-                  document.getElementById('email_warning').innerHTML = "MAIL IS TAKEN"
+                //  var email_id=document.getElementById("user_emailid").innerHTML
+                document.getElementById('login_id').innerHTML = email
+                  document.getElementById('email_warning').innerHTML="";
+                  console.log(email)
+                  document.getElementById("user_emailid").value=""
                   console.log("mail is taken")
                 } else {
                   console.log("mail is not taken")
                   document.getElementById('email_warning').style.color="red"
                   document.getElementById('email_warning').innerHTML = "ENTER THE VALID EMAIL ID"
 
-              }
+                  }
 
             }else{
               document.getElementById('email_warning').style.color="red"
@@ -140,7 +162,9 @@
             }
 
         }
-} alert("Please enter @")
+
+}
+
     }else {
         document.getElementById('email_warning').style.color="red"
         document.getElementById("email_warning").innerHTML = "ENTER THE VALID EMAIL ID"

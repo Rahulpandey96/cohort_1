@@ -1,0 +1,74 @@
+<html>
+    <head>
+        <title>Practise Creators</title>
+    </head>
+    <body>
+        <div id="headings">
+
+        </div>
+        <div id="cont">
+        </div>
+        <ul id="vikings">
+            <li id="p">Priyanshu</li>
+        </ul>
+        <button onclick="createH1()" id="btn">Create H1</button>
+        <button onclick="createH3()">Create 2 H3</button>
+        <button onclick="create10Divs()">Create DIVS</button>
+        <button onclick="addStds()">Add Students</button>
+        <button onclick="addCprght()">Add Copyright</button>
+        <script>
+            var students = ['Ajay','Akshay','Anusha','Chandrashekhara','Haren','Hasaan','Mahesh','Mousumi','Pavan','Rahul','Sumanta','Venkatesh','Vetrival','Vijayendra'];
+            function createH1()
+            {
+              var h1 = document.createElement('h1');
+              h1.textContent = 'MASAI';
+              var bodyElem = document.querySelector('#headings');
+              bodyElem.appendChild(h1);
+            }
+            function createH3()
+            {
+              var h3 = document.createElement('h3');
+              var secondH3 = document.createElement('h3');
+
+              h3.textContent = 'A Transformation in education!';
+              secondH3.textContent = 'Learn to earn, pay when you get.'
+              var bodyElem = document.querySelector('#headings');
+
+              bodyElem.appendChild(h3);
+              bodyElem.appendChild(secondH3);
+            }
+            function create10Divs()
+            {
+              for(var i=0;i<10;i++)
+              {
+                var div = document.createElement('div');
+                div.textContent = 'Content ' + (i+1) ;
+                var bodyElem = document.querySelector('#cont');
+                bodyElem.appendChild(div)
+              }
+
+            }
+            function addStds()
+            {
+              var li= document.createElement('li');
+              li.innerHTML = '<li>Ajay</li><li>Akshay</li><li>Anusha</li><li>Chandrashekhara</li><li>Haren</li><li>Hasaan</li><li>Mahesh</li><li>Mousumi</li><li>Pavan</li><li>Rahul</li><li>Sumanta</li><li>Venkatesh</li><li>Vijayendra</li>  '
+              var bodyElem = document.querySelector('#p');
+              bodyElem.appendChild(li)
+            }
+            function addCprght()
+            {
+              var para = document.createElement('p');
+              para.textContent = '@ masai 2019 '
+
+              var btn = document.getElementById('btn');
+
+              var bodyElem = document.querySelector('body');
+              bodyElem.insertBefore(para, btn);
+              
+
+
+            }
+
+        </script>
+    </body>
+</html>
