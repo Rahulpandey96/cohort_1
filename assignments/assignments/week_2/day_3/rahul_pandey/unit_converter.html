@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>UNIT CONVERTER</title>
+    <style type="text/css">
+    </style>
+    </head>
+<body>
+    <label for="input">Input</label>
+    <input type="text" name="From" id="input"><br><br>
+    <p id="output"></p><br><br>
+        <div>
+            <label for="input_length">FROM</label>
+                <select id="input_length">
+                    <option value="Meter">Meter</option>
+                    <option value="Kilometer">Kilometer</option>
+                    <option value="Mile">Mile</option>
+                    <option value="Light_year">LightYear</option>
+                    <option value="Liter">Liter</option>
+                    <option value="Mililiter">Mililiter</option>
+                    <option value="Us_gallon">Us_Gallon</option>
+                    <option value="Imperial_tea_spoon">Imperial_Tea_spoon</option>
+                    <option value="Celsius">Celsius</option>
+                    <option value="Kelvin">Kelvin</option>
+                    <option value="Fahrenheit">Fahrenheit</option>
+                </select>
+            <label for="output_length">TO</label>
+                  <select id="output_length">
+                    <option value="Meter">Meter</option>
+                    <option value="Kilometer">Kilometer</option>
+                    <option value="Mile">Mile</option>
+                    <option value="Light_year">LightYear</option>
+                    <option value="Liter">Liter</option>
+                    <option value="Mililiter">Mililiter</option>
+                    <option value="Us_gallon">Us_Gallon</option>
+                    <option value="Imperial_tea_spoon">Imperial_Tea_spoon</option>
+                    <option value="Celsius">Celsius</option>
+                    <option value="Kelvin">Kelvin</option>
+                    <option value="Fahrenheit">Fahrenheit</option>
+                </select>
+                <br> <br>
+                <button id="submit" style="margin-left: 150px;" onclick="convert()">Convert</button>
+         </div>
+    <script>
+        function convert()
+        {
+            var from_input= document.getElementById("input_length").value;
+            var to_input=document.getElementById("output_length").value;
+            var value= document.getElementById("input").value
+            if(from_input=="Meter")
+            {
+                switch (to_input)
+                {
+                    case 'Meter':
+                    document.getElementById("output").innerHTML=value;
+                    break;
+
+                    case 'Kilometer':
+                    document.getElementById("output").innerHTML=value/1000;
+                    break;
+
+                    case 'Mile':
+                    document.getElementById("output").innerHTML=value/1609.344;
+                    break;
+
+                    case 'Light_year':
+                    document.getElementById("output").innerHTML=value/9.461e+15;
+                    break;
+
+                    case 'Liter':
+                    alert("Please select the required conversion");
+                    break;
+
+                    case 'Mililiter':
+                    alert("Please select the required conversion");
+                    break;
+
+                    case 'Us_gallon':
+                    alert("Please select the required conversion");
+                    break;
+
+                    case 'Imperial_tea_spoon':
+                    alert("Please select the required conversion");
+                    break;
+
+                    case 'Celsius':
+                    alert("Please select the required conversion");
+                    break;
+
+                    case 'Kelvin':
+                    alert("Please select the required conversion");
+                    break;
+
+                    case 'Fahrenheit':
+                    alert("Please select the required conversion");
+                    break;
+
+                }
+            }
+            if(from_input=="Kilometer")
+            {
+                switch (to_input)
+                {
+                    case 'Meter':
+                    document.getElementById("output").innerHTML=value*1000;
+                    break;
+
+                    case 'Kilometer':
+                    document.getElementById("output").innerHTML=value;
+                    break;
+
+                    case 'Mile':
+                    document.getElementById("output").innerHTML=value/1.609;
+                    break;
+
+                    case 'Light_year':
+                    document.getElementById("output").innerHTML=value/9.461e+12;
+                    break;
+
+                    case 'Liter':
+                    alert("Please select the required conversion");
+                    break;
+
+                    case 'Mililiter':
+                    alert("Please select the required conversion");
+                    break;
+
+                    case 'Us_gallon':
+                    alert("Please select the required conversion");
+                    break;
+
+                    case 'Imperial_tea_spoon':
+                    alert("Please select the required conversion");
+                    break;
+
+                    case 'Celsius':
+                    alert("Please select the required conversion");
+                    break;
+
+                    case 'Kelvin':
+                    alert("Please select the required conversion");
+                    break;
+
+                    case 'Fahrenheit':
+                    alert("Please select the required conversion");
+                    break;
+
+                }
+            }
+            if(from_input=="Mile")
+            {
+                switch (to_input)
+                {
+                    case 'Meter':
+                    document.getElementById("output").innerHTML=value*1609.344;
+                    break;
+
+                    case 'Kilometer':
+                    document.getElementById("output").innerHTML=value*1.609;
+                    break;
+
+                    case 'Mile':
+                    document.getElementById("output").innerHTML=value;
+                    break;
+
+                    case 'Light_year':
+                    document.getElementById("output").innerHTML=value/5.879e+12;
+                    break;
+
+                    case 'Liter':
+                    alert("Please select the required conversion");
+                    break;
+
+                    case 'Mililiter':
+                    alert("Please select the required conversion");
+                    break;
+
+                    case 'Us_gallon':
+                    alert("Please select the required conversion");
+                    break;
+
+                    case 'Imperial_tea_spoon':
+                    alert("Please select the required conversion");
+                    break;
+
+                    case 'Celsius':
+                    alert("Please select the required conversion");
+                    break;
+
+                    case 'Kelvin':
+                    alert("Please select the required conversion");
+                    break;
+
+                    case 'Fahrenheit':
+                    alert("Please select the required conversion");
+                    break;
+
+                }
+            }
+            if(from_input=="Light_year")
+            {
+                switch (to_input)
+                {
+                    case 'Meter':
+                    document.getElementById("output").innerHTML=value*9.461e+15;
+                    break;
+
+                    case 'Kilometer':
+                    document.getElementById("output").innerHTML=value*9.461e+12;
+                    break;
+
+                    case 'Mile':
+                    document.getElementById("output").innerHTML=value*5.879e+12;
+                    break;
+
+                    case 'Light_year':
+                    document.getElementById("output").innerHTML=value;
+                    break;
+
+                    case 'Liter':
+                    alert("Please select the required conversion");
+                    break;
+
+                    case 'Mililiter':
+                    alert("Please select the required conversion");
+                    break;
+
+                    case 'Us_gallon':
+                    alert("Please select the required conversion");
+                    break;
+
+                    case 'Imperial_tea_spoon':
+                    alert("Please select the required conversion");
+                    break;
+
+                    case 'Celsius':
+                    alert("Please select the required conversion");
+                    break;
+
+                    case 'Kelvin':
+                    alert("Please select the required conversion");
+                    break;
+
+                    case 'Fahrenheit':
+                    alert("Please select the required conversion");
+                    break;
+
+                }
+            }
+            if(from_input=="Liter")
+            {
+                switch (to_input)
+                {
+                    case 'Meter':
+                    alert("Please select the required conversion");
+                    break;
+
+                    case 'Kilometer':
+                    alert("Please select the required conversion");
+                    break;
+
+                    case 'Mile':
+                    alert("Please select the required conversion");
+                    break;
+
+                    case 'Light_year':
+                    alert("Please select the required conversion");
+                    break;
+
+                    case 'Liter':
+                    document.getElementById("output").innerHTML=value;
+                    break;
+
+                    case 'Mililiter':
+                    document.getElementById("output").innerHTML=value*1000;
+                    break;
+
+                    case 'Us_gallon':
+                    document.getElementById("output").innerHTML=value/3.785;
+                    break;
+
+                    case 'Imperial_tea_spoon':
+                    document.getElementById("output").innerHTML=value*168.936;
+                    break;
+
+                    case 'Celsius':
+                    alert("Please select the required conversion");
+                    break;
+
+                    case 'Kelvin':
+                    alert("Please select the required conversion");
+                    break;
+
+                    case 'Fahrenheit':
+                    alert("Please select the required conversion");
+                    break;
+
+                }
+            }
+            if(from_input=="Mililiter")
+            {
+                switch (to_input)
+                {
+                    case 'Meter':
+                    alert("Please select the required conversion");
+                    break;
+
+                    case 'Kilometer':
+                    alert("Please select the required conversion");
+                    break;
+
+                    case 'Mile':
+                    alert("Please select the required conversion");
+                    break;
+
+                    case 'Light_year':
+                    alert("Please select the required conversion");
+                    break;
+
+                    case 'Liter':
+                    document.getElementById("output").innerHTML=value/1000;
+                    break;
+
+                    case 'Mililiter':
+                    document.getElementById("output").innerHTML=value;
+                    break;
+
+                    case 'Us_gallon':
+                    document.getElementById("output").innerHTML=value/ 3785.412;
+                    break;
+
+                    case 'Imperial_tea_spoon':
+                    document.getElementById("output").innerHTML=value/5.919;
+                    break;
+
+                    case 'Celsius':
+                    alert("Please select the required conversion");
+                    break;
+
+                    case 'Kelvin':
+                    alert("Please select the required conversion");
+                    break;
+
+                    case 'Fahrenheit':
+                    alert("Please select the required conversion");
+                    break;
+
+                }
+            }
+            if(from_input=="Us_gallon")
+            {
+                switch (to_input)
+                {
+                    case 'Meter':
+                    alert("Please select the required conversion");
+                    break;
+
+                    case 'Kilometer':
+                    alert("Please select the required conversion");
+                    break;
+
+                    case 'Mile':
+                    alert("Please select the required conversion");
+                    break;
+
+                    case 'Light_year':
+                    alert("Please select the required conversion");
+                    break;
+
+                    case 'Liter':
+                    document.getElementById("output").innerHTML=value* 3.785;
+                    break;
+
+                    case 'Mililiter':
+                    document.getElementById("output").innerHTML=value*3785.412;
+                    break;
+
+                    case 'Us_gallon':
+                    document.getElementById("output").innerHTML=value;
+                    break;
+
+                    case 'Imperial_tea_spoon':
+                    document.getElementById("output").innerHTML=value*639.494;
+                    break;
+
+                    case 'Celsius':
+                    alert("Please select the required conversion");
+                    break;
+
+                    case 'Kelvin':
+                    alert("Please select the required conversion");
+                    break;
+
+                    case 'Fahrenheit':
+                    alert("Please select the required conversion");
+                    break;
+
+                }
+            }
+            if(from_input=="Imperial_tea_spoon")
+            {
+                switch (to_input)
+                {
+                    case 'Meter':
+                    alert("Please select the required conversion");
+                    break;
+
+                    case 'Kilometer':
+                    alert("Please select the required conversion");
+                    break;
+
+                    case 'Mile':
+                    alert("Please select the required conversion");
+                    break;
+
+                    case 'Light_year':
+                    alert("Please select the required conversion");
+                    break;
+
+                    case 'Liter':
+                    document.getElementById("output").innerHTML=value/168.936;
+                    break;
+
+                    case 'Mililiter':
+                    document.getElementById("output").innerHTML=value* 5.919;
+                    break;
+
+                    case 'Us_gallon':
+                    document.getElementById("output").innerHTML=value/639.494;
+                    break;
+
+                    case 'Imperial_tea_spoon':
+                    document.getElementById("output").innerHTML=value;
+                    break;
+
+                    case 'Celsius':
+                    alert("Please select the required conversion");
+                    break;
+
+                    case 'Kelvin':
+                    alert("Please select the required conversion");
+                    break;
+
+                    case 'Fahrenheit':
+                    alert("Please select the required conversion");
+                    break;
+
+                }
+            }
+            if(from_input=="Celsius")
+            {
+                switch (to_input)
+                {
+                    case 'Meter':
+                    alert("Please select the required conversion");
+                    break;
+
+                    case 'Kilometer':
+                    alert("Please select the required conversion");
+                    break;
+
+                    case 'Mile':
+                    alert("Please select the required conversion");
+                    break;
+
+                    case 'Light_year':
+                    alert("Please select the required conversion");
+                    break;
+
+                    case 'Liter':
+                    alert("Please select the required conversion");
+                    break;
+
+                    case 'Mililiter':
+                    alert("Please select the required conversion");
+                    break;
+
+                    case 'Us_gallon':
+                    alert("Please select the required conversion");
+                    break;
+
+                    case 'Imperial_tea_spoon':
+                    alert("Please select the required conversion");
+                    break;
+
+                    case 'Celsius':
+                    document.getElementById("output").innerHTML=value;
+                    break;
+
+                    case 'Kelvin':
+                    document.getElementById("output").innerHTML=value+(273.15);
+                    break;
+
+                    case 'Fahrenheit':
+                    document.getElementById("output").innerHTML=(value*9/5)+32;
+                    break;
+
+                }
+            }
+            if(from_input=="Kelvin")
+            {
+                switch (to_input)
+                {
+                    case 'Meter':
+                    alert("Please select the required conversion");
+                    break;
+
+                    case 'Kilometer':
+                    alert("Please select the required conversion");
+                    break;
+
+                    case 'Mile':
+                    alert("Please select the required conversion");
+                    break;
+
+                    case 'Light_year':
+                    alert("Please select the required conversion");
+                    break;
+
+                    case 'Liter':
+                    alert("Please select the required conversion");
+                    break;
+
+                    case 'Mililiter':
+                    alert("Please select the required conversion");
+                    break;
+
+                    case 'Us_gallon':
+                    alert("Please select the required conversion");
+                    break;
+
+                    case 'Imperial_tea_spoon':
+                    alert("Please select the required conversion");
+                    break;
+
+                    case 'Celsius':
+                    document.getElementById("output").innerHTML=value-273.15;
+                    break;
+
+                    case 'Kelvin':
+                    document.getElementById("output").innerHTML=value;
+                    break;
+
+                    case 'Fahrenheit':
+                    document.getElementById("output").innerHTML=(value-273.15)*9/5+32;
+                    break;
+
+                }
+            }
+            if(from_input=="Fahrenheit")
+            {
+                switch (to_input)
+                {
+                    case 'Meter':
+                    alert("Please select the required conversion");
+                    break;
+
+                    case 'Kilometer':
+                    alert("Please select the required conversion");
+                    break;
+
+                    case 'Mile':
+                    alert("Please select the required conversion");
+                    break;
+
+                    case 'Light_year':
+                    alert("Please select the required conversion");
+                    break;
+
+                    case 'Liter':
+                    alert("Please select the required conversion");
+                    break;
+
+                    case 'Mililiter':
+                    alert("Please select the required conversion");
+                    break;
+
+                    case 'Us_gallon':
+                    alert("Please select the required conversion");
+                    break;
+
+                    case 'Imperial_tea_spoon':
+                    alert("Please select the required conversion");
+                    break;
+
+                    case 'Celsius':
+                    document.getElementById("output").innerHTML=(value-32)*5/9;
+                    break;
+
+                    case 'Kelvin':
+                    document.getElementById("output").innerHTML=(value -32)*5/9+273.15;
+                    break;
+
+                    case 'Fahrenheit':
+                    document.getElementById("output").innerHTML=value;
+                    break;
+                }
+            }
+        }
+    </script>
+</body>
+</html>

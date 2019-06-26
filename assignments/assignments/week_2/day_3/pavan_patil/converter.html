@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Unit Converter</title>
+</head>
+	<div style=" background-color: #777;
+	                padding: 10px;
+	                text-align: center; 
+	                color: white;">
+	      <form>
+	          <label for="Unit_select">Select Unit</label>
+	              <select  id="unit">
+		          <option value="">  </option>
+		          <option value="Length"> Lenght </option>
+		          <option value="Tempreture">Tempreture</option>
+		          <option value="Volume">Volume</option>
+	              </select>
+	              Convert:  <input type="text" id="measure"/>
+	       <select  id="length">
+		   <option value="">  </option>
+		   <option value="meter">meter</option>
+		   <option value="kilometer">kilometer</option>
+		   <option value="mile">mile</option>
+	       </select>
+	       To:<select  id="length1">
+		   <option value="">  </option>
+		   <option value="meter">meter</option>
+		   <option value="kilometer">kilometer</option>
+		   <option value="mile">mile</option>
+	       </select>
+	       <button onclick="result()">Result</button>
+        </div>
+   <script type="text/javascript">
+   		function result(){
+   			var measure = document.getElementById(measure);
+        var result = document.getElementById(result);
+        document.getElementById(input).value = (length());
+        document.getElementById(length1).value = (length1());
+        var input_1 = my_select.value;
+        var result_1 = result.value;
+  
+          if(input_type == "meter" && result_type == "kilometer"){
+                result.value = parseInt(input.value)*0.001;
+            }
+            elseif(input_type == "meter" && result_type == "centimeter")
+            {
+                result.value = parseInt(input.value)*100;
+            }
+            elseif(input_type == "meter" && result_type == "meter")
+            {
+                result.value = parseInt(input.value);
+            }
+           
+            }
+   </script>
+</body>
+</html>

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Registration form...</title>
+	<style type="text/css">
+		*{
+			box-sizing:border-box;
+		}
+		body{
+			padding:0;
+			margin:0;
+			background-color:black;
+		}
+
+		#page{
+			width:1000px;
+			height:900px;
+			border:1px solid #ccc;
+			margin:0 auto;
+			background-color:white;
+			position:relative;
+			padding:40px;
+		}
+		/* left hand form design coding goes here */
+		#form{
+			width:400px;
+			height:900px;
+			border:1px solid green;
+			border: none;
+			position:absolute;
+			top:100px;
+			padding:10px;
+		}
+		.input_text{
+			font-family:sans-serif;
+			font-size:30px;
+			position:relative;
+			top:50px;
+			float:left;
+		}
+		/* form input field style coding goes here */
+		.input_field{
+			width:380px;
+			height:50px;
+			padding:10px;
+			border:1px solid red;
+			margin-top:50px;
+			font-size:18px;
+		}
+		.submit_btn{
+			background-color:black;
+			color:white;
+			font-size:30px;
+		}
+		/* Right hand box style coding goes here */
+		#result_box{
+			width:400px;
+			height:488px;
+			border:1px solid green;
+			position:absolute;
+			top:150px;
+			padding:10px;
+			right:40px;
+			background-color:black;
+			}
+			.result_name{
+			font-family:sans-serif;
+			font-size:30px;
+			position:relative;
+			top:70px;
+			padding-left:40px;
+			color:white;
+			}
+			#display_name{
+				margin-left:35px;
+				font-size:20px;
+				color:yellow;
+			}
+			#display_email{
+				margin-left:35px;
+				font-size:20px;
+				color:yellow;
+			}
+			#display_mobile{
+				margin-left:35px;
+				font-size:20px;
+				color:yellow;
+			}
+			.form_heading{
+				margin:0 auto;
+				color:blue;
+				margin-left:300px;
+			}
+	</style>
+</head>
+<body>
+	
+	<div id="page">
+		<h1 class="form_heading">--Registraion Form--</h1>
+		<form id="form" onsubmit="return val_check()">
+			<label class="input_text">NAME</label><br/>
+			<input type="text" name="name" class="input_field" id="name"/>
+			<br/><span id="error_name"></span>
+			<label class="input_text">EMAIL</label><br/>
+			<input type="text" name="email" class="input_field"  id="email" />
+			<br/>
+			<span id="error_email"></span>
+			<label class="input_text">MOBILE</label><br/>
+			<input type="text" name="mobile" class="input_field"  id="mobile"/>
+			<br/>
+			<span id="error_mobile"></span>
+			<br/>
+			<input type="submit" name="submit" value="REGISTER" class="input_field submit_btn" id="submit" />
+			<br/>
+		</form>
+		<!-- Display box element coding goes here !-->
+		<div id="result_box">
+			<br/>
+			<label class="result_name">
+				NAME<br/>
+				<span id="display_name"></span>
+			</label><br/>
+			<h1 id="result_1"></h1>
+			<br/><br/><br/>
+			<label class="result_name">
+				Email<br/>
+				<span id="display_email"></span>
+			</label>
+			<br/>
+			<h1 id="result_2"></h1>
+			<br/><br/><br/>
+			<label class="result_name">
+				Mobile<br/>
+				<span id="display_mobile"></span>
+			</label>
+			<br/>
+			<h1 id="result_3"></h1>
+		</div>
+	</div>
+<script type="text/javascript">
+	
+	function val_check()
+	{
+			var user_name = document.getElementById('name').value;
+			var user_email = document.getElementById('email').value;
+			var user_mobile = document.getElementById('mobile').value;
+			var show_result = document.getElementById('result_box');
+			var name_length= user_name.length;
+			var mail_length = user_email.length;
+	if(user_name!=="" && user_email !=="" && user_mobile !=="")
+	{
+		if (name_length>10)
+		{
+			document.getElementById('error_name').innerHTML="You entered more then 10 alpha";
+			document.getElementById('display_name').innerHTML="";
+		}
+		if (name_length<3)
+			{
+				document.getElementById('error_name').innerHTML="Name should be 3 to 10 alpha";
+				document.getElementById('display_name').innerHTML="";
+			}
+			else{
+				var name = document.getElementById('display_name');
+				name.innerHTML = user_name;
+				}
+			
+			if (user_email[mail_length-4]=="."
+				&& user_email[mail_length-3]=="c"
+				&& user_email[mail_length-2]=="o"
+				&& user_email[mail_length-1]=="m"
+				&& user_email[0]!=="@")
+			{
+				document.getElementById('display_email').innerHTML=user_email;
+			}
+			else{
+				document.getElementById('error_email').innerHTML="Email id is invalid";
+				document.getElementById('display_email').innerHTML="";
+			}
+		if (user_mobile.length==10) {
+				document.getElementById('display_mobile').innerHTML=user_mobile;
+			}
+		
+		else{
+			document.getElementById('error_mobile').innerHTML="Enter 10 digit mobile number";
+			document.getElementById('display_mobile').innerHTML="";
+		}
+	}
+	else{
+		alert("All fields are mandatory");
+	}
+		var clean = document.getElementById('submit').value;
+	if (clean=="REGISTER") {
+		document.getElementById('name').value="";
+		document.getElementById('email').value="";
+		document.getElementById('mobile').value="";
+	}
+return false;
+}
+</script>
+</body>
+</html>

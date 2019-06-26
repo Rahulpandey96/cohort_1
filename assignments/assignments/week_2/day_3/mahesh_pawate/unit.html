@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+	<title>Unit converter</title>
+	<style type="text/css">
+		
+		.body_background
+		{
+			background-color: silver;
+		}
+
+		.main_align
+		{
+			height: 400px;
+			margin-left: 455px;
+			margin-right:455px;
+			color: black;
+			background-color: white;
+			padding: 30px;
+		}
+
+		.float_left
+		{
+			float: left;
+		}
+
+		.inputbox_align
+		{
+			padding: 5px;
+			margin-right:25px;
+		}
+
+		.inputbox_border
+		{
+			border-style: solid;
+			border-width: 4px;
+			border-radius: 15px;
+			border-color: maroon;
+			padding: 20px;
+			font-size: 28px;
+		}
+
+		.box_two_margin
+		{
+			margin-right: 20px;
+		}
+		.clear_left
+		{
+			clear: left;
+		}
+	</style>
+</head>
+<body class="body_background"><!--master div-->
+	<div  class="main_align" ><!--child_first-->
+		<div class="inputbox_border">
+			<label class="inputbox_align"> Input : </label>
+			<input class=" inputbox_align"  type="text" id="take_input">
+			<select class="inputbox_align" id="select_your_unit">
+				<option value="M" >M</option>
+				<option value="K">KM</option>
+				<option value="Mil">Mil</option>
+				<option value="LY">LY</option>
+				<option value="C">Cel</option>
+				<option value="Kel">Kel</option>
+				<option value="F">F</option>
+				<option value="Ltr">Ltr</option>
+				<option value="MLtr">MLtr</option>
+				<option value="USG">USG</option>
+				<option value="ITS">ITS</option>
+			</select><br><br>
+				<label class="inputbox_align">Output : </label> <label class="inputbox_align"  id="display"></label>
+		</div>
+		<br>
+		<div ><!--child div2-->
+			<div class="float_left inputbox_border box_two_margin "><!--length div1-->
+				<select size="4" id="convert_in_length">
+					<option value="Meter" >Meter</option>
+					<option value="Kilometer">Kilometer</option>
+					<option value="Mile">Mile</option>
+					<option value="Light_Year">Light Year</option>
+				</select><br>
+				<button onclick="length()" >Length</button>
+			</div>
+
+			<div class="float_left inputbox_border box_two_margin" ><!--Temperature div2-->
+				<select size="4" id="convert_in_temp">
+					<option value="Celsius" >Celsius</option>
+					<option value="Kelvin">Kelvin</option>
+					<option value="Fahrenheit">Fahrenheit</option>
+				</select><br>
+				<button onclick="temperature()" >Temperature</button> 
+			</div>
+
+			<div class="float_left inputbox_border" ><!--Volume div3-->
+				<select size="4" id="convert_in_volume">
+					<option value="Liter">Liter</option>
+					<option value="Milliliter">Milliliter</option>
+					<option value="US_Gallon">US Gallon</option>
+					<option value="Imperial_Tea_Spoon">Imperial Tea Spoon</option>
+				</select><br>
+				<button onclick="volume()" >Volume</button>
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		function length()
+		{
+			var unit_selected=document.getElementById("select_your_unit").value
+			var convert_unit=document.getElementById("convert_in_length").value
+			var get_input=Number(document.getElementById("take_input").value)
+			switch(unit_selected)
+			{
+				case "M" :
+				{
+						if (convert_unit == "Meter")
+						{
+							document.getElementById("display").innerHTML=get_input * 1  + " " + convert_unit
+						}
+						else if (convert_unit == "Kilometer")
+						{
+							document.getElementById("display").innerHTML=get_input / 1000  + " " + convert_unit
+						}
+						else if (convert_unit == "Mile")
+						{
+							document.getElementById("display").innerHTML=get_input/1609.344 +" "+ convert_unit
+						}
+						else if (convert_unit == "Light_Year")
+						{
+							document.getElementById("display").innerHTML=get_input/9.461e+15 +" "+ convert_unit
+						}
+						else
+						{
+							alert("Please use proper selection, This is not a length...!!!");
+						}
+						break;
+				}
+				case "K" :
+				{
+						if (convert_unit == "Meter")
+						{
+							document.getElementById("display").innerHTML=get_input / 1000  + " " + convert_unit
+						}
+						else if (convert_unit == "Kilometer")
+						{
+							document.getElementById("display").innerHTML=get_input * 1  + " " + convert_unit
+						}
+						else if (convert_unit == "Mile")
+						{
+							document.getElementById("display").innerHTML=get_input / 1.609344 +" "+ convert_unit
+						}
+						else if (convert_unit == "Light_Year")
+						{
+							document.getElementById("display").innerHTML=get_input/9.461e+12 +" "+ convert_unit
+						}
+						else
+						{
+							alert("Please use proper selection, This is not a length...!!!");
+						}
+						break;
+				}
+				case "Mil" :
+				{
+						if (convert_unit == "Meter")
+						{
+							document.getElementById("display").innerHTML=get_input * 1609.34   + " " + convert_unit
+						}
+						else if (convert_unit == "Kilometer")
+						{
+							document.getElementById("display").innerHTML=get_input * 1.609344  + " " + convert_unit
+						}
+						else if (convert_unit == "Mile")
+						{
+							document.getElementById("display").innerHTML=get_input * 1 +" "+ convert_unit
+						}
+						else if (convert_unit == "Light_Year")
+						{
+							document.getElementById("display").innerHTML=get_input/5.879e+12 +" "+ convert_unit
+						}
+						else
+						{
+							alert("Please use proper selection, This is not a length...!!!");
+						}
+						break;
+				}
+				case "LY" :
+				{
+						if (convert_unit == "Meter")
+						{
+							document.getElementById("display").innerHTML=get_input * 9.461e+15 + " " + convert_unit
+						}
+						else if (convert_unit == "Kilometer")
+						{
+							document.getElementById("display").innerHTML=get_input * 9.461e+12  + " " + convert_unit
+						}
+						else if (convert_unit == "Mile")
+						{
+							document.getElementById("display").innerHTML=get_input * 5.879e+12 +" "+ convert_unit
+						}
+						else if (convert_unit == "Light_Year")
+						{
+							document.getElementById("display").innerHTML=get_input * 1 +" "+ convert_unit
+						}
+						else
+						{
+							alert("Please use proper selection, This is not a length...!!!");
+						}
+						break;
+				}
+				default :
+				{
+					alert("This may be neither unit nor Length, please select Proper...! ");
+				}
+			}
+		}
+		function temperature()
+		{
+			var unit_selected=document.getElementById("select_your_unit").value
+			var convert_unit=document.getElementById("convert_in_temp").value
+			var get_input=Number(document.getElementById("take_input").value)
+			var temp=0
+			switch(unit_selected)
+			{
+				case "C" :
+				{
+						if (convert_unit == "Celsius")
+						{
+							document.getElementById("display").innerHTML=get_input * 1  + " " + convert_unit;
+						}
+						else if (convert_unit == "Kelvin")
+						{
+							temp=get_input + 273.15;
+							document.getElementById("display").innerHTML= temp  + " " + convert_unit;
+						}
+						else if (convert_unit == "Fahrenheit")
+						{
+							document.getElementById("display").innerHTML= get_input* 9/5 + 32 +" "+ convert_unit;
+						}
+						else
+						{
+							alert("Please use proper selection, This is not a temperature...!!!");
+						}
+						break;
+				}
+				case "Kel" :
+				{
+						if (convert_unit == "Celsius")
+						{
+							document.getElementById("display").innerHTML=get_input - 273.15  + " " + convert_unit
+						}
+						else if (convert_unit == "Kelvin")
+						{
+							document.getElementById("display").innerHTML=get_input * 1  + " " + convert_unit
+						}
+						else if (convert_unit == "Fahrenheit")
+						{
+							console.log(convert_unit);
+							temp=(get_input - 273.15) * 9/5
+							document.getElementById("display").innerHTML= temp  + 32  +" "+ convert_unit
+						}
+						else
+						{
+							alert("Please use proper selection, This is not a temperature...!!!");
+						}
+						break;
+				}
+				case "F" :
+				{
+						if (convert_unit == "Celsius")
+						{
+							temp=(get_input - 32) * 5/9
+							document.getElementById("display").innerHTML= temp  + " " + convert_unit
+						}
+						else if (convert_unit == "Kelvin")
+						{
+							temp=(get_input - 32) * 5/9 + 273.15
+							document.getElementById("display").innerHTML=temp  + " " + convert_unit
+						}
+						else if (convert_unit == "Fahrenheit")
+						{
+							document.getElementById("display").innerHTML=get_input +" "+ convert_unit
+						}
+						else
+						{
+							alert("Please use proper selection, This is not a temperature...!!!");
+						}
+						break;
+				}
+				default :
+				{
+					alert("This may be neither unit nor temperature, please select Proper...! ");
+				}
+			}
+		}
+
+		function volume()
+		{
+			var unit_selected=document.getElementById("select_your_unit").value
+			var convert_unit=document.getElementById("convert_in_volume").value
+			var get_input=Number(document.getElementById("take_input").value)
+			switch(unit_selected)
+			{
+				case "Ltr" :
+				{
+						if (convert_unit == "Liter")
+						{
+							document.getElementById("display").innerHTML=get_input+ " " + convert_unit;
+						}
+						else if (convert_unit == "Milliliter")
+						{
+							document.getElementById("display").innerHTML= get_input * 1000  + " " + convert_unit;
+						}
+						else if (convert_unit == "US_Gallon")
+						{
+							document.getElementById("display").innerHTML= get_input* 168.936 +" "+ convert_unit;
+						}
+						else if (convert_unit == "Imperial_Tea_Spoon")
+						{
+							document.getElementById("display").innerHTML= get_input / 3.785 +" "+ convert_unit;
+						}
+						else
+						{
+							alert("Please use proper selection, This is not a volume...!!!");
+						}
+						break;
+				}
+				case "MLtr" :
+				{
+						if (convert_unit == "Liter")
+						{
+							document.getElementById("display").innerHTML=get_input / 1000 + " " + convert_unit;
+						}
+						else if (convert_unit == "Milliliter")
+						{
+							document.getElementById("display").innerHTML= get_input  + " " + convert_unit;
+						}
+						else if (convert_unit == "US_Gallon")
+						{
+							document.getElementById("display").innerHTML= get_input / 3785.412 +" "+ convert_unit;
+						}
+						else if (convert_unit == "Imperial_Tea_Spoon")
+						{
+							document.getElementById("display").innerHTML= get_input / 5.919 +" "+ convert_unit;
+						}
+						else
+						{
+							alert("Please use proper selection, This is not a volume...!!!");
+						}
+						break;
+				}
+				case "USG" :
+				{
+						if (convert_unit == "Liter")
+						{
+							document.getElementById("display").innerHTML=get_input * 3.785 + " " + convert_unit;
+						}
+						else if (convert_unit == "Milliliter")
+						{
+							document.getElementById("display").innerHTML= get_input * 3785.412  + " " + convert_unit;
+						}
+						else if (convert_unit == "US_Gallon")
+						{
+							document.getElementById("display").innerHTML= get_input +" "+ convert_unit;
+						}
+						else if (convert_unit == "Imperial_Tea_Spoon")
+						{
+							document.getElementById("display").innerHTML= get_input * 639.494 +" "+ convert_unit;
+						}
+						else
+						{
+							alert("Please use proper selection, This is not a volume...!!!");
+						}
+						break;
+				}
+				case "ITS" :
+				{
+						if (convert_unit == "Liter")
+						{
+							document.getElementById("display").innerHTML=get_input / 168.936 + " " + convert_unit;
+						}
+						else if (convert_unit == "Milliliter")
+						{
+							document.getElementById("display").innerHTML= get_input * 5.919  + " " + convert_unit;
+						}
+						else if (convert_unit == "US_Gallon")
+						{
+							document.getElementById("display").innerHTML= get_input / 639.494 +" "+ convert_unit;
+						}
+						else if (convert_unit == "Imperial_Tea_Spoon")
+						{
+							document.getElementById("display").innerHTML= get_input +" "+ convert_unit;
+						}
+						else
+						{
+							alert("Please use proper selection, This is not a volume...!!!");
+						}
+						break;
+				}
+				default :
+				{
+					alert("This may be neither unit nor volume, please select Proper...! ");
+				}
+			}
+		}
+	</script>
+</body>
+</html>
+

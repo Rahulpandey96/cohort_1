@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Register</title>
+	<style type="text/css">
+		.sbutton
+		{
+			margin-left: 300px;
+			margin-top: 50px;
+            
+		}
+		.align
+		{
+			margin-left: 250px;
+		}
+		.taln
+		{
+			margin-left: 400px;
+		}
+		.c2
+		{
+			margin-top: -350px;
+			width: 450px;
+			height: 350px;
+			color: white;
+			background-color: black;
+			padding: 20px;
+		}
+		.float_right
+		{
+			float: right;
+		}
+        .abcd
+         {
+            float: left;
+            clear: left;
+         }
+		.margin
+		{
+			margin-left: 800px;
+		}
+		.font
+		{
+			font-size: 28px;
+			font-style: bold;
+			padding-top:  40px;
+			padding-bottom: 30px;
+		}
+		.color
+		{
+			color: red;
+		}
+	</style>
+</head>
+<body>
+	<form>
+		<div>
+			<h2 id="taln" style=" margin-left: 250px";>NAME</h2><p class="color" id="ename"></p>
+			<input type="text" name="Name" placeholder="Name" class="align" id="inputName" value="">
+			<span id="ename"></span>
+			<br>
+		
+		</div>
+		<div >
+			<h2 id="taln" style="margin-left: 250px">EMAIL</h2><p class="color" id="eemail"></p>
+            <input type="text" name="Emailid" placeholder="Emailid" class="align" id="email" value="">
+            <p id="mailwarning" class=" abcd"></p>
+			
+			<br>
+		</div>
+		<div >
+			<h2 id="taln" style="margin-left: 250px">MOBILE</h2><p class="color" id="ep"></p>
+            <input type="text" name="Contact" placeholder="Contact" class="align" id="mobile" value="">
+            <p id="mobwarning" class=" abcd"></p>
+			
+			<br>
+		</div>
+		<button class="sbutton" style="background-color: white" onclick="sub()">REGISTER</button><br>
+	</form>
+     
+         <div  class="c2 margin">
+		      <div class="font">
+			    <div> Name : <label id="name">NAME </label>
+			    </div>
+		      </div>
+		<div class="font">
+            <div> EMAIL : <label id="email" >EMAIL</label>
+                <p id="mailwarn" class="abcd"> </p>
+			</div>
+		</div>
+		<div class="font">
+            <div> MOBILE : <label id="mobile">MOBILE</label>
+               <p id="mobwarn" class=" abcd"></p>
+			</div>
+		</div>
+	</div>
+	<script>
+		
+		function sub() 
+            { 
+            var mobbile = parseInt(document.getElementById("mobile").value)
+            document.getElementById('mobwarn').innerHTML = mobbile;
+
+        if (typeof(mobbile == 'number')) 
+            { 
+                mob = mobbile.toString();
+            
+             console.log(mob.length)
+         
+          if (mob.length == 10) 
+            {
+            document.getElementById("mobwarning").style.color="green";
+            document.getElementById('mobwarn').innerHTML = mobbile;
+          } 
+          else 
+           {
+            document.getElementById('mobwarning').style.color="red"
+            document.getElementById("mobwarn").innerHTML = "INCORRECT NUMBER"
+          }
+        } 
+        else 
+          {
+            document.getElementById('mobwarning').style.color="red"
+            document.getElementById('mobwarn').innerHTML = "PLEASE ENTER NUMBER"
+        }
+      }
+
+      function sub() 
+      {
+        var email = document.getElementById("email").value
+        if (typeof(email) == "string") 
+        {
+          for (var i = 0; i < email.length; i++)
+           {
+            var email = document.getElementById("email").value
+            if (email[i] == '@')
+             {
+              var email = document.getElementById("email").value
+              if ((email[0] != "@") && (email[email.length - 4] == '.') && (email[email.length - 3] == 'c') && (email[email.length - 2] == 'o') && (email[email.length - 1] == 'm')) {
+                console.log(email[email.length - 4])
+                if ((email[email.length - 5] != '@') && (email[email.length - 4] == '.')) 
+                {
+                  console.log(email[email.length - 2])
+                  document.getElementById('mailwarn').style.color="green"
+                  document.getElementById('mailwarn').innerHTML = "MAIL IS TAKEN"
+                  console.log("mail is taken")
+                } else 
+                {
+                  console.log("mail is not taken")
+                  document.getElementById('mailwarn').style.color="red"
+                  document.getElementById('mailwarn').innerHTML = "ENTER THE VALID EMAIL ID"
+              }
+            }else
+            {
+              document.getElementById('mailwarn').style.color="red"
+              document.getElementById("mailwarn").innerHTML = "ENTER THE VALID EMAIL ID"
+            }
+        }
+}           alert("enter @")
+    }
+    else {
+
+        document.getElementById('mailwarn').style.color="red"
+        document.getElementById("mailwarn").innerHTML = "ENTER THE VALID EMAIL ID"
+         }
+     }
+}
+		
+	</script>
+</body>
+</html>
