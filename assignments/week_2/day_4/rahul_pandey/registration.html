@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Registration Form</title>
+	<style type="text/css">
+	
+		
+		.align
+		{
+			margin-left: 400px;
+		}
+		.text_align
+		{
+			margin-left: 400px;
+            font-size: 35px;
+		}
+		.column_2
+		{
+			margin-top: -600px;
+			width: 500px;
+			height: 650px;
+			color: white;
+			background-color: black;
+			padding: 20px;
+		}
+		.float_right
+		{
+			float: right;
+		}
+		.black_box
+		{
+			margin-left: 990px;
+            
+		}
+		.font
+		{
+			font-size: 30px;
+			font-style: bold;
+			padding-top:  40px;
+			padding-bottom: 30px;
+		}
+        .error_msg
+        {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 20px;
+            color: red;
+            margin-left: 500px;
+        }
+		.submit_button
+		{
+			margin-left: 500px;
+			margin-top: 50px;
+            font-size: 35px;
+			height: 100px;
+			width: 200px;
+		}
+		.color
+		{
+			color: red;
+			margin-left: 400px;
+		}
+	</style>
+</head>
+<body>
+  <center>
+    <h1>Registration form</h1>
+  </center>
+
+<form style="margin-top: 100px;" >
+    <h2 class="text_align" >NAME</h2>
+	<input type="text" class="text_align align" name="name" id="name" >
+	<p class="color" id="name_validation"></p><br>
+    <h2 class="text_align">EMAIL</h2>
+	<input type="text" class="text_align align" name="email_id" id="email_id">
+	<p class="color" id="mail_validation"></p><br>
+    <h2 class="text_align align">CONTACT</h2>
+	<input type="tel" class="text_align align" id="contact_no" >
+	<p class="color" id="contact_no_validation"></p>
+</form>
+<button class="submit_button" onclick="submit()">SUBMIT</button>
+
+<div  class="column_2  black_box">
+	<div class="font">
+		<div>
+			Name : <label id="name_box"> </label>
+			<br>
+		</div>
+	</div>
+	<div class="font">
+		<div>
+			EMAIL : <label id="email_box" ></label>
+			<br>
+		</div>
+	</div>
+	<div class="font">
+		<div>
+			MOBILE : <label id="mobile_box"></label>
+			<br>
+		</div>
+	</div>
+</div>
+	<script>
+		function submit()
+		{
+			console.log("qw")
+			var name= document.getElementById("name").value;
+			if(name.length<3 || name.length>10)
+			{
+				document.getElementById("name_validation").innerHTML= "Enter a valid name"
+			}
+			else
+			{
+				document.getElementById("name_validation").innerHTML=""
+			}
+
+			var number= document.getElementById("contact_no").value;
+			if(number.length !=10 && number[i]!="")
+			{
+				document.getElementById("contact_no_validation").innerHTML="Enter a valid 10 digit number"
+			}
+			else
+			{
+				document.getElementById("contact_no_validation").innerHTML=""
+			}
+
+			var mail= document.getElementById("email_id").value;
+			for(var i=0; i<=mail.length-1; i++)
+			{
+				if((mail[i]=='@'))
+				{
+					if((mail[0]!='@') && (mail[mail.length-1]== 'm') && (mail[mail.length-2]== 'o') && (mail[mail.length-3]== 'c') && (mail[mail.length-4]== '.'))
+						{
+						document.getElementById("name_box").innerHTML =name;
+						document.getElementById("email_box").innerHTML =mail;
+						document.getElementById("mobile_box").innerHTML =number;
+
+						}	
+				
+					else
+					{
+					document.getElementById("mail_validation").innerHTML="Enter a valid mail id"
+					}
+				}	
+			}
+		}
+	</script>
+	
+  </body>
+  </html>

@@ -118,7 +118,11 @@ Fill the below property values for the `div`
 ```
 2. Height
 ```
+<<<<<<< HEAD
+50px;
+=======
 100px;
+>>>>>>> dd21e596b503c7780cc4d990770b7e0f21cded2f
 
 ```
 3. Padding
@@ -212,7 +216,11 @@ red
 ```
 6. Color
 ```
+<<<<<<< HEAD
+purple
+=======
 white
+>>>>>>> dd21e596b503c7780cc4d990770b7e0f21cded2f
 ```
 ### FSD.W2.2.1_6
 ```
@@ -328,7 +336,11 @@ red
 ```
 1. Width
 ```
+<<<<<<< HEAD
+150px
+=======
 100px
+>>>>>>> dd21e596b503c7780cc4d990770b7e0f21cded2f
 ```
 2. Height
 ```
@@ -406,5 +418,8 @@ black
 ```
 white
 ```
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> dd21e596b503c7780cc4d990770b7e0f21cded2f

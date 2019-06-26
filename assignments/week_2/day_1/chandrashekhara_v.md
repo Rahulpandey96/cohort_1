@@ -92,23 +92,21 @@ Commands on how you got the answer
 sort city_names_orders_rand.csv | uniq -d | wc -l
 ```
 4. User having the most no of orders
+
 ```
-USERNAME
-
 Bangalore,Yuli Z. Pratt
-
 ```
 
 Commands on how you got the answer
 
 ```
 sort city_names_orders_rand.csv | uniq -c | sort -n | tail -n 1
-
 ```
 5. User from Mumbai having the most no of orders
 
 ```
 Mumbai,Russell T. Compton
+```
 
 ```
 COUNT OF ORDERS 11
@@ -117,7 +115,6 @@ Commands on how you got the answer
 
 ```
 grep -i mumbai city_names_orders_rand.csv | uniq -c | sort -n
-
 ```
 
 ## FSD.W2.1.C (30 min)
@@ -126,6 +123,7 @@ grep -i mumbai city_names_orders_rand.csv | uniq -c | sort -n
 
 Clone the repo https://github.com/jlevy/the-art-of-command-line
 1. Total no of commits made to the repository
+
 ```
 1218
 ```
@@ -134,9 +132,9 @@ Commands on how you got the answer
 
 ```
 git log | grep commit |wc -l
-
 ```
 2. No. of contributors to the repository
+
 ```
 84
 ```
@@ -149,9 +147,11 @@ git log | grep Author | sort | uniq -d | wc -l
 ```
 
 3. User with the maximum no of commits to the repository
+
 ```
 Joshua Levy <joshua@cal.berkeley.edu>
 ``` 
+```
 466
 ```
 
@@ -159,20 +159,22 @@ Commands on how you got the answer
 
 ```
 git log | grep @ | sort -r | uniq -c | sort -r
-
 ```
 
 4. Commits made in the month of January for the year 2018
+
+
 ```
 8
 ```
+
 Commands on how you got the answer
 
 ```
 git log | grep 2018 | grep Jan | wc -l
-
 ```
 5. Commits made on Sundays for the year 2019
+
 ```
 0
 ```

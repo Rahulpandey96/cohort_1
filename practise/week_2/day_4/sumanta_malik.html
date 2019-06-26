@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Coding Session 1!</title>
+</head>
+<body>
+	<!-- These elements below are for FSD.W2.4.1_1-->
+	<h1> Create your own exponentiation function! </h1>
+	<input type="text" name = "num1" id="num1" placeholder="number one" />
+	<input type="text" name = "num2" id="num2" placeholder="number two" />
+	<p id="showResult"> </p>
+	<hr/>
+	<button onclick="exponent()">Click here to find the exponent!</button>
+	<!-- These elements above are for FSD.W2.2.2_1-->
+
+	<!-- These elements below are for FSD.W2.2.2_3-->
+	<h1>Sum of multiples of 3 and 5!</h1>
+	<p id="sum"></p>
+	<input type="text" id="user_input"/>
+	<button onclick="sumOf3And5()">Click here for the output!</button>
+	
+	<!-- These elements above are for FSD.W2.2.2_2-->
+
+	<!-- These elements below are for FSD.W2.2.2_3-->
+	<h1>Check if the users email is valid!</h1>
+	<label>Email</label>
+	<input type="text" id="email" />
+	<button onclick="validateEmail()">Check Email!</button>
+	<!-- These elements above are for FSD.W2.2.2_2-->
+	<script type="text/javascript">
+		//Write javascript for FSD.W2.4.1_1 here
+		function exponent(){
+			var x = Number(document.getElementById('num1').value);
+			var y = Number(document.getElementById('num2').value);
+			var z = 1;
+			var i;
+			var result = document.getElementById('showResult');
+			for(i=0; i<y;i++)
+				{
+					z = z*x;
+				}
+				result.innerHTML =x+"<sup>"+y+"</sup> = "+z;
+			} 
+		//Write javascript for FSD.W2.4.1_2 here
+		function sumOf3And5(){
+			var user = Number(document.getElementById('user_input').value);
+			var sum = document.getElementById('sum');
+			var add =0;
+			var i;
+			for (i=0; i<=user; i=i+15) {
+				if (i%15===0) {
+					add = add+i;
+				}
+			}
+			sum.innerHTML = "Sum is :="+add;
+		}
+
+		//Write javascript for FSD.W2.4.1_3 here
+	
+		function validateEmail(){
+			var user_email = document.getElementById('email').value;
+			var mail_length = user_email.length;
+
+			if (user_email[mail_length-4]=="."
+				&& user_email[mail_length-3]=="c"
+				&& user_email[0]!=="@")
+			{
+				alert('valid email');
+			}
+		else{
+			alert('invalid email id');
+		}
+	}
+		
+	</script>
+</body>
+</html>

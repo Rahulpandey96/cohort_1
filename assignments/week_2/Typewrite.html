@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Shipt</title>
+	<style type="text/css">
+		*{
+			box-sizing:border-box;
+		}
+		body{
+		background-color:#ccc;
+		}
+		#result{
+			width:920px;
+			height:50px;
+			border:2px solid black;
+			margin:20px auto;
+			font-size:30px;
+			text-align:center;
+			background-color:white;
+		}
+		/* whole page style coding goes here */
+		#main_box{
+			width:1020px;
+			height:700px;
+			border:1px solid red;
+			margin:0 auto;
+			border:none;
+		}
+		.row_1{
+			width:1000px;
+			height:60px;
+			border:1px solid green;
+			border:none;
+			margin-top:50px;
+			margin-left:20px;
+		}
+		/* dell button style coding goes here */
+		.dell{
+			position:relative;
+			top:17px;
+			right:10px;
+		}
+		.row_2{
+			width:900px;
+			margin-top:40px;
+			margin-left:70px;
+		}
+		.row2_col2{
+			margin-left:20px;
+			text-align:center;
+			padding-left:23px;
+		}
+		.row3{
+			margin-left:115px;
+			width:850px;
+			margin-top:25px;
+
+		}
+		.row4{
+			margin-left:160px;
+			text-align:left;
+		}
+		/* all bottun coding goes here */
+		.char{
+			width:60px;
+			height:60px;
+			border:3px solid white;
+			margin-left:23px;
+			text-align:left;
+			background-color:black;
+			color:white;
+			font-size:16px;
+			border-radius:5px;
+		}
+		.dot_com{
+			text-align:left;
+			padding-left:10px;
+		}
+		/* space bar style coding goes here */
+		.spac_bar{
+			width:550px;
+			margin-left:90px;
+		}
+		.row5{
+			margin-left:135px;
+		}
+		.row5_col{
+			width:120px;
+			color:black;
+			background-color:white;
+			border:2px solid black;
+			font-weight:bold;
+			padding-left:35px;
+		}
+		.row6{
+			color:lightgreen;
+		}
+		/* password button style coding goes here */
+		.text_passd{
+			padding-left:20px;
+		}
+		#char_shipt2{
+			color:black;
+		}
+
+		span{
+			float:right;
+			color:white;
+		}
+	</style>
+</head>
+<body>
+	<input type="text" name="typewriter" id="result"/>
+	<div id="main_box">
+<div class="row_1">
+<button class="char" id="char_0"><span>!</span><br/><br/>1</button>
+<button class="char" id="char_1"><span>@</span><br/><br/>2</button>
+<button class="char" id="char_2"><span>#</span><br/><br/>3</button>
+<button class="char" id="char_3" onclick="char_four()"><span>$</span><br/><br/>4</button>
+<button class="char" id="char_4" onclick="char_five()"><span>%</span><br/><br/>5</button>
+<button class="char" id="char_5" onclick="char_six()"><span>^</span><br/><br/>6</button>
+<button class="char" id="char_6" onclick="char_seven()"><span>&</span><br/><br/>7</button>
+<button class="char" id="char_7" onclick="char_eight()"><span>*</span><br/><br/>8</button>
+<button class="char" id="char_8" onclick="char_nine()"><span>(</span><br/><br/>9</button>
+<button class="char" id="char_9" onclick="char_ten()"><span>)</span><br/><br/>0</button>
+<button class="char dell" id="char_del">Del</button>
+</div>
+<div class="row_1 row_2">
+<button class="char row2_col2" id="char_q">Q</button>
+<button class="char row2_col2" id="char_w">W</button>
+<button class="char row2_col2" id="char_e">E</button>
+<button class="char row2_col2" id="char_r">R</button>
+<button class="char row2_col2" id="char_t">T</button>
+<button class="char row2_col2" id="char_y">Y</button>
+<button class="char row2_col2" id="char_u">U</button>
+<button class="char row2_col2" id="char_i">I</button>
+<button class="char row2_col2" id="char_o">O</button>
+<button class="char row2_col2" id="char_p">P</button>
+</div>
+<div class="row_1 row_2 row3">
+<button class="char row2_col2" id="char_a">A</button>
+<button class="char row2_col2" id="char_s">S</button>
+<button class="char row2_col2" id="char_d">D</button>
+<button class="char row2_col2" id="char_f">F</button>
+<button class="char row2_col2" id="char_g">G</button>
+<button class="char row2_col2" id="char_h">H</button>
+<button class="char row2_col2" id="char_j">J</button>
+<button class="char row2_col2" id="char_k">K</button>
+<button class="char row2_col2" id="char_l">L</button>
+</div>
+<div class="row_1 row_2 row3 row4">
+<button class="char row2_col2" id="char_z">Z</button>
+<button class="char row2_col2" id="char_x">X</button>
+<button class="char row2_col2" id="char_c">C</button>
+<button class="char row2_col2" id="char_v">V</button>
+<button class="char row2_col2" id="char_b">B</button>
+<button class="char row2_col2" id="char_n">N</button>
+<button class="char row2_col2" id="char_m">M</button>
+<button class="char row2_col2 dot_com" id="char_com">.com</button>
+</div>
+<div class="row_1 row_2 row3 row4">
+<button class="char row2_col2 spac_bar" id="char_bar"></button>
+</div>
+<div class="row_1 row_2 row3 row4 row5">
+<button class="char row2_col2 row5_col" id="char_cap">CAPS</button>
+<button class="char row2_col2 row5_col" id="char_shipt">SHIFT</button>
+<button class="char row2_col2 row5_col text_passd" id="char_passwd">PASSWD</button>
+<button class="char row2_col2 row5_col" id="char_clean">CLEAN</button>
+<button class="char row2_col2 row5_col" id="char_rev">REV</button>
+</div>
+<div class="row_1 row_2 row3 row4 row5">
+<button class="char row2_col2 row5_col row6" id="char_cap2">CAPS</button>
+<button class="char row2_col2 row5_col row6" id="char_shipt2">SHIFT</button>
+<button class="char row2_col2 row5_col row6 text_passd" id="char_passwd2">PASSWD</button>
+<button class="char row2_col2 row5_col row6" id="char_clean2">CLEAN</button>
+<button class="char row2_col2 row5_col row6" id="char_rev2">REV</button>
+</div>
+</div>
+<script type="text/javascript">
+	btn_shift = document.getElementById('char_shipt2');
+	btn_shift.onclick=function shift()
+	{	
+		var shipt_btn = document.getElementById('char_shipt2')
+		shipt_btn.style.color = "lightgreen";
+		var btn_first = document.getElementById('char_0');
+		btn_first.onclick=function char_first()
+		{	var input_value = document.getElementById("result").value;
+			var result = document.getElementById('result');
+			result.value = input_value+"!";
+		}/*
+	var btn_second = document.getElementById('char_1');
+	btn_second.onclick=function char_second()
+	{	
+		var input_value = document.getElementById("result").value;
+		var result = document.getElementById('result');
+		result.value =input_value+"@";
+	}
+	var btn_third = document.getElementById('char_2');
+	btn_third.onclick=function char_third()
+	{	
+		var input_value = document.getElementById("result").value;
+		var result = document.getElementById('result');
+		result.value = input_value+"#";
+	}
+	var btn_four = document.getElementById('char_3');
+	btn_four.onclick=function()
+	{	
+		var input_value = document.getElementById("result").value;
+		var result = document.getElementById('result');
+		result.value = "$"+input_value;
+	}*/
+
+}/*
+	
+	
+	
+	function char_five()
+	{	
+		var result = document.getElementById('result');
+		result.value = "%";
+	}
+	function char_six()
+	{	
+		var result = document.getElementById('result');
+		result.value = "^";
+	}
+	function char_seven()
+	{	
+		var result = document.getElementById('result');
+		result.value = "&";
+	}
+	function char_eight()
+	{	
+		var result = document.getElementById('result');
+		result.value = "*";
+	}
+	function char_nine()
+	{	
+		var result = document.getElementById('result');
+		result.value = "(";
+	}
+	function char_ten()
+	{	
+		var result = document.getElementById('result');
+		result.value = ")";
+	}
+	*/
+</script>
+</body>
+</html>
