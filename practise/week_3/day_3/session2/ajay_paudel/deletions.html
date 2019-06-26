@@ -1,0 +1,76 @@
+<html>
+    <head>
+        <title>Practise Deletions</title>
+    </head>
+    <body>
+        <h1 id="head1">First H1</h1>
+        <h1>Second H1</h1>
+        <h3 id="head3">First H3</h3>
+        <h3 id="head3_1">Second H3</h3>
+        <div id="headings">
+            <h5 id="head5">First H5</h5>
+            <h5 id= "head5">Second H5</h5>
+            <h5 id="head5">Third H5</h5>
+        </div>
+        <div id="cont">
+            <div class="green" id="div1">First DIV</div>
+            <div class="red" id="div1">Second DIV</div>
+            <div class="blue" id="div1">Third DIV</div>
+            <p class="green">First P</p>
+            <p class="red">Second P</p>
+            <p class="blue">Third P</p>
+        </div>
+        <hr/>
+        <button onclick="remove_h1()">Remove H1</button>
+        <button onclick="remove_h3()">Remove H3</button>
+        <button onclick="remove_h5()">Remove H5</button>
+        <button onclick="remove_red()">Remove Red</button>
+        <button onclick="remove_divs()">Remove DIVS</button>
+        <script>
+            function remove_h1(){
+                var parent_value = document.querySelector("body")
+                var h1_value = document.getElementById('head1') 
+                parent_value.removeChild(h1_value)
+            }
+
+            function remove_h3(){
+                var h3_value = document.getElementById("head3")
+                var h3_value1 = document.getElementById("head3_1")
+                var parent_value1 = document.querySelector("body")
+                var parent_value2 = document.querySelector("body")
+                parent_value1.removeChild(h3_value)
+                parent_value2.removeChild(h3_value1)
+
+
+            }
+
+            function remove_h5(){
+                var parent_value = document.getElementById("headings")
+                var value = document.querySelectorAll("#head5")
+                for(i=0;i<value.length;i++)
+                {
+                    parent_value.removeChild(value[i])
+                }
+            }
+
+            function remove_red(){
+                var parent_value = document.getElementById("cont")
+                var value = parent_value.querySelectorAll(".red")
+                for(i=0;i<value.length;i++)
+                {
+                    parent_value.removeChild(value[i])
+                }
+            }
+                function remove_divs(){
+                var parent_value = document.getElementById("cont")
+                var value = parent_value.querySelectorAll("div")
+                
+                for(i=0;i<value.length;i++)
+                {
+                    parent_value.removeChild(value[i])
+                }
+            }
+            
+        </script>
+    </body>
+</html>
