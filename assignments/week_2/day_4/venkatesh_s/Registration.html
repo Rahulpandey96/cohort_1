@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Registration Form</title>
+    <style type="text/css">
+        *{
+            box-sizing: border-box;
+        }
+
+        .container{
+            padding:16px;
+            background-color: white;
+
+        }
+
+        .inputfields{
+            width: 300px;
+            padding:15px;
+            margin: 200px 0 22px 0;
+            display: inline-block;
+            border:none;
+            background:white;
+
+        }
+        hr{
+            border:1px Solid white;
+            margin-bottom:25px;
+        }
+
+        .registerbtn{
+            background-color: black;
+            color:white;
+            padding: 16px 20px;
+            margin-left: 320px;
+            height: 50px;
+            width: 100px;
+        }
+		.leftcolumnmargin
+		{
+            background-color:black;
+            height:900px;
+            width:160px;
+            float:left;
+
+		}
+
+         .rightcolumnmargin
+        {
+            background-color:black;
+            height:900px;
+            width:160px;
+            float:right;
+        }
+
+        .Regform{
+            margin-top: -350px;
+			width: 450px;
+			height: 350px;
+			color: white;
+			background-color: black;
+			padding: 20px;
+
+        }
+        </style>
+        <body>
+            <div class="leftcolumnmargin"></div>
+            <div class="rightcolumnmargin"></div>
+            <div class="container">   
+        </body>
+        <form action="/action.php">
+            <div class="container">
+            <label for="Name"><b>NAME</b><br></label>
+            <input type="text" name="Name" required>
+            <hr>
+            <label for="Email"><b>EMAIL</b><br></label>
+            <input type="text" name="Email" required>
+            <hr>
+            <label for="Mobile"><b>MOBILE</b><br></label>
+            <input type="text" name="Mobile" required>
+            <hr>
+            <button type="submit" class="registerbtn">REGISTER</button>
+            </div>
+        
+
+        </form>
+	
