@@ -1,0 +1,177 @@
+<html>
+    <head>
+        <title>Profile</title>
+        <style>
+        	<style type="text/css">
+		#body_back_specification
+		{
+			background-color: black;
+			height:100vh;
+		}
+		.image_border
+		{
+			padding-top: 30px;
+			margin-left: 290px;
+			border-style: solid;
+			border-color: black;
+			border-width: 8px;
+			background-color: pink;
+			height: 275px;
+			width: 400px;
+		}
+		.image_align
+		{
+			height: 110px;
+			width: 80px;
+			padding-top: 40px;
+		}
+		.work_background_specification
+		{
+			padding-top: 40px;
+			height: 100vh;
+			margin-left: 250px;
+			margin-right: 250px;
+			background-color: white;
+		}
+		#linus_text
+		{
+			font-size: 28px;
+			color: navy;
+			text-align: center;
+		}
+		.float_left
+		{
+			float: left;
+		}
+		.float_right
+		{
+			float: right;
+		}
+		.sal_margin_left
+		{
+			margin-left: 200px;
+			padding: 30px;
+		}
+		#font_style_salName
+		{
+			font-size: 28px;
+			color: red;
+			font-style:italic;
+		}
+		#font_style_salbody
+		{
+			font-size: 20px;
+			color: black;
+			font-style:oblique;
+		}
+		#pipe_devider_size
+		{
+			border-style: solid;
+			border-color: black;
+			border-width: 5px;
+			height: 70px;
+			margin-top: 20px;
+			margin-left: 180px;
+		}
+		#base_background
+		{
+			margin-left: 50px;
+			background-color: orange;
+			height: 110px;
+			width: 800px;
+			padding-left: 30px;
+			padding-right: 30px;
+		}
+		.clear_left
+		{
+			clear: left;
+		}
+		</style>
+        </style>
+    </head>
+    <body>
+       <button id="teri_to_lag_gayi">Create Page</button>
+       <script type="text/javascript">
+       	function to_lagane_de()
+       	{
+
+       		//main_div
+       		var div_main=document.createElement('div')
+       		div_main.setAttribute('id','div_main_all')
+       		div_main.textContent="hi"
+
+       		var takebtn=document.getElementById('teri_to_lag_gayi')
+       		element_body=document.querySelector('body')
+       		element_body.insertBefore(div_main,takebtn)
+
+       		//child_div 1
+       		var div1=document.createElement('div')
+       		div1.setAttribute('id','div_1')
+       		div1.textContent="hi1"
+       		var takebtn=document.getElementById('div_main_all')
+       		element_body=document.querySelector('div')
+       		element_body.appendChild(div1,takebtn)
+
+       		//img insert
+       		var imp_create=document.createElement('img')//*
+       		imp_create.setAttribute('src', 'https://raw.githubusercontent.com/masai-school/full-stack-dev/master/course/week_2/day_2/w2_d2_assignment/linus.jpg') 
+       		imp_create.style.borderWidth=8+'px'
+       		imp_create.style.height=100+'px'
+       		imp_create.style.width=120+'px'
+       		imp_create.style.padding=50+'px'
+       		imp_create.style.borderStyle="solid"
+       		imp_create.setAttribute('id','img1btn')
+       		imp_create.setAttribute('class','.image_align')
+       		var takebtn=document.getElementById('div_1')
+       		element_body=document.querySelector('div')
+       		element_body.appendChild(imp_create,takebtn)
+       		
+       		//heading 1
+       		var heading_one=document.createElement('h3') 
+       		heading_one.textContent="Linus Torvalds"
+       		heading_one.setAttribute('id','head1_id')
+       		var takebtn=document.getElementById('img1btn')
+       		element_body=document.querySelector('div')
+       		element_body.appendChild(heading_one,takebtn)
+
+       		var heading_two=document.createElement('h2') 
+       		heading_two.textContent="The creator of Linux & GIT"
+       		var takebtn=document.getElementById('head1_id')
+       		element_body=document.querySelector('div')
+       		element_body.appendChild(heading_two,takebtn)
+
+       		
+
+       		//child_div 2
+       		var div2=document.createElement('div')
+       		div2.setAttribute('id','div_2')
+       		div2.textContent="hi2"
+       		var takebtn=document.getElementById('div_1')
+       		element_body=document.querySelector('div')
+       		element_body.appendChild(div2,takebtn)
+
+       		//img 2
+       		var img2_create=document.createElement('img')//*
+       		imp_create.setAttribute('src','https://raw.githubusercontent.com/masai-school/full-stack-dev/master/course/week_2/day_2/w2_d2_assignment/khan.jpg')
+       		var takebtn=document.getElementById('div_2')
+       		element_body=document.querySelector('div')
+       		element_body.appendChild(img2_create,takebtn)
+
+
+       		//child_div 3
+       		var div3=document.createElement('div')
+       		div3.setAttribute('id',"div_3")
+       		div3.textContent="hi3"
+       		var takebtn=document.getElementById('div_2')
+       		element_body=document.querySelector('div')
+       		element_body.appendChild(div3,takebtn)
+
+       		/*//body
+       		var takebtn=document.getElementById('teri_to_lag_gayi')
+       		element_body=document.querySelector('body')
+       		element_body.appendChild(div_main,takebtn)*/
+       	}
+       	teri_to_lag_gayi.addEventListener('click',to_lagane_de)
+       </script>
+    </body>
+</html>

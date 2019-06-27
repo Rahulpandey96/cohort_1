@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<body id="bodyelem">
+  <!-- FSD.W3.4.1_1 !-->
+  <h1>Click the button to see information about my favourite movie</h1>
+  <button onclick="movieinfo()">Movie Information!</button>
+  <!-- FSD.W3.4.1_2 !-->
+  <button onclick="addruntime()">Add Runtime to the movie object! </button>
+  
+  <!-- FSD.W3.4.1_3 !-->
+  <button onclick="addcast()">Add cast member </button>
+  
+
+  <script>
+  	var movie ={
+  		Name: "Inception",
+  		Director:"Christopher Nolan",
+  		Year: 2010,
+  		Rating: 8.8,
+  		Cast:['Leonardo Di Caprio', 'Tom Hardy','Ellen Page', 'Cillian Murphy', 'Joseph Gordon-Levitt']
+  	
+  	}
+  	var outputtext = 'My favorite movie is '+ movie.Name+'Its directed by '+ movie.Director+'. It was released in'+movie.Year+'. Its rating on imdb is'+ movie.Rating +'out of 10'+'.some of its cast members are'+ movie.Cast;
+
+  	var body= document.getElementById('bodyelem')
+  	function movieinfo(){
+  		
+  		console.log(movie)
+  		var para = document.createElement('p')
+  		para.textContent =outputtext;
+  		body.appendChild(para)
+  	}
+
+  	function addruntime(){
+  		movie.runTime =2.5
+  		outputtext = 'My favorite movie is '+ movie.Name+'Its directed by '+ movie.Director+'. It was released in'+movie.Year+'. Its rating on imdb is'+ movie.Rating +'out of 10'+'.some of its cast members are'+ movie.Cast+ '.Its run time is'+movie.runTime
+  		var para = document.createElement('p')
+  		para.textContent =outputtext;
+  		body.appendChild(para)
+  	}
+  	function addcast(){
+  		console.log(movie.Cast)
+  		 movie.Cast.push("Ken watanabe")
+  		 console.log(movie.Cast)
+  		 outputtext = 'My favorite movie is '+ movie.Name+'Its directed by '+ movie.Director+'. It was released in'+movie.Year+'. Its rating on imdb is'+ movie.Rating +'out of 10'+'.some of its cast members are'+ movie.Cast+ '.Its run time is'+movie.runTime
+  		var para = document.createElement('p')
+  		para.textContent =outputtext;
+  		body.appendChild(para)
+  	}
+
+  </script>
+</body>
+</html>

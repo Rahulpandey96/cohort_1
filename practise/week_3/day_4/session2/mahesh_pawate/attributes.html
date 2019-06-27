@@ -1,0 +1,127 @@
+<html>
+    <head>
+        <title>Practise Attributes</title>
+        <style type="text/css">
+            .class-h1 {
+                color: red
+            }
+            .class-h3 {
+                color: green;
+            }
+            .class-h5 {
+                color: orange;
+            }
+            .class-div {
+                color: yellow;
+                font-size: 20px;
+                margin: 10px;
+            }
+            .class-p {
+                border: 1px solid black;
+                padding: 5px;
+            }
+            #test-2 {
+                font-size: 30px;
+                padding: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>First H1</h1>
+        <h1>Second H1</h1>
+        <h3>First H3</h3>
+        <h3>Second H3</h3>
+        <h5>First H5</h5>
+        <h5>Second H5</h5>
+        <h5>Third H5</h5>
+        <div id="box">
+            <div>First DIV</div>
+            <div>Second DIV</div>
+            <div>Third DIV</div>
+        </div>
+        <div>Fourth DIV</div>
+        <div id="cont">
+            <p>First P</p>
+            <p>Second P</p>
+            <p>Third P</p>
+        </div>
+        <div id="temp">
+            <p>Test P1</p>
+            <p>Test P2</p>
+            <p>Test P3</p>
+        </div>
+        <hr/>
+        <button id="change_h1" >Change H1</button>
+        <button id="change_all_h3">Change H3</button>
+        <button id="change_all_h5">Change H5</button>
+        <button id="change_div_all" >Change DIV</button>
+        <button id="change_para">Change P</button>
+        <button id="set_id">Set ID</button>
+        <script>
+            //On clicking the button Change H1 the first <h1> should have the class class-h1
+            function btn1_h1()
+            {
+                var frt=document.querySelector('h1');
+                frt.setAttribute('class','class-h1')
+            }
+            change_h1.addEventListener('click',btn1_h1)
+            //On clicking the button Change H3 all <h3> should have the class class-h3
+            function btn2_h3()
+            {
+
+                var frt=document.querySelectorAll('h3')
+                frt.setAttribute('class','class-h3')
+            }
+            change_all_h3.addEventListener('click',btn2_h3)
+            //On clicking the button Change H5 all <h5> should have the class class-h5
+            function btn3_h5()
+            {
+                var frt = document.querySelectorAll(h5)
+                frt.setAttribute('class','class-h5')
+            }
+            change_all_h5.addEventListener('click',btn3_h5)
+
+            //On clicking Change DIV all the div inside the div with id box should have the class class-div
+
+            function btn4_div_all()
+            {
+                var frt=document.getElementById('box')
+                var new_frt=frt.querySelectorAll('div')
+                for(var i=0; i<=new_frt.length-1; i++)
+                {
+                    new_frt[i].setAttribute('class','class-div');
+                }
+
+            }
+            change_div_all.addEventListener('click',btn4_div_all)
+
+            //On clicking Change P all the p inside the div with the id cont should have the class class-p
+            function btn5_para()
+            {
+                var frt=document.getElementById('cont')
+                var new_frt=frt.querySelectorAll('p')
+
+                for(var i=0; i<=new_frt.length-1; i++)
+                {
+                    new_frt[i].setAttribute('class',class-p);
+                }
+            }
+            change_para.addEventListener('click',btn5_para)
+
+            //On clicking Set ID the second p inside div with the id temp should have the id test-2
+            function btn6_set_id()
+            {
+                var frt=document.getElementById('temp')
+                var new_frt=frt.querySelectorAll('p')
+                for(var i=0; i<=new_frt.length-1; i++)
+                {
+                    if (i%2==0)
+                    {
+                        new_frt[i].setAttribute('id','test-2');
+                    }
+                }
+            }
+            set_id.addEventListener('click',btn6_set_id)
+        </script>
+    </body>
+</html>
