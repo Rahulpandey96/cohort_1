@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <!-- FSD.W3.4.1_1 !-->
+    <h1>Click the button to see information about my favourite movie</h1>
+    <div></div>
+    <button class="movieinfo">Movie Information!</button>
+    <!-- FSD.W3.4.1_2 !-->
+    <button class="movietime">Add Runtime to the movie object!</button>
+
+    <!-- FSD.W3.4.1_3 !-->
+    <button class="moviecast">Add cast member</button>
+
+    <script>
+      var movie = {
+        name: "Shin-chan",
+        location: "Kurihashi Station, Japan",
+        year: 2019,
+        rating: "5.5 stars",
+        Time: "2.5 Min",
+        cast: [
+          "Shinchan",
+          "Buri-Buri",
+          "Hiroshi",
+          "Himawari",
+          "Shiro",
+          "Kazama"
+        ]
+      };
+
+      //setup Global movie details
+      var moiveTxt =
+        "Movie:" +
+        " " +
+        movie.name +
+        " " +
+        "location:" +
+        " " +
+        movie.location +
+        " " +
+        "year:" +
+        " " +
+        movie.year +
+        " ";
+
+      // global setup of Movie time and casting
+      var movieTime = "Running Time" + " " + movie.Time;
+      var movieCast = movie.cast;
+
+      //beating starting here
+      document
+        .querySelector(".movieinfo")
+        .addEventListener("click", function(event) {
+          // when clicked show without time
+          var txtOut = document.createElement("p");
+          txtOut.textContent = moiveTxt;
+          txtOut.style.color = "blue";
+          var bodyElem = document.querySelector("div");
+          bodyElem.appendChild(txtOut);
+        });
+      // show movie time
+      document
+        .querySelector(".movietime", ".movieinfo")
+        .addEventListener("click", function(event) {
+          // clicked show with time..
+          var txtOut = document.createElement("p");
+          txtOut.textContent = moiveTxt + "" + movieTime;
+          txtOut.style.color = "green";
+          var bodyElem = document.querySelector("div");
+          bodyElem.appendChild(txtOut);
+        });
+      // add some more details
+      document
+        .querySelector(".moviecast")
+        .addEventListener("click", function(event) {
+          // clicked show everything in one place
+          for (var i = 0; i < movieCast.length - 1; i++) {
+            var txtOut = document.createElement("p");
+            txtOut.textContent = moiveTxt + "" + movieTime + movieCast[i];
+            txtOut.style.color = "red";
+            var bodyElem = document.querySelector("div");
+            bodyElem.appendChild(txtOut);
+          }
+        });
+    </script>
+  </body>
+</html>

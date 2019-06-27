@@ -1,0 +1,138 @@
+    <html>
+    <head>
+        <title>Profile</title>
+        <style>
+            .class1
+        {border: 7px solid black;
+         padding: 50px;text-align: center;margin-right: 100px;margin-left: 300px;height: 300px;width: 430px;background-color: lightpink
+        }
+        .class2
+        { margin-right: 3px;height: 230px;
+        }
+        .class3
+        { color: darkblue;font-size: 22px;
+        }
+        .class4
+        { color: gray;font-size: 18px;
+        }
+        .class5
+        { margin-left: 60px;height: 200px;width: 200px;float: left
+        }
+        .class6
+        { float: left;margin-right: 60px;font-size: 23px;color: red;
+        }
+        .class7
+        { clear:left;height:120px;background-color:orangered;
+        }
+        .class8
+        { float:left;margin-left:30px;
+        }
+        .class9
+        { color:white;font-weight:100;
+        }
+        .class10
+        { width:8px;height:100px;background-color:black ;float:left;margin:10px 0px 20px 280px;
+        }
+        .class11
+        { float:right;margin-right:30px;
+        }
+        .class12
+        { color:white;font-weight:100 ;
+        }
+        </style>
+    </head>
+    <body>
+            <button onclick="createpage()">Create Page</button>
+    <script>
+            function createpage()
+            {
+                var div=document.createElement('div');
+                div.setAttribute('class','class1')
+                var ele= document.querySelector('body');
+                ele.appendChild(div);
+
+                
+                var imgone =  document.createElement('img');
+                var ele = document.querySelector('div');
+                imgone.setAttribute('src','/home/haren/Documents/css_pract_1/images/linus.jpg')
+                imgone.setAttribute('id','class2');
+                ele.appendChild(imgone);
+
+                var para1 = document.createElement('p');
+                para1.textContent = 'Linus Torvalds';
+                para1.setAttribute('id', 'class3');
+                ele.appendChild(para1);
+
+                var para2 = document.createElement('p');
+                para2.textContent = 'The creator of Linux & Git';
+                 para2.setAttribute('id', 'class4');
+                ele.appendChild(para2);
+
+                //var div = document.createElement('div');
+                //div.setAttribute('class','class6')
+                //var ele= document.querySelector('body');
+                //ele.appendChild(div);
+
+                var imgtwo= document.createElement('img');
+                var ele = document.querySelector('div');
+                imgtwo.setAttribute('src','/home/haren/Documents/css_pract_1/images/khan.jpg');
+                imgtwo.setAttribute('id','class5');
+                ele.appendChild(imgtwo);
+
+                var para3= document.createElement('p');
+                para3.textContent='Sal Khan';
+                para3.setAttribute('class','class6');
+                ele.appendChild(para3);
+
+                var para4= document.createElement('p');
+                para3.textContent='Salman Khan is the Founder of The Khan Academy which has a mission of providing a free class education for anyone, anywhere.';
+                para3.setAttribute('class','class6');
+                ele.appendChild(para3);
+
+                var divv= document.createElement('div');
+                divv.setAttribute('class','class7');
+                var ele= document.querySelector('body');
+                ele.appendChild(divv);
+
+                var div4= document.createElement('div');
+                div4.setAttribute('class','class8');
+                var ele= document.querySelector('body');
+                divv.appendChild(div4);
+
+                var head1 = document.createElement('h2');
+                head1.textContent = 'Ken Thompson';
+                head1.setAttribute('class', 'class9');
+                ele.appendChild(head1);
+
+                var para5= document.createElement('p');
+                para5.textContent='Designed and Implemented the <br>original unix operating system';
+                para5.setAttribute('class','class9');
+                ele.appendChild(para5);
+
+                var div5= document.createElement('div');
+                div4.setAttribute('class','class10');
+                var ele= document.querySelector('body');
+                divv.appendChild(div4);
+
+                var div6= document.createElement('div');
+                div4.setAttribute('class','class11');
+                var ele= document.querySelector('body');
+                divv.appendChild(div4);
+
+                var head12 = document.createElement('h2');
+                head12.textContent = 'Dennis Ritchie';
+                head12.setAttribute('class', 'class12');
+                ele.appendChild(head12);
+
+
+                
+
+
+
+            }
+    
+    
+    </script>
+            
+    </body>
+</html>
