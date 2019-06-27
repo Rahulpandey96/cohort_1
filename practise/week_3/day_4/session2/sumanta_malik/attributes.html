@@ -1,0 +1,127 @@
+<html>
+    <head>
+        <title>Practise Attributes</title>
+        <style type="text/css">
+            .class-h1 {
+                color: red
+            }
+            .class-h3 {
+                color: green;
+            }
+            .class-h5 {
+                color: orange;
+            }
+            .class-div {
+                color: yellow;
+                font-size: 20px;
+                margin: 10px;
+            }
+            .class-p {
+                border: 1px solid black;
+                padding: 5px;
+            }
+            #test-2 {
+                font-size: 30px;
+                padding: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>First H1</h1>
+        <h1>Second H1</h1>
+        <h3>First H3</h3>
+        <h3>Second H3</h3>
+        <h5>First H5</h5>
+        <h5>Second H5</h5>
+        <h5>Third H5</h5>
+        <div id="box">
+            <div>First DIV</div>
+            <div>Second DIV</div>
+            <div>Third DIV</div>
+        </div>
+        <div>Fourth DIV</div>
+        <div id="cont">
+            <p>First P</p>
+            <p>Second P</p>
+            <p>Third P</p>
+        </div>
+        <div id="temp">
+            <p>Test P1</p>
+            <p>Test P2</p>
+            <p>Test P3</p>
+        </div>
+        <hr/>
+        <button id="change-one">Change H1</button>
+        <button id="btn_two">Change H3</button>
+        <button onclick="change_h_five()">Change H5</button>
+        <button onclick="change_div()">Change DIV</button>
+        <button id="para-btn">Change P</button>
+        <button id="set_id">Set ID</button>
+        <script>
+            var first_btn = document.getElementById('change-one');
+            function change()
+            {
+                var firstH1 = document.querySelector('h1');
+                firstH1.setAttribute('class','class-h1');
+            }
+            first_btn.addEventListener('click',change);
+// here is the h3 scripting coding 
+            var second_btn = document.getElementById('btn_two');
+            function change_h3()
+            {
+               var h3= document.querySelectorAll('h3');
+                for (i = 0; i < h3.length; i++){
+                    var head_three = h3[i];
+                    head_three.setAttribute('class','class-h3');
+                    }
+            }
+            second_btn.addEventListener('click',change_h3);
+
+            // third scripting coding goes here
+            function change_h_five()
+            {
+                var h5 = document.querySelectorAll('h5');
+                for (i = 0; i < h5.length; i++){
+                    var head_five = h5[i];
+                    head_five.setAttribute('class','class-h5');
+                    }
+            }
+            // change the attribute of divs
+
+            function change_div()
+            {
+                var divs = document.getElementById('box').querySelectorAll('div');
+                for (i = 0; i < divs.length; i++){
+                    var div =divs[i];
+                    div.setAttribute('class','class-div');
+                    }
+            }
+// change the paragraphg here 
+            var para_btn = document.getElementById('para-btn');
+            function change_paras()
+            {
+                var para = document.getElementById('cont').querySelectorAll('p');
+                for (i = 0; i < para.length; i++){
+                    var paras =para[i];
+                    paras.setAttribute('class','class-p');
+                    }
+            }
+            para_btn.addEventListener('click',change_paras);
+
+   // set the ides in para goes here
+    var set_id = document.getElementById('set_id');
+            function Set_p_id()
+            {
+                var para_two = document.getElementById('temp').querySelectorAll('p');
+                for (i = 0; i < para_two.length; i++){
+                        continue;
+                    }
+                    var para =para_two[1];
+                    para.setAttribute('id','test-2');
+            }
+            set_id.addEventListener('click',Set_p_id);
+         
+
+        </script>
+    </body>
+</html>
