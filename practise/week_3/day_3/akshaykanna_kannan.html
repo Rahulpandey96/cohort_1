@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <meta charset="utf-8">
+<body>
+  <!-- FSD.W3.3.1_1 !-->
+  <h1>Change the buttons text color random value</h1>
+  <button id="change_color">Click here to change my color</button>
+  <button id="change_color1">Click me to change my color to an array value!</button>
+
+</button>
+
+  <!-- FSD.W3.3.1_2 !-->
+  <h1 id="changecolor_double">My color should change when I double click the button!</h1>
+  <button id="text">Double Click here to change the color of the h1 tag !</button>
+  
+  <!-- FSD.W3.3.1_3 !-->
+  <h1>The buttons color changes to a random value when it is clicked! But only two times!</h1>
+  <button id="changecolor_twice">Click here to change my color!</button>
+  <script>
+    var change_btn=document.getElementById("change_color")
+
+    function random(number) 
+    {
+      return (Math.random()*number);  
+    }
+    function switch_color()
+    {
+      var random_color='rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
+
+      change_btn.style.color=random_color;
+    }
+    change_btn.addEventListener('click',switch_color);
+    
+    var array1=document.getElementById("change_color1")
+    function switch_color1()
+    {
+      var array_color=["red","blue","green"];
+
+      change_color1.style.color=array_color;
+    }
+
+    change_color1.addEventListener("click",switch_color1);
+
+    /*Double CLick*/
+    var double_btn=document.getElementById("changecolor_double")
+    var text=document.getElementById("text")
+    function switch_doublecolor()
+    {
+      var random_color='rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
+
+      changecolor_double.style.color=random_color;
+    } 
+
+      text.addEventListener("dblclick",switch_doublecolor);
+  
+
+    /*Change Color Twice*/
+    var background_color =document.getElementById("changecolor_twice")
+    
+    count=0;
+    function switch_backgroundcolor()
+    {
+      count++;
+      if(count==2)
+      {
+        background_color.removeEventListener("click",switch_backgroundcolor);
+      }
+      var random_color='rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
+
+      background_color.style.backgroundColor=random_color;
+      
+            // background_color.removeEventListener("dblclick",switch_backgroundcolor);
+    }
+      background_color.addEventListener("click",switch_backgroundcolor);
+      // background_color.addEventListener("click",switch_backgroundcolor2);
+
+    // function switch_backgroundcolor2()
+    // {
+    //   var random_color='rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
+
+    //   background_color.style.backgroundColor=random_color;
+    //   background_color.removeEventListener("dblclick",switch_backgroundcolor2);
+    //         // background_color.removeEventListener("dblclick",switch_backgroundcolor);
+    // }
+    //   background_color.addEventListener("dblclick",switch_backgroundcolor2);   
+  </script>
+</body>
+</html>

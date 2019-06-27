@@ -1,0 +1,81 @@
+<html>
+    <head>
+        <title>Practise Deletions</title>
+    </head>
+    <body>
+        <h1>First H1</h1>
+        <h1>Second H1</h1>
+        <h3>First H3</h3>
+        <h3>Second H3</h3>
+        <div id="headings">
+            <h5>First H5</h5>
+            <h5>Second H5</h5>
+            <h5>Third H5</h5>
+        </div>
+        <div id="cont">
+            <div class="green">First DIV</div>
+            <div class="red">Second DIV</div>
+            <div class="blue">Third DIV</div>
+            <p class="green">First P</p>
+            <p class="red">Second P</p>
+            <p class="blue">Third P</p>
+        </div>
+        <hr/>
+        <button onclick="removeh1div()">Remove H1</button>
+        <button onclick="removeh3div()">Remove H3</button>
+        <button onclick="removeh5div()">Remove H5</button>
+        <button onclick="removecontred()">Remove Red</button>
+        <button onclick="removeallcontdiv()">Remove DIVS</button>
+
+        <script type="text/javascript">
+
+            function removeh1div(){
+                var bodyElem=document.querySelector('body');
+                var removeh1=document.querySelector('h1');
+                bodyElem.removeChild(removeh1);
+            }
+
+            function removeh3div(){
+                var bodyElem1=document.querySelector('body');
+                var removeh3=document.querySelectorAll('h3');
+                for(i=0;i<removeh3.length;i++){
+                    var remh3=removeh3[i];
+                    bodyElem1.removeChild(remh3);}
+            }
+
+            function removeh5div(){
+                var bodyElem2=document.querySelector('body');
+                var removeh5=document.querySelectorAll('h5');
+                for(i=0;i<removeh5.length;i++){
+                    var remh5=removeh5[i];
+                var divid=document.getElementById('headings');
+                divid.removeChild(remh5);}
+
+            }
+
+            function removecontred(){
+                var bodyElem3=document.querySelector('body');
+                var remcontred=document.querySelectorAll('.red');
+                for(i=0;i<remcontred.length;i++){
+                    var rmcontred=remcontred[i];
+                var remvcontred=document.getElementById('cont');
+                remvcontred.removeChild(rmcontred);}
+            }
+
+            function removeallcontdiv(){
+                var bodyElem4=document.querySelector('body');
+                var remcontdivs=document.querySelectorAll('.green.red.blue');
+                for(i=0;i<remcontdivs.length;i++){
+                    var rmcont=remcontdivs[i];
+                var remvcontdivs=document.getElementById('cont');
+                remvcontdivs.removeChild(rmcont);}
+            }
+
+
+
+
+
+
+        </script>
+    </body>
+</html>

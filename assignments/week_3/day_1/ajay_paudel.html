@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keyboard</title>
+
+    <style>
+        .outer_box {
+            
+            height: 800px;
+            width: 1000px;
+            margin-left: 200px;
+
+        }
+
+        .rec_box {
+            border: 1px solid black;
+            height: 50px;
+            width: 800px;
+            margin-left: 100px;
+            margin-top: 50px;
+            background-color: black;
+
+        }
+
+        .text {
+            text-align: center;
+            font-size: 20px;
+            color: white;
+            height: 50px;
+            width: 800px;
+
+        }
+
+        .inner_box {
+            
+            height: 600px;
+            width: 800px;
+            margin-top: 50px;
+            margin-left: 100px;
+        }
+
+        button {
+
+            height: 50px;
+            width: 50px;
+            font-size: 15px;
+            background-color: black;
+
+
+        }
+
+        .text1 {
+            color: white;
+            font-size: 20px;
+            padding-top: 20px;
+            padding-right: 20px;
+            margin-left: 20px;
+
+        }
+
+        .button_box {
+            float: left;
+            border: 1px solid black;
+            height: 50px;
+            width: 50px;
+            margin-top: 30px;
+            margin-left: 20px;
+
+        }
+
+        .centre_align {
+            text-align: center;
+            padding: 20px;
+            color: white;
+        }
+
+        .spec_align {
+            margin-top: -40px;
+            margin-left: 10px;
+            color: white;
+        }
+
+        .clear {
+            clear: both;
+        }
+
+        .button_box2 {
+            clear: both;
+            float: left;
+            border: 1px solid black;
+            height: 50px;
+            width: 50px;
+            margin-top: 30px;
+            margin-left: 50px;
+
+        }
+
+        .button_box3 {
+            clear: both;
+            float: left;
+            border: 1px solid black;
+            height: 50px;
+            width: 50px;
+            margin-top: 30px;
+            margin-left: 90px;
+
+        }
+
+        .button_box4 {
+            clear: both;
+            float: left;
+            border: 1px solid black;
+            height: 50px;
+            width: 50px;
+            margin-top: 30px;
+            margin-left: 125px;
+
+        }
+
+        .space {
+            clear: both;
+            float: left;
+            border: 1px solid black;
+            height: 50px;
+            width: 300px;
+            margin-left: 270px;
+            margin-top: 30px;
+            background-color: black;
+
+        }
+
+        .space_button {
+            height: 50px;
+            width: 300px;
+        }
+
+        .caps {
+            clear: both;
+            float: left;
+            border: 1px solid black;
+            height: 50px;
+            width: 100px;
+            margin-left: 100px;
+            margin-top: 30px;
+
+
+
+        }
+
+        .btn {
+            height: 50px;
+            width: 100px;
+            background-color: white;
+
+        }
+
+        .button_box5 {
+            float: left;
+            border: 1px solid black;
+            height: 50px;
+            width: 100px;
+            margin-left: 30px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="outer_box">
+        <div class="rec_box">
+            <input style="background-color: black" name="" id="input_value" class="text" type="text">
+        </div>
+
+        <div class="inner_box">
+            <div class="button_box">
+                <button onclick="show_spcl_char(1)" class="centre_align ">1
+                    <p class="spec_align">!</p>
+                </button>
+            </div>
+
+            <div class="button_box">
+                <button onclick="show_spcl_char(2)" class="centre_align ">2
+                    <p class="spec_align">@</p>
+                </button>
+            </div>
+
+            <div class="button_box">
+                <button onclick="show_spcl_char(3)" class="centre_align ">3
+                    <p class="spec_align">#</p>
+                </button>
+            </div>
+
+            <div class="button_box">
+                <button onclick="show_spcl_char(4)" class="centre_align ">4
+                    <p class="spec_align">$</p>
+                </button>
+            </div>
+
+            <div class="button_box">
+                <button onclick="show_spcl_char(5)" class="centre_align ">5
+                    <p class="spec_align">%</p>
+                </button>
+            </div>
+
+            <div class="button_box">
+                <button onclick="show_spcl_char(6)" class="centre_align ">6
+                    <p class="spec_align">^</p>
+                </button>
+            </div>
+
+            <div class="button_box">
+                <button onclick="show_spcl_char(7)" class="centre_align ">7
+                    <p class="spec_align">&</p>
+                </button>
+            </div>
+
+            <div class="button_box">
+                <button onclick="show_spcl_char(8)" class="centre_align ">8
+                    <p class="spec_align">*</p>
+                </button>
+            </div>
+
+            <div class="button_box">
+                <button onclick="show_spcl_char(9)" class="centre_align ">9
+                    <p class="spec_align">(</p>
+                </button>
+            </div>
+
+            <div class="button_box">
+                <button onclick="show_spcl_char(0)" class="centre_align ">0
+                    <p class="spec_align">)</p>
+                </button>
+            </div>
+
+            <div class="button_box">
+                <button onclick="delete_alpha()" class="centre_align ">DEL
+                    <p class="spec_align"></p>
+                </button>
+            </div>
+
+
+
+
+            <div class="button_box2">
+                <button onclick="show_aphabet('q')" class="centre_align ">Q</button>
+            </div>
+
+            <div class="button_box">
+                <button onclick="show_aphabet('w')" class="centre_align ">W</button>
+            </div>
+
+            <div class="button_box">
+                <button onclick="show_aphabet('e')" class="centre_align ">E</button>
+            </div>
+
+            <div class="button_box">
+                <button onclick="show_aphabet('r')" class="centre_align ">R</button>
+            </div>
+
+            <div class="button_box">
+                <button onclick="show_aphabet('t')" class="centre_align ">T</button>
+            </div>
+
+            <div class="button_box">
+                <button onclick="show_aphabet('y')" class="centre_align ">Y</button>
+            </div>
+
+            <div class="button_box">
+                <button onclick="show_aphabet('u')" class="centre_align ">U</button>
+            </div>
+
+            <div class="button_box">
+                <button onclick="show_aphabet('i')" class="centre_align ">I</button>
+            </div>
+
+            <div class="button_box">
+                <button onclick="show_aphabet('o')" class="centre_align ">O</button>
+            </div>
+
+            <div class="button_box">
+                <button onclick="show_aphabet('p')" class="centre_align ">P</button>
+            </div>
+
+
+            <div class="button_box3">
+                <button onclick="show_aphabet('a')" class="centre_align ">A</button>
+            </div>
+
+            <div class="button_box">
+                <button onclick="show_aphabet('s')" class="centre_align ">S</button>
+            </div>
+
+            <div class="button_box">
+                <button onclick="show_aphabet('d')" class="centre_align ">D</button>
+            </div>
+
+            <div class="button_box">
+                <button onclick="show_aphabet('f')" class="centre_align ">F</button>
+            </div>
+
+            <div class="button_box">
+                <button onclick="show_aphabet('g')" class="centre_align ">G</button>
+            </div>
+
+            <div class="button_box">
+                <button onclick="show_aphabet('h')" class="centre_align ">H</button>
+            </div>
+
+            <div class="button_box">
+                <button onclick="show_aphabet('j')" class="centre_align ">J</button>
+            </div>
+
+            <div class="button_box">
+                <button onclick="show_aphabet('k')" class="centre_align ">K</button>
+            </div>
+
+            <div class="button_box">
+                <button onclick="show_aphabet('l')" class="centre_align ">L</button>
+            </div>
+
+
+
+            <div class="button_box4">
+                <button onclick="show_aphabet('z')" class="centre_align ">Z</button>
+            </div>
+
+            <div class="button_box">
+                <button onclick="show_aphabet('x')" class="centre_align ">X</button>
+            </div>
+
+            <div class="button_box">
+                <button onclick="show_aphabet('c')" class="centre_align ">C</button>
+            </div>
+
+            <div class="button_box">
+                <button onclick="show_aphabet('v')" class="centre_align ">V</button>
+            </div>
+
+            <div class="button_box">
+                <button onclick="show_aphabet('b')" class="centre_align ">B</button>
+            </div>
+
+            <div class="button_box">
+                <button onclick="show_aphabet('n')" class="centre_align ">N</button>
+            </div>
+
+            <div class="button_box">
+                <button onclick="show_aphabet('m')" class="centre_align ">M</button>
+            </div>
+
+            <div class="button_box">
+                <button onclick="show_aphabet('.com')" class="centre_align "
+                    style="text-align: left; padding-left: 1px">.COM</button>
+            </div>
+
+
+            <div class="space">
+                <button onclick="space_btn(' ')" class="space_button">Space </button>
+            </div>
+
+            <div class="caps">
+                <button onclick="caps_btn1()" class="btn">
+                    <p id="caps_value">CAPS</p>
+                </button>
+
+            </div>
+
+            <div class="button_box5">
+                <button onclick="shift_btn()" class="btn">
+                    <p id="shift_value">SHIFT</p>
+                </button>
+
+            </div>
+
+            <div class="button_box5">
+                <button onclick="password()" class="btn">
+                    <p id="pwd_value"> PASSWORD</p>
+                </button>
+
+            </div>
+
+            <div class="button_box5">
+                <button onclick="clean()" class="btn">CLEAN</button>
+
+            </div>
+
+            <div class="button_box5">
+                <button onclick="rev()" class="btn">
+                    REV
+                </button>
+
+            </div>
+
+            <div class="caps">
+                <button  class="btn">
+                    <p id="caps_value1">CAPS</p>
+                </button>
+
+            </div>
+
+            <div class="button_box5">
+                <button  class="btn">
+                    <p id="shift_value1">SHIFT</p>
+                </button>
+
+            </div>
+
+            <div class="button_box5">
+                <button onclick="password()" class="btn">
+                    <p id="pwd_value1"> PASSWORD</p>
+                </button>
+
+            </div>
+
+            <div class="button_box5">
+                <button  class="btn">
+                    <p id="clean_value1"> CLEAN</p>
+                </button>
+                
+            </div>
+
+            <div class="button_box5">
+                <button  class="btn">
+                    <p id="rev_value1">REV</p>
+                </button>
+
+            </div>
+
+        </div>
+
+
+
+        <script>
+            var inputValue = "";
+            function show_aphabet(num) {
+                var shift_p = document.getElementById("shift_value1");
+                var caps_color = document.getElementById("caps_value1").style.color
+                var shift_color = shift_p.style.color
+                if ((caps_color != "green" && shift_color != "green") || (caps_color == "green" && shift_color == "green")) {
+                    document.getElementById('input_value').value += num
+                } else {
+                    switch (num) {
+                        case "a":
+                            document.getElementById('input_value').value += "A"
+                            break
+                        case "b":
+                            document.getElementById('input_value').value += "B"
+                            break
+                        case "c":
+                            document.getElementById('input_value').value += "C"
+                            break
+                        case "d":
+                            document.getElementById('input_value').value += "D"
+                            break
+                        case "e":
+                            document.getElementById('input_value').value += "E"
+                            break
+                        case "f":
+                            document.getElementById('input_value').value += "F"
+                            break
+                        case "g":
+                            document.getElementById('input_value').value += "G"
+                            break
+                        case "h":
+                            document.getElementById('input_value').value += "H"
+                            break
+                        case "i":
+                            document.getElementById('input_value').value += "I"
+                            break
+                        case "j":
+                            document.getElementById('input_value').value += "J"
+                            break
+                        case "k":
+                            document.getElementById('input_value').value += "K"
+                            break
+                        case "l":
+                            document.getElementById('input_value').value += "L"
+                            break
+                        case "m":
+                            document.getElementById('input_value').value += "M"
+                            break
+                        case "n":
+                            document.getElementById('input_value').value += "N"
+                            break
+                        case "o":
+                            document.getElementById('input_value').value += "O"
+                            break
+                        case "p":
+                            document.getElementById('input_value').value += "P"
+                            break
+                        case "q":
+                            document.getElementById('input_value').value += "Q"
+                            break
+                        case "r":
+                            document.getElementById('input_value').value += "R"
+                            break
+                        case "s":
+                            document.getElementById('input_value').value += "S"
+                            break
+                        case "t":
+                            document.getElementById('input_value').value += "T"
+                            break
+                        case "u":
+                            document.getElementById('input_value').value += "U"
+                            break
+                        case "v":
+                            document.getElementById('input_value').value += "V"
+                            break
+                        case "w":
+                            document.getElementById('input_value').value += "W"
+                            break
+                        case "x":
+                            document.getElementById('input_value').value += "X"
+                            break
+                        case "y":
+                            document.getElementById('input_value').value += "Y"
+                            break
+                        case "z":
+                            document.getElementById('input_value').value += "Z"
+                            break
+                    }
+                }
+                if (shift_color == "green") {
+                    shift_p.style.color = "black";
+                }
+                inputValue = document.getElementById('input_value').value;
+            }
+
+            function delete_alpha() {
+                var input_text = document.getElementById("input_value").value
+                var new_var = ""
+                for (i = 0; i < input_text.length - 1; i++) {
+                    new_var += input_text[i]
+                }
+                document.getElementById("input_value").value = new_var
+            }
+
+            function rev() {
+                var rev_color = document.getElementById("rev_value1").style.color;
+                if(rev_color == "black" || rev_color == ""){
+                    document.getElementById("rev_value1").style.color = "green";
+                    input = document.getElementById("input_value").value
+                    var new_input1 = ""
+                    for (i = input.length - 1; i >= 0; i--) {
+                        new_input1 += input[i]
+                    }
+                    document.getElementById("input_value").value = new_input1
+                }else{
+                    document.getElementById("rev_value1").style.color = "black";
+                    document.getElementById("input_value").value = inputValue;
+                }
+            }
+
+            function space_btn(nan) {
+                var input1 = document.getElementById("input_value").value
+                var input2 = input1 + ' '
+                document.getElementById("input_value").value = input2
+
+            }
+
+            function caps_btn1() {
+                var color_val = document.getElementById("caps_value1").style.color
+                if (color_val == "green") {
+                    document.getElementById("caps_value1").style.color = "black"
+                }else{
+                    document.getElementById("caps_value1").style.color = "green"
+                }
+            }
+
+            function show_spcl_char(number) {
+                var shift = document.getElementById("shift_value1");
+                var shift_color = shift.style.color;
+                if (shift_color != "green") {
+                    document.getElementById("input_value").value += number;
+                } else {
+                    switch (number) {
+                        case 1:
+                            document.getElementById("input_value").value += '!';
+                            break;
+                        case 2:
+                            document.getElementById("input_value").value += '@';
+                            break;
+                        case 3:
+                            document.getElementById("input_value").value += '#';
+                            break;
+                        case 4:
+                            document.getElementById("input_value").value += '$';
+                            break;
+                        case 5:
+                            document.getElementById("input_value").value += '%';
+                            break;
+                        case 6:
+                            document.getElementById("input_value").value += '^';
+                            break;
+                        case 7:
+                            document.getElementById("input_value").value += '&';
+                            break;
+                        case 8:
+                            document.getElementById("input_value").value += '*';
+                            break;
+                        case 9:
+                            document.getElementById("input_value").value += '(';
+                            break;
+                        case 0:
+                            document.getElementById("input_value").value += ')';
+                            break;
+
+                    }
+                }
+                shift.style.color = "black";
+            }
+
+            function shift_btn() {
+                var current_color = document.getElementById("shift_value1").style.color;
+                if(current_color == "green"){
+                    document.getElementById("shift_value1").style.color = "black"
+                }else{
+                    document.getElementById("shift_value1").style.color = "green"
+                }
+            }
+
+            function password() {
+                var pwd_color = document.getElementById("pwd_value1").style.color;
+                if(pwd_color == "black" || pwd_color == ""){
+                    document.getElementById("pwd_value1").style.color = "green";
+                    inputValue = document.getElementById("input_value").value;
+                    var pwd_value = "";
+                    for(i = 0; i < inputValue.length; i++){
+                        if(i == inputValue.length - 1){
+                            pwd_value = pwd_value + inputValue[i];
+                        }else{
+                            pwd_value = pwd_value + "*";
+                        }
+                    }
+                    document.getElementById("input_value").value = pwd_value;
+                }else{
+                    document.getElementById("pwd_value1").style.color = "black";
+                    document.getElementById("input_value").value = inputValue;
+                }
+            }
+
+            function clean(){
+                var clean_color = document.getElementById("clean_value1").style.color;
+                if(clean_color == "black" || clean_color == ""){
+                    document.getElementById("clean_value1").style.color = "green";
+                    inputValue = document.getElementById("input_value").value;
+                    var clean_value = "";
+                    if(inputValue == 'fuck' || inputValue == "shit" || inputValue == "anal" || inputValue == "anus" || inputValue == "ass" || inputValue == "asshole" || inputValue == "assmunch" || inputValue == "apeshit" || inputValue == "bitch" || inputValue == "bastard" ){
+                        for(i = 0; i < inputValue.length; i++){
+                            if(i == inputValue.length - 1 || i == 0){
+                                clean_value = clean_value + inputValue[i];
+                            }else{
+                                clean_value = clean_value + "*";
+                            }
+                        }
+                        document.getElementById("input_value").value = clean_value;
+                    }
+                }else{
+                    document.getElementById("clean_value1").style.color = "black";
+                    document.getElementById("input_value").value = inputValue;
+                }
+            }
+
+
+        </script>
+
+</body>
+
+</html>

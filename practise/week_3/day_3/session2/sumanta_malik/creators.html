@@ -1,0 +1,71 @@
+<html>
+    <head>
+        <title>Practise Creators</title>
+    </head>
+    <body>
+        <div id="headings">
+        </div>
+        <div id="cont">
+        </div>
+        <ul id="vikings">
+            <li>Priyanshu</li>
+        </ul>
+        <button onclick="creat_Hone()" id="btn_one">Create H1</button>
+        <button onclick="creat_Hthree()">Create 2 H3</button>
+        <button onclick="creat_Divs()">Create DIVS</button>
+        <button onclick="add_student()">Add Students</button>
+        <button onclick="add_copyright()">Add Copyright</button>
+        <script>
+            
+            function creat_Hone()
+            {
+                var heading_one = document.createElement('h1');
+                heading_one.textContent="MASAI";
+                var div = document.querySelector('#headings');
+                div.appendChild(heading_one);
+            } 
+             function creat_Hthree()
+            {     var sms = ['A Transformation in education!','Learn to earn, pay when you get.'];
+                for(i=0;i<sms.length;i++)
+                {
+                     var heading_three = document.createElement('h3');
+                        heading_three.textContent=sms[i];
+                         var div = document.querySelector('#headings');
+                        div.appendChild(heading_three);
+                 }   
+
+            }  
+             function creat_Divs()
+            {
+                for(i=1;i<11;i++)
+                {   var create_div = document.createElement('div');
+                    create_div.textContent="Content "+i;
+                    var mainDiv = document.querySelector('#cont');
+                    mainDiv.appendChild(create_div);
+                }
+            }
+            function add_student()
+            {
+                var students = ['Ajay','Akshay','Anusha','Chandrashekhara','Haren','Hasaan','Mahesh','Mousumi','Pavan','Rahul','Sumanta','Venkatesh','Vetrival','Vijayendra'];
+                var length = students.length;
+                for(i=0;i<length;i++)
+                {
+                var add_std = document.createElement('li');
+                   var name=add_std.textContent=students[i];
+                  var ul = document.querySelector('#vikings');
+                 ul.appendChild(add_std); 
+            }
+
+            }
+            var index =1;
+            function add_copyright()
+            {
+                var copy = document.createElement('p');
+                copy.textContent = "@ masai 2019 "+index;
+                var btn = document.getElementById('btn_one');
+                var Belemt = document.querySelector('body');
+                Belemt.insertBefore(copy,btn_one);
+            }
+        </script>
+    </body>
+</html>
