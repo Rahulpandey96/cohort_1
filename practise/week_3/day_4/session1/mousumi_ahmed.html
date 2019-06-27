@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <!-- FSD.W3.4.1_1 !-->
+  <h1>Click the button to see information about my favourite movie</h1>
+  <button onclick="printMovie()">Movie Information!</button>
+  <p id="movie_details"></p>
+  <!-- FSD.W3.4.1_2 !-->
+  <button onclick="addMovie()">Add Runtime to the movie object! </button>
+  <p id="add"></p>
+  
+  <!-- FSD.W3.4.1_3 !-->
+ 
+  <button onclick="addCastMember()">Add cast member </button>
+  <p id="cast"></p>
+  
+
+  
+
+  <script>
+    var movie = {
+    Name : "3 idiots",
+    Director : "Rajkumar Hirani",
+    Year: 2009,
+    Rating : 5,
+    Cast: ["R. Madhavan", "Aamir Khan", "Sharman Joshi", "Kareena Kapoor","Boman Irani"]
+}
+function printMovie(){
+  var outputText = "Movie Name is: " + movie.Name + ". "
+               + "Director: " + movie.Director + " Release Year: "+movie.Year + "Rating : "+movie.Rating
+               + "Some Actor & Actress are: " + movie.Cast[0] +", "+movie.Cast[1] + ", " +movie.Cast[2] +", " +movie.Cast[3] +" and "+ movie.Cast[4];
+                
+  
+  var outputPara = document.createElement('p')
+  outputPara.textContent = outputText
+  
+  var container = document.querySelector('#movie_details')
+  container.appendChild(outputPara)
+  
+}
+
+var movieButton = document.querySelector('#movie_details')
+movieButton.addEventListener('click', printMovie)
+
+function addMovie(){
+        movie.runTime = 2.45;
+  var outputText = "Movie Name is: " + movie.Name + ".  "
+               + "Director: " + movie.Director + " Release Year:  "+movie.Year + "Rating : "+movie.Rating
+               + "Some Actor & Actress are: " + movie.Cast[0] +", "+movie.Cast[1] + ", " +movie.Cast[2] +", " +movie.Cast[3] +" and "+ movie.Cast[4]
+               +"."+ "Movie Running Time: "+ movie.runTime + " hours ";
+            
+  
+         var outputPara = document.createElement('p')
+          outputPara.textContent = outputText
+  
+          var container = document.querySelector('#add')
+          container.appendChild(outputPara)
+  
+        }
+
+var movieButton = document.querySelector('#add')
+movieButton.addEventListener('click', addMovie)
+
+function addCastMember(){
+        movie.runTime = 2.45;
+        movie.Cast.push("Omi_Vaidya");
+  var outputText = "Movie Name is: " + movie.Name + ". "
+               + "Director: " + movie.Director + " Release Year: "+movie.Year + "Rating : "+movie.Rating
+               + "Some Actor & Actress are: " + movie.Cast[0] +", "+movie.Cast[1] + ", " +movie.Cast[2] +"," +movie.Cast[3] +" and "+ movie.Cast[4] +"  "+ movie.Cast[5]
+               +"."+ "Movie Running Time: "+ movie.runTime + " hours";
+            
+  
+  var outputPara = document.createElement('p')
+  outputPara.textContent = outputText
+  
+  var container = document.querySelector('#cast')
+  container.appendChild(outputPara)
+  
+}
+
+var movieButton = document.querySelector('#cast')
+movieButton.addEventListener('click', addCastMember)
+
+
+
+
+  
+  </script>
+</body>
+</html>
