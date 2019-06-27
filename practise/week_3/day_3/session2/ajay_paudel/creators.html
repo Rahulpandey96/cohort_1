@@ -1,0 +1,70 @@
+<html>
+    <head>
+        <title>Practise Creators</title>
+    </head>
+    <body>
+        <div id="headings">
+        </div>
+        <div id="cont">
+        </div>
+        <ul id="vikings">
+            <li>Priyanshu</li>
+        </ul>
+        <button onclick="create_h1()" id = "btn">Create H1</button>
+        <button onclick="create_h3()">Create 2 H3</button>
+        <button onclick="create_divs()">Create DIVS</button>
+        <button onclick="create_li()">Add Students</button>
+        <button onclick="create_copyrights()">Add Copyright</button>
+        <script>
+            var students = ['Ajay','Akshay','Anusha','Chandrashekhara','Haren','Hasaan','Mahesh','Mousumi','Pavan','Rahul','Sumanta','Venkatesh','Vetrival','Vijayendra'];
+
+            function create_h1()
+            {
+                var h1_value = document.createElement("h1")
+                var parent_value = document.querySelector("#headings")
+                parent_value.appendChild(h1_value)
+                h1_value.textContent = "Masai"
+            }
+
+            function create_h3(){
+                var h3_value1 = document.createElement("h3")
+                var h3_value2 = document.createElement("h3")
+                var parent_value = document.querySelector("#headings")
+                parent_value.appendChild(h3_value1)
+                parent_value.appendChild(h3_value2)
+                h3_value1.textContent ="A Transformation in education!"
+                h3_value2.textContent = "Learn to earn, pay when you get."
+            }
+
+            function create_divs(){
+                for(i=1;i<=10;i++)
+                {
+                var div_value = document.createElement("div")
+                var parent_value = document.querySelector("#cont")
+                parent_value.appendChild(div_value)
+                 div_value.textContent = "content " + i
+                }
+            }
+
+            function create_li(){
+                for(i=0;i< students.length-1;i++)
+                {
+                    var ul_value= document.createElement("li")
+                    var parent_value = document.querySelector("#vikings")
+                    parent_value.appendChild(ul_value)
+                    ul_value.textContent = students[i]
+                }
+            }
+
+            function create_copyrights(){
+                var copyrights = document.createElement("p")
+                var parent_value = document.querySelector("body")
+                var btn = document.getElementById('btn')
+                parent_value.insertBefore(copyrights, btn)
+                copyrights.textContent = "@ masai 2019"
+            }
+
+        </script>
+    </body>
+</html>
+               

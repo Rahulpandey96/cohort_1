@@ -1,0 +1,77 @@
+<html>
+    <head>
+        <title>Practise Creators</title>
+    </head>
+    <body>
+        <div id="headings">
+        </div>
+        <div id="cont">
+        </div>
+        <ul id="vikings">
+            <li>Priyanshu</li>
+        </ul>
+        <button onclick="createh1()" id="btn">Create H1</button>
+        <button onclick="createh3()">Create 2 H3</button>
+        <button onclick="createdivs()">Create DIVS</button>
+        <button onclick="addstudents()">Add Students</button>
+        <button onclick="addcopyright()">Add Copyright</button>
+        <script>
+            var students = ['Ajay','Akshay','Anusha','Chandrashekhara','Haren','Hasaan','Mahesh','Mousumi','Pavan','Rahul','Sumanta','Venkatesh','Vetrival','Vijayendra'];
+
+            function createh1(){
+                var h1=document.createElement('h1');
+                h1.textContent="MASAI";
+                
+                var bodyElem=document.querySelector('#headings');
+                bodyElem.appendChild(h1);
+            }
+
+            function createh3(){
+                var h3=document.createElement('h3');
+                h3.textContent="A Transformation in Education";
+
+                var bodyElem1=document.querySelector('#headings');
+                bodyElem1.appendChild(h3);
+
+                var h31=document.createElement('h3');
+                h31.textContent="Learn to earn, pay when you get.";
+
+                var bodyElem2=document.querySelector('#headings');
+                bodyElem2.appendChild(h31);
+            }
+
+            function createdivs(){
+                for(i=0;i<10;i++){
+                    var divs=document.createElement('div');
+                    divs.textContent='Content '+(i+1);
+
+                    var bodyElem3=document.querySelector('#cont');
+                    bodyElem3.appendChild(divs);
+                }
+            }
+
+            function addstudents(){
+                var student=document.createElement('ul');
+                student.innerHTML='<li>Ajay</li><li>Akshay</li><li>Anusha</li><li>Chandrashekhara</li><li>Haren</li><li>Hasaan</li><li>Mahesh</li><li>Mousumi</li><li>Pavan</li><li>Rahul</li><li>Sumanta</li><li>Venkatesh</li><li>Vetrival</li><li>Vijayendra</li>';
+
+                var bodyElem4=document.querySelector('#vikings');
+                bodyElem4.appendChild(student);
+            }
+              
+
+            function addcopyright(){
+                var copyright=document.createElement('p');
+                copyright.textContent='@ masai 2019';
+
+                var insert=document.getElementById('btn');
+
+                var bodyElem5=document.queryselector('body');
+                bodyElem5.insertBefore(copyright,btn);
+            }
+
+            
+            
+        </script>
+
+    </body>
+</html>

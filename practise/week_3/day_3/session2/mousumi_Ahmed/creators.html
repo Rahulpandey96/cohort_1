@@ -1,0 +1,93 @@
+<html>
+    <head>
+        <title>Practise Creators</title>
+    </head>
+    <body>
+        <p id="copyright"></p>
+        <div id="headings">
+        </div>
+        <div id="cont">
+        </div>
+        <ul id="vikings">
+            
+        </ul>
+        <button onclick="createh1()">Create H1</button>
+        <button onclick="createh3()">Create 2 H3</button>
+        <button onclick="creatediv()">Create DIVS</button>
+        <button onclick="addstudent()">Add Students</button>
+        <button onclick="addcopyright()">Add Copyright</button>
+
+
+
+        <script>
+           var students = ['Ajay','Akshay','Anusha','Chandrashekhara','Haren','Hasaan','Mahesh','Mousumi','Pavan','Rahul','Sumanta','Venkatesh','Vetrival','Vijayendra'];
+
+
+            function createh1()
+             {
+            var para = document.createElement('h1');
+            para.textContent = 'Masai';
+            
+            var ele = document.querySelector('#headings');
+            
+            ele.appendChild(para);
+            
+            
+            }
+            function createh3()
+             {
+            var para = document.createElement('h3');
+            var para1 = document.createElement('h3');
+            para.textContent = 'A Transformation in education!';
+            para1.textContent = 'Learn to earn, pay when you get.';
+            
+            var ele = document.querySelector('#headings');
+            
+            ele.appendChild(para);
+            ele.appendChild(para1);
+            
+            }
+
+
+
+            function creatediv()
+             {
+                 for(var i=0;i<10;i++)
+                 {
+                 var para = document.createElement('div');
+                 para.textContent = 'Content'+(i+1);
+            
+                 var ele = document.querySelector('#cont');
+            
+                    ele.appendChild(para);
+            
+            
+             }
+             }
+
+          
+             function addstudent()
+             {
+                var add = document.createElement('ul');
+                add.innerHTML = '<li>Priyanshu</li><li>Ajay</li><li>Akshay</li><li>Anusha</li><li>Chandrashekhara</li><li>Haren</li><li>Hasaan</li><li>Mahesh</li><li>Mousumi</li><li>Pavan</li><li>Rahul</li><li>Sumanta</li><li>Venkatesh</li><li>Vetrival</li><li>Vijayendra</li>';
+                var ele = document.querySelector('#vikings');
+            
+                    ele.appendChild(add);
+             }
+
+
+             function addcopyright()
+             {
+            var para = document.createElement('p');
+            para.textContent = '@ masai 2019';
+            
+            var ele = document.querySelector('#copyright');
+            
+            ele.appendChild(para);
+             }
+             
+           
+
+        </script>
+    </body>
+</html>

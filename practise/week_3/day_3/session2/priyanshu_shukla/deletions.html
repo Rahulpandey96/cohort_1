@@ -21,12 +21,48 @@
             <p class="blue">Third P</p>
         </div>
         <hr/>
-        <button>Remove H1</button>
-        <button>Remove H3</button>
-        <button>Remove H5</button>
-        <button>Remove Red</button>
-        <button>Remove DIVS</button>
+        <button onclick="removeh1()">Remove H1</button>
+        <button onclick="removeh3()">Remove H3</button>
+        <button onclick="removeh5()">Remove H5</button>
+        <button onclick="removered()">Remove Red</button>
+        <button onclick="removediv()">Remove DIVS</button>
         <script>
+            var bodyelem=document.querySelector('body');
+            var red= document.querySelectorAll('.red')
+            var h5=document.querySelectorAll('h5')
+            var h1= document.querySelector('h1')
+            var h3= document.querySelectorAll('h3')
+            var divcont = document.getElementById('cont')
+            var divs = [document.querySelector('.green'),document.querySelector('.red'),document.querySelector('.blue')] 
+            var divhead = document.getElementById('headings')
+
+            function removeh1(){
+                bodyelem.removeChild(h1)
+            }
+            function removeh3(){
+                for(var i=0; i<h3.length;i++){
+                    var head3=h3[i]
+                    bodyelem.removeChild(head3)
+                }
+            }
+            function removeh5(){
+                for(var i=0;i<h5.length;i++){
+                   var head5=h5[i]
+                    divhead.removeChild(head5)
+                }
+             } 
+            function removered(){
+                for(var i=0;i<red.length;i++){
+                    var REED=red[i]
+                    divcont.removeChild(REED)
+                }
+            }
+            function removediv(){
+                for(var i=0;i<divs.length;i++){
+                   var DIIV=divs[i]
+                    divcont.removeChild(DIIV)
+                }
+            }
         </script>
     </body>
 </html>
