@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <!-- FSD.W3.4.1_1 !-->
+  <h1>Click the button to see information about my favourite movie</h1>
+  <button id="info_btn">Movie Information!</button>
+  <!-- FSD.W3.4.1_2 !-->
+  <button id="add_btn">Add Runtime to the movie object! </button>
+  
+  <!-- FSD.W3.4.1_3 !-->
+  <button id="btn_cast">Add cast member </button>
+  	
+
+  <script>
+  	var movie = {
+			name:'Housefull',
+			director:'Sajid khan',
+			year:'2012',
+			rating:'*****',
+			cast:['Akshay Kumar', 'Ritesh Deshmukh','Dipika padukan','Baman irani']
+		};
+
+  	var moviInfo_btn = document.getElementById('info_btn');
+  	function movieInfo()
+	{
+				var detail_info = "Movie name :"
+				+" "+movie.name+" "+"Director :"
+				+" "+movie.director+" "+"Year :"
+				+" "+movie.year+" "+"Rating :"
+				+" "+movie.rating+" "+"Cast :"
+				+" "+movie.cast[0]+" , "
+				+" "+movie.cast[1]+" , "
+				+" "+movie.cast[2]+" , "
+				+" "+movie.cast[3]+" , "
+				+" "+movie.cast[4];
+				var elmntbody = document.querySelector('body');
+				var div = document.createElement('div');
+					div.textContent =detail_info;
+					elmntbody.appendChild(div);
+		}
+		moviInfo_btn.addEventListener('click',movieInfo); 
+		// add scripting coding goes here 
+	var add_btn = document.getElementById('add_btn');
+  	function add_runtime()
+	{			movie.runtime=2.30;
+				var detail_info = "Movie name :"+" "+movie.name
+				+" "+"Director :"+" "+movie.director
+				+" "+"Year :"+" "+movie.year
+				+" "+"Rating :"+" "+movie.rating
+				+" "+"Cast :"+" "+movie.cast[0]+" , "+" "+movie.cast[1]+" , "
+				+" "+movie.cast[2]+" , "+" "+movie.cast[3]+" , "+" "+movie.cast[4]
+				+" "+"Runnig Time: "+movie.runtime;
+				var elmntbody = document.querySelector('body');
+				var div = document.createElement('div');
+					div.textContent =detail_info;
+					elmntbody.appendChild(div);
+		}
+		add_btn.addEventListener('click',add_runtime);  
+
+	// add cast to the array 
+	var add_cast = document.getElementById('btn_cast');
+  	function add_actress()
+	{			movie.cast.push('Karina Kapoor');
+				var detail_info = "Movie name :"+" "+movie.name
+				+" "+"Director :"+" "+movie.director
+				+" "+"Year :"+" "+movie.year
+				+" "+"Rating :"+" "+movie.rating
+				+" "+"Cast :"+" "+movie.cast[movie.cast.length-1];
+				var elmntbody = document.querySelector('body');
+				var div = document.createElement('div');
+					div.textContent =detail_info;
+					elmntbody.appendChild(div);
+		}
+		add_cast.addEventListener('click',add_actress);  
+
+  </script>
+</body>
+</html>
