@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>My favourite Movie</title>
+</head>
+<body>
+
+  <!-- FSD.W3.4.1_1 !-->
+  <h1>Click the button to see information about my favourite movie</h1>
+  <button onclick="movie_detail()">Movie Information!</button>
+  <!-- FSD.W3.4.1_2 !-->
+  <button id="runtime_btn">Add Runtime to the movie object! </button>
+
+  <!-- FSD.W3.4.1_3 !-->
+  <button id="cast">Add cast member </button>
+
+
+  <script>
+
+var movie={
+  Name:"",
+  Director:"",
+  Year:2009,
+  Rating:8.4+"/"+10,
+  Cast:[]
+}
+movie.Name="3Idiots"
+movie.Director="RajKumar Hirani"
+movie.Cast[0]="Aamir Khan"
+movie.Cast[1]="Madhavan"
+movie.Cast[2]="Mona Singh"
+movie.Cast[3]="Kareena Kapoor"
+movie.Cast[4]="Boman Irani"
+var p=document.createElement("p")
+function movie_detail(){
+  document.body.appendChild(p)
+  p.textContent="Movie Name :"+ movie.Name + "Movie Director :"+ movie.Director +"Movie Casted by :"+ movie.Cast
+}
+document.getElementById('runtime_btn').addEventListener('click',runtime)
+function runtime(){
+  movie.Runtime=2+":"+30+":"+05 + "min"
+  document.body.appendChild(p)
+  p.textContent="Movie Name :"+ movie.Name + "Movie Director :"+ movie.Director +"Movie Casted by :"+ movie.Cast[0]+","+movie.Cast[1]+","+movie.Cast[2]+","+movie.Cast[3]+","+movie.Cast[4]+","+"Movie Runtime :"+movie.Runtime
+}
+document.getElementById('cast').addEventListener('click',addcast)
+function addcast(){
+  movie.Cast[5]="piya"
+  movie.Cast[6]="Hassan"
+  document.body.appendChild(p)
+  // for(var i=0;i<movie.Cast.length;i++){
+  //
+  // }
+
+  p.textContent="Movie Name :"+ movie.Name + "Movie Director :"+
+   movie.Director +"Movie Casted by :"+ movie.Cast+","+"Movie Runtime :"+movie.Runtime
+
+}
+  </script>
+</body>
+</html>
