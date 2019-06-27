@@ -1,0 +1,88 @@
+<html>
+    <head>
+        <title>Practise Deletions</title>
+    </head>
+    <body>
+        <h1 id="one">First H1</h1>
+        <h1>Second H1</h1>
+        <h3 id="h3_first">First H3</h3>
+        <h3 id="h3_second">Second H3</h3>
+        <div id="headings">
+            <h5 class="h_five">First H5</h5>
+            <h5 class="h_five">Second H5</h5>
+            <h5 class="h_five">Third H5</h5>
+        </div>
+        <div id="cont">
+            <div class="green div_one">First DIV</div>
+            <div class="red div_one">Second DIV</div>
+            <div class="blue div_one">Third DIV</div>
+            <p class="green">First P</p>
+            <p class="red">Second P</p>
+            <p class="blue">Third P</p>
+        </div>
+        <hr/>
+        <button id="btn_one">Remove H1</button>
+        <button id="btn_two">Remove H3</button>
+        <button id="btn_three">Remove H5</button>
+        <button id="btn_four">Remove Red</button>
+        <button id="btn_five">Remove DIVS</button>
+        <script>
+            var btn_one = document.getElementById('btn_one');
+            function remove_Hone()
+            {   
+                var elmnt_body = document.querySelector('body');
+                var H_one = document.querySelector('#one');
+                elmnt_body.removeChild(H_one);
+                btn_one.removeEventListner('click',remove_Hone);
+            }
+            btn_one.addEventListener('click',remove_Hone);
+             var btn_two = document.getElementById('btn_two');
+            function remove_Hthree()
+            {   
+                var elmnt_body = document.querySelector('body');
+                var h3_one = document.querySelector('#h3_first');
+                var h3_two = document.querySelector('#h3_second');
+                elmnt_body.removeChild(h3_one);
+                elmnt_body.removeChild(h3_two);
+            }
+            btn_two.addEventListener('click',remove_Hthree);
+            // H5 remove from div 
+            var btn_three = document.getElementById("btn_three");
+            function remove_Hfive()
+            {
+                var heading_div = document.getElementById('headings');
+                var heading_five = document.querySelectorAll('.h_five');
+                for(i=0;i<heading_five.length;i++)
+                {    
+                 heading_div.removeChild(heading_five[i]);
+                }
+            }
+            btn_three.addEventListener('click',remove_Hfive);
+
+            // remove red color div
+            var btn_four = document.getElementById('btn_four');
+            function red()
+            {
+                var main_div = document.getElementById('cont');
+                var red_elmnt = document.querySelectorAll('.red');
+                for(i=0;i<red_elmnt.length;i++)
+                {
+                    main_div.removeChild(red_elmnt[i]);
+                }
+            }
+            btn_four.addEventListener('click',red);
+            // all div remove 
+            var btn_five = document.getElementById('btn_five');
+            function all_div()
+            {
+                var div = document.getElementById('cont');
+                var div_elmnt = document.querySelectorAll('.div_one');
+                for(i=0;i<div_elmnt.length;i++)
+                {
+                    div.removeChild(div_elmnt[i]);
+                }
+            }
+            btn_five.addEventListener('click',all_div);
+        </script>
+    </body>
+</html>
