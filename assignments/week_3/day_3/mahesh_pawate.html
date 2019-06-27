@@ -1,0 +1,262 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<style type="text/css">
+		.keys_style
+		{
+			height: 40px;
+			width: 40px;
+			margin-left: 10px;
+			margin-top: 10px;
+			float: left;
+			background-color: green;
+			color: black;
+			text-align: center;
+			font-size: 18px;
+		}
+
+		.keys_fl_clear
+		{
+			clear: left;
+		}
+
+		.key_fl_clr
+		{
+			clear: both;
+		}
+
+		.plus
+		{
+			background-color: orange;
+		}
+		.sub_style
+		{
+			width: 120px;
+			background-color: black;
+			color: white;
+		}
+		#margin
+		{
+			margin-left: 650px;
+			margin-top: 10px;
+
+		}
+		.center1
+		{
+			margin-left: 50px;
+		}
+
+		.margin_bottom_total
+		{
+			margin-left: 10px;
+			border-width: 3px;
+			height: 30px;
+			width: 200px;
+			margin-bottom: 20px;
+		}
+
+		#margin_bottom_total_heading
+		{
+			margin-left: 40px;
+		}
+
+		.max
+		{
+			height: 40px;
+			width: 90px;
+			font-size: 28px;
+			text-align: center;
+			background-color: white;
+		}
+		.flt
+		{
+			float: left;
+			margin-right: 40px;
+		}
+		.fltr
+		{
+			float: right;
+		}
+		.last
+		{
+			background-color: maroon;
+		}
+		.input_back
+		{
+			background-color: gray;
+		}
+		.input_back2
+		{
+			background-color: red;
+		}
+		.input_back3
+		{
+			background-color: lightgreen
+		}
+		
+	</style>
+	<title>score card</title>
+</head>
+<body >
+	<!--master div-->
+	<div id="margin">
+		<!--Total box-->
+		<div>
+			<h2 class=" margin_bottom_total" >TOTAL</h2>
+			<input id="total_score" class=" margin_bottom_total" type="text">
+		</div>
+		<div id="game" style="float: right;">
+			
+		</div>
+		<!--min and Max-->
+		<div>
+			<!--min-->
+			<div class="flt">
+				<input value="0" class=" max input_back2 " id="input_min" type="text" >
+				<h2>Min</h2>
+			</div>
+			<!--max-->
+			<div class="flt">
+				<input value="0" class="max input_back3" id="input_max" type="text" >
+				<h2>Max</h2>
+			</div>
+		</div>
+		<!--screen-->
+		<div class="keys_fl_clear center1 flt">
+			<div >
+				<h2>Screen</h2>
+			</div>
+			<div >
+				<input class="max input_back" id="screen" type="text">
+			</div>
+		</div>
+		<!--keys-->
+		<div>
+			<div >
+				<button class="keys_style keys_fl_clear" onclick="display('1')">1</button>
+			</div>
+			<div >
+				<button class="keys_style plus" onclick="display('2')">2</button>
+			</div>
+			<div>
+				<button class="keys_style" onclick="display('3')">3</button>
+			</div>
+			<div>
+				<button class="keys_style plus keys_fl_clear" onclick="display('4')">4</button>
+			</div>
+			<div>
+				<button class="keys_style " onclick="display('5')">5</button>
+			</div>
+			<div>
+				<button class="keys_style plus" onclick="display('6')">6</button>
+			</div>
+			<div>
+				<button class="keys_style keys_fl_clear" onclick="display('7')">7</button>
+			</div>
+			<div>
+				<button class="keys_style plus" onclick="display('8')">8</button>
+			</div>
+			<div>
+				<button class="keys_style" onclick="display('9')">9</button>
+			</div>
+			<div>
+				<button class=" keys_style keys_fl_clear center1 last" onclick="display('0')">0</button>
+			</div>
+			
+		</div>
+		<!--submit-->
+		<div>
+			<div>
+				<button id="enter" class=" keys_style keys_fl_clear sub_style" onclick="submit()">Submit</button>
+				<button id="RemoveAll_id" class=" keys_style  sub_style" onclick="RemoveAll()">RemoveAll</button>
+				<button id="RemoveOdd_id" class=" keys_style  sub_style" onclick="RemoveOdd()">RemoveOdd</button>
+				<button id="RemoveEven_id" class=" keys_style  sub_style" onclick="RemoveEven()">RemoveEven</button>
+				<button id="RemoveLast_id" class=" keys_style  sub_style" onclick="RemoveLast()">RemoveLast</button>
+				<button class=" keys_style  sub_style" onclick="clearAll()">clear</button>
+			</div>
+		</div>
+	</div>
+
+
+	<script type="text/javascript">
+
+		var max_score = Number(document.getElementById("input_max").value)
+		var min_score = Number(document.getElementById("input_min").value)
+		function clearAll()
+		{
+			document.getElementById("screen").value=""
+		}
+		function display(input)
+		{
+			document.getElementById("screen").value+=input
+		}
+		var flag=false;
+		var count=0;
+		function flag_func()
+		{
+			if (flag==false)
+			{
+				return flag=true;
+				 //return count++;
+			}
+			else
+			{
+				 flag=false
+				 return count++;
+			}
+		}
+		function submit()
+		{
+			if (flag_func()==true)
+			 {
+			 	var curent_score = Number(document.getElementById("screen").value)
+				if (curent_score <= min_score || curent_score<max_score) 
+				{
+					document.getElementById("input_min").value = curent_score
+					document.getElementById("screen").value =""
+					min_score=curent_score
+				}
+				else if (curent_score >= max_score)
+				{
+			 		document.getElementById("input_max").value = curent_score
+			 		document.getElementById("screen").value = ""
+				 	max_score=curent_score
+				}
+				else
+				{
+					alert("Not a Integer Number");
+				}
+
+					document.getElementById("total_score").value=total_fun()
+
+			 }	
+			 flag = !flag			
+		}
+
+		function total_fun()
+		{
+			return min_score+max_score;
+		}
+
+		function changeContent() 
+		{
+		  var para = document.createElement('p');
+ 			 para.textContent = ' score ' + total_fun() +' game No : ' + flag_func() ;
+  
+  			var btn = document.getElementById('game');
+  
+ 			 var bodyElem = document.querySelector('div');
+ 			 bodyElem.insertBefore(para, btn);
+  			//bodyElem.appendChild(para);
+		}
+		enter.addEventListener("click",changeContent)
+
+
+	</script>
+			
+
+</body>
+</html>
+statr time-- Wed Jun 26 23:34:34 IST 2019
+Thu Jun 27 01:25:10 IST 2019
