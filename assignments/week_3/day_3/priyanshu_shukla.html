@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<head>
+<style>
+	*{
+		font-size: 13px;
+	}
+	.marginleft{
+		margin-left: 30px;
+	}
+	.marginright{
+		margin-right: 30px;
+	}
+	#main_div{
+		height: 600px;
+		width: 900px
+	}
+	.secondary_divs{
+		height: 8000px;
+		width: 300px;
+		float: left;
+	}
+	.line_divs{
+		height: 50px;
+		width: 180px;
+		margin: 10px;
+		text-align: center;
+		float: left;
+	}
+	.grey{
+		background-color: grey;
+	}
+	.green{
+		background-color: green;
+
+	}
+	.orange{
+		background-color: orange;
+	}
+	.purple{
+		background-color: purple;
+	}
+	.black{
+		background-color: black;
+		color: white;
+	}
+	.greyboxes{
+		background-color: grey;
+		height: 50px;
+		width: 140px;
+		border: 1px;
+		border-style: solid;
+	}
+	.typing{
+		height: 50px;
+		width: 46.67px;
+		margin: 10px;
+		border: 1px;
+		border-style: solid;
+		float: left;
+	}
+	.keys{
+		height: 50px;
+		width: 33.33px;
+		margin: 10px;
+		border: 1px;
+		border-style: solid;
+		padding-left: 10px;
+	}
+	.emptydivs{
+		float: left;
+	}
+	.emptykeys{
+		height: 50px;
+		width: 33.33px;
+		margin: 10px;
+		float: left;
+	}
+	.emptytyping{
+		height: 50px;
+		width: 0.07px;
+		margin: 10px;
+		border: 1px;
+		float: left;
+	}
+	#game_scores{
+		
+		width: 90px;
+		margin: 10px;
+		text-align: center;
+		float: left
+	}
+	.main_game_heading{
+		font-size: 20px;
+		font-style: bold;
+	}
+	.float{
+		float: left;
+		margin-top: 10px;
+	}
+</style>
+<body>
+	<div id="main_div">
+		<div class="secondary_divs">
+			<div class="line_divs greyboxes">
+				<input type="numbers" id="input_bar" style="height: 50px; width: 140px; background-color: grey;">
+			</div>
+			<div class="line_divs">
+				<div class="typing orange">
+					<input type="numbers" id="min" style="height: 50px; width: 46.67px; background-color: orange;">
+				</div>
+				<div class="emptytyping ">
+					
+				</div>
+				<div class="typing green">
+					<input type="numbers" id="max" style="height: 50px; width: 46.67px; background-color: green;">
+				</div>
+
+			</div>
+			<div class="line_divs greyboxes">
+				<input type="numbers" id="total" style="height: 50px; width: 140px;background-color: grey;">
+			</div>
+			<div class="line_divs">
+				<div class="emptydivs">
+					<button onclick="num(1)" class="keys green marginleft">1</button>
+				</div>
+				<div class="emptydivs">
+					<button onclick="num(2)" class="keys orange">2</button>
+				</div>
+				<div class="emptydivs">
+					<button onclick="num(3)" class="keys green marginright">3</button>
+				</div>
+			</div>
+			<div class="line_divs">
+				<div class="emptydivs">
+					<button onclick="num(4)" class="keys green marginleft">4</button>
+				</div>
+				<div class="emptydivs">
+					<button onclick="num(5)" class="keys orange">5</button>
+				</div>
+				<div class="emptydivs">
+					<button onclick="num(6)" class="keys green marginright">6</button>
+				</div>
+			</div>
+			<div class="line_divs">
+				<div class="emptydivs">
+					<button onclick="num(7)" class="keys green marginleft">7</button>
+				</div>
+				<div class="emptydivs">
+					<button onclick="num(8)" class="keys orange">8</button>
+				</div>
+				<div class="emptydivs">
+					<button onclick="num(9)" class="keys green marginright">9</button>
+				</div>
+			</div>
+			<div class="line_divs">
+				<div class="emptykeys">
+					
+				</div>
+				<div class="emptydivs">
+					<button onclick="num(0)" class="keys purple">0</button>
+				</div>
+				<div class="emptykeys marginright">
+					
+				</div>
+			</div>
+			<div >
+				<button class="black line_divs" onclick="enter()">ENTER</button>
+			</div>
+		</div>
+		<div class="secondary_divs">
+			
+		</div>
+		<div  class="secondary_divs">
+			<div class="game_scores main_game_heading">
+				GAME SCORES
+			</div>
+			<div id="game_scores"></div>
+			
+			<div class="float">
+				<div id="hu">
+					<button class="black line_divs" onclick="removeall()">REMOVE ALL</button>
+				</div>
+				<div >
+					<button class="black line_divs" onclick="removeodd()">REMOVE ODD</button>
+				</div>
+				<div >
+					<button class="black line_divs" onclick="removeeven()">REMOVE EVEN</button>
+				</div>
+				<div >
+					<button class="black line_divs" onclick="removelast()">REMOVE LAST</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+		function num(input){
+			document.getElementById('input_bar').value += input;
+		}
+
+		/*var smaplearr = [x,y,z]
+		var output =0
+		function addarr(smaplearr){
+			for (var i=0; i< smaplearr.length; i++){
+				output += smaplearr[i]
+			}console.log(output)
+			return output
+		}*/
+		
+				/*var k=0
+		 function enter(){
+		k++
+			switch(k){
+				case 1:
+				document.getElementById('game1').value = document.getElementById('input_bar')value
+				break;
+
+				case 2:
+				document.getElementById('game2').value = document.getElementById('input_bar')value;
+				break;
+
+				case 3:
+				document.getElementById('game3').value = document.getElementById('input_bar')value;
+				break;
+
+				case 4:
+				document.getElementById('game4').value = document.getElementById('input_bar')value;
+				break;
+
+				case 5:
+				document.getElementById('game5').value = document.getElementById('input_bar')value;
+				break;
+
+				case 6:
+				document.getElementById('game6').value = document.getElementById('input_bar')value;
+				break;
+
+				
+			}
+
+		document.getElementById('input_bar')value ='';
+		}*/
+		var ar =[]
+
+
+		var game = document.getElementById('game_scores');
+		var e =0
+		var btn= document.getElementById('hu');
+
+		function sumArray(ar){
+  			
+ 		 }
+		
+		function enter(){
+			var min = Number(document.getElementById('min').value);
+			var max = Number(document.getElementById('max').value);
+			var l = document.getElementById('input_bar').value;
+			var tot =document.getElementById('total').value;
+			var c =Number(l)
+			e++
+			
+			var para = document.createElement('div');
+				console.log(l)
+				para.textContent='Game'+e+'-'+l
+				game.appendChild(para);
+				
+			ar.push(c)
+			
+			
+			/*if(c<min){
+				min == c;
+				document.getElementById('min').value = c;
+				var para = document.createElement('p');
+				console.log(l)
+				para.textContent='Game'+e+'-'+l
+				game.insertBefore(para, btn);
+				document.getElementById('input_bar').value='';
+			}
+			else if(c>max){
+				max = c;
+				document.getElementById('max').value = c;
+				var para = document.createElement('p');
+				
+				para.textContent='Game'+e+'-'+l
+				game.insertBefore(para, btn);
+				document.getElementById('input_bar').value='';
+			}
+			else{
+				var para = document.createElement('p');
+				console.log(l)
+				para.textContent='Game'+e+'-'+l
+				game.insertBefore(para, btn);
+				document.getElementById('input_bar').value='';
+			}*/
+			document.getElementById('min').value = Math.min.apply(null, ar);
+			document.getElementById('max').value = Math.max.apply(null,ar);
+			/*for(var i=0;i<arr.length;i++){
+				temp +=arr[i]
+			}*/
+			var output=0
+  			for(var i=0; i < ar.length ; i++){
+   			output+=ar[i]
+   			 }
+   			 
+			 document.getElementById('total').value = output;
+			document.getElementById('input_bar').value='';
+			
+			
+			
+		}
+
+		function removeodd(){
+			var limit = game.childNodes.length
+			for(var i=0; i<limit/2;i++){
+   				 game.removeChild(game.childNodes[i])
+  			}
+		
+		}
+		function removeall(){
+			 var limit = game.childNodes.length
+			for(var i=0; i<limit;i++){
+   				 game.removeChild(game.childNodes[0])
+  			}
+		}
+		function removelast(){
+			var limit = game.childNodes.length
+			
+   				 game.removeChild(game.childNodes[limit-1])
+  			
+		}
+		function removeeven(){
+			var limit = game.childNodes.length
+			for(var i=0; i<limit/2;i++){
+   				 game.removeChild(game.childNodes[i+1])
+  			}
+		}
+		/*switch(value){
+				case 'last':
+				return ar.pop();
+				break;
+
+				case 'all':
+				;
+				break;
+
+				case 'even'
+				for(var i=0;i<ar.length;i++){
+					if(i% !=0){
+						return ar.po()
+					}
+				};
+				break;
+			}
+		}*/
+		
+	</script>
+</body>

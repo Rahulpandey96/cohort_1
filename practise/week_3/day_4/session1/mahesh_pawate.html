@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <!-- FSD.W3.4.1_1 !-->
+  <h1 id="display_here">Click the button to see information about my favourite movie</h1>
+  <button id="btn">Movie Information!</button>
+  <!-- FSD.W3.4.1_2 !-->
+  <button id="btn2">Add Runtime to the movie object! </button>
+  
+  <!-- FSD.W3.4.1_3 !-->
+  <button id="btn3">Add cast member </button>
+  
+
+  <script>
+  var movie={
+  	name : "Inception",
+  	director :"will smith",
+  	year : " 2009",
+  	rating : "5",
+  	cast : ["emma watson","david warner","robert scotch","peter parker","nathen william"]
+  }
+
+  function display_all()
+  {
+  	var dis1=document.createElement('h1');
+  	var dis2=document.createElement('h2');
+  	var dis3=document.createElement('h3');
+  	var dis4=document.createElement('h4');
+  	var dis5=document.createElement('h5');
+
+  	dis1.textContent= "Name = "+ movie.name;
+  	dis2.textContent=  "Director = " + movie.director;
+  	dis3.textContent= "Year = " + movie.year ;
+  	dis4.textContent="Rating =" + movie.rating ;
+  	document.getElementById("display_here").appendChild(dis1);
+  	document.getElementById("display_here").appendChild(dis2);
+  	document.getElementById("display_here").appendChild(dis3);
+  	document.getElementById("display_here").appendChild(dis4);
+  	for (var i=0; i<movie.cast.length-1;i++)
+  	{
+  		var diss=document.createElement('h5');
+  		diss.textContent= "cast = " + movie.cast[i]
+  		document.getElementById("display_here").appendChild(diss);
+  	}
+  	
+  }
+  btn.addEventListener('click',display_all);
+
+  function runtime_add()
+  {
+  	movie.runtime="22"
+  	var dis1=document.createElement('h1');
+  	var dis2=document.createElement('h2');
+  	var dis3=document.createElement('h3');
+  	var dis4=document.createElement('h4');
+  	var dis5=document.createElement('h5');
+  	var dis6=document.createElement('h6');
+  	dis1.textContent= "Name = "+ movie.name;
+  	dis2.textContent=  "Director = " + movie.director;
+  	dis3.textContent= "Year = " + movie.year ;
+  	dis4.textContent="Rating =" + movie.rating ;
+  	dis6.textContent="Runtime = " + movie.runtime;
+  	document.getElementById("display_here").appendChild(dis1);
+  	document.getElementById("display_here").appendChild(dis2);
+  	document.getElementById("display_here").appendChild(dis3);
+  	document.getElementById("display_here").appendChild(dis4);
+  	for (var i=0; i<movie.cast.length-1;i++)
+  	{
+  		var diss=document.createElement('h5');
+  		diss.textContent= "cast = " + movie.cast[i]
+  		document.getElementById("display_here").appendChild(diss);
+  	}
+  		document.getElementById("display_here").appendChild(dis6);
+  }
+  btn2.addEventListener('click',runtime_add);
+
+  function cast_mamber_add()
+  {
+  	movie.cast[movie.cast.length]="paul walker"
+  	console.log(movie.cast.length-1)
+  	var dis1=document.createElement('h1');
+  	var dis2=document.createElement('h2');
+  	var dis3=document.createElement('h3');
+  	var dis4=document.createElement('h4');
+  	var dis5=document.createElement('h5');
+  	var dis6=document.createElement('h6');
+  
+  	dis1.textContent= "Name = "+ movie.name;
+  	dis2.textContent=  "Director = " + movie.director;
+  	dis3.textContent= "Year = " + movie.year ;
+  	dis4.textContent="Rating =" + movie.rating ;
+  	dis6.textContent="Runtime = " + movie.runtime;
+  	document.getElementById("display_here").appendChild(dis1);
+  	document.getElementById("display_here").appendChild(dis2);
+  	document.getElementById("display_here").appendChild(dis3);
+  	document.getElementById("display_here").appendChild(dis4);
+  	for (var i=0; i<movie.cast.length-1;i++)
+  	{
+  		var diss=document.createElement('h5');
+  		diss.textContent= "cast = " + movie.cast[i]
+  		document.getElementById("display_here").appendChild(diss);
+  	}
+  		document.getElementById("display_here").appendChild(dis6);
+
+  }
+  btn3.addEventListener('click',cast_mamber_add)
+  </script>
+</body>
+</html>
