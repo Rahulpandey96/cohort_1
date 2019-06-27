@@ -1,0 +1,103 @@
+<html>
+    <head>
+        <title>Practise Attributes</title>
+        <style type="text/css">
+            .class-h1 {
+                color: red
+            }
+            .class-h3 {
+                color: green;
+            }
+            .class-h5 {
+                color: orange;
+            }
+            .class-div {
+                color: yellow;
+                font-size: 20px;
+                margin: 10px;
+            }
+            .class-p {
+                border: 1px solid black;
+                padding: 5px;
+            }
+            #test-2 {
+                font-size: 30px;
+                padding: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>First H1</h1>
+        <h1>Second H1</h1>
+        <h3>First H3</h3>
+        <h3>Second H3</h3>
+        <h5>First H5</h5>
+        <h5>Second H5</h5>
+        <h5>Third H5</h5>
+        <div id="box">
+            <div>First DIV</div>
+            <div>Second DIV</div>
+            <div>Third DIV</div>
+        </div>
+        <div>Fourth DIV</div>
+        <div id="cont">
+            <p class="wer">First P</p>
+            <p class="wer">Second P</p>
+            <p class="wer">Third P</p>
+        </div>
+        <div id="temp">
+            <p >Test P1</p>
+            <p class="qwe">Test P2</p>
+            <p >Test P3</p>
+        </div>
+        <hr/>
+        <button onclick="h1()">Change H1</button>
+        <button onclick="h3()">Change H3</button>
+        <button onclick="h5()">Change H5</button>
+        <button onclick="div()">Change DIV</button>
+        <button onclick="para()">Change P</button>
+        <button onclick="para3()">Set ID</button>
+        <script>
+            var head1 = document.querySelector('h1');
+            var head3 = document.querySelectorAll('h3');
+            var head5 = document.querySelectorAll('h5');
+            var divs = document.getElementById('box');
+            
+            var para1 = document.getElementById('cont');
+            var para2 = document.getElementById('temp');
+
+            function h1(){
+                head1.setAttribute('class','class-h1')
+            }
+            function h3(){
+                for( var i=0;i<head3.length;i++){
+                    var H3 = head3[i]
+                    H3.setAttribute('class','class-h3')
+                }
+            }
+            function h5(){
+                for( var i=0;i<head5.length;i++){
+                    var H3 = head5[i]
+                    H3.setAttribute('class','class-h5')
+                }
+            }
+            function div(){
+               divs.setAttribute('class','class-div')
+            }
+            function para(){
+                var x = document.getElementsByClassName('wer')
+                console.log(x)
+                for(var i=0;i<x.length;i++){
+                    var y =x[i]
+                    console.log(x)
+                    y.setAttribute('class','class-p')
+                }
+            }
+            function para3(){
+                var w =document.getElementsByClassName('qwe')
+                w[0].setAttribute('id', 'test-2')
+            }
+            
+        </script>
+    </body>
+</html>

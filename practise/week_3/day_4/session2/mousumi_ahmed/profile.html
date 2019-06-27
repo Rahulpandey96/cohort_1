@@ -1,0 +1,218 @@
+<html>
+    <head>
+        <title>Profile</title>
+        <style>
+ .box_linus{
+    margin-left: 400px;
+    margin-top: 30px;                   
+    border: 10px solid black;
+    height:320px;
+    width: 420px;
+    background-color: rgba(172, 172, 189, 0.877);
+}
+#img_linus{
+    width:130px;
+    height:150px; 
+    margin-left:140px; 
+    margin-top: 30px;
+    padding: 10px;
+}
+#heading1_linus{
+    margin-left: 110px; 
+    margin-top: -5px;
+    color:blue; 
+    font-size: 34px;
+}
+#heading2_linus{
+    
+    margin-left: 90px;  
+    font-size: 24px;
+    margin-top: -10px;
+}
+.box_khan{
+    margin-left: 280px;
+    margin-top: 30px;                   
+    height:200px;
+    width: 700px;
+}
+#img_khan{
+    width:120px;
+    height:160px; 
+    margin-left:50px; 
+    margin-right: 20px; 
+    float: left
+}
+#heading1_khan{
+    color:red;
+}
+.box_footer{
+    height:150px;
+    background-color: rgb(182, 82, 46);
+    margin-left:20px;
+    margin-right:20px
+}
+.box_left{
+    height: 150;
+    float:left;
+    color: palegoldenrod;
+    padding:5px;
+    margin-left:10px
+}
+.box_right{
+    height: 150px;
+    float:right;
+    margin-right: 50px;
+    color: palegoldenrod;
+    margin-right:20px;
+}
+.p_footer{
+    color:black;
+}
+#vertical_bar{
+    background-color:black;
+    height:130px;
+    margin-top:10px;
+    margin-left:300px;
+    width:3px;
+    float:left
+}
+
+
+        </style>
+    </head>
+
+    <body>
+       <button onclick="createPage()">Create Page</button>
+       <script>
+           function createPage()
+           {
+            var div = document.createElement('div');
+            div.setAttribute('class', 'box_linus')
+            var ele = document.querySelector('body');
+            
+             ele.appendChild(div);
+
+             var img1 = document.createElement('img');
+             var ele = document.querySelector('div');   
+             
+                img1.setAttribute('src', 'images/linus.jpg');
+                img1.setAttribute('id', 'img_linus');
+
+                ele.appendChild(img1);
+
+
+                var h2 = document.createElement('h2');
+                h2.textContent = 'Linus Torvalds';
+              
+                h2.setAttribute('id', 'heading1_linus');
+
+                ele.appendChild(h2);
+
+                var h5 = document.createElement('h5');
+                h5.textContent = 'The creator of Linux & Git';
+              
+                h5.setAttribute('id', 'heading2_linus');
+
+                ele.appendChild(h5);
+
+
+
+
+
+                var div = document.createElement('div');
+                 div.setAttribute('class', 'box_khan')
+                 var ele = document.querySelector('body');
+            
+                 ele.appendChild(div);
+
+                 var img1 = document.createElement('img');
+                 var ele = document.querySelector('.box_khan');   
+             
+                img1.setAttribute('src', 'images/khan.jpg');
+                img1.setAttribute('id', 'img_khan');
+
+                ele.appendChild(img1);
+
+
+                var h2 = document.createElement('h2');
+                h2.textContent = 'Sal Khan';
+              
+                h2.setAttribute('id', 'heading1_khan');
+
+                ele.appendChild(h2);
+
+                var p = document.createElement('p');
+                p.textContent = 'Salmam khan is the founder of the Khan Academy which has a mission of providing a free world class education for anyone,anywhere.';
+              
+               
+
+                ele.appendChild(p);
+
+
+
+                var div = document.createElement('div');
+                 div.setAttribute('class', 'box_footer')
+                 var ele = document.querySelector('body');
+            
+                 ele.appendChild(div);
+
+                 var div = document.createElement('div');
+                 div.setAttribute('class', 'box_left')
+                 var ele = document.querySelector('.box_footer');
+            
+                 ele.appendChild(div);
+
+                 var h2 = document.createElement('h2');
+                  h2.textContent = 'Ken Thompson';
+              
+               
+                var ele = document.querySelector('.box_left');
+
+                ele.appendChild(h2);
+
+                var p = document.createElement('p');
+                  p.textContent = 'Designed and Implemented the';
+                  p.textContent = 'Original Unix Operating Systerm';
+                  p.setAttribute('id', 'class6')
+                
+                ele.appendChild(p);
+
+                var div = document.createElement('div');
+                 div.setAttribute('id', 'vertical_bar')
+                 var ele = document.querySelector('.box_footer');
+            
+                 ele.appendChild(div);
+
+
+
+
+                 var div = document.createElement('div');
+                 div.setAttribute('class', 'box_right')
+                 var ele = document.querySelector('.box_footer');
+            
+                 ele.appendChild(div);
+
+                 var h2 = document.createElement('h2');
+                  h2.textContent = 'Dennis Ritchie';
+              
+                var ele = document.querySelector('.box_right');
+
+                ele.appendChild(h2);
+
+                var p = document.createElement('p');
+                  p.textContent = 'The creator of C Programming Language';
+                  
+                  p.setAttribute('id', 'class6')
+
+                  ele.appendChild(p);
+
+
+
+           }
+       
+       
+       
+       
+       </script>
+    </body>
+</html>
