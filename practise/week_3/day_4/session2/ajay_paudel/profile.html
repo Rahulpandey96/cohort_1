@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style >
+    .box{
+      height:300px; 
+      width:450px;
+      margin:30px 250px;
+      border:10px solid #000;
+      background-color:white;
+    }
+    .linus_image{
+      height:150px; 
+      width:100px;
+      margin-left:175px;
+      margin-top:30px;
+    }
+    .linus_part{
+      margin-left:110px
+    }
+    #linus_para1{
+      color:#341f97;
+      margin-left:25px;
+    }
+    #linus_para2{
+        font-weight:100;
+    }
+    .third_part{
+      clear:left;
+      height:120px;
+      background-color:orange;
+    }
+    .ken_thomas_part{
+      float:left;
+      margin-left:30px;
+    }
+    #ken_thomas_para{
+      color:white;
+      font-weight:100;
+    }
+    .horizontal_line{
+      width:10px;
+      height:100px;
+      background-color:#000;
+      float:left;
+      margin:10px 0 20px 250px;
+    }
+    .dennis_ritche_part{
+      float:right;
+      margin-right:30px;
+    }
+    #dennis_ritche_para{
+      color:white;
+      font-weight:100;
+    }
+    .sal_khan_outter{
+      margin-left:180px;
+      height:150px;
+      margin-bottom:30px;
+    }
+    .sal_khan_img{
+      width:100px;
+      height:130px;
+      float:left
+    }
+    .sal_khan_part{
+      float:left;margin-left:30px
+    }
+    .sal_khan_para1{
+      color:red;
+    }
+    #sal_khan_para2{
+      font-weight: 100;
+    }
+    body{
+      width: 1140px;
+      margin: 0 auto;
+    }
+  </style>
+
+ <title>Asignment</title>
+</head>
+<body >
+  <button onclick="create_page()" id="btn">Create Page</button>
+  <script >
+    function create_page(){
+      var div1 = document.createElement("div")
+      var parent_div1=document.querySelector("body")
+      var btn1 = document.getElementById('btn')
+      parent_div1.insertBefore(div1, btn1)
+      div1.setAttribute("class","box")
+      var img1 =document.createElement("img")
+      var parent_img1 = document.querySelector("div")
+      parent_img1.appendChild(img1)
+      img1.setAttribute("src", "linus.jpg")
+      img1.setAttribute("class","linus_image")
+      var div2 =document.createElement("div")
+      var parent_div2=document.querySelector("div")
+      parent_div2.appendChild(div2)
+      div2.setAttribute("class","linus_part")
+      var val_h2=document.createElement("h2")
+      var parent_h2=document.querySelector("div") 
+      parent_h2.appendChild(val_h2)
+      val_h2.setAttribute("id", "linus_para1")
+      val_h2.textContent ="Linus Torvalds"
+      val_h2.style.textAlign ="center"
+      val_h3=document.createElement("h3")
+      var parent_h3 = document.querySelector("div")
+      parent_h3.appendChild(val_h3)
+      val_h3.textContent="The creator of Linux & Git"
+      val_h3.setAttribute("id","linus_para2")
+      val_h3.style.textAlign ="center"
+
+      //second div
+
+      var sec_div1 = document.createElement("div")
+      var sec_parent_div1=document.querySelector("body")
+      var btn1 = document.getElementById('btn')
+      sec_parent_div1.insertBefore(sec_div1, btn1)
+      sec_div1.setAttribute("class","sal_khan_outter")
+      var img2 =document.createElement("img")
+      var parent_img2 = document.querySelector(".sal_khan_outter")
+      parent_img2.appendChild(img2)
+      img2.setAttribute("src", "khan.jpg")
+      img2.setAttribute("class","sal_khan_img")
+
+      var sec_div2 =document.createElement("div")
+      //var sec_parent_div2=document.querySelector(".sal_khan_outter")
+      sec_div1.appendChild(sec_div2)
+      sec_div2.setAttribute("class","sal_khan_part")
+      var sec_val_h2=document.createElement("h2")
+      var sec_parent_h2=document.querySelector(".sal_khan_part") 
+      sec_parent_h2.appendChild(sec_val_h2)
+       sec_val_h2.textContent ="Sal Khan"
+      sec_val_h2.setAttribute("class", "sal_khan_para1")
+      sec_p =document.createElement("div")
+      sec_div2.appendChild(sec_p)
+      sec_p.textContent="Salman khan is the founder of khan academy, which has a mission"
+      sec_p.setAttribute("id","sal_khan_para2")
+      sec_p1 =document.createElement("div")
+      sec_div2.appendChild(sec_p1)
+      sec_p1.textContent="of providing free world class education for anyone,anywhere"
+      sec_p1.setAttribute("id","sal_khan_para2")
+
+
+      //third div
+
+      var third_div1 = document.createElement("div")
+      var third_parent_div1=document.querySelector("body")
+      var btn1 = document.getElementById('btn')
+      third_parent_div1.insertBefore(third_div1, btn1)
+      third_div1.setAttribute("class","third_part")
+      var third_div2 =document.createElement("div")
+      third_div1.appendChild(third_div2)
+      third_div2.setAttribute("class", "ken_thomas_part")
+      var third_h2=document.createElement("h2")
+      third_div2.appendChild(third_h2)
+      third_h2.setAttribute("id", "ken_thomas_para")
+      third_h2.textContent = "ken Thompson"
+      var third_p1 = document.createElement("p")
+      third_div2.appendChild(third_p1)
+      third_p1.textContent= "Designed and implemented the "
+      var third_p2 = document.createElement("p")
+      third_div2.appendChild(third_p2)
+      third_p2.textContent= "original unix operating system "
+      var third_div3 = document.createElement("div")
+      third_div1.appendChild(third_div3)
+      third_div3.setAttribute("class", "horizontal_line")
+      var third_div4 = document.createElement("div")
+      third_div1.appendChild(third_div4)
+      third_div4.setAttribute("class", "dennis_ritche_part")
+      var third_h2_1=document.createElement("h2")
+      third_div4.appendChild(third_h2_1)
+      third_h2_1.setAttribute("id", "dennis_ritche_para")
+      third_h2_1.textContent = "Dennis Ritche"
+      var third_p3 = document.createElement("p")
+      third_div4.appendChild(third_p3)
+      third_p3.textContent= "The creator of C programming Language "
+
+
+
+    }
+  </script>
+
+
+</body>
+</html>
