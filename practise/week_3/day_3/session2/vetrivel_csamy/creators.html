@@ -1,0 +1,72 @@
+<html>
+  <head>
+    <title>Practise Creators</title>
+  </head>
+  <body>
+    <div id="headings"></div>
+    <div id="cont"></div>
+    <ul id="vikings">
+      <li>Priyanshu</li>
+    </ul>
+    <button onclick="createh1()">Create H1</button>
+    <button onclick="createh2()">Create 2 H3</button>
+    <button onclick="createh3()">Create DIVS</button>
+    <button onclick="createh4()">Add Students</button>
+    <button onclick="createh5()">Add Copyright</button>
+    <script>
+      var index = 1;
+
+      var students = [
+        "Ajay",
+        "Akshay",
+        "Anusha",
+        "Chandrashekhara",
+        "Haren",
+        "Hasaan",
+        "Mahesh",
+        "Mousumi",
+        "Pavan",
+        "Rahul",
+        "Sumanta",
+        "Venkatesh",
+        "Vetrival",
+        "Vijayendra"
+      ];
+
+      function createh1() {
+        var heading = document.createElement("h1");
+        heading.innerHTML = "MASAI";
+        document.getElementById("headings").appendChild(heading);
+      }
+      function createh2() {
+        var heading2 = document.createElement("h2");
+        var heading3 = document.createElement("h3");
+        heading2.innerHTML = "A Transformation in education!";
+        heading3.innerHTML = "Learn to earn, pay when you get.";
+        document
+          .getElementById("headings")
+          .appendChild(heading2)
+          .appendChild(heading3);
+      }
+      function createh3() {
+        for (i = 0; i <= 10; i++) {
+          var content1 = document.createElement("div");
+          content1.textContent = "Welcome to MASAI SCHOOL";
+          document.getElementById("cont").appendChild(content1);
+        }
+      }
+      function createh4() {
+        for (i = 0; i < students.length; i++) {
+          var student = document.createElement("li");
+          student.innerHTML = students[i];
+          document.getElementById("vikings").appendChild(student);
+        }
+      }
+      function createh5() {
+        var copyright = document.createElement("p");
+        copyright.innerHTML = "@ masai 2019";
+        document.getElementById("headings").appendChild(copyright);
+      }
+    </script>
+  </body>
+</html>

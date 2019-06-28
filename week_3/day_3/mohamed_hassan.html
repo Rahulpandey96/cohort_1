@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <style type="text/css">
+.body{
+  width:1500px;
+  margin:0 auto;
+}
+.container{
+  margin:0 100px;
+}
+.screen{
+  width:350px;
+  height:100px;
+  border:4px solid #000;
+  background-color: #ccc;
+  float:left;
+  font-size:75px;
+  margin-top: 70px;
+}
+.buttons_key{
+  position:relative;
+  width:70px;
+  height:50px;
+  border:2px solid #000;
+  float:left;
+  font-size:20px;
+}
+.clear_left{
+  clear:left;
+}
+.margin_left{
+  margin-left:70px;
+}
+.margin_top{
+  margin-top: 40px;
+}
+.margin_left_for_zerobtn{
+margin-left: 145px;
+}
+.margin_left_for_maxbtn{
+margin-left:210px;
+}
+.margin_left_for_minbtn{
+  margin-left:-50px;
+}
+.margin_left_for_total{
+  margin-left:80px;
+}
+.enter_key{
+  width:230px;
+  background-color: #000;
+  color:#fff;
+}
+.span_enterbtn{
+  left:70px;
+}
+span{
+  position: absolute;
+  top:15px;
+  left:30px;
+}
+.total_box{
+  width:200px;
+  height:100px;
+}
+.max_min_key{
+width:125px;
+height:100px;
+}
+.span_min_max_btn{
+  top:110px;
+}
+.span_total_value{
+  top:110px;
+  left:60px;
+}
+.max_color{
+  background-color: green;
+}
+.min_color{
+  background-color: red;
+}
+.total_color{
+  background-color: #ccc;
+}
+.max_min_fontsize{
+  font-size: 30px;
+}
+.game_score{
+  font-size: 50px;
+}
+.min_max_value{
+position: absolute;
+top:25px;
+}
+
+.bgcolor_green{
+background-color: green;
+}
+.bgcolor_orange{
+background-color: orange;
+}
+.bgcolor_purple{
+  background-color: purple;
+}
+.float_right{
+  float:right;
+}
+.float_left{
+float:left;
+}
+.side_btn{
+  width:300px;
+  height:80px;
+  background-color: #000;
+  color:#fff;
+  font-size:35px;
+  margin-top: 30px;
+  margin-left: 100px;
+}
+
+  </style>
+  <title>Numpad</title>
+</head>
+<body class="body">
+  <div class="container float_left">
+    <div id="total_div"class="buttons_key clear_left margin_top total_box margin_left_for_total total_color"> <span class="span_total_value">TOTAL</span><span id='total_box' class="max_min_fontsize min_max_value">-</span></div>
+    <div class="buttons_key clear_left margin_top max_min_key margin_left_for_minbtn min_color"> <span class="span_min_max_btn">MIN</span><span id='min_box' class="max_min_fontsize min_max_value">43</span></div>
+    <div class="buttons_key margin_top margin_left_for_maxbtn max_min_key max_color"><span class="span_min_max_btn">MAX</span><span id='max_box' class="max_min_fontsize min_max_value">2019</span></div>
+    <div id="screendisplay" class="screen clear_left">#</div>
+    <div onclick="display(1)" id="press1" class="buttons_key clear_left margin_top bgcolor_green"><span>1</span></div>
+    <div onclick="display(2)" id="press2" class="buttons_key margin_left margin_top bgcolor_orange"><span>2</span></div>
+    <div onclick="display(3)" id="press3" class="buttons_key margin_left margin_top bgcolor_green"><span>3</span></div>
+    <div onclick="display(4)" id="press4" class="buttons_key clear_left margin_top bgcolor_orange"><span>4</span></div>
+    <div onclick="display(5)" id="press5" class="buttons_key margin_left margin_top bgcolor_orange"><span>5</span></div>
+    <div onclick="display(6)" id="press6" class="buttons_key margin_left margin_top bgcolor_orange"><span>6</span></div>
+    <div onclick="display(7)" id="press7" class="buttons_key clear_left margin_top bgcolor_green"><span>7</span></div>
+    <div onclick="display(8)" id="press8" class="buttons_key margin_left margin_top bgcolor_orange"><span>8</span></div>
+    <div onclick="display(9)" id="press9" class="buttons_key margin_left margin_top bgcolor_green"><span>9</span></div>
+    <div onclick="display(0)" id="press0" class="buttons_key clear_left margin_top margin_left_for_zerobtn bgcolor_purple"><span>0</span> </div>
+    <div onclick="enter()" id="pressenter" class="buttons_key enter_key clear_left margin_left margin_top"><span class="span_enterbtn">ENTER</span></div>
+  </div>
+  <div style="margin-top:150px;" id="container2" class="container float_left">
+    <div style="margin:-100px;margin-left:70px;float:left;" id="game_scor" class="game_score">GAME SCORES</div>
+    <div id="game_btn" style="width:250px;float:left;">
+      <button class="side_btn" type="button" name="button">REMOVE ALL</button>
+      <button class="side_btn" type="button" name="button">REMOVE ODD</button>
+      <button class="side_btn" type="button" name="button">REMOVE EVEN</button>
+      <button class="side_btn" type="button" name="button">REMOVE LAST</button>
+    </div>
+  </div>
+<script>
+function display(val){
+  var screen_content= document.getElementById('screendisplay').innerHTML
+  if(screen_content=='#'){
+    var clear='';
+    document.getElementById('screendisplay').innerHTML=clear;
+  }
+document.getElementById('screendisplay').innerHTML+=val;
+}
+var i=0;
+var k=1;
+function enter(){
+  var min=parseInt(document.getElementById('min_box').innerHTML);
+  var max=parseInt(document.getElementById('max_box').innerHTML);
+  var screen_content= parseInt(document.getElementById('screendisplay').innerHTML);
+  var total=document.body.querySelector(".container").querySelector("#total_div").querySelector("#total_box").innerHTML
+
+  if(total=="-"){
+    document. querySelector('#total_box').innerHTML=parseInt(0)
+  }
+  var total=Number(document.body.querySelector(".container").querySelector("#total_div").querySelector("#total_box").innerHTML)
+  total=total+screen_content
+  //var i=0
+  var my_score=[]
+  my_score[i]=screen_content
+my_score=my_score.push(my_score[i])
+
+var create_p=[]
+  create_p[i]=document.createElement('p')
+  var append=document.body.querySelector("#container2").querySelector("#game_scor")
+//   i++
+// console.log(i)
+
+
+    append.appendChild(create_p[i])
+    create_p[i].textContent="Game"+" "+k+":"+screen_content
+
+  i++
+k++
+console.log(my_score)
+//console.log(game_sc)
+// if(typeof(game_sc)=="Number"){
+//   console.log("iaminside")
+//   switch(game_sc){
+//     //console.log("iam inside")
+//     case game_sc==0:
+//                   var create_div=document.body.createElement('p')
+//                   var append=document.body.querySelector("#container2").querySelector("#game_btn")
+//                   append.appendChild(create_div)
+//                   create_div.textContent="Game1:"+screen_content
+//                   game_sc++
+//                   console.log("i am here")
+//       break;
+//     case game_sc==1:
+//                   var create_div=document.createElement('div')
+//                   var append=document.querySelector("#game_btn")
+//                   append.appendChild(create_div)
+//                   create_div.textContent="Game2:"+screen_content
+//                   game_sc++
+//       break;
+//     case game_sc==2:
+//                   var create_div=document.createElement('div')
+//                   var append=document.querySelector("#game_btn")
+//                   append.appendChild(create_div)
+//                   create_div.textContent="Game3:"+
+//                   game_sc++
+//       break;
+//     case game_sc==3:
+//                   var create_div=document.createElement('div')
+//                   var append=document.querySelector("#game_btn")
+//                   append.appendChild(create_div)
+//                   create_div.textContent="Game4:"+screen_content
+//                   game_sc++
+//       break;
+//     case game_sc==4:
+//                   var create_div=document.createElement('div')
+//                   var append=document.querySelector("#game_btn")
+//                   append.appendChild(create_div)
+//                   create_div.textContent="Game5:"+screen_content
+//                   game_sc++
+//       break;
+//     case game_sc==5:
+//                   var create_div=document.createElement('div')
+//                   var append=document.querySelector("#game_btn")
+//                   append.appendChild(create_div)
+//                   create_div.textContent="Game6:"+screen_content
+//                   game_sc=0
+//       break;
+//   }
+// }
+
+
+  if(screen_content > max){
+  //  console.log(screen_content)
+   document.getElementById('max_box').innerHTML=screen_content;
+ }
+ else if(screen_content < min){
+    //console.log(screen_content)
+    document.getElementById('min_box').innerHTML=screen_content;
+  }
+document. querySelector('#total_box').innerHTML=total;
+  document.getElementById('screendisplay').innerHTML="";
+}
+
+</script>
+</body>
+</html>

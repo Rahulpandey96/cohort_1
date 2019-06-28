@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<body>
+  
+  <h1 >Click the button to see information about my favourite movie</h1>
+  <button id="btn" >Movie Information!</button>
+  <button id="btn1">Add Runtime to the movie object! </button>
+  <button id = "btn2">Add cast member </button>
+
+
+  <script>
+  	var movie = {
+  		Name:"Avengers Endgame",
+  		Director:"Anthony Russo",
+  		Year:2019,
+  		Rating:8.7,
+  		Cast:["Robert Dwoney","Chris Evans", "Chris Hemsworth","Tom","Tom Holland"]
+  	}
+  	
+  	function print_input() {
+    	var outputText = "Movie name is " + movie.Name + ". "+ "Director of the movie is " + movie.Director + "."+ " Year of release is " + movie.Year + "." + "Rating of the movie is " + movie.Rating + "." +" and cast and crew are  " + movie.Cast
+    	var create_ele = document.createElement("p")
+    	var parent_value = document.querySelector("body")
+    	parent_value.appendChild(create_ele)
+    	create_ele.textContent = outputText
+
+} 
+var addButton = document.querySelector('#btn')
+addButton.addEventListener('click', print_input)
+
+	function add_runtime(){
+		movie.Runtime = 200
+		var outputText = "Movie name is " + movie.Name + ". "+ "Director of the movie is " + movie.Director + "."+ " Year of release is " + movie.Year + "." + "Rating of the movie is " + movie.Rating + "." +" and cast and crew are  " + movie.Cast + "." +" Runtime of movie is " + movie.Runtime + "."
+		console.log(outputText)
+		var create_ele = document.createElement("p")
+    	var parent_value = document.querySelector("body")
+    	
+    	parent_value.appendChild(create_ele)
+    	create_ele.textContent = outputText
+	}
+	var run_btn = document.querySelector('#btn1')
+run_btn.addEventListener('click', add_runtime)
+
+	function add_cast(){
+		movie.Cast.push("Ajay")
+		console.log(movie.cast)
+		var outputText = "Movie name is " + movie.Name + ". "+ "Director of the movie is " + movie.Director + "."+ " Year of release is " + movie.Year + "." + "Rating of the movie is " + movie.Rating + "." +" and cast and crew are  " + movie.Cast + "." 
+    	console.log(outputText)
+    	var create_ele = document.createElement("p")
+    	var parent_value = document.querySelector("body")
+    	parent_value.appendChild(create_ele)
+    	create_ele.textContent = outputText
+	}
+	var cast_btn = document.querySelector('#btn2')
+cast_btn.addEventListener('click', add_cast)
+
+
+
+
+
+  
+  	
+  </script>
+</body>
+</html>
+
