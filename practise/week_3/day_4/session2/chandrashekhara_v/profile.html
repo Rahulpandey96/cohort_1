@@ -1,0 +1,188 @@
+<html>
+    <head>
+      <meta charset="utf-8"/>
+        <title>Profile</title>
+
+        <style type="text/css">
+        .linusTorvalds{
+          border-style: solid;
+          width: 399px;height: 280px;
+          padding-bottom: 2px;
+          background-color: lavenderblush;
+          margin-left: 400px;
+          border-right-width: 8px;
+          border-top-width: 8px;
+          border-left-width: 8px;
+          border-bottom-width: 8px;
+        }
+
+        #salKhan{
+          width: 126px;
+          padding-left: 489px;
+          color: red;
+        }
+        .imageLinus{
+          height:150px;
+          width:109px;
+          padding-left: 143px;
+          padding-top: 25px;
+        }
+        #name{
+          padding-left: 120px;
+          width: 161px;
+          color: blueviolet;
+        }
+        .kenThompson
+        {
+          background-color:chocolate;
+          height: 131px;
+        }
+        #aboutSalkhan
+        {
+          margin-top: -116px;
+          margin-bottom: 100px;
+          margin-right: 139px;
+          margin-left: 491px;
+        }
+        .aboutLinus{
+          padding-left: 95px;
+        }
+        #imageSalkhan
+        {
+          padding-left: 343px;width: 122px;height: 142.717px;padding-top: -7px;margin-top: -44px;margin-left: 10px;
+        }
+        #boxKen
+        {
+          padding-left: 24px;padding-top: 10px;width: 400px;height: 100px;
+        }
+        #kenName
+        {
+          padding-left: 24px;padding-top: 10px;font-size: 23px;color: ivory;margin-top:-1px;
+        }
+        #aboutKen
+        {
+          margin-top: -17px;padding-left: 24px;width: 300px;
+        }
+        .dennisRitchie{
+          width: 400px;height: 100px;padding-left: 850px;margin-top: -98px;
+
+        }
+        .dennisName{
+          font-size: 23px;color: ivory;margin-top: -1px;padding-left:195px;
+        }
+        .aboutDennis{
+          margin-top: 2px;padding-left: 60px;width: 364px;
+        }
+        .vLine
+        {
+          border:solid;height: 110px;
+          margin-top: -105px;
+          padding-left: -7px;
+          margin-left: 588px;
+          width: 0px;
+        }
+
+        </style>
+    </head>
+    <body >
+       <button onclick="createPage()">Create Page</button>
+    </body>
+
+
+    <script>
+    function createPage()
+    {
+      var bodyElem = document.querySelector('body')
+      var op = document.createElement('div')
+      op.setAttribute('class','linusTorvalds')
+      var img = document.createElement('img')
+      img.setAttribute('src','https://raw.githubusercontent.com/masai-school/full-stack-dev/master/course/week_2/day_2/w2_d2_assignment/linus.jpg')
+      img.setAttribute('class','imageLinus')
+      var h3 = document.createElement('h3')
+      h3.setAttribute('id','name')
+      h3.textContent = "Linus Torvalds"
+      var p = document.createElement('p')
+      p.setAttribute('class','aboutLinus')
+      var b = document.createElement('b')
+      b.textContent = "The creator of Linux & Git"
+      p.appendChild(b)
+      bodyElem.appendChild(op)
+      var div = document.querySelector('div')
+
+      div.appendChild(img)
+      div.appendChild(h3)
+      div.appendChild(p)
+
+
+
+
+      var div1 = document.createElement('div')
+      bodyElem.appendChild(div1)
+      var h2 = document.createElement('h2')
+      h2.setAttribute('id','salKhan')
+      h2.textContent="Sal khan"
+      var img1 = document.createElement('img')
+      img1.setAttribute("src","https://raw.githubusercontent.com/masai-school/full-stack-dev/master/course/week_2/day_2/w2_d2_assignment/khan.jpg")
+      img1.setAttribute('id','imageSalkhan')
+      div1.appendChild(h2)
+      div1.appendChild(img1)
+
+
+
+      var div2 = document.createElement('div')
+      bodyElem.appendChild(div2)
+      var p1 = document.createElement('p')
+      p1.setAttribute('id','aboutSalkhan')
+      p1.textContent = " Salman khan is the founder of the Khan academy which has a mission of providing a free world-class education for anyone, anywhere."
+      div2.appendChild(p1)
+
+
+
+
+      var div3 = document.createElement('div')
+      div3.setAttribute('class','kenThompson')
+      bodyElem.appendChild(div3)
+
+
+      var divA = document.createElement('div')
+      divA.setAttribute('id','boxKen')
+      div3.appendChild(divA)
+
+      var divB = document.createElement('div')
+      divB.setAttribute('class','dennisRitchie')
+      div3.appendChild(divB)
+
+      var divC = document.createElement('div')
+      divC.setAttribute('class','vLine')
+      div3.appendChild(divC)
+
+
+      var h44 = createElement('h4')
+      h44.setAttribute('id','kenName')
+      h44.textContent = "Ken Thompson"
+      div.appendChild(h44)
+
+      var p22 = createElement('p')
+      p22.setAttribute('id','aboutKen')
+      p22.textContent="Designed and Implemented the original Unix operating system"
+      divA.appendChild(p22)
+
+      var h45 = document.createElement(h4)
+      h45.setAttribute('class','dennisName')
+      h45.textContent="Dennis Ritchie"
+      divB.appendChild('h45')
+      var p23= document.createElement('p')
+      p23.setAttribute('class','aboutDennis')
+      p23.textContent="The Creater of C Programming Language"
+      divB.appendChild('p23')
+
+
+
+
+
+    }
+
+
+
+    </script>
+</html>
