@@ -1,0 +1,121 @@
+<html>
+    <head>
+        <title>Profile</title>
+        <style type="text/css">
+		h1{
+			color: darkslateblue; 
+			background-color: lightgrey;
+			width: 500px;
+			height: 300px;
+			border: 10px solid black;
+			padding: 50px;
+			margin: 20px;
+			align-items: center;"
+		}
+		p{
+			font-size: 25px; 
+			color: black;
+		}
+		img{
+			height: 200px; 
+			width: 150px;
+			align-self: center;
+		}
+		h2{
+			color: red;
+			font-size: 30px;
+		}
+		#img2{
+			float:left;
+			height: 200px; 
+			width: 150px;
+			margin-left: 200px;
+		}
+		#data{
+			font-size: 20px;
+			font-family: bold;
+			color: black;
+			font-size: 20px;
+		}
+		#bottomdiv{
+			margin-top:300px;
+			background-color: chocolate;
+			padding-left: 15px;
+			height: 140px;
+		}
+		#ken{
+			color: white;
+			font-size: 25px; 
+			float: left;
+		}
+		#dennis{
+			color: white;
+			font-size: 25px;
+			float: right;
+		}
+		#vertical_bar{
+			border-left: 7px solid black;
+			height: 100px;
+			position: absolute;
+			left: 50%;
+			margin-left: -3px;
+			top: 890px;
+		}
+		#kendata{
+			float: left;
+			font-size: 17px;
+		}
+		#dennisdata{
+			float: right;
+			font-size: 17px;
+		}
+        </style>
+    </head>
+    <body id="body1">
+       <button onclick="createpage()">Create Page</button>
+
+       <script type="text/javascript">
+          
+          function createpage(){
+
+              var center1=document.createElement('center');
+              var bodyElem=getElementbyId('body1');
+              bodyElem.appendChild(center1);
+
+              var div1=document.createElement('div');
+              var bodyElem=getElementbyId('body1');
+              center1.appendChild(div1);
+
+              var head1=document.createElement('h1');
+              head1.innerHTML='<img src="images/linus.jpg" alt="linus torvalds"> <br>Linus Torvalds <br><p>The Creator of Linux and Git</p></h1>;');
+              head1.setAttribute('class','h1');
+              head1.setAttribute('id','img');
+              var bodyElem=getElementbyId('body1');
+              div1.appendChild(head1);
+
+              var head2=document.createElement('h2');
+              head2.innerHTML='<img src="https://raw.githubusercontent.com/masai-school/full-stack-dev/master/course/week_2/day_2/w2_d2_assignment/khan.jpg');
+              head2.setAttribute('class','h2');
+              head2.setAttribute('id','img2');
+              head2.innerHTML="Salman Khan  is the founder of the Khan Academy which has a mission <br>of providing a free world - class education for anyone, anywhere.";
+              var bodyElem=getElementbyId('data');
+              div.appendChild(head2);
+
+
+
+              
+
+
+
+             
+
+              
+
+              
+          }
+       
+       </script>
+
+
+    </body>
+</html>
