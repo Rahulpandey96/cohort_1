@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <!-- FSD.W3.4.1_1 !-->
+  <h1>Click the button to see information about my favourite movie</h1>
+  <button id="movieinfo">Movie Information!</button>
+     <p id="movie_details"></p>
+  <!-- FSD.W3.4.1_2 !-->
+  <button id="runtime">Add Runtime to the movie object! </button>
+     <p id="add"></p>
+  
+  <!-- FSD.W3.4.1_3 !-->
+  <button id ="cast">Add cast member </button>
+    <p id="castpara"></p>
+  
+
+  <script>
+
+      var movie = {
+        name : "Shawshank Redemption",
+        director: "Frank Darabont",
+        year : 1994,
+        rating: 9.3,
+        cast :["Tim robbins","Morgan Freeman","Bob Gunton","william Sadler","Clancy Brown"]
+      }
+        function movieinf()
+       { 
+         var outputText = "The name of movie is " + movie.name + ". "
+               + "The Director of this movie is " + movie.director + " It released in " + movie.year +"."
+               + "The IMDB rating is " + movie.rating + "."
+               + "The cast of this movie is " +movie.cast +".";
+  
+        var outputPara = document.createElement('p')
+        outputPara.textContent = outputText
+
+        var container = document.querySelector('body')
+        var mv = document.getElementById("movieinfo")
+        container.insertBefore(outputPara, mv)
+       }
+        var movieButton = document.querySelector('#movieinfo')
+        movieButton.addEventListener('click', movieinf)
+
+
+
+        function runtim(){
+        movie.runtim = 142;
+        var outputText = "The name of movie is " + movie.name + ". "
+               + "The Director of this movie is " + movie.director + " It released in " + movie.year +"."
+               + "The IMDB rating is " + movie.rating + "."
+               + "The cast of this movie is " +movie.cast
+               +"."+ "Movie Running Time: "+ movie.runtim+ " minutes ";
+            
+  
+         var outputPara = document.createElement('p')
+          outputPara.textContent = outputText
+  
+          var container = document.querySelector('#add')
+          var rt = document.getElementById("runinfo")
+          container.insertBefore(outputPara, rt)
+  
+        }
+        var movieButton = document.querySelector('#runtime')
+        movieButton.addEventListener('click', runtim)
+
+
+        function addCastMember(){
+        movie.runtim = 142;
+        movie.cast.push("Gill Bellows");
+        var outputText = "The name of movie is " + movie.name + ". "
+               + "The Director of this movie is " + movie.director + " It released in " + movie.year +"."
+               + "The IMDB rating is " + movie.rating + "."
+               + "The cast of this movie is " +movie.cast
+               +"."+ "Movie Running Time: "+ movie.runtim+ " minutes ";
+       
+            
+  
+         var outputPara = document.createElement('p')
+         outputPara.textContent = outputText
+  
+         var container = document.querySelector('#castpara')
+         var cs = document.getElementById("castinfo")
+         container.insertBefore(outputPara, cs)
+  
+}
+         var movieButton = document.querySelector('#cast')
+          movieButton.addEventListener('click', addCastMember)
+
+
+
+
+  </script>
+</body>
+</html>

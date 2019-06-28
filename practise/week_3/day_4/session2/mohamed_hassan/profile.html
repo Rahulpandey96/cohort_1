@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style type="text/css">
+    .body {
+      width: 1140px;
+
+      margin: 0 auto;
+    }
+
+    .linus_sec {
+      height: 300px;
+      width: 450px;
+      margin: 30px 250px;
+      border: 10px solid #000;
+      background-color: #778beb;
+    }
+
+    .linus_des {
+      margin-left: 110px;
+    }
+
+    .khan_sec {
+      margin-left: 180px;
+      height: 150px;
+      margin-bottom: 30px;
+    }
+
+    .khan_des{
+      float: left;
+      margin-left: 30px;
+    }
+
+    .ken_ritche {
+      clear: left;
+      height: 130px;
+      background-color: #e15f41;
+    }
+
+    .ken_sec {
+      float: left;
+      margin-left: 20px;
+    }
+
+    .seperator {
+      width: 10px;
+      height: 110px;
+      background-color: #000;
+      float: left;
+      margin: 10px 0 20px 250px;
+    }
+
+    .ritche_sec {
+      float: right;
+      margin-right: 30px;
+    }
+amed
+    .primary_heading {
+      color: #341f97;
+      margin-left: 25px;
+    }
+
+    .heading_weightage {
+      font-weight: 100;
+    }
+
+    .heading_color {
+      color: red;
+    }
+
+    .sub_headings {
+      color: white;
+      font-weight: 100;
+    }
+
+
+
+    .linus_img {
+      height: 150px;
+      width: 100px;
+      margin-left: 175px;
+      margin-top: 30px;
+    }
+
+    .khan_img {
+      width: 100px;
+      height: 130px;
+      float: left;
+    }
+  </style>
+  <title>Profile</title>
+</head>
+    <body>
+       <button>Create Page</button>
+       <script type="text/javascript">
+document.body.querySelector("button").addEventListener("click",display_page)
+//linus_sec
+function display_page(){
+  var get_body=document.querySelector("body")
+  get_body.setAttribute("class","body")
+  var linus=document.createElement("div")
+  var div1_linus=document.createElement("div")
+  var div2_linus=document.createElement("div")
+  var khan=document.createElement("div")
+  var div1_khan=document.createElement("div")
+  var ritche=document.createElement("div")
+  var ritche1=document.createElement("div")
+  var separator=document.createElement("div")
+  var dennis=document.createElement("div")
+
+//direct div 1
+linus.setAttribute('class','linus_sec')
+get_body.appendChild(linus)
+
+var linus_img=document.createElement("img")
+linus_img.setAttribute("src","linus.jpg")
+linus_img.setAttribute("class","linus_img")
+document.body.querySelector("div").appendChild(linus_img)
+div1_linus.setAttribute("class","linus_des")
+document.body.querySelector("div").appendChild(div1_linus)
+
+var h2=document.createElement("h2")
+var h3=document.createElement("h3")
+h2.setAttribute("class","primary_heading")
+get_body.querySelector("div").querySelector("div").appendChild(h2)
+h2.textContent="Linus Torvalds"
+
+h3.setAttribute("class","heading_weightage")
+get_body.querySelector("div").querySelector("div").appendChild(h3)
+//var select_h2=get_body.querySelector("div").querySelector("div").querySelector("h2")
+h3.textContent="The creator of Linux & Git"
+
+khan.setAttribute("class","khan_sec")
+document.body.appendChild(khan)
+var khan_img=document.createElement("img")
+khan_img.setAttribute("class","khan_img")
+khan_img.setAttribute("src","khan.jpg")
+document.body.querySelectorAll("div")[2].appendChild(khan_img)
+
+div1_khan.setAttribute("class","khan_des")
+document.body.querySelectorAll("div")[2].appendChild(div1_khan)
+
+var h2_khan=document.createElement("h2")
+var p_khan=document.createElement("p")
+var p_khan2=document.createElement("p")
+h2_khan.setAttribute("class","heading_color")
+h2_khan.textContent="Sal Khan"
+document.body.querySelectorAll("div")[2].querySelectorAll("div")[0].appendChild(h2_khan)
+
+p_khan.textContent="Salman khan is the founder of khan academy, which has a mission of"
+p_khan2.textContent="providing free world class education for anyone,anywhere"
+document.body.querySelectorAll("div")[2].querySelectorAll("div")[0].appendChild(p_khan)
+document.body.querySelectorAll("div")[2].querySelectorAll("div")[0].appendChild(p_khan2)
+
+ritche.setAttribute("class","ken_ritche")
+document.body.appendChild(ritche)
+
+ritche1.setAttribute("class","ken_sec")
+document.body.querySelectorAll('div')[4].appendChild(ritche1)
+var rit_h2=document.createElement("h2")
+var rit_p=document.createElement("p")
+var rit_p1=document.createElement("p")
+rit_h2.setAttribute("class","sub_headings")
+document.body.querySelectorAll('div')[5].appendChild(rit_h2)
+document.body.querySelectorAll('div')[5].appendChild(rit_p)
+document.body.querySelectorAll('div')[5].appendChild(rit_p1)
+rit_h2.textContent="Ken Thompson"
+rit_p.textContent="Designed and implemented the original"
+rit_p1.textContent=" unix operating system"
+
+
+separator.setAttribute("class","seperator")
+document.body.querySelectorAll('div')[4].appendChild(separator)
+
+dennis.setAttribute("class","ritche_sec")
+document.body.querySelectorAll('div')[4].appendChild(dennis)
+var denni_h2=document.createElement("h2")
+var denni_p=document.createElement("p")
+denni_h2.setAttribute("class","sub_headings")
+document.body.querySelectorAll('div')[7].appendChild(denni_h2)
+document.body.querySelectorAll('div')[7].appendChild(denni_p)
+denni_h2.textContent="Dennis Ritche"
+denni_p.textContent="The creator of C programming Language"
+
+//var denn_h2=
+
+
+
+
+
+
+
+}
+       </script>
+    </body>
+</html>

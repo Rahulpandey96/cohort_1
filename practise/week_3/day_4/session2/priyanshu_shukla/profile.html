@@ -1,0 +1,96 @@
+<html>
+    <head>
+        <title>Profile</title>
+        <style>
+        		.Linus_box {
+		 			height:200px;
+		 			width:300px;
+		 			background-color:#efebb3;
+					border:10px;
+					border-color:#000000;
+					border-style: solid;
+					text-align:center;
+					padding: 5px;
+					}
+		    .sal_khan {
+		    		height:200px;
+		    		width:400px;
+		    		padding: 15px;
+		    		}
+		    #orange_box {
+		    	background-color:#ed601a;
+		    	height: 100px;
+		    	width: 1000px;
+		    	padding: 10px;
+		    	}
+		    #key_thompson {
+		    	text-align:left;
+		    	background-color:#ed601a;
+		    	height:100px;
+		    	width:250px; 
+		    	float:left;
+		    	}
+		    #black_line {
+		    	background-color:#000000;
+		    	height:100px;
+		    	width:4px;
+		    	margin-left:270px;
+		    	float: left;
+		    	}
+		    #dennis {
+		    	text-align:right;
+		    	background-color:#ed601a;
+		    	height:80px;
+		    	width:235px;
+		    	padding-left:5px;
+		    	padding-right:10px;
+		    	padding-top:10px;
+		    	padding bottom:10px;
+		    	padding-color:#ed7512;
+		    	padding-left-color:#0c0c0c;
+		    	float:right;
+		    	}
+        </style>
+    </head>
+    <body id="bodyelem">
+       <button onclick="create()">Create Page</button>
+    </body>
+    <script type="text/javascript">
+    	var bodyelem =document.getElementById('bodyelem')
+
+    	function create(){
+    		var center = document.createElement('center')
+    		bodyelem.appendChild(center)
+
+    		var linusDiv = document.createElement('div')
+    		linusDiv.innerHTML = '<img src="https://raw.githubusercontent.com/masai-school/full-stack-dev/master/course/week_2/day_2/w2_d2_assignment/linus.jpg" height="106px" width="76px"><br><font size="5" color="blue"><b>Linus Torvalds</b></font><br><hr><font size="4">The creator of Linux & Git</font>';
+    		linusDiv.setAttribute('class', 'Linus_box')
+			center.appendChild(linusDiv);
+
+			var salDiv = document.createElement('div')
+			salDiv.innerHTML = '<img src="https://raw.githubusercontent.com/masai-school/full-stack-dev/master/course/week_2/day_2/w2_d2_assignment/khan.jpg" height="100px" width="75px" float="left"></left><right><font size="4" color="#f71904"><b>Sal Khan</b></font><br><font size="3"> <b>Salman Khan is the founder of Khan Academy which has a mission of providing a free world class education for anyone, anywhere.</b></font></right>';
+			salDiv.setAttribute('class', 'sal_khan')
+			center.appendChild(salDiv);
+
+			var orangeDiv =document.createElement('div')
+			orangeDiv.setAttribute('id','orange_box')
+			center.appendChild(orangeDiv)
+
+			var kenThompson = document.createElement('div')
+			kenThompson.innerHTML='<font size=4 color=#f7f7f7>Ken Thompson</font><br><font size="3">Designed and implemented the original Unix OS</font>'
+			kenThompson.setAttribute('id','key_thompson')
+			orangeDiv.appendChild(kenThompson)
+
+			var black =document.createElement('div')
+			black.setAttribute('id','black_line')
+			orangeDiv.appendChild(black)
+
+			var dennis =document.createElement('div')
+			dennis.innerHTML ='<font size=4 color="#f7f7f7">Dennis Ritche</font><br><font size="3">The creator of c programming language</font>'
+			dennis.setAttribute('id', 'dennis')
+			orangeDiv.appendChild(dennis)
+
+
+    	}
+    </script>
+</html>

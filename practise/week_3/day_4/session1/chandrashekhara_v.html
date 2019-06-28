@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <!-- FSD.W3.4.1_1 !-->
+
+  <h1>Click the button to see information about my favourite movie</h1>
+  <div class="details">
+
+  </div>
+
+
+  <button id="movieBtn">Movie Information!</button>
+  <!-- FSD.W3.4.1_2 !-->
+
+  <button id="runTime">Add Runtime to the movie object! </button>
+
+
+  <!-- FSD.W3.4.1_3 !-->
+  <button id="addCast">Add cast member </button>
+
+
+  <script>
+
+    var movie = {
+        Name : "Maharshi ",
+        Director : "Vamshi Paidipally",
+        Year : 2019,
+        Rating : "8.0/10",
+        Cast : ["Mahesh Babu, ","Pooja Hegde, ","Allari Naresh, ","Rajsekhar Aningi, ", "R.J. Hemant "]
+    }
+    function movieDetails()
+    {
+      var op = document.createElement('p')
+      op.textContent = "Name : " + movie.Name
+      var op1 = document.createElement('p')
+      op1.textContent = "Director : " +  movie.Director
+      var op2 = document.createElement('p')
+      op2.textContent = "Year : " +  movie.Year
+      var op3 = document.createElement('p')
+      op3.textContent ="Rating : " + movie.Rating
+      var op4 = document.createElement('p')
+      op4.textContent = "Cast : " + movie.Cast[0] + movie.Cast[1] +movie.Cast[2] +movie.Cast[3] + movie.Cast[4]
+
+      var display=document.querySelector(".details")
+      display.appendChild(op)
+      display.appendChild(op1)
+      display.appendChild(op2)
+      display.appendChild(op3)
+      display.appendChild(op4)
+
+    }
+
+    var movieButton = document.querySelector('#movieBtn')
+    movieButton.addEventListener('click', movieDetails)
+
+    function runTime() {
+      movie.runtime = 179;
+      var op = document.createElement('h3')
+      op.textContent = "Runtime : " + movie.runtime + " Minutes"
+      var btn = document.getElementById('movieBtn');
+      var display=document.querySelector("body")
+      display.insertBefore(op, btn);
+
+
+    }
+
+    var runtimeButton = document.querySelector('#runTime')
+    runtimeButton.addEventListener('click', runTime)
+
+    movie.Cast.push(",Ram Charan ")
+
+    function addCast() {
+      var op = document.createElement('p')
+      op.textContent = "Name : " + movie.Name
+      var op1 = document.createElement('p')
+      op1.textContent = "Director : " +  movie.Director
+      var op2 = document.createElement('p')
+      op2.textContent = "Year : " +  movie.Year
+      var op3 = document.createElement('p')
+      op3.textContent ="Rating : " + movie.Rating
+      var op4 = document.createElement('p')
+      op4.textContent = "Cast : " + movie.Cast[0] + movie.Cast[1] +movie.Cast[2] +movie.Cast[3] + movie.Cast[4] + movie.Cast[5]
+
+      var btn = document.getElementById('movieBtn');
+      var display=document.querySelector("body")
+      display.insertBefore(op, btn);
+      display.insertBefore(op1, btn);
+      display.insertBefore(op2, btn);
+      display.insertBefore(op3, btn);
+      display.insertBefore(op4, btn);
+
+
+    }
+
+    var addcastButton = document.querySelector('#addCast')
+    addcastButton.addEventListener('click',addCast )
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Profile page...</title>
+	<style type="text/css">
+		/* Design of header box goes here */
+		#box_img{
+			width:450px;
+			height:300px;
+			border:10px solid black;
+			margin:0 auto;
+			padding:30px;
+			background-color:#ccc;
+		}
+		/* Design coding of linus image goes heer */ 
+		#img_linus{
+			width:100px;
+			height:120px;
+			float: left;
+			margin-left:170px;
+			margin-top:40px;
+		}
+		#name_linus{
+			float:left;
+			font-weight:bold;
+			color:blue;
+			font-family:sans-serif;
+			margin-left:105px;
+		}
+		#founder_name{
+			float:left;
+			font-family:sans-serif;
+			margin-left:100px;
+		}
+		/* Design coding of Middle box coding goes here */
+		#box_salman{
+			margin-left:270px;
+			margin-top:30px;
+		}
+		#img_box_text{
+			float: left;
+			width:800px; 
+			height:200px;
+			margin-left:60px;
+		}
+		#img_salman{
+			width:110px; 
+			height:145px;
+			 float: left;
+		}
+		#text_salman{
+			color:red;
+			font-family: 
+			sans-serif;
+			float: left; 
+			margin:0; 
+			padding:0;
+			margin-left:30px; 
+			font-size:30px;
+			}
+		#text_descr_salman{
+			width:600px; 
+			margin-left:100px;
+			margin-top:60px;
+			padding-left:50px;
+			}
+		#text_descr_h4{
+			text-align:center;
+			font-family: sans-serif;
+			text-align:justify; 
+			font-weight:normal;
+		}
+		/* Design of Bottom box goes here */
+		#bottom_box{
+			width:1000px; 
+			height:100px; 
+			background:orange; 
+			float:left; 
+			margin-top:5px;
+			margin-left:200px;
+			padding:20px;
+			}
+			/* thomson design coding goes here */
+		#box_thomson{
+			float:left; 
+			width:260px;
+		}
+		#text_thomson{
+			color:white; 
+			font-family:sans-serif; 
+			padding:0;
+			margin:0;
+		}
+		#text_descr_thomson{
+			font-weight:bold;
+			font-family:sans-serif; 
+			text-align:justify;
+			padding:0;
+			margin:0;
+		}
+		/* Design of thick black color vertical line putted in bottom goes here */
+		#v_width_line{
+			width:10px; 
+			height:95px; 
+			margin-left:250px; 
+			background-color:black;
+			float: left;
+			}
+			/* this design for cofounder c programme denish */
+		#box_denish{
+			float:right;
+		}
+		#txt_name_denish{
+			color: white; 
+			font-family: sans-serif; 
+			text-align:right;
+			font-weight:bold; 
+			padding:0;
+			margin:0;
+			}
+		#c_progm_founder{
+			font-family: 
+			sans-serif; 
+			text-align:right;
+			font-weight:bold;
+		}
+
+
+	</style>
+</head>
+<body>
+	<button id="btn">Create Page</button>
+<script>
+	var create_btn = document.getElementById('btn');
+	function pageCreater()
+	{
+		var eleBody = document.querySelector('body');
+		for(i=0;i<3;i++)
+		{	
+		var div = document.createElement('div');
+			eleBody.appendChild(div);
+			if (i==1) {
+				div.setAttribute('id','box_salman');
+			}
+			if (i==2) {
+				div.setAttribute('id','bottom_box');
+			}
+
+		}
+
+		 // three dive is created inside of body here
+
+	var divOne = document.querySelector('div');//first div attached by id box-img
+	divOne.setAttribute('id','box_img');
+	var img = document.createElement('img');
+	divOne.appendChild(img);
+	img.setAttribute('id','img_linus');
+	img.setAttribute('src','resources/linus.jpg');
+	img.setAttribute('alt','linus');
+	var br = document.createElement('br');
+	divOne.appendChild(br);
+	var h1 = document.createElement('h1');
+	divOne.appendChild(h1);
+	h1.setAttribute('id','name_linus');
+	h1.innerHTML="Linus Torvalds";
+	var br1 = document.createElement('br');
+	divOne.appendChild(br1);
+	var h3 = document.createElement('h3');
+	divOne.appendChild(h3);
+	h3.setAttribute('id','founder_name');
+	h3.innerHTML="The creator of Linus & Git";
+	// salman khan box codign goes here
+	var divTwo = document.getElementById('box_salman');
+	var subDivOne = document.createElement('div');
+	divTwo.appendChild(subDivOne);
+	subDivOne.setAttribute('id','img_box_text');
+	var sub_div_one = document.createElement('div');
+	subDivOne.appendChild(sub_div_one);
+	sub_div_one.setAttribute('id','img_box_text');
+	var imgTwo = document.createElement('img');
+	var sal_h2 = document.createElement('h2');
+	var sup_sub_div = document.createElement('div');
+	sub_div_one.appendChild(imgTwo);
+	sub_div_one.appendChild(sal_h2);
+	sub_div_one.appendChild(sup_sub_div);
+	imgTwo.setAttribute('src','resources/khan.jpg');
+	imgTwo.setAttribute('id','img_salman');
+	imgTwo.setAttribute('alt','khan');
+	sup_sub_div.setAttribute('id','text_descr_salman');
+	var text_h4 = document.createElement('h4');
+	sup_sub_div.appendChild(text_h4);
+	text_h4.setAttribute('id','text_descr_h4');
+	text_h4.innerHTML='Salman Khan is the co founder of the Khan Aacademy which has mission of providing a free world-class education for anyone, anywhere.';
+
+	document.getElementById('bottom_box').appendChild(document.createElement('div')).setAttribute('id','box_thomson');
+	document.getElementById('bottom_box').appendChild(document.createElement('div')).setAttribute('id','v_width_line');
+	document.getElementById('bottom_box').appendChild(document.createElement('div')).setAttribute('class','denish_div');
+	document.getElementById('box_thomson').appendChild(document.createElement('h2')).setAttribute('id','text_thomson');
+	document.getElementById('box_thomson').appendChild(document.createElement('br'));
+	document.getElementById('box_thomson').appendChild(document.createElement('p')).setAttribute('id','text_descr_thomson');
+	document.getElementById('text_descr_thomson').innerHTML="Designend and implemented the origin of Unix Operationg System";
+	document.getElementById('text_thomson').innerHTML="Ken Thompson";
+	document.querySelector('.denish_div').appendChild(document.createElement('h2')).setAttribute('id','txt_name_denish');
+	document.getElementById('txt_name_denish').innerHTML="Denish Ritchie";
+	document.querySelector('.denish_div').appendChild(document.createElement('p')).setAttribute('id','c_progm_founder');
+	document.querySelector('.denish_div').insertBefore(document.createElement('br'),document.getElementById('c_progm_founder'));
+	document.getElementById('c_progm_founder').innerHTML="The creator of C Programme Language";
+
+
+		btn.removeEventListener('click',pageCreater);
+	}
+	create_btn.addEventListener('click',pageCreater);
+</script>
+</body>
+</html>
