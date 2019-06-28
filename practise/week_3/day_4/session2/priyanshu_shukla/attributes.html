@@ -85,13 +85,13 @@
                divs.setAttribute('class','class-div')
             }
             function para(){
-                var x = document.getElementsByClassName('wer')
-                console.log(x)
-                for(var i=0;i<x.length;i++){
-                    var y =x[i]
-                    console.log(x)
-                    y.setAttribute('class','class-p')
-                }
+                while(true){
+                    var x = document.getElementsByClassName('wer')[0]
+                                        if(x == undefined) break;
+
+                    x.setAttribute('class', 'class-p')
+
+                }        
             }
             function para3(){
                 var w =document.getElementsByClassName('qwe')
