@@ -4,14 +4,6 @@
 ### Session 1
 
 
-**SUBMISSION:**
-
-- Pull the `cohort_1` repo
-- Go to `practise/week_3/day_2/session1` 
-- Copy `w3_day_2_coding1.md` with `firstname_lastname.md`
-- Fill the answers
-- Push the file `firstname_lastname.md` back to the online repo
-
 <u>Don't use the web browser or any online tool to answer these questions. Only refer to the notes and apply the basic concepts</u>
 
 Sample Submission
